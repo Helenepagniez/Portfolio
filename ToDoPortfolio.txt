@@ -1,10 +1,7 @@
 - Rendre responsive (Header)
 - Rendre code propre ( header + animation header à regroupper)
 - Animation cartes hover
-- Trouver logo avant dernier projet et l'ajouter
-- Modif carte avant dernier projet
 - Créer page GitHub Kanap et ajouter au HTML
-- Centrer logos Boooki, ohmyfood et Groupomania
 - Lien mailto dans contact du footer pour adresse mail
 
 
