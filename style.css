@@ -1,11 +1,51 @@
-body{
+body
+{
     font-family: cascadia code;
 }
 
-body h3{
+body h3
+{
     color: deeppink;
 }
-/*Zone de texte animation*/
+
+header
+{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+    color: white;
+    padding: 25px;
+    justify-content: space-between;
+    padding-left: 40px;
+    border-radius: 10px 10px 0px 0px;
+    transition: 0.5s;
+}
+
+header img
+{
+    border-radius: 30% ;
+}
+
+header h3
+{
+    color: deeppink;
+}
+
+header:hover
+{
+    color: black;
+}
+
+header .header
+{
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 85%;
+    border-radius: 70px 0px 0px 70px;
+    transition: 0.5s;
+}
+
 header .header .wrapper
 {
     display: inline-flex;
@@ -16,22 +56,12 @@ header .header .wrapper
     transition: 0.5s;
 }
 
-header .header:hover .wrapper
-{
-    background-color: white;
-}
-
 header .header .wrapper .static-txt
 {
     color: #fff;
     font-size: 40px;
     font-weight: 400;
     transition: 0.5s;
-}
-
-header .header:hover .wrapper .static-txt
-{
-    color: black;
 }
 
 header .header .wrapper .dynamic-txts
@@ -55,17 +85,13 @@ header .header .wrapper .dynamic-txts li
     transition: 0.5s;
 }
 
-header .header:hover .wrapper .dynamic-txts li
-{
-    color: black;
-}
-
 @keyframes slide 
 {
     100%{
       top: -360px;
     }
 }
+
 header .header .wrapper .dynamic-txts li span
 {
     position: static;
@@ -86,12 +112,6 @@ header .header .wrapper .dynamic-txts li span::after
     transition: 0.5s;
 }
 
-header .header:hover .wrapper .dynamic-txts li span::after
-{
-    background-color: white;
-    border-left: 2px solid black;
-}
-
 @keyframes typing 
 {
     40%, 60%
@@ -105,47 +125,35 @@ header .header:hover .wrapper .dynamic-txts li span::after
     }
 }
 
-/*Fin Zone de texte animation*/
-
-header{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: red;
-    color: white;
-    padding: 25px;
-    justify-content: space-between;
-    padding-left: 40px;
-    border-radius: 10px 10px 0px 0px;
-    transition: 0.5s;
-}
-
-header:hover{
-    color: black;
-}
-
-header img{
-    border-radius: 30% ;
-}
-
-header h3{
-    color: deeppink;
-}
-
-.header{
-    text-align: center;
-    background-color: black;
-    color: white;
-    width: 85%;
-    border-radius: 70px 0px 0px 70px;
-    transition: 0.5s;
-}
-
-.header:hover{
+header .header:hover
+{
     background-color: white;
     color: black;
 }
 
-.titre{
+header .header:hover .wrapper
+{
+    background-color: white;
+}
+
+header .header:hover .wrapper .static-txt
+{
+    color: black;
+}
+
+header .header:hover .wrapper .dynamic-txts li
+{
+    color: black;
+}
+
+header .header:hover .wrapper .dynamic-txts li span::after
+{
+    background-color: white;
+    border-left: 2px solid black;
+}
+
+.titre
+{
     display: flex;
     color: red;
     justify-content: center;
@@ -153,23 +161,27 @@ header h3{
     transition: 0.5s;
 }
 
-.titre:hover{
+.titre:hover
+{
     color: black;
     text-decoration: underline red;
 }
 
-.organisme{
+.organisme
+{
     color: deeppink;
 }
 
-.projets{
+.projets
+{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 20px;
 }
 
-.projets .projet{
+.projets .projet
+{
     background-color: pink;
     border: 3px solid red ;
     height: 250px;
@@ -179,7 +191,8 @@ header h3{
     margin: 10px;
 }
 
-.projets .projet .un{
+.projets .projet .un
+{
     width: 60%;
     height: auto;
     background-color: red;
@@ -188,7 +201,8 @@ header h3{
     border-radius: 6px 6px 0px 0px;
 }
 
-.projets .projet .deux{
+.projets .projet .deux
+{
     width: 70%;
     height: auto;
     background-color: red;
@@ -197,7 +211,8 @@ header h3{
     border-radius: 6px 6px 0px 0px;
 }
 
-.projets .projet .trois{
+.projets .projet .trois
+{
     width: 80%;
     height: auto;
     background-color: red;
@@ -206,7 +221,8 @@ header h3{
     border-radius: 6px 6px 0px 0px;
 }
 
-.projets .projet .quatre{
+.projets .projet .quatre
+{
     width: 65%;
     height: auto;
     background-color: red;
@@ -215,7 +231,8 @@ header h3{
     border-radius: 6px 6px 0px 0px;
 }
 
-.projets .projet .cinq{
+.projets .projet .cinq
+{
     width: 35%;
     height: auto;
     background-color: red;
@@ -224,7 +241,8 @@ header h3{
     border-radius: 6px 6px 0px 0px;
 }
 
-.projets .projet .six{
+.projets .projet .six
+{
     width: 90%;
     height: auto;
     background-color: red;
@@ -247,13 +265,15 @@ header h3{
     margin: -23px 6px 0px 14px;
 }
 
-footer{
+footer
+{
     background-color: red;
     padding: 10px;
     border-radius: 0px 0px 10px 10px;
 }
 
-footer .contact{
+footer .contact
+{
     background-color: black;
     display: flex;
     flex-direction: row;
@@ -264,7 +284,8 @@ footer .contact{
     margin-right: 5px;
 }
 
-footer .contact:hover{
+footer .contact:hover
+{
     background-color: white;
     color: black;
 }
