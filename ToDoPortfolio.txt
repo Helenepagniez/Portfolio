@@ -1,8 +1,6 @@
 - Rendre responsive (Header)
 - Animation cartes hover
 - Créer page GitHub Kanap et ajouter au HTML
-- Lien mailto dans contact du footer pour adresse mail
-- logo contacts footer( tel, maison,...)
 
 
 - Gérer Git hub des prochains projets et rajouter liens sur HTML

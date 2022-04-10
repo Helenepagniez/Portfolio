@@ -281,11 +281,32 @@ footer .contact
     color: white;
     justify-content: space-around;
     transition: 0.5s;
-    margin-right: 5px;
+}
+
+footer .contact div
+{   
+    color: white;
+    margin-top: 15px;
+}
+
+footer .contact a
+{
+    text-decoration: none;
+    color: white;
 }
 
 footer .contact:hover
 {
     background-color: white;
+    color: black;
+}
+
+footer .contact:hover div
+{
+    color: black;
+}
+
+footer .contact:hover a
+{
     color: black;
 }
