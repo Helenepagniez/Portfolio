@@ -1,0 +1,261 @@
+body{
+    font-family: cascadia code;
+}
+
+body h3{
+    color: deeppink;
+}
+/*Zone de texte animation*/
+header .header .wrapper
+{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 60px;
+    transition: 0.5s;
+}
+
+header .header:hover .wrapper
+{
+    background-color: white;
+}
+
+header .header .wrapper .static-txt
+{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+header .header:hover .wrapper .static-txt
+{
+    color: black;
+}
+
+header .header .wrapper .dynamic-txts
+{
+    margin-left: -15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+header .header .wrapper .dynamic-txts li
+{
+    list-style: none;
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+    text-align: left;
+    transition: 0.5s;
+}
+
+header .header:hover .wrapper .dynamic-txts li
+{
+    color: black;
+}
+
+@keyframes slide 
+{
+    100%{
+      top: -360px;
+    }
+}
+header .header .wrapper .dynamic-txts li span
+{
+    position: static;
+    margin: 5px 0;
+    line-height: 40px;
+}
+
+header .header .wrapper .dynamic-txts li span::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    border-left: 2px solid white;
+    animation: typing 3s steps(10) infinite;
+    transition: 0.5s;
+}
+
+header .header:hover .wrapper .dynamic-txts li span::after
+{
+    background-color: white;
+    border-left: 2px solid black;
+}
+
+@keyframes typing 
+{
+    40%, 60%
+    {
+      left: calc(100% + 30px);
+    }
+
+    100%
+    {
+      left: 0;
+    }
+}
+
+/*Fin Zone de texte animation*/
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+    color: white;
+    padding: 25px;
+    justify-content: space-between;
+    padding-left: 40px;
+    border-radius: 10px 10px 0px 0px;
+    transition: 0.5s;
+}
+
+header:hover{
+    color: black;
+}
+
+header img{
+    border-radius: 30% ;
+}
+
+header h3{
+    color: deeppink;
+}
+
+.header{
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 85%;
+    border-radius: 70px 0px 0px 70px;
+    transition: 0.5s;
+}
+
+.header:hover{
+    background-color: white;
+    color: black;
+}
+
+.titre{
+    display: flex;
+    color: red;
+    justify-content: center;
+    text-decoration: underline black;
+    transition: 0.5s;
+}
+
+.titre:hover{
+    color: black;
+    text-decoration: underline red;
+}
+
+.organisme{
+    color: deeppink;
+}
+
+.projets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.projets .projet{
+    background-color: pink;
+    border: 3px solid red ;
+    height: 250px;
+    width: 150px;
+    border-radius: 15px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.projets .projet h3{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    margin: 26px 0px 0px 0px;
+}
+
+.projets .projet .un{
+    width: 90%;
+    height: auto;
+    background-color: red;
+    display: flex;
+    padding: 30px 2px 46px 13px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.projets .projet .deux{
+    width: 70%;
+    height: auto;
+    background-color: red;
+    display: flex;
+    padding: 56px 35px 66px 11px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.projets .projet .trois{
+    width: 90%;
+    height: auto;
+    background-color: red;
+    display: flex;
+    padding: 0px 9px 7px 7px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.projets .projet .quatre{
+    width: 80%;
+    height: auto;
+    background-color: red;
+    display: flex;
+    padding: 0px 16px 7px 14px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.projets .projet .cinq{
+    width: 90%;
+    height: auto;
+}
+
+.projets .projet .six{
+    width: 90%;
+    height: auto;
+    background-color: red;
+    display: flex;
+    padding: 2px 2px 12px 14px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+footer{
+    background-color: red;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+footer .contact{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: space-around;
+    transition: 0.5s;
+    margin-right: 5px;
+}
+
+footer .contact:hover{
+    background-color: white;
+    color: black;
+}
