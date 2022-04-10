@@ -6,5 +6,4 @@
 
 
 
-
 - Gérer Git hub des prochains projets et rajouter liens sur HTML

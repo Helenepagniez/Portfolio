@@ -193,7 +193,7 @@ header h3{
     height: auto;
     background-color: red;
     display: flex;
-    padding: 56px 23px 69px 23px;
+    padding: 63px 23px 60px 23px;
     border-radius: 6px 6px 0px 0px;
 }
 
@@ -202,7 +202,7 @@ header h3{
     height: auto;
     background-color: red;
     display: flex;
-    padding: 12px 16px 14px 15px;
+    padding: 10px 16px 11px 15px;
     border-radius: 6px 6px 0px 0px;
 }
 
@@ -211,7 +211,7 @@ header h3{
     height: auto;
     background-color: red;
     display: flex;
-    padding: 16px 25px 16px 28px;
+    padding: 12px 25px 15px 28px;
     border-radius: 6px 6px 0px 0px;
 }
 
@@ -220,7 +220,7 @@ header h3{
     height: auto;
     background-color: red;
     display: flex;
-    padding: 24px 51px 24px 48px;
+    padding: 18px 51px 18px 48px;
     border-radius: 6px 6px 0px 0px;
 }
 
@@ -229,7 +229,7 @@ header h3{
     height: auto;
     background-color: red;
     display: flex;
-    padding: 58px 9px 58px 7px;
+    padding: 56px 9px 56px 7px;
     border-radius: 6px 6px 0px 0px;
 }
 
