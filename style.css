@@ -225,8 +225,12 @@ header h3{
 }
 
 .projets .projet .cinq{
-    width: 90%;
+    width: 50%;
     height: auto;
+    background-color: red;
+    display: flex;
+    padding: 0px 36px 7px 39px;
+    border-radius: 6px 6px 0px 0px;
 }
 
 .projets .projet .six{
