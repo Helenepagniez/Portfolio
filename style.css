@@ -89,7 +89,8 @@ header .header .wrapper .dynamic-txts li
 
 @keyframes slide 
 {
-    100%{
+    100%
+    {
       top: -360px;
     }
 }
@@ -192,7 +193,8 @@ header .header:hover .wrapper .dynamic-txts li span::after
     border-left: 2px solid black;
 }
 
-header .header .reseaux .social i:hover{
+header .header .reseaux .social i:hover
+{
     box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
                 inset -4px -4px 6px -1px rgba(255,255,255,0.7),
                     -0.5px -0.5px 0px rgba(255,255,255,1),
@@ -387,12 +389,12 @@ footer .contact:hover a
 {
     header .header .wrapper .static-txt
     {
-    font-size: 20px;
+        font-size: 20px;
     }
 
     header .header .wrapper .dynamic-txts li
     {
-    font-size: 20px;
+        font-size: 20px;
     }
 }
 
