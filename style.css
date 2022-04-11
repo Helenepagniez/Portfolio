@@ -183,13 +183,20 @@ header .header:hover .wrapper .dynamic-txts li span::after
 .projets .projet
 {
     background-color: pink;
-    border: 3px solid red ;
+    border: 3px solid black ;
     height: 250px;
     width: 150px;
     border-radius: 15px;
     text-decoration: none;
     margin: 10px;
     box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    transition: 0.5s;
+}
+
+.projets .projet:hover
+{
+    box-shadow: 3px 3px 5px deeppink, 5px 5px 0.5px red;
+    transform : scale(1.1);
 }
 
 .projets .projet .un
@@ -199,7 +206,7 @@ header .header:hover .wrapper .dynamic-txts li span::after
     background-color: red;
     display: flex;
     padding: 36px 29px 42px 31px;
-    border-radius: 6px 6px 0px 0px;
+    border-radius: 11px 11px 0px 0px;
 }
 
 .projets .projet .deux
@@ -209,7 +216,7 @@ header .header:hover .wrapper .dynamic-txts li span::after
     background-color: red;
     display: flex;
     padding: 63px 23px 60px 23px;
-    border-radius: 6px 6px 0px 0px;
+    border-radius: 11px 11px 0px 0px;
 }
 
 .projets .projet .trois
@@ -219,7 +226,7 @@ header .header:hover .wrapper .dynamic-txts li span::after
     background-color: red;
     display: flex;
     padding: 10px 16px 11px 15px;
-    border-radius: 6px 6px 0px 0px;
+    border-radius: 11px 11px 0px 0px;
 }
 
 .projets .projet .quatre
@@ -229,7 +236,7 @@ header .header:hover .wrapper .dynamic-txts li span::after
     background-color: red;
     display: flex;
     padding: 12px 25px 15px 28px;
-    border-radius: 6px 6px 0px 0px;
+    border-radius: 11px 11px 0px 0px;
 }
 
 .projets .projet .cinq
@@ -239,7 +246,7 @@ header .header:hover .wrapper .dynamic-txts li span::after
     background-color: red;
     display: flex;
     padding: 18px 51px 18px 48px;
-    border-radius: 6px 6px 0px 0px;
+    border-radius: 11px 11px 0px 0px;
 }
 
 .projets .projet .six
@@ -249,7 +256,7 @@ header .header:hover .wrapper .dynamic-txts li span::after
     background-color: red;
     display: flex;
     padding: 56px 9px 56px 7px;
-    border-radius: 6px 6px 0px 0px;
+    border-radius: 11px 11px 0px 0px;
 }
 
 .projets .projet h3

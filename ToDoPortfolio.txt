@@ -1,5 +1,4 @@
 - Rendre responsive (Header)
-- Animation cartes hover ( rainbow)
 - Animations logos réseaux sociaux et git
 
 - Créer page GitHub Kanap et ajouter au HTML
