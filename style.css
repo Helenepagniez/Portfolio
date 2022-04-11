@@ -15,7 +15,7 @@ header
     background-color: red;
     color: white;
     padding: 25px;
-    justify-content: space-between;
+    justify-content: center;
     padding-left: 40px;
     border-radius: 10px 10px 0px 0px;
     transition: 0.5s;
@@ -24,6 +24,8 @@ header
 header img
 {
     border-radius: 30% ;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 header h3
@@ -125,6 +127,44 @@ header .header .wrapper .dynamic-txts li span::after
     }
 }
 
+header .header .reseaux
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: -193px 20px 0px 0px;
+}
+
+header .header .reseaux .social
+{
+    font-size: 40px;
+    margin: 22px;
+}
+
+header .header .reseaux .social i
+{
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0,0,0,0 );
+    transition: transform 0.5s ;
+}
+
+header .header .reseaux .social .bxl-linkedin-square
+{
+    color: blue;
+}
+
+header .header .reseaux .social .bxl-github
+{
+    color: white;
+}
+
+header .header .reseaux .social .bxs-report
+{
+    color: red;
+}
+
 header .header:hover
 {
     background-color: white;
@@ -150,6 +190,16 @@ header .header:hover .wrapper .dynamic-txts li span::after
 {
     background-color: white;
     border-left: 2px solid black;
+}
+
+header .header .reseaux .social i:hover{
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                    -0.5px -0.5px 0px rgba(255,255,255,1),
+                    0.5px 0.5px 0px rgba(0,0,0,0.15),
+                    0px 12px 10px -10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.01);
+    transform: translateY(5px);
 }
 
 .titre
@@ -276,25 +326,39 @@ header .header:hover .wrapper .dynamic-txts li span::after
 footer
 {
     background-color: red;
-    padding: 10px;
     border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer .contact
 {
+    text-align: center;
     background-color: black;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     color: white;
-    justify-content: space-around;
+    margin: 10px;
+    width: 100%;
     transition: 0.5s;
 }
 
-footer .contact div
+footer .contact h3
+{
+    padding-top: 5px;
+}
+
+footer .contact .conteneur 
 {   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
     color: white;
-    margin-top: 15px;
+}
+
+footer .contact .conteneur .contenu
+{   
+    margin: 10px;
 }
 
 footer .contact a
@@ -317,4 +381,27 @@ footer .contact:hover div
 footer .contact:hover a
 {
     color: black;
+}
+
+@media screen and (max-width: 700px)
+{
+    header .header .wrapper .static-txt
+    {
+    font-size: 20px;
+    }
+
+    header .header .wrapper .dynamic-txts li
+    {
+    font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 940px)
+{
+    header .header .reseaux
+    {
+        flex-direction: row;
+        margin: 0;
+        justify-content: center;
+    }
 }

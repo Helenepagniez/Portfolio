@@ -1,5 +1,5 @@
-- Rendre responsive (Header)
-- Animations logos réseaux sociaux et git
-
+- Modif CV parfait
+- Ajouter format cv en pdf pour télécharger
+- Enregistrer nouveau cv pdf dans images
 - Créer page GitHub Kanap et ajouter au HTML
 - Gérer Git hub des prochains projets et rajouter liens sur HTML
