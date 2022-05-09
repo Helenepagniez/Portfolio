@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Portfolio d'Hélène Pagniez</title>
+    <style>
+        hr
+        {
+            height: 3px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background: linear-gradient(to left, deeppink, pink);
+        }
+    </style>
 </head>
 <body>
     <header>
         <img src="images/maphoto.jpg" width="150" alt="ma photo">
-        <div class="header">
+        <div class="header" id="header">
             <h1>Hélène Pagniez</h1>
             <div class="wrapper">
                 <div class="static-txt">Je suis</div>
@@ -36,46 +49,164 @@
                 </a>
             </div>
         </div>
-        
-    </header>
+    </header>  
 
     <main>
-        <h1 class="titre">Mon portfolio</h1>
+        <h1 class="titre">Ma Présentation</h1>
+        <div class="presentation">
+            <div class="imagepresentation">
+                <img src="images/présentation.png" alt="images de présentation">
+            </div>
+            <div class="description">
+                <h2>Qui suis-je ?</h2>
+                <h3>Jeune femmme en recherche de son premier emploi de Développeuse Web 
+                    <i class="fas fa-id-card-alt"></i>
+                </h3>
+                <p>J'aurai 22 ans fin juillet. 
+                    <i class="fas fa-birthday-cake"></i>
+                    <br>
+                    <br>
+                    Je suis en reconversion professionnelle dans le développement web <i class="fas fa-laptop-code"></i> après plusieurs années dans le domaine administratif.
+                    <br>
+                    <br>
+                    En effet, je suis actuellement en formation de Développeuse Web <i class="fas fa-user-graduate"></i> chez OpenClassroom et serais disponible dès le mois d'Août <i class="fas fa-calendar-check" style="color: red ;"></i>.
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <hr>
+        <h1 class="titre">Mes Projets</h1>
         <h2 class="organisme">Formation OpenClassroom : </h2>
         <div class="projets">
-                <a class="projet" href="https://helenepagniez.github.io/Booki/" target="_blank">
-                    <img class="un" src="images/Booki.png" alt="logo">
-                    <h3 class="nom">Booki</h3>
-                    <h2 class="description">Transformation d'une maquette en site web</h2>
-                </a>
-                <a class="projet" href="https://helenepagniez.github.io/ohmyfood/" target="_blank">
-                    <img class="deux" src="images/ohmyfood.png" alt="logo">
-                    <h3 class="nom">Ohmyfood</h3>
-                    <h2 class="description">Dynamisation d'une page web avec des animations CSS</h2>
-                </a>
-                <a class="projet" href="https://helenepagniez.github.io/La-Panthere/" target="_blank">
-                    <img class="trois" src="images/lapanthère.png" alt="logo">
-                    <h3 class="nom">La Panthère</h3>
-                    <h2 class="description">Optimisation d'un site web existant</h2>
-                </a>
-                <a class="projet" href="" target="_blank">
-                    <img class="quatre" src="images/kanap.png" alt="logo">
-                    <h3 class="nom">Kanap</h3>
-                    <h2 class="description">Construction d'un site e-commerce en JavaScript</h2>
-                </a>
-                <a class="projet" href="" target="_blank">
-                    <img class="cinq" src="images/piiquante.png" alt="logo">
-                    <h3 class="nom">Piiquante</h3>
-                    <h2 class="description">Construction d'une API sécurisée</h2>
-                </a>
-                <a class="projet" href="" target="_blank">
-                    <img class="six" src="images/icon-left-font-monochrome-black.png" alt="logo">
-                    <h3 class="nom">Groupomania</h3>
-                    <h2 class="description">Création d'un réseau social d'entreprise</h2>
-                </a>
+            <a class="projet" href="booki.html" target="_blank">
+                <img class="un" src="images/Booki.png" alt="logo">
+                <h3 class="nom">Booki</h3>
+                <h2 class="description">Transformation d'une maquette en site web</h2>
+            </a>
+            <a class="projet" href="ohmyfood.html" target="_blank">
+                <img class="deux" src="images/ohmyfood.png" alt="logo">
+                <h3 class="nom">Ohmyfood</h3>
+                <h2 class="description">Dynamisation d'une page web avec des animations CSS</h2>
+            </a>
+            <a class="projet" href="lapanthere.html" target="_blank">
+                <img class="trois" src="images/lapanthère.png" alt="logo">
+                <h3 class="nom">La Panthère</h3>
+                <h2 class="description">Optimisation d'un site web existant</h2>
+            </a>
+            <a class="projet" href="kanap.html" target="_blank">
+                <img class="quatre" src="images/kanap.png" alt="logo">
+                <h3 class="nom">Kanap</h3>
+                <h2 class="description">Construction d'un site e-commerce en JavaScript</h2>
+            </a>
+            <a class="projet" href="piiquante.html" target="_blank">
+                <img class="cinq" src="images/piiquante.png" alt="logo">
+                <h3 class="nom">Piiquante</h3>
+                <h2 class="description">En cours : Construction d'une API sécurisée</h2>
+            </a>
+            <a class="projet" href="groupomania.html" target="_blank">
+                <img class="six" src="images/groupomania.png" alt="logo">
+                <h3 class="nom">Groupomania</h3>
+                <h2 class="description">En cours : Création d'un réseau social d'entreprise</h2>
+            </a>
         </div>
-    </main>
+        <hr>
+        <h1 class="titre">Mon parcours</h1>
+        <section class="timeline">
+            <ul>
+              <li>
+                <div>
+                  <time>2022</time> Recherche premier emploi de Développeuse web.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2021-2022</time> Diplôme de Développeuse Web ( niveau 5 (bac +2)) <br> OpenClassroom <br> Paris puis Rennes .
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2019-2021</time> Titre Certifié d'Attachée de Direction ( Bac +2 )<br> Alternance de 2 années <br> Montereau-Fault-Yonne.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2018-2019</time> Polyvalente de l'Hôtel/ Restaurants/ Boutique de ventes des Vieux Remparts <br> Provins.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2018</time> Baccalauréat Sciences et Technologies du Sanitaires et du Social <br> Provins.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2015</time> Brevet des Collèges <br> Provins.
+                </div>
+              </li>
+            </ul>
+        </section>
 
+        <hr>
+
+        <h1 class="titre">Mes Hobbies</h1>
+        <div class="hobbies">
+            <div class="precision">
+                <img src="images/puzzle.jpg" alt="image de puzzle" class="puzzle"><br>
+                <p class="nom">Les Puzzles</p>
+            </div>
+            <div class="precision">
+                <img src="images/voyage.jpg" alt="image de voyage" class="voyage"><br>
+                <p class="nom">Les voyages</p>
+            </div>
+            <div class="precision">
+                <img src="images/ecriture.jpg" alt="image d'écriture" class="ecriture"><br>
+                <p class="nom">L'écriture</p>
+            </div>
+            <div class="precision">
+                <img src="images/patisserie.png" alt="image de patisserie" class="patisserie"><br>
+               <p class="nom">La patisserie</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h1 class="titre">Me Contacter</h1>
+        <div class="formulaire-contact">
+            <form>
+                <div class="categorie">
+                    <label class="form-label" for="textarea">
+                        Nom
+                    </label>
+                    <input id="name" class="form-control" required placeholder="Pagniez"/>
+                </div>
+                <div class="categorie">
+                    <label class="form-label" for="textarea">
+                        Prénom
+                    </label>
+                    <input id="prenom" class="form-control" required placeholder="Hélène"/>
+                </div>
+                <div class="categorie">
+                    <label>
+                        Adresse email
+                    </label>
+                    <input id="email" class="form-control" type="email" required placeholder="helenepagniez51@gmail.com"/>
+                </div>
+                <div class="categorie">
+                    <label>
+                        Votre message <br>
+                    </label><textarea id="message" class="form-control" required placeholder="Que souhaitez-vous me dire ?"></textarea>
+                </div> 
+                <button onclick="sendMail()" class="btn" type="submit">
+                    Envoyer
+                </button>
+            </form>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    </main>
+    <div class="scroll-conteneur">
+        <a  class="scroll" href="#header"><i class="fas fa-chevron-circle-up"></i></a>
+    </div>
     <footer>
         <div class="contact">
             <h3>Contact</h3>
@@ -97,6 +228,16 @@
             </div>
         </div>
     </footer>
-
+    <script src="index.js"></script>
+    <script
+     type="text/javascript"
+     src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+        (function()
+        {
+            emailjs.init("IXusPiFsR93OEVb-4");
+        })();
+    </script>
 </body>
 </html>

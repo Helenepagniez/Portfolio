@@ -1,0 +1,189 @@
+body
+{
+    font-family: cascadia code;
+}
+
+body h3
+{
+    color: deeppink;
+}
+
+/* BARRE DE SCROLL-------------------------- */
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: white; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: deeppink;
+        border-radius: 20px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: black; 
+    }
+/* FIN: BARRE DE SCROLL-------------------------- */
+
+/* HEADER-------------------------- */
+
+header
+{
+    display: flex;
+    background-color: pink;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header .logo
+{
+    max-width: 150px;
+    margin-left: 0;
+    margin: auto;
+}
+
+header .explication
+{
+    width: 1200px;
+}
+
+header .explication h1
+{
+    color: deeppink;
+    text-align: center;
+}
+
+header .explication h2
+{
+    color: #551a8b;
+    text-align: center;
+}
+
+/* HEADER-------------------------- */
+
+.titre
+{
+    display: flex;
+    color: red;
+    justify-content: center;
+    text-decoration: underline black;
+    transition: 0.5s;
+}
+
+.titre:hover
+{
+    color: black;
+    text-decoration: underline red;
+}
+
+.contexte,
+.soutenance,
+.site,
+p
+{
+    font-size: medium;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/* SITE WEB-------------------------- */
+    
+
+    .site a
+    {
+        text-decoration: none;
+    }
+
+    .site .btn
+    {
+        width: 150px;
+        padding: 3px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+    }
+
+    .site .btn:hover
+    {
+        background-color: white;
+        transition: 0.5s;
+        color: black;
+        cursor: pointer;
+    }
+/* FIN: SITE WEB-------------------------- */
+
+/* FOOTER–––––––––––––––––––––––––––––––––––––––––––––––––– */
+    footer
+    {
+        background-color: red;
+        border-radius: 0px 0px 10px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .contact
+    {
+        text-align: center;
+        background-color: black;
+        color: white;
+        margin: 10px;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    footer .contact h3
+    {
+        padding-top: 5px;
+    }
+
+    footer .contact .conteneur 
+    {   
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        color: white;
+    }
+
+    footer .contact .conteneur .contenu
+    {   
+        margin: 10px;
+    }
+
+    footer .contact a
+    {
+        text-decoration: none;
+        color: white;
+    }
+
+    footer .contact:hover
+    {
+        background-color: white;
+        color: black;
+    }
+
+    footer .contact:hover div
+    {
+        color: black;
+    }
+
+    footer .contact:hover a
+    {
+        color: black;
+    }
+
+/* FIN: FOOTER–––––––––––––––––––––––––––––––––––––––––––––––––– */
