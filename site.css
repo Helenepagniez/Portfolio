@@ -1,3 +1,13 @@
+:root{
+    --principal: #178CA4;
+    --secondaire : #18B7BE;
+    --tertiaire: #072A40;
+    --complementaire: #F9F7F0;
+    --background_hover: white;
+    --text_hover: white;
+    --texte: black;
+}
+
 body
 {
     font-family: cascadia code;
@@ -5,7 +15,7 @@ body
 
 body h3
 {
-    color: deeppink;
+    color: var(--tertiaire);
 }
 
 /* BARRE DE SCROLL-------------------------- */
@@ -16,18 +26,18 @@ body h3
     
     /* Track */
     ::-webkit-scrollbar-track {
-        background: white; 
+        background: var(--background_hover); 
     }
     
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: deeppink;
+        background: var(--tertiaire);
         border-radius: 20px;
     }
     
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        background: black; 
+        background: var(--secondaire); 
     }
 /* FIN: BARRE DE SCROLL-------------------------- */
 
@@ -36,9 +46,10 @@ body h3
 header
 {
     display: flex;
-    background-color: pink;
+    background-color: var(--secondaire);
     flex-wrap: wrap;
     justify-content: center;
+    border-radius: 20px 20px 0 0;
 }
 
 header .logo
@@ -55,13 +66,13 @@ header .explication
 
 header .explication h1
 {
-    color: deeppink;
+    color: var(--tertiaire);
     text-align: center;
 }
 
 header .explication h2
 {
-    color: #551a8b;
+    color: var(--text_hover);
     text-align: center;
 }
 
@@ -70,16 +81,16 @@ header .explication h2
 .titre
 {
     display: flex;
-    color: red;
+    color: var(--principal);
     justify-content: center;
-    text-decoration: underline black;
+    text-decoration: underline var(--texte);
     transition: 0.5s;
 }
 
 .titre:hover
 {
-    color: black;
-    text-decoration: underline red;
+    color: var(--texte);
+    text-decoration: underline var(--principal);
 }
 
 .contexte,
@@ -112,23 +123,24 @@ p
         margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 10px;
-        background-color: black;
-        color: white;
+        background-color: var(--principal);
+        color: var(--text_hover);
     }
 
     .site .btn:hover
     {
-        background-color: white;
+        background-color: var(--background_hover);
         transition: 0.5s;
-        color: black;
+        color: var(--tertiaire);
         cursor: pointer;
+        border: 5px solid var(--secondaire);
     }
 /* FIN: SITE WEB-------------------------- */
 
 /* FOOTER–––––––––––––––––––––––––––––––––––––––––––––––––– */
     footer
     {
-        background-color: red;
+        background-color: var(--secondaire);
         border-radius: 0px 0px 10px 10px;
         display: flex;
         justify-content: center;
@@ -138,8 +150,8 @@ p
     footer .contact
     {
         text-align: center;
-        background-color: black;
-        color: white;
+        background-color: var(--secondaire);
+        color: var(--text_hover);
         margin: 10px;
         width: 100%;
         transition: 0.5s;
@@ -156,7 +168,7 @@ p
         justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
-        color: white;
+        color: var(--text_hover);
     }
 
     footer .contact .conteneur .contenu
@@ -167,23 +179,23 @@ p
     footer .contact a
     {
         text-decoration: none;
-        color: white;
+        color: var(--text_hover);
     }
 
     footer .contact:hover
     {
-        background-color: white;
-        color: black;
+        background-color: var(--background_hover);
+        color: var(--texte);
     }
 
     footer .contact:hover div
     {
-        color: black;
+        color: var(--texte);
     }
 
     footer .contact:hover a
     {
-        color: black;
+        color: var(--texte);
     }
 
 /* FIN: FOOTER–––––––––––––––––––––––––––––––––––––––––––––––––– */

@@ -1,3 +1,13 @@
+:root{
+    --principal: #178CA4;
+    --secondaire : #18B7BE;
+    --tertiaire: #072A40;
+    --complementaire: #F9F7F0;
+    --background_hover: white;
+    --text_hover: white;
+    --texte: black;
+}
+
 body
 {
     font-family: cascadia code;
@@ -5,7 +15,7 @@ body
 
 body h3
 {
-    color: deeppink;
+    color: var(--tertiaire);
 }
 
 /* width */
@@ -15,18 +25,18 @@ body h3
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: white; 
+    background: var(--background_hover); 
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: deeppink;
+    background: var(--tertiaire);
     border-radius: 20px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: black; 
+    background: var(--secondaire); 
   }
   
 /* HEADER–––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -34,8 +44,8 @@ body h3
     {
         display: flex;
         flex-wrap: wrap;
-        background-color: red;
-        color: white;
+        background-color: var(--principal);
+        color: var(--text_hover);
         padding: 25px;
         justify-content: center;
         padding-left: 40px;
@@ -52,19 +62,19 @@ body h3
 
     header h3
     {
-        color: deeppink;
+        color: var(--secondaire);
     }
 
     header:hover
     {
-        color: black;
+        color: var(--texte);
     }
 
     header .header
     {
         text-align: center;
-        background-color: black;
-        color: white;
+        background-color: var(--tertiaire);
+        color: var(--text_hover);
         width: 85%;
         border-radius: 70px 0px 0px 70px;
         transition: 0.5s;
@@ -75,7 +85,7 @@ body h3
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        background-color: black;
+        background-color: var(--tertiaire);
         height: 60px;
         transition: 0.5s;
     }
@@ -99,7 +109,7 @@ body h3
     header .header .wrapper .dynamic-txts li
     {
         list-style: none;
-        color: white;
+        color: var(--text_hover);
         font-size: 40px;
         font-weight: 500;
         position: relative;
@@ -131,8 +141,8 @@ body h3
         left: 0;
         height: 100%;
         width: 100%;
-        background: black;
-        border-left: 2px solid white;
+        background: var(--tertiaire);
+        border-left: 2px solid var(--text_hover);
         animation: typing 3s steps(10) infinite;
         transition: 0.5s;
     }
@@ -166,9 +176,8 @@ body h3
 
     header .header .reseaux .social i
     {
-        background-color: black;
+        background-color: var(--complementaire);
         border-radius: 8px;
-        box-shadow: 6px 6px 10px -1px rgba(0,0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
         border: 1px solid rgba(0,0,0,0 );
         transition: transform 0.5s ;
     }
@@ -180,51 +189,57 @@ body h3
 
     header .header .reseaux .social .bxl-github
     {
-        color: white;
+        color: var(--texte);
     }
 
     header .header .reseaux .social .bxs-report
     {
-        color: red;
+        color: var(--principal);
     }
 
     header .header:hover
     {
-        background-color: white;
-        color: black;
+        background-color: var(--background_hover);
+        color: var(--texte);
     }
 
     header .header:hover .wrapper
     {
-        background-color: white;
+        background-color: var(--background_hover);
     }
 
     header .header:hover .wrapper .static-txt
     {
-        color: black;
+        color: var(--texte);
     }
 
     header .header:hover .wrapper .dynamic-txts li
     {
-        color: black;
+        color: var(--texte);
     }
 
     header .header:hover .wrapper .dynamic-txts li span::after
     {
-        background-color: white;
-        border-left: 2px solid black;
+        background-color: var(--background_hover);
+        border-left: 2px solid var(--complementaire);
     }
 
     header .header .reseaux .social i:hover
     {
         box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
-                    inset -4px -4px 6px -1px rgba(255,255,255,0.7),
-                        -0.5px -0.5px 0px rgba(255,255,255,1),
+                    inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                    4px 4px 6px -1px rgba(0,0,0,0.2),
                         0.5px 0.5px 0px rgba(0,0,0,0.15),
                         0px 12px 10px -10px rgba(0,0,0,0.05);
         border: 1px solid rgba(0,0,0,0.01);
         transform: translateY(5px);
     }
+
+    header .header:hover .reseaux .social i
+    {
+        border: 5px solid var(--tertiaire);
+    }
+
 /* FIN: HEADER–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* MA PRESENTATION–––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -264,7 +279,7 @@ body h3
 
     .presentation .description p i
     {
-        color: red;
+        color: var(--principal);
     }
     
 /* FIN: MA PRESENTATION–––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -274,21 +289,21 @@ body h3
     .titre
     {
         display: flex;
-        color: red;
+        color: var(--principal);
         justify-content: center;
-        text-decoration: underline black;
+        text-decoration: underline var(--texte);
         transition: 0.5s;
     }
 
     .titre:hover
     {
-        color: black;
-        text-decoration: underline red;
+        color: var(--texte);
+        text-decoration: underline var(--principal);
     }
 
     .organisme
     {
-        color: deeppink;
+        color: var(--tertiaire);
     }
     
 /* MES PROJETS–––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -302,8 +317,8 @@ body h3
 
     .projets .projet
     {
-        background-color: pink;
-        border: 3px solid black ;
+        background-color: var(--principal);
+        border: 3px solid var(--complementaire);
         height: 250px;
         width: 150px;
         border-radius: 15px;
@@ -315,7 +330,7 @@ body h3
 
     .projets .projet:hover
     {
-        box-shadow: 3px 3px 5px deeppink, 5px 5px 0.5px red;
+        box-shadow: 3px 3px 5px var(--tertiaire), 5px 5px 0.5px var(--principal);
         transform : scale(1.1);
     }
 
@@ -323,7 +338,7 @@ body h3
     {
         width: 60%;
         height: auto;
-        background-color: red;
+        background-color: var(--secondaire);
         display: flex;
         padding: 36px 29px 42px 31px;
         border-radius: 11px 11px 0px 0px;
@@ -333,7 +348,7 @@ body h3
     {
         width: 70%;
         height: auto;
-        background-color: red;
+        background-color: var(--secondaire);
         display: flex;
         padding: 63px 23px 60px 23px;
         border-radius: 11px 11px 0px 0px;
@@ -343,7 +358,7 @@ body h3
     {
         width: 80%;
         height: auto;
-        background-color: red;
+        background-color: var(--secondaire);
         display: flex;
         padding: 10px 16px 11px 15px;
         border-radius: 11px 11px 0px 0px;
@@ -353,7 +368,7 @@ body h3
     {
         width: 65%;
         height: auto;
-        background-color: red;
+        background-color: var(--secondaire);
         display: flex;
         padding: 12px 25px 15px 28px;
         border-radius: 11px 11px 0px 0px;
@@ -363,7 +378,7 @@ body h3
     {
         width: 35%;
         height: auto;
-        background-color: red;
+        background-color: var(--secondaire);
         display: flex;
         padding: 18px 51px 18px 48px;
         border-radius: 11px 11px 0px 0px;
@@ -373,7 +388,7 @@ body h3
     {
         width: 90%;
         height: auto;
-        background-color: red;
+        background-color: var(--secondaire);
         display: flex;
         padding: 56px 9px 56px 7px;
         border-radius: 11px 11px 0px 0px;
@@ -391,7 +406,7 @@ body h3
     {
         font-size: small;
         margin: -23px 6px 0px 14px;
-        color: darkmagenta;
+        color: var(--complementaire);
     }
 /* FIN: MES PROJETS–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -402,7 +417,7 @@ body h3
 
     .timeline ul 
     {
-        background: pink;
+        background: var(--secondaire);
         padding: 50px 0;
     }
     
@@ -413,7 +428,7 @@ body h3
         width: 6px;
         margin: 0 auto;
         padding-top: 50px;
-        background: black;
+        background: var(--complementaire);
     }
     
     .timeline ul li::after 
@@ -436,7 +451,7 @@ body h3
         bottom: 0;
         width: 400px;
         padding: 15px;
-        background: white;
+        background: var(--background_hover);
     }
     
     .timeline ul li div::before {
@@ -457,7 +472,7 @@ body h3
     {
         left: -15px;
         border-width: 8px 16px 8px 0;
-        border-color: transparent #f45b69 transparent transparent;
+        border-color: transparent var(--tertiaire) transparent transparent;
     }
     
     .timeline ul li:nth-child(even) div 
@@ -469,7 +484,7 @@ body h3
     {
         right: -15px;
         border-width: 8px 0 8px 16px;
-        border-color: transparent transparent transparent #f45b69;
+        border-color: transparent transparent transparent var(--tertiaire);
     }
     
     time 
@@ -478,7 +493,7 @@ body h3
         font-size: 1.2rem;
         font-weight: bold;
         margin-bottom: 8px;
-        color: deeppink;
+        color: var(--tertiaire);
     }
     
     
@@ -490,7 +505,7 @@ body h3
   }
   
   .timeline ul li.in-view::after {
-    background: deeppink;
+    background: var(--tertiaire);
   }
   
   .timeline ul li div {
@@ -635,7 +650,7 @@ body h3
     .hobbies .precision .nom 
     {
         margin: 10px;
-        color: deeppink;
+        color: var(--tertiaire);
     }
 
     .hobbies .precision .puzzle
@@ -689,8 +704,8 @@ body h3
 
     .formulaire-contact .categorie .form-control
     {
-        border: 2px solid black;
-        background-color:blanchedalmond;
+        border: 2px solid var(--tertiaire);
+        background-color:rgb(163, 210, 212);
         height: 30px;
         border-radius: 5px;
         padding-left: 5px;
@@ -698,11 +713,15 @@ body h3
 
     .formulaire-contact .categorie .form-control:focus
     {
-        box-shadow: 2px 2px 2px deeppink;
-        background-color: blanchedalmond;
+        box-shadow: 2px 2px 2px var(--tertiaire);
+        background-color: rgb(163, 210, 212);
         border-radius: 10px;
-        
     }
+
+    .formulaire-contact .categorie .form-control::placeholder { 
+        color: var(--texte);
+        opacity: 1;
+      }
 
     .formulaire-contact .btn
     {
@@ -714,16 +733,17 @@ body h3
         margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 10px;
-        background-color: black;
-        color: white;
+        background-color: var(--principal);
+        color: var(--text_hover);
     }
 
     .formulaire-contact .btn:hover
     {
-        background-color: white;
+        background-color: var(--background_hover);
         transition: 0.5s;
-        color: black;
+        color: var(--tertiaire);
         cursor: pointer;
+        border: 5px solid var(--secondaire);
     }
 
 /* FIN :FORMULAIRE DE CONTACT–––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -744,13 +764,13 @@ body h3
     bottom: 40px;
     font-size: 40px;
     text-decoration: none;
-    color: deeppink;
+    color: var(--tertiaire);
 }
 
 /* FOOTER–––––––––––––––––––––––––––––––––––––––––––––––––– */
     footer
     {
-        background-color: red;
+        background-color: var(--principal);
         border-radius: 0px 0px 10px 10px;
         display: flex;
         justify-content: center;
@@ -760,8 +780,8 @@ body h3
     footer .contact
     {
         text-align: center;
-        background-color: black;
-        color: white;
+        background-color: var(--principal);
+        color: var(--text_hover);
         margin: 10px;
         width: 100%;
         transition: 0.5s;
@@ -778,7 +798,7 @@ body h3
         justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
-        color: white;
+        color: var(--text_hover);
     }
 
     footer .contact .conteneur .contenu
@@ -789,23 +809,23 @@ body h3
     footer .contact a
     {
         text-decoration: none;
-        color: white;
+        color: var(--text_hover);
     }
 
     footer .contact:hover
     {
-        background-color: white;
-        color: black;
+        background-color: var(--background_hover);
+        color: var(--texte);
     }
 
     footer .contact:hover div
     {
-        color: black;
+        color: var(--texte);
     }
 
     footer .contact:hover a
     {
-        color: black;
+        color: var(--texte);
     }
 
 /* FIN: FOOTER–––––––––––––––––––––––––––––––––––––––––––––––––– */
