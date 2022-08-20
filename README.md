@@ -1,5 +1,5 @@
 # Portfolio d'Hélène PAGNIEZ
-<img src="../portfolio/images/readMe.png">
+![Portfolio](/images/readMe.png)
 
 ## Table des matières
 1. [Description](#description)
