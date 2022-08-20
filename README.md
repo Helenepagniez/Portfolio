@@ -1,5 +1,5 @@
 # Portfolio d'Hélène PAGNIEZ
-![image](https://user-images.githubusercontent.com/99498715/183410959-715fe8df-4437-4bf1-838d-97605f2a8edd.png)
+<img src="../portfolio/images/readMe.png">
 
 ## Table des matières
 1. [Description](#description)
