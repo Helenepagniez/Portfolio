@@ -37,23 +37,6 @@
   window.addEventListener("scroll", callbackFunc);
 })();
 
-//envoi mail
-function sendMail(params)
-{
-  var tempParams = 
-  {
-    name: document.getElementById("name").value,
-    prenom: document.getElementById("prenom").value,
-    message: document.getElementById("message").value,
-    email: document.getElementById("email").value,
-  };
-
-  emailjs.send('gmail','template_ze5a3hk',tempParams)
-    .then(function(res){
-      console.log("success", res.status);
-    })
-} 
-
 // ===== Scroll ====
 const scroll = document.querySelector(".scroll");
 // Lorsque la page est chargée, masquez le bouton de défilement vers le haut

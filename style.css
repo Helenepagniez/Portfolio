@@ -621,6 +621,15 @@ body h3
   
 /* fIN : MON PARCOURS–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.certifications{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.certifications iframe{
+    margin: 20px;
+}
+
 /* MES HOBBIES–––––––––––––––––––––––––––––––––––––––––––––––––– */
     .hobbies
     {
@@ -683,32 +692,34 @@ body h3
     .formulaire-contact .categorie
     {
         padding-top: 15px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 80%;
-        height: 100%;
-        justify-content: center;
-        margin: auto;
-    }
-
-    .formulaire-contact .categorie .form-label
-    {
         padding-bottom: 7px;
-    }
-
-    .formulaire-contact .categorie label
-    {
-        padding-bottom: 7px;
+        align-content: center;
+        align-items: center;
     }
 
     .formulaire-contact .categorie .form-control
     {
         border: 2px solid var(--tertiaire);
         background-color:rgb(163, 210, 212);
-        height: 30px;
         border-radius: 5px;
-        padding-left: 5px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 70%;
+        height: 100%;
+        justify-content: center;
+        margin: 15px auto;
+    }
+    
+    .formulaire-contact .categorie input{
+        height: auto;
+        min-height: 35px;
+    }
+
+    .formulaire-contact .categorie textarea{
+        height: auto;
+        min-height: 35px;
+        padding-top: 15px;
     }
 
     .formulaire-contact .categorie .form-control:focus
