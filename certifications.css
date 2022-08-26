@@ -83,7 +83,7 @@ header .explication h2
     margin-bottom: 15px;
 }
 
-.certifications iframe{
+.certifications img{
     padding: 15px;
     flex-wrap: wrap;
     width: 270px;
