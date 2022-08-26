@@ -619,8 +619,18 @@ body h3
 /* fIN : MON PARCOURS–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .certifications{
-    text-align: center;
     margin-bottom: 20px;
+}
+
+.certifications .projets {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.certifications .projets a {
+    text-align: center;
 }
 
 .certifications iframe{
