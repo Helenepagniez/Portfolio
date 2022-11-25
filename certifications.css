@@ -88,6 +88,25 @@ header .explication h2
     flex-wrap: wrap;
     width: 270px;
     height: 192px;
+    background-color: #178CA4;
+}
+
+.diplomes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.diplomes img{
+    padding: 15px;
+    width: 270px;
+    height: 200px;
+    background-color: #178CA4;
 }
 
 /* FOOTER–––––––––––––––––––––––––––––––––––––––––––––––––– */
