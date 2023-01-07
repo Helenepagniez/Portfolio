@@ -1,0 +1,220 @@
+/* ------------- FONTS ------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ------------- GENERAUX ------------------ */
+a{
+    text-decoration: none;
+}
+
+h1,h2{
+    font-weight: 600;
+}
+
+h3,h4,h5,h6{
+    font-weight: 500;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+ul{
+    list-style: none;
+}
+
+section{
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    min-height: 90vh;
+    border-radius: 30px;
+    backdrop-filter: var(--backdrop-filter-blur);
+}
+
+.main{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container{
+    padding: 0 40px;
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sec-padding{
+    padding: 80px 0;
+}
+
+/* ------------- BOUTONS ------------------ */
+button{
+    font-family: inherit;
+    user-select: none;
+}
+
+.btn{
+    line-height: 1.5;
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    padding: 10px 28px;
+    display: inline-block;
+    border-radius: 30px;
+    color: var(--main-color);
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.btn:hover::before{
+    width: 100%;
+}
+
+.btn:hover{
+    color: var(--white);
+}
+
+/* ------------- SECTION TITLE ------------------ */
+.section-title{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2{
+    font-size: 40px;
+    text-transform: capitalize;
+
+}
+
+/* ------------- SECTION CONTACT ------------------ */
+.contact-form,
+.contact-info{
+    width: 50%;
+    padding: 0 15px;
+}
+
+.contact-form .input-group{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.contact-form .input-control::placeholder{
+    color: var(--blue-dark);
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+.contact-form .input-control{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: var(--white-alpha-25);
+    padding: 0 20px;
+    color: var(--blue-dark);
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form .input-control:focus{
+    border-color: var(--white-alpha-40);
+}
+
+.contact-form  textarea.input-control{
+    height: 120px;
+    resize: none;
+    padding-top: 15px;
+}
+
+.contact-info-item{
+    margin: 0 0 30px;
+    padding: 0 0 0 20px;
+}
+
+.contact-info-item h3{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0 0 5px;
+}
+
+.contact-info-item .social-links a{
+    display: inline-flex;
+    height: 40px;
+    width: 40px;
+    background-color: var(--white-alpha-25);
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    border-radius: 50%;
+    border: 1px solid var(--white-alpha-40);
+    margin: 6px 20px 0 0;
+    transition: all 0.3s ease;
+    font-size: 30px;
+}
+
+.contact-info-item .social-links a:hover{
+    color: var(--white);
+    background-color: var(--main-color);
+}
+
+@media screen and (max-width: 600px){
+    .container {
+        padding: 0;
+    }
+
+    .row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row h2 {
+        font-size: 30px;
+    }
+
+    .contact-form,
+    .contact-info{
+    width: 100%;
+    }
+
+    .contact-info {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .contact-info-item {
+        padding: 0;
+    }
+
+    .contact-info-item .social-links a {
+        margin: 6px 10px;
+    }
+}
