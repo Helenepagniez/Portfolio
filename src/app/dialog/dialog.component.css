@@ -126,9 +126,3 @@
     background-color: var(--main-color);
 }
 
-@media screen and (max-width: 900px) {
-    .portfolio-popup{
-        left: 200px;
-        right: 200px;
-    }
-}
