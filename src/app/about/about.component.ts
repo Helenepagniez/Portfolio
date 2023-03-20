@@ -7,6 +7,7 @@ import { environment } from '../environments/environment';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
+  filePath: string = environment.filePath;
   imagePath: string = environment.imagePath;
   isActivedFormation: boolean = true;
   isActivedExperience: boolean = false;
