@@ -1,0 +1,25 @@
+<div class="main">
+    <section class="projets-section sec-padding">
+        <div class="container">
+            <div class="section-title" *ngIf="!estActifSites && !estActifLivres">
+                <h2>Projets</h2>
+            </div>
+            <div class="projets-container" *ngIf="!estActifSites && !estActifLivres">
+                <div class="projets-item" (click)="activeSites()" title="Sites">
+                    <h2>Sites</h2>
+                </div>
+                <div class="projets-item" (click)="activeLivres()" title="Livres">
+                    <h2>Livres</h2>
+                </div>
+            </div>
+            <div class="retour-container" *ngIf="estActifSites || estActifLivres">
+                <a class="retour" (click)="retour()" title="Retour">
+                    <span>Retour</span>
+                </a>
+            </div>
+            <app-sites *ngIf="estActifSites"></app-sites>
+            <app-livres *ngIf="estActifLivres"></app-livres>
+        </div>
+    </section>
+</div>
+
