@@ -8,21 +8,13 @@ import { environment } from '../environments/environment';
 })
 export class ProjetsComponent {
   imagePath: string = environment.imagePath;
-  estActifLivres: boolean = false;
-  estActifSites: boolean = false;
+  pageActive?: string;
 
-  retour() {
-    this.estActifLivres = false;
-    this.estActifSites = false;
+  retour(): void {
+    this.pageActive = undefined;
   }
 
-  activeLivres() {
-    this.estActifLivres = true;
-    this.estActifSites = false;
-  }
-
-  activeSites() {
-    this.estActifLivres = false;
-    this.estActifSites = true;
+  activePage(pageAActiver: string): void {
+    this.pageActive = pageAActiver;
   }
 }

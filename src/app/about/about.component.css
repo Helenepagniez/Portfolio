@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* ------------- GENERAUX ------------------ */
+:host {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 a{
     text-decoration: none;
 }
@@ -20,21 +27,24 @@ img{
 }
 
 section{
-    background-color: var(--white-alpha-25);
-    border: 1px solid var(--white-alpha-40);
-    min-height: 90vh;
-    border-radius: 30px;
-    backdrop-filter: var(--backdrop-filter-blur);
+    background-color: var(--tertiary-color);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+    border-radius: var(--strong-radius);
+    backdrop-filter: var(--backdrop);
 }
 
 .about-section{
     max-width: 1200px;
-    margin: auto;
+    width: 95%;
+    margin-bottom: 10px;
 }
 
 .container{
-    padding: 0 40px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .row{
@@ -46,7 +56,7 @@ section{
 }
 
 .sec-padding{
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 /* ------------- BOUTONS ------------------ */
@@ -56,43 +66,25 @@ button{
 }
 
 .btn{
-    line-height: 1.5;
-    background-color: var(--white-alpha-25);
-    border: 1px solid var(--white-alpha-40);
+    background-color: var(--secondary-color);
     padding: 10px 28px;
-    display: inline-block;
-    border-radius: 30px;
-    color: var(--main-color);
-    font-weight: 500;
+    border-radius: var(--strong-radius);
+    color: var(--text-primary-color);
+    font-weight: 700;
     text-transform: capitalize;
-    font-family: inherit;
     font-size: 16px;
     cursor: pointer;
-    user-select: none;
-    position: relative;
     overflow: hidden;
-    vertical-align: middle;
-    transition: color 0.3s ease;
-}
-
-.btn::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 0%;
-    background-color: var(--main-color);
-    z-index: -1;
-    transition: width 0.3s ease;
-}
-
-.btn:hover::before{
-    width: 100%;
+    transition: 0.5s ease;
+    border: none;
+    width: 210px;
+    margin: 5px;
+    text-align: center;
 }
 
 .btn:hover{
-    color: var(--white);
+    color: var(--tertiary-color);
+    transform: scale(1.1);
 }
 
 /* ------------- SECTION TITLE ------------------ */
@@ -100,41 +92,36 @@ button{
     padding: 0 15px;
     width: 100%;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .section-title h2{
     font-size: 40px;
     text-transform: capitalize;
-
+    color: var(--secondary-color);
+    font-weight: 600;
 }
 
 /* ------------- SECTION ABOUT ------------------ */
-.about-img{
-    width: 50%;
-    padding: 0 15px;
-    margin-bottom: 25px;
-}
-
 .about-text{
-    width: 70%;
-    padding: 0 15px;
+    width: 90%;
+    max-width: 1100px;
 }
 
 .about-text p {
     text-align: justify;
 }
 
-.about-img .img-box{
-    background-color: var(--white-alpha-25);
+.img-box{
     max-width: 380px;
-    border: 1px solid var(--white-alpha-40);
-    margin: auto;
-    border-radius: 10px;
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 15px;
 }
 
-.about-img .img-box img{
+.img-box img{
     width: 100%;
+    border-radius: var(--strong-radius);
 }
 
 .about-text h3{
@@ -149,12 +136,10 @@ button{
 }
 
 .about-text .skill-item{
-    background-color: var(--white-alpha-25);
-    border: 1px solid var(--white-alpha-40);
+    border: 3px solid var(--secondary-color);
     padding: 5px 15px;
-    text-transform: capitalize;
     margin: 0 10px 10px 0;
-    border-radius: 20px;
+    border-radius: var(--strong-radius);
 }
 
 .about-tabs{
@@ -167,7 +152,7 @@ button{
     border: none;
     text-transform: capitalize;
     display: inline-block;
-    color: var(--blue-dark);
+    color: var(--text-primary-color);
     font-size: 20px;
     cursor: pointer;
     font-weight: 500;
@@ -186,9 +171,9 @@ button{
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 0%;
+    width: 0;
     height: 1px;
-    background-color: var(--blue-dark);
+    background-color: var(--text-primary-color);
     transition: width 0.3s ease;
 }
 
@@ -198,11 +183,11 @@ button{
 
 .about-tabs .tab-item.active::before{
     width: 100%;
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
 }
 
 .about-tabs .tab-item.active{
-    color: var(--main-color);
+    color: var(--secondary-color);
     opacity: 1;
     cursor: auto;
 }
@@ -218,7 +203,7 @@ button{
     width: 1px;
     top: 0;
     left: 5px;
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
 }
 
 .about-text .tab-content{
@@ -241,7 +226,7 @@ button{
     position: absolute;
     height: 11px;
     width: 11px;
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     left: 0;
     top: 16px;
     border-radius: 50%;
@@ -253,7 +238,7 @@ button{
 
 .about-text .timeline-item .date{
     display: block;
-    color: var(--main-color);
+    color: var(--secondary-color);
     font-weight: 400;
     margin: 0 0 10px;
 }
@@ -268,26 +253,10 @@ button{
     font-weight: 400;
 }
 
-.about-text .btn{
-    margin: 0 15px 15px 0;
-}
-
-@media screen and (max-width: 600px){
-    .about-img{
-        width: 65%;
-    }
-}
-
-@media screen and (max-width: 480px){
-    .about-img{
-        width: 80%;
-    }
-    
-    .about-text{
-        width: 100%;
-    }
-
-    .row h2 {
-        font-size: 30px;
-    }
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }

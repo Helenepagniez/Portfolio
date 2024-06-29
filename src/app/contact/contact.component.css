@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* ------------- GENERAUX ------------------ */
+:host {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 a{
     text-decoration: none;
 }
@@ -24,16 +31,16 @@ ul{
 }
 
 section{
-    background-color: var(--white-alpha-25);
-    border: 1px solid var(--white-alpha-40);
-    min-height: 90vh;
-    border-radius: 30px;
-    backdrop-filter: var(--backdrop-filter-blur);
+    background-color: var(--tertiary-color);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+    border-radius: var(--strong-radius);
+    backdrop-filter: var(--backdrop);
 }
 
 .main{
     max-width: 1200px;
-    margin: auto;
+    width: 95%;
+    margin-bottom: 10px;
 }
 
 .container{
@@ -48,7 +55,7 @@ section{
 }
 
 .sec-padding{
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 /* ------------- BOUTONS ------------------ */
@@ -58,43 +65,25 @@ button{
 }
 
 .btn{
-    line-height: 1.5;
-    background-color: var(--white-alpha-25);
-    border: 1px solid var(--white-alpha-40);
+    background-color: var(--secondary-color);
     padding: 10px 28px;
-    display: inline-block;
-    border-radius: 30px;
-    color: var(--main-color);
-    font-weight: 500;
+    border-radius: var(--strong-radius);
+    color: var(--text-primary-color);
+    font-weight: 700;
     text-transform: capitalize;
-    font-family: inherit;
     font-size: 16px;
     cursor: pointer;
-    user-select: none;
-    position: relative;
     overflow: hidden;
-    vertical-align: middle;
-    transition: color 0.3s ease;
-}
-
-.btn::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 0%;
-    background-color: var(--main-color);
-    z-index: -1;
-    transition: width 0.3s ease;
-}
-
-.btn:hover::before{
-    width: 100%;
+    transition: 0.5s ease;
+    border: none;
+    width: 210px;
+    margin: 5px;
+    text-align: center;
 }
 
 .btn:hover{
-    color: var(--white);
+    color: var(--tertiary-color);
+    transform: scale(1.1);
 }
 
 /* ------------- SECTION TITLE ------------------ */
@@ -108,7 +97,8 @@ button{
 .section-title h2{
     font-size: 40px;
     text-transform: capitalize;
-
+    color: var(--secondary-color);
+    font-weight: 600;
 }
 
 /* ------------- SECTION CONTACT ------------------ */
@@ -124,7 +114,7 @@ button{
 }
 
 .contact-form .input-control::placeholder{
-    color: var(--blue-dark);
+    color: var(--text-primary-color);
     opacity: 0.8;
     font-weight: 300;
 }
@@ -133,20 +123,14 @@ button{
     display: block;
     width: 100%;
     height: 50px;
-    border-radius: 25px;
+    border-radius: var(--strong-radius);
     border: none;
     font-family: inherit;
     font-weight: 400;
     font-size: 16px;
-    background-color: var(--white-alpha-25);
     padding: 0 20px;
-    color: var(--blue-dark);
-    border: 1px solid transparent;
-    transition: border-color 0.3s ease;
-}
-
-.contact-form .input-control:focus{
-    border-color: var(--white-alpha-40);
+    color: var(--text-primary-color);
+    border: 3px solid var(--secondary-color);
 }
 
 .contact-form  textarea.input-control{
@@ -168,22 +152,21 @@ button{
 
 .contact-info-item .social-links a{
     display: inline-flex;
-    height: 40px;
-    width: 40px;
-    background-color: var(--white-alpha-25);
     align-items: center;
     justify-content: center;
-    color: var(--main-color);
+    color: var(--secondary-color);
     border-radius: 50%;
-    border: 1px solid var(--white-alpha-40);
     margin: 6px 20px 0 0;
-    transition: all 0.3s ease;
-    font-size: 30px;
+    transition: 0.5s ease;
+    font-size: 50px;
 }
 
 .contact-info-item .social-links a:hover{
-    color: var(--white);
-    background-color: var(--main-color);
+    transform: scale(1.1);
+}
+
+i {
+    color: var(--secondary-color);
 }
 
 @media screen and (max-width: 600px){

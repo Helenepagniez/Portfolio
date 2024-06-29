@@ -8,4 +8,5 @@ import { environment } from '../environments/environment';
 })
 export class HomeComponent {
   imagePath: string = environment.imagePath;
+  filePath: string = environment.filePath;
 }

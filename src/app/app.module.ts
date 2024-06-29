@@ -14,6 +14,7 @@ import { MatSnackBarModule }from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SitesComponent } from './projets/sites/sites.component';
 import { LivresComponent } from './projets/livres/livres.component';
+import { CreationContenuComponent } from './projets/creation-contenu/creation-contenu.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LivresComponent } from './projets/livres/livres.component';
     ContactComponent,
     HeaderComponent,
     SitesComponent,
-    LivresComponent
+    LivresComponent,
+    CreationContenuComponent
   ],
   imports: [
     BrowserModule,

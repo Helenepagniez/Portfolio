@@ -10,7 +10,7 @@ h2{
     font-weight: 600;
 }
 
-h3 {
+h3{
     font-weight: 500;
 }
 
@@ -76,7 +76,7 @@ button{
 }
 
 .projets-item{
-    max-width: 360px;
+    max-width: 250px;
     width: 100%;
     margin: 0 15px 30px;
     display: flex;
@@ -89,16 +89,16 @@ button{
     padding: 10px;
     border: 3px solid var(--secondary-color);
     border-radius: var(--light-radius);
-    width: auto;
-    height: 240px;
     display: flex;
     align-content: center;
     justify-content: center;
+    width: 500px;
 }
 
 .projets-item-thumbnail img{
     width: 100%;
     border-radius: var(--light-radius);
+    object-fit:contain;
 }
 
 .projets-item h3{
@@ -110,5 +110,15 @@ button{
 @media screen and (max-width: 610px){
     .section-title h2{
         font-size: 30px;
+    }
+
+    .projets-item-thumbnail{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .projets-item-thumbnail{
+        width: 250px;
     }
 }

@@ -5,14 +5,16 @@
                 <div class="home-text">
                     <p>Salut, je suis</p>
                     <h1>Hélène Pagniez</h1>
-                    <h2>Etudiante - Recherche Alternance en communication</h2>
-                    <a class="btn" routerLink="/about">à propos de moi </a>
-                    <a class="btn" routerLink="/projets">Projets</a>
+                    <h2>Ta future recrue | En quête d'opportunités d'apprentissage</h2>
+                    <div class="button-container">
+                        <a class="btn" routerLink="/about">A propos de moi</a>
+                        <a class="btn" routerLink="/projets">Projets</a>
+                        <a class="btn" routerLink="/contact">Contactez moi</a>
+                        <a [href]="filePath+'cv.pdf'" download="images/cv.pdf" title="CV" aria-label="cv" class="btn">Téléchargement CV</a>
+                    </div>
                 </div>
                 <div class="home-img">
-                    <div class="img-box">
-                        <img [src]="imagePath+'profile.png'" alt="profile-img">
-                    </div>
+                    <img [src]="imagePath+'profile.png'" alt="profile-img">
                 </div>
             </div>
         </div>

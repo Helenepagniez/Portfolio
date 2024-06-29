@@ -1,16 +1,13 @@
 /* ------------- VARIABLES ------------------ */
 :root{
-    --main-color: rgb(7, 106, 255);
-    --blue: #0000ff;
-    --blue-dark: #18293c;
-    --orange: #ffa500;
-    --green-yellow: #cddc39;
-    --pink-light: #efa2b4;
-    --cyan-light: #aef1ee;
-    --white: #ffffff;
-    --white-alpha-40: rgba(255, 255, 255, 0.40);
-    --white-alpha-25: rgba(255, 255, 255, 0.25);
-    --backdrop-filter-blur: blur(5px);
+    --primary-color: #BEEFEB;
+    --secondary-color: #FF7F50;
+    --tertiary-color: white;
+    --text-primary-color: black;
+    --light-background-color: rgba(255, 255, 255, 0.4);
+    --strong-radius: 30px;
+    --light-radius: 10px;
+    --backdrop: 5px;
 }
 
 /* ------------- GENERAUX ------------------ */
@@ -27,17 +24,13 @@
 }
 
 body {
-    min-height: 100vh;
-    background: linear-gradient(166deg, rgba(5,19,244,1) 0%, rgba(0,128,167,1) 38%, rgba(0,144,178,1) 46%, rgba(1,255,250,1) 100%);
+    background: var(--primary-color);
     background-attachment: fixed;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    color:  var(--blue-dark);
     line-height: 1.5;
-    overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
-    padding: 5vh 15px;
 }
 
 body::before{
@@ -57,9 +50,9 @@ body::before{
 }
 
 ::-webkit-scrollbar-track{
-    background-color: var(--white);
+    background-color: var(--tertiary-color);
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
 }
