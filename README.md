@@ -4,14 +4,8 @@
 
 # Portfolio
 
-Ce projet a été réalisé à l'aide d'Angular
-
-<br/>
-
+Ce projet a été réalisé à l'aide d'Angular.
 Au travers de ce portfolio, vous y ferez ma découverte et vous pourrez également me joindre.  
-
-<br/>
-
 Bonne lecture !  
 
 <br/>
