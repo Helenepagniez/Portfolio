@@ -17,7 +17,6 @@ section{
     background-color: var(--tertiary-color);
     box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
     border-radius: var(--strong-radius);
-    backdrop-filter: var(--backdrop);
 }
 
 .main{
@@ -47,6 +46,7 @@ section{
 
 .section-title h2{
     font-size: 40px;
+    font-family: var(--font-family-title);
     text-transform: capitalize;
     color: var(--secondary-color);
     font-weight: 600;
@@ -74,7 +74,7 @@ section{
     border: 3px solid var(--secondary-color);
     border-radius: var(--strong-radius);
     height: 150px;
-    color: var(--main-color);
+    color: var(--text-primary-color);
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -83,6 +83,7 @@ section{
 }
 
 .projets-item h2  {
+    font-family: var(--font-family-title);
     margin-bottom: 0;
 }
 
@@ -105,6 +106,7 @@ section{
     font-weight: 700;
     text-transform: capitalize;
     font-size: 16px;
+    font-family: var(--font-family-text);
     cursor: pointer;
     overflow: hidden;
     border: none;

@@ -30,7 +30,6 @@ section{
     background-color: var(--tertiary-color);
     box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
     border-radius: var(--strong-radius);
-    backdrop-filter: var(--backdrop);
 }
 
 .about-section{
@@ -73,6 +72,7 @@ button{
     font-weight: 700;
     text-transform: capitalize;
     font-size: 16px;
+    font-family: var(--font-family-text);
     cursor: pointer;
     overflow: hidden;
     transition: 0.5s ease;
@@ -97,6 +97,7 @@ button{
 
 .section-title h2{
     font-size: 40px;
+    font-family: var(--font-family-title);
     text-transform: capitalize;
     color: var(--secondary-color);
     font-weight: 600;
@@ -128,6 +129,7 @@ button{
     text-transform: capitalize;
     font-size: 20px;
     margin: 20px 0;
+    font-family: var(--font-family-title);
 }
 
 .about-text .skills{
@@ -159,6 +161,7 @@ button{
     margin: 0 30px 0 0;
     position: relative;
     opacity: 0.5;
+    font-family: var(--font-family-title);
     transition: all 0.3s ease;
 }
 
@@ -245,6 +248,7 @@ button{
 
 .about-text .timeline-item h4{
     font-size: 18px;
+    font-family: var(--font-family-text);
     text-transform: capitalize;
     margin: 0 0 10px;
 }

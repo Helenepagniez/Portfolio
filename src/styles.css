@@ -7,7 +7,8 @@
     --light-background-color: rgba(255, 255, 255, 0.4);
     --strong-radius: 30px;
     --light-radius: 10px;
-    --backdrop: 5px;
+    --font-family-title: "Playfair Display", serif;
+    --font-family-text: "Lato", sans-serif;
 }
 
 /* ------------- GENERAUX ------------------ */
@@ -27,7 +28,7 @@ body {
     background: var(--primary-color);
     background-attachment: fixed;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-text);
     font-weight: 300;
     line-height: 1.5;
     -webkit-tap-highlight-color: transparent;

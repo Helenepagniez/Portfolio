@@ -8,6 +8,7 @@ a{
 
 h2{
     font-weight: 600;
+    margin-top: 20px;
 }
 
 h3 {
@@ -33,6 +34,7 @@ button{
     font-weight: 700;
     text-transform: capitalize;
     font-size: 16px;
+    font-family: var(--font-family-text);
     cursor: pointer;
     overflow: hidden;
     transition: 0.5s ease;
@@ -58,6 +60,7 @@ button{
 
 .section-title h2{
     font-size: 40px;
+    font-family: var(--font-family-title);
     text-transform: capitalize;
     color: var(--secondary-color);
     font-weight: 600;
@@ -103,6 +106,7 @@ button{
 
 .projets-item h3{
     font-size: 20px;
+    font-family: var(--font-family-title);
     text-transform: capitalize;
     margin: 20px 0;
 }

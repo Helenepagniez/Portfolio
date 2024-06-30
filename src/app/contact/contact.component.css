@@ -34,7 +34,6 @@ section{
     background-color: var(--tertiary-color);
     box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
     border-radius: var(--strong-radius);
-    backdrop-filter: var(--backdrop);
 }
 
 .main{
@@ -73,6 +72,7 @@ button{
     text-transform: capitalize;
     font-size: 16px;
     cursor: pointer;
+    font-family: var(--font-family-text);
     overflow: hidden;
     transition: 0.5s ease;
     border: none;
@@ -97,6 +97,7 @@ button{
 .section-title h2{
     font-size: 40px;
     text-transform: capitalize;
+    font-family: var(--font-family-title);
     color: var(--secondary-color);
     font-weight: 600;
 }
@@ -128,6 +129,7 @@ button{
     font-family: inherit;
     font-weight: 400;
     font-size: 16px;
+    font-family: var(--font-family-text);
     padding: 0 20px;
     color: var(--text-primary-color);
     border: 3px solid var(--secondary-color);
@@ -147,6 +149,7 @@ button{
 .contact-info-item h3{
     font-size: 20px;
     text-transform: capitalize;
+    font-family: var(--font-family-title);
     margin: 0 0 5px;
 }
 
@@ -181,6 +184,7 @@ i {
 
     .row h2 {
         font-size: 30px;
+        font-family: var(--font-family-title);
     }
 
     .contact-form,

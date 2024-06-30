@@ -28,7 +28,7 @@
     text-decoration: none;
     color: var(--text-primary-color);
     font-size: 2em;
-    backdrop-filter: var(--backdrop);
+    backdrop-filter: 5px;
     transition: 0.5s;
     overflow: hidden;
     margin: 20px;

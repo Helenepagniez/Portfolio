@@ -4,11 +4,17 @@
 
 # Portfolio
 
-Ce projet a été réalisé avec un style glassmorphisme à l'aide d' [Angular CLI] version 15.0.4. <br />
+Ce projet a été réalisé à l'aide d'Angular
 
-Au travers de ce portfolio, vous y ferez ma découverte et vous pourrez également me joindre.  <br />
+<br/>
 
-Bonne lecture !  <br />
+Au travers de ce portfolio, vous y ferez ma découverte et vous pourrez également me joindre.  
+
+<br/>
+
+Bonne lecture !  
+
+<br/>
 
 <details>
   <summary>Pages de l'application</summary>
@@ -21,13 +27,14 @@ Bonne lecture !  <br />
 
   - Informations générales me concernant
   - Mes soft skills
+  - Mes hard skills
   - Mes formations et expériences
   - Mon CV
 
   ### Projets
 
-  - Choix possibles : Sites ou Livres
-  - Visualisation de ces derniers et lien 
+  - Choix possibles : Sites, Livres ou Création de contenu
+  - Visualisation de ces derniers et liens 
 
   ### Contact
 
