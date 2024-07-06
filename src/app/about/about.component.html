@@ -1,101 +1,163 @@
 <section class="about-section sec-padding">
-    <div class="container">
-        <div class="row">
-            <div class="section-title">
-                <h2>à propos de moi</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="img-box">
-                <img [src]="imagePath+'mascotte.jpg'" alt="about img">
-            </div>
-            <div class="about-text">
-                <p>Passionnée par le digital, je suis actuellement en recherche d'une entreprise où effectuer mon alternance dans le cadre de mon intégration au Mastère Content Marketing & Brand Entertainment à l'école Ynov, en septembre / octobre 2024. 
-                    Je souhaite intégrer une équipe dynamique dans une entreprise innovante qui m'offrira la chance de contribuer à sa croissance et au développement de son image. 
-                    Avec ma mascotte Pigloo, je surfe sur les tendances du marketing digital et de la communication !</p>
-                <h3>Soft Skills</h3>
-                <div class="skills">
-                    <div class="skill-item">Curieuse</div>
-                    <div class="skill-item">Poluvalente</div>
-                    <div class="skill-item">Organisée</div>
-                    <div class="skill-item">Joyeuse</div>
-                    <div class="skill-item">Rigoureuse</div>
-                    <div class="skill-item">Autonome</div>
-                </div>
-                <h3>Hard Skills</h3>
-                <div class="skills">
-                    <div class="skill-item">Ranxplorer</div>
-                    <div class="skill-item">Google Ads</div>
-                    <div class="skill-item">Stripo</div>
-                    <div class="skill-item">Figma</div>
-                    <div class="skill-item">Canva</div>
-                    <div class="skill-item">Gestion d'Equipe</div>
-                    <div class="skill-item">Gestion de Projets</div>
-                    <div class="skill-item">CMS (Wordpress-Magento)</div>
-                    <div class="skill-item">Google Analytics</div>
-                    <div class="skill-item">LookerStudio</div>
-                </div>
-                <div class="about-tabs">
-                    <button type="button" class="tab-item active" (click)="activeFormation()" *ngIf="isActivedFormation">Formation</button>
-                    <button type="button" class="tab-item" (click)="activeFormation()" *ngIf="!isActivedFormation">Formation</button>
-                    <button type="button" class="tab-item active" (click)="activeExperience()" *ngIf="isActivedExperience">Expérience</button>
-                    <button type="button" class="tab-item" (click)="activeExperience()" *ngIf="!isActivedExperience">Expérience</button>
-                </div>
-
-                <div class="tab-content active" *ngIf="isActivedFormation">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <span class="date">2024 - 2026</span>
-                            <h4>[RECHERCHE ALTERNANCE] Mastère Content Marketing & Brand Entertainment - <span>YNOV</span></h4>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="date">2023 - 2024</span>
-                            <h4>Licence Chef de Projet Digitale - <span>ECOLE 301 / GUILLEMOT CORPORATION</span></h4>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="date">2021 - 2022</span>
-                            <h4>Bachelor 2 de Développeuse Web - <span>OPENCLASSROOM</span></h4>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="date">2019 - 2021</span>
-                            <h4>Bachelor 2 d'Attachée de Direction - <span>PIGIER / SILEC CABLE</span></h4>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="date">2018</span>
-                            <h4>Baccalauréat Sciences et Technologies du Sanitaire et du Social - <span>LES PANNEVELLES</span></h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-content active" *ngIf="isActivedExperience">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <span class="date">2024 - 2026</span>
-                            <h4>[RECHERCHE ALTERNANCE] Mastère Content Marketing & Brand Entertainment</h4>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="date">2023 - 2024</span>
-                            <h4>Assitante Marketing Digitale en Alternance - GUILLEMOT CORPORATION</h4>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="date">Novembre 2021 - Décembre 2021</span>
-                            <h4>Assistante Manager en Intérim - GRTGAZ</h4>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="date">2019 - 2021</span>
-                            <h4>Attaché de Direction - SILEC CABLE</h4>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="date">2018 - 2019</span>
-                            <h4>Polyvalente - AUX VIEUX REMPARTS</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <a [href]="filePath+'cv.pdf'" download="images/cv.pdf" title="CV" aria-label="cv" class="btn">Téléchargement CV</a>
-                    <a class="btn" routerLink="/contact">Contactez moi</a>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h2>à propos de moi</h2>
+      </div>
     </div>
+    <div class="row">
+      <div class="img-box">
+        <img [src]="imagePath + 'mascotte.jpg'" alt="about img" />
+      </div>
+      <div class="about-text">
+        <p>
+          Passionnée par le digital, je suis actuellement en recherche d'une
+          entreprise où effectuer mon alternance dans le cadre de mon
+          intégration au Mastère Content Marketing & Brand Entertainment à
+          l'école Ynov, dès fin août 2024. Je souhaite intégrer une équipe
+          dynamique dans une entreprise innovante qui m'offrira la chance de
+          contribuer à sa croissance et au développement de son image. Avec ma
+          mascotte Pigloo, je surfe sur les tendances du marketing digital et de
+          la communication !
+        </p>
+        <h3>Soft Skills</h3>
+        <div class="skills">
+          <div class="skill-item">Curieuse</div>
+          <div class="skill-item">Poluvalente</div>
+          <div class="skill-item">Organisée</div>
+          <div class="skill-item">Joyeuse</div>
+          <div class="skill-item">Rigoureuse</div>
+          <div class="skill-item">Autonome</div>
+        </div>
+        <h3>Hard Skills</h3>
+        <div class="skills">
+          <div class="skill-item">Ranxplorer</div>
+          <div class="skill-item">Google Ads</div>
+          <div class="skill-item">Stripo</div>
+          <div class="skill-item">Figma</div>
+          <div class="skill-item">Canva</div>
+          <div class="skill-item">Gestion d'Equipe</div>
+          <div class="skill-item">Gestion de Projets</div>
+          <div class="skill-item">CMS (Wordpress-Magento)</div>
+          <div class="skill-item">Google Analytics</div>
+          <div class="skill-item">LookerStudio</div>
+        </div>
+        <div class="about-tabs">
+          <button
+            type="button"
+            class="tab-item active"
+            (click)="activeFormation()"
+            *ngIf="isActivedFormation"
+          >
+            Formation
+          </button>
+          <button
+            type="button"
+            class="tab-item"
+            (click)="activeFormation()"
+            *ngIf="!isActivedFormation"
+          >
+            Formation
+          </button>
+          <button
+            type="button"
+            class="tab-item active"
+            (click)="activeExperience()"
+            *ngIf="isActivedExperience"
+          >
+            Expérience
+          </button>
+          <button
+            type="button"
+            class="tab-item"
+            (click)="activeExperience()"
+            *ngIf="!isActivedExperience"
+          >
+            Expérience
+          </button>
+        </div>
+
+        <div class="tab-content active" *ngIf="isActivedFormation">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="date">2024 - 2026</span>
+              <h4>
+                [RECHERCHE ALTERNANCE] Mastère Content Marketing & Brand
+                Entertainment - <span>YNOV</span>
+              </h4>
+            </div>
+            <div class="timeline-item">
+              <span class="date">2023 - 2024</span>
+              <h4>
+                Licence Chef de Projet Digitale -
+                <span>ECOLE 301 / GUILLEMOT CORPORATION</span>
+              </h4>
+            </div>
+            <div class="timeline-item">
+              <span class="date">2021 - 2022</span>
+              <h4>
+                Bachelor 2 de Développeuse Web - <span>OPENCLASSROOM</span>
+              </h4>
+            </div>
+            <div class="timeline-item">
+              <span class="date">2019 - 2021</span>
+              <h4>
+                Bachelor 2 d'Attachée de Direction -
+                <span>PIGIER / SILEC CABLE</span>
+              </h4>
+            </div>
+            <div class="timeline-item">
+              <span class="date">2018</span>
+              <h4>
+                Baccalauréat Sciences et Technologies du Sanitaire et du Social
+                - <span>LES PANNEVELLES</span>
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content active" *ngIf="isActivedExperience">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="date">2024 - 2026</span>
+              <h4>
+                [RECHERCHE ALTERNANCE] Mastère Content Marketing & Brand
+                Entertainment
+              </h4>
+            </div>
+            <div class="timeline-item">
+              <span class="date">2023 - 2024</span>
+              <h4>
+                Assitante Marketing Digitale en Alternance - GUILLEMOT
+                CORPORATION
+              </h4>
+            </div>
+            <div class="timeline-item">
+              <span class="date">Novembre 2021 - Décembre 2021</span>
+              <h4>Assistante Manager en Intérim - GRTGAZ</h4>
+            </div>
+            <div class="timeline-item">
+              <span class="date">2019 - 2021</span>
+              <h4>Attaché de Direction - SILEC CABLE</h4>
+            </div>
+            <div class="timeline-item">
+              <span class="date">2018 - 2019</span>
+              <h4>Polyvalente - AUX VIEUX REMPARTS</h4>
+            </div>
+          </div>
+        </div>
+        <div class="button-container">
+          <a
+            [href]="filePath + 'cv.pdf'"
+            download="images/cv.pdf"
+            title="CV"
+            aria-label="cv"
+            class="btn"
+            >Téléchargement CV</a
+          >
+          <a class="btn" routerLink="/contact">Contactez moi</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

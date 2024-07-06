@@ -1,128 +1,119 @@
 /* ------------- FONTS ------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 /* ------------- GENERAUX ------------------ */
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-h2{
-    font-weight: 600;
-    margin-top: 20px;
+h2 {
+  font-weight: 600;
+  margin-top: 20px;
 }
 
-h3{
-    font-weight: 500;
+h3 {
+  font-weight: 500;
 }
 
-img{
-    max-width: 100%;
-    vertical-align: middle;
+img {
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 /* ------------- BOUTONS ------------------ */
-button{
-    font-family: inherit;
-    user-select: none;
+button {
+  font-family: inherit;
+  user-select: none;
 }
 
-.btn{
-    background-color: var(--secondary-color);
-    padding: 10px 28px;
-    border-radius: var(--strong-radius);
-    color: var(--text-primary-color);
-    font-weight: 700;
-    text-transform: capitalize;
-    font-size: 16px;
-    font-family: var(--font-family-text);
-    cursor: pointer;
-    overflow: hidden;
-    transition: 0.5s ease;
-    border: none;
-    width: 210px;
-    margin: 5px;
-    text-align: center;
+.btn {
+  background-color: var(--secondary-color);
+  padding: 10px 28px;
+  border-radius: var(--strong-radius);
+  color: var(--text-primary-color);
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-family: var(--font-family-text);
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.5s ease;
+  border: none;
+  width: 210px;
+  margin: 5px;
+  text-align: center;
 }
 
-.btn:hover{
-    color: var(--tertiary-color);
-    transform: scale(1.1);
+.btn:hover {
+  color: var(--tertiary-color);
+  transform: scale(1.1);
 }
 /* ------------- SECTION TITLE ------------------ */
-.section-title{
-    width: 100%;
-    text-align: center;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.section-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.section-title h2{
-    font-size: 40px;
-    font-family: var(--font-family-title);
-    text-transform: capitalize;
-    color: var(--secondary-color);
-    font-weight: 600;
+.section-title h2 {
+  font-size: 40px;
+  font-family: var(--font-family-title);
+  text-transform: capitalize;
+  color: var(--secondary-color);
+  font-weight: 600;
 }
 
 /* ------------- SECTION projets ------------------ */
-.projets-container  {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.projets-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-.projets-section{
-    padding-bottom: 50px;
+.projets-section {
+  padding-bottom: 50px;
 }
 
-.projets-item{
-    max-width: 250px;
-    width: 100%;
-    margin: 0 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.projets-item {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.projets-item-thumbnail{
-    padding: 10px;
-    border: 3px solid var(--secondary-color);
-    border-radius: var(--light-radius);
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    width: 500px;
+.projets-item-thumbnail {
+  border: 3px solid var(--secondary-color);
+  border-radius: var(--light-radius);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 80%;
 }
 
-.projets-item-thumbnail img{
-    width: 100%;
-    border-radius: var(--light-radius);
-    object-fit:contain;
+.projets-item-thumbnail img {
+  width: 100%;
+  border-radius: var(--light-radius);
+  object-fit: contain;
 }
 
-.projets-item h3{
-    font-size: 20px;
-    font-family: var(--font-family-title);
-    text-transform: capitalize;
-    margin: 20px 0;
+.projets-item h3 {
+  font-size: 20px;
+  font-family: var(--font-family-title);
+  text-transform: capitalize;
+  margin: 20px 0;
+  width: 80%;
+  text-align: center;
 }
 
-@media screen and (max-width: 610px){
-    .section-title h2{
-        font-size: 30px;
-    }
-
-    .projets-item-thumbnail{
-        width: 300px;
-    }
-}
-
-@media screen and (max-width: 420px){
-    .projets-item-thumbnail{
-        width: 250px;
-    }
+@media screen and (max-width: 610px) {
+  .section-title h2 {
+    font-size: 30px;
+  }
 }
