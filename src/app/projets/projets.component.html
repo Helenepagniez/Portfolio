@@ -1,29 +1,24 @@
 <div class="main">
-    <div class="retour-container" *ngIf="pageActive">
-        <a class="retour" (click)="retour()" title="Retour">
-            <span>Retour</span>
-        </a>
-    </div>
-    <section class="projets-section sec-padding">
-        <div class="container">
-            <div class="section-title" *ngIf="!pageActive">
-                <h2>Projets</h2>
-            </div>
-            <div class="projets-container" *ngIf="!pageActive">
-                <div class="projets-item" (click)="activePage('sites')" title="Sites">
-                    <h2>Sites</h2>
-                </div>
-                <div class="projets-item" (click)="activePage('livres')" title="Livres">
-                    <h2>Livres</h2>
-                </div>
-                <div class="projets-item" (click)="activePage('creation')" title="Création de contenu">
-                    <h2>Création de contenu</h2>
-                </div>
-            </div>
-            <app-sites *ngIf="pageActive === 'sites'"></app-sites>
-            <app-livres *ngIf="pageActive === 'livres'"></app-livres>
-            <app-creation-contenu *ngIf="pageActive === 'creation'"></app-creation-contenu>
+  <section class="projets-section sec-padding">
+    <div class="container">
+      <div class="section-title">
+        <h2>Projets</h2>
+      </div>
+      <div class="projets-container">
+        <div class="projets-item" routerLink="sites" title="Sites">
+          <h2>Sites</h2>
         </div>
-    </section>
+        <div class="projets-item" routerLink="livres" title="Livres">
+          <h2>Livres</h2>
+        </div>
+        <div
+          class="projets-item"
+          routerLink="creations-contenu"
+          title="Création de contenu"
+        >
+          <h2>Créations de contenu</h2>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
-

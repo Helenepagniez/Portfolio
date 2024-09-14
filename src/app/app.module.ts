@@ -10,11 +10,25 @@ import { ProjetsComponent } from './projets/projets.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MatSnackBarModule }from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SitesComponent } from './projets/sites/sites.component';
 import { LivresComponent } from './projets/livres/livres.component';
-import { CreationContenuComponent } from './projets/creation-contenu/creation-contenu.component';
+import { CreationsContenuComponent } from './projets/creations-contenu/creations-contenu.component';
+import { BannieresComponent } from './projets/creations-contenu/bannieres/bannieres.component';
+import { ArticlesComponent } from './projets/creations-contenu/articles/articles.component';
+import { Article1Component } from './projets/creations-contenu/articles/article1/article1.component';
+import { Article2Component } from './projets/creations-contenu/articles/article2/article2.component';
+import { Article3Component } from './projets/creations-contenu/articles/article3/article3.component';
+import { Article4Component } from './projets/creations-contenu/articles/article4/article4.component';
+import { Article5Component } from './projets/creations-contenu/articles/article5/article5.component';
+import { Article6Component } from './projets/creations-contenu/articles/article6/article6.component';
+import { Article7Component } from './projets/creations-contenu/articles/article7/article7.component';
+import { Article8Component } from './projets/creations-contenu/articles/article8/article8.component';
+import { Article9Component } from './projets/creations-contenu/articles/article9/article9.component';
+import { Article10Component } from './projets/creations-contenu/articles/article10/article10.component';
+import { Article11Component } from './projets/creations-contenu/articles/article11/article11.component';
+import { Article12Component } from './projets/creations-contenu/articles/article12/article12.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +40,21 @@ import { CreationContenuComponent } from './projets/creation-contenu/creation-co
     HeaderComponent,
     SitesComponent,
     LivresComponent,
-    CreationContenuComponent
+    CreationsContenuComponent,
+    BannieresComponent,
+    ArticlesComponent,
+    Article1Component,
+    Article2Component,
+    Article3Component,
+    Article4Component,
+    Article5Component,
+    Article6Component,
+    Article7Component,
+    Article8Component,
+    Article9Component,
+    Article10Component,
+    Article11Component,
+    Article12Component,
   ],
   imports: [
     BrowserModule,
@@ -35,9 +63,9 @@ import { CreationContenuComponent } from './projets/creation-contenu/creation-co
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

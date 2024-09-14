@@ -1,42 +1,75 @@
-            <div class="section-title">
-                <h2>Sites</h2>
-            </div>
-            <div class="projets-container">
-                <div class="projets-item">
-                    <div class="projets-item-thumbnail">
-                        <img [src]="imagePath+'booki.png'" alt="projets item thumb">
-                    </div>
-                    <h3 class="projets-item-title">Booki</h3>
-                    <a type="button" class="btn view-project-btn" href="https://helenepagniez.github.io/Booki/" target="_blank">
-                        Voir projet
-                    </a>
-                </div>
-                <div class="projets-item">
-                    <div class="projets-item-thumbnail">
-                        <img [src]="imagePath+'ohmyfood.png'" alt="projets item thumb">
-                    </div>
-                    <h3 class="projets-item-title">Ohmyfood</h3>
-                    <a type="button" class="btn view-project-btn" href="https://helenepagniez.github.io/ohmyfood/" target="_blank">
-                        Voir projet
-                    </a>
-                </div>
-                <div class="projets-item">
-                    <div class="projets-item-thumbnail">
-                        <img [src]="imagePath+'la-panthere.png'" alt="projets item thumb">
-                    </div>
-                    <h3 class="projets-item-title">La panthère</h3>
-                    <a type="button" class="btn view-project-btn" href="https://helenepagniez.github.io/La-Panthere/" target="_blank">
-                        Voir projet
-                    </a>
-                </div>
-                <div class="projets-item">
-                    <div class="projets-item-thumbnail">
-                        <img [src]="imagePath+'foodlove.jpg'" alt="projets item thumb">
-                    </div>
-                    <h3 class="projets-item-title">Foodlove</h3>
-                    <a type="button" class="btn view-project-btn" href="https://github.com/Helenepagniez/FoodLove/" target="_blank">
-                        Voir Projet
-                    </a>
-                </div>
-            </div>
-            
+<div class="main">
+  <div class="retour-container">
+    <a class="retour" routerLink="/projets" title="Retour">
+      <span>Retour</span>
+    </a>
+  </div>
+  <section class="projets-section sec-padding">
+    <div class="container">
+      <div class="section-title">
+        <h2>Sites</h2>
+      </div>
+      <div class="projets-container">
+        <div class="projets-item">
+          <div class="projets-item-thumbnail">
+            <img [src]="imagePath + 'booki.png'" alt="projets item thumb" />
+          </div>
+          <h3 class="projets-item-title">Booki</h3>
+          <a
+            type="button"
+            class="btn view-project-btn"
+            href="https://helenepagniez.github.io/Booki/"
+            target="_blank"
+          >
+            Voir le site
+          </a>
+        </div>
+        <div class="projets-item">
+          <div class="projets-item-thumbnail">
+            <img [src]="imagePath + 'ohmyfood.png'" alt="projets item thumb" />
+          </div>
+          <h3 class="projets-item-title">Ohmyfood</h3>
+          <a
+            type="button"
+            class="btn view-project-btn"
+            href="https://helenepagniez.github.io/ohmyfood/"
+            target="_blank"
+          >
+            Voir le site
+          </a>
+        </div>
+        <div class="projets-item">
+          <div class="projets-item-thumbnail">
+            <img
+              [src]="imagePath + 'la-panthere.png'"
+              alt="projets item thumb"
+            />
+          </div>
+          <h3 class="projets-item-title">La panthère</h3>
+          <a
+            type="button"
+            class="btn view-project-btn"
+            href="https://helenepagniez.github.io/La-Panthere/"
+            target="_blank"
+          >
+            Voir le site
+          </a>
+        </div>
+        <div class="projets-item">
+          <div class="projets-item-thumbnail">
+            <img [src]="imagePath + 'foodlove.jpg'" alt="projets item thumb" />
+          </div>
+          <h3 class="projets-item-title">Foodlove</h3>
+          <a
+            type="button"
+            class="btn view-project-btn"
+            href="https://github.com/Helenepagniez/FoodLove/"
+            target="_blank"
+          >
+            Voir le site
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
