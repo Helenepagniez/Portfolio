@@ -91,6 +91,7 @@ button {
   color: var(--secondary-color);
   font-weight: 600;
   text-decoration: underline;
+  line-height: normal;
 }
 
 /* ------------- SECTION projets ------------------ */
@@ -108,10 +109,18 @@ button {
   font-weight: 600;
   margin-left: 30px;
   text-decoration: underline;
+  font-family: var(--font-family-title);
+  font-size: 22px;
 }
 
 .projets-container .section-some p {
   margin: 0 50px;
+  text-align: justify;
+}
+
+.projets-container .section-some ul {
+  margin-left: 90px;
+  margin-right: 40px;
   text-align: justify;
 }
 
@@ -121,9 +130,19 @@ button {
   text-align: justify;
 }
 
-.projets-container .section-some ol li h3 {
+.projets-container .section-some h3 {
+  font-weight: 800px;
+  color: var(--secondary-color);
+  margin-left: 50px;
   text-decoration: underline;
+  font-size: 18px;
+  font-family: var(--font-family-title);
+}
+
+.projets-container .section-some li h4 {
   font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 2px;
 }
 
 .projets-section {
@@ -178,6 +197,12 @@ button {
   width: 90%;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.articles {
+  font-weight: 800;
+  color: #30d5c8;
+  text-decoration: underline;
 }
 
 .retour-container {
