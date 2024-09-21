@@ -202,20 +202,22 @@ table th {
 .projets-item-thumbnail img {
   border-radius: var(--light-radius);
   border: 3px solid var(--secondary-color);
-  width: auto;
+  width: 100%;
+  max-width: 700px;
   max-height: 400px;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   margin: 20px 0;
 }
 
 .projets-item-thumbnail img.small {
   border-radius: var(--light-radius);
   border: 3px solid var(--secondary-color);
-  width: auto;
+  width: 100%;
+  max-width: 500px;
   max-height: 300px;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   margin: 20px 0;
 }
 
