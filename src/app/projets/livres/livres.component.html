@@ -1,23 +1,40 @@
-            <div class="section-title">
-                <h2>Livres</h2>
-            </div>
-            <div class="projets-container">
-                <div class="projets-item">
-                    <div class="projets-item-thumbnail">
-                        <img [src]="imagePath+'ascension.jpg'" alt="projets item thumb">
-                    </div>
-                    <h3 class="projets-item-title">L' Ascension</h3>
-                    <a type="button" class="btn view-project-btn" href="https://www.amazon.fr/LAscension-H%C3%A9l%C3%A8ne-Pagniez/dp/B0C7T9JQ4B/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2O154P42Z8D7C&keywords=h%C3%A9l%C3%A8ne+pagniez&qid=1691693119&sprefix=h%C3%A9l%C3%A8ne+pagniez%2Caps%2C85&sr=8-2" target="_blank">
-                        Voir projet
-                    </a>
-                </div>
-                <div class="projets-item">
-                    <div class="projets-item-thumbnail">
-                        <img [src]="imagePath+'fascination.jpg'" alt="projets item thumb">
-                    </div>
-                    <h3 class="projets-item-title">Fascination et Répulsion</h3>
-                    <a type="button" class="btn view-project-btn">
-                        En Cours
-                    </a>
-                </div>
-            </div>
+<div class="main">
+  <div class="retour-container">
+    <a class="retour" routerLink="/projets" title="Retour">
+      <span>Retour</span>
+    </a>
+  </div>
+  <section class="projets-section sec-padding">
+    <div class="container">
+      <div class="section-title">
+        <h2>Livres</h2>
+      </div>
+      <div class="projets-container">
+        <div class="projets-item">
+          <div class="projets-item-thumbnail">
+            <img [src]="imagePath + 'ascension.jpg'" alt="projets item thumb" />
+          </div>
+          <h3 class="projets-item-title">L' Ascension</h3>
+          <a
+            type="button"
+            class="btn view-project-btn"
+            href="https://www.amazon.fr/LAscension-H%C3%A9l%C3%A8ne-Pagniez/dp/B0C7T9JQ4B/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2O154P42Z8D7C&keywords=h%C3%A9l%C3%A8ne+pagniez&qid=1691693119&sprefix=h%C3%A9l%C3%A8ne+pagniez%2Caps%2C85&sr=8-2"
+            target="_blank"
+          >
+            Découvrir le livre
+          </a>
+        </div>
+        <div class="projets-item">
+          <div class="projets-item-thumbnail">
+            <img
+              [src]="imagePath + 'fascination.jpg'"
+              alt="projets item thumb"
+            />
+          </div>
+          <h3 class="projets-item-title">Fascination et Répulsion</h3>
+          <a type="button" class="btn view-project-btn">En cours </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
