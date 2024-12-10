@@ -72,7 +72,7 @@ button {
   background-color: var(--secondary-color);
   padding: 10px 28px;
   border-radius: var(--strong-radius);
-  color: var(--text-primary-color);
+  color: var(--tertiary-color);
   font-weight: 700;
   font-size: 16px;
   font-family: var(--font-family-text);
@@ -80,13 +80,12 @@ button {
   overflow: hidden;
   transition: 0.5s ease;
   border: none;
-  width: 210px;
+  width: 220px;
   margin: 5px;
   text-align: center;
 }
 
 .btn:hover {
-  color: var(--tertiary-color);
   transform: scale(1.1);
 }
 
@@ -242,7 +241,7 @@ button {
 .about-text .timeline-item .date {
   display: block;
   color: var(--secondary-color);
-  font-weight: 400;
+  font-weight: 700;
   margin: 0 0 10px;
 }
 

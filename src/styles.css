@@ -1,59 +1,59 @@
 /* ------------- VARIABLES ------------------ */
-:root{
-    --primary-color: #BEEFEB;
-    --secondary-color: #FF7F50;
-    --tertiary-color: white;
-    --text-primary-color: black;
-    --light-background-color: rgba(255, 255, 255, 0.4);
-    --strong-radius: 30px;
-    --light-radius: 10px;
-    --font-family-title: "Playfair Display", serif;
-    --font-family-text: "Lato", sans-serif;
+:root {
+  --primary-color: #75b8b2;
+  --secondary-color: #ce0045;
+  --tertiary-color: white;
+  --text-primary-color: black;
+  --light-background-color: rgba(255, 255, 255, 0.4);
+  --strong-radius: 30px;
+  --light-radius: 10px;
+  --font-family-title: "Anton", serif;
+  --font-family-text: "Open Sans", sans-serif;
 }
 
 /* ------------- GENERAUX ------------------ */
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    outline: none;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
 }
 
 ::before,
-::after{
-    box-sizing: border-box;
+::after {
+  box-sizing: border-box;
 }
 
 body {
-    background: var(--primary-color);
-    background-attachment: fixed;
-    font-size: 16px;
-    font-family: var(--font-family-text);
-    font-weight: 300;
-    line-height: 1.5;
-    -webkit-tap-highlight-color: transparent;
+  background: var(--primary-color);
+  background-attachment: fixed;
+  font-size: 16px;
+  font-family: var(--font-family-text);
+  font-weight: 300;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
 }
 
-body::before{
-    content: '';
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.12;
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.12;
 }
 
 /* ------------- CUSTOM SCROLLBAR------------------ */
-::-webkit-scrollbar{
-    width: 5px;
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-::-webkit-scrollbar-track{
-    background-color: var(--tertiary-color);
+::-webkit-scrollbar-track {
+  background-color: var(--tertiary-color);
 }
 
-::-webkit-scrollbar-thumb{
-    background-color: var(--secondary-color);
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
 }

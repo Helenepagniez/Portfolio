@@ -7,18 +7,17 @@
     </div>
     <div class="row">
       <div class="img-box">
-        <img [src]="imagePath + 'mascotte.jpg'" alt="about img" />
+        <img [src]="imagePath + 'mascotte.png'" alt="about img" />
       </div>
       <div class="about-text">
         <p>
-          Passionnée par le digital, je suis actuellement en recherche d'une
-          entreprise où effectuer mon alternance dans le cadre de mon
-          intégration au Mastère Content Marketing & Brand Entertainment à
-          l'école Ynov, dès fin août 2024. Je souhaite intégrer une équipe
-          dynamique dans une entreprise innovante qui m'offrira la chance de
-          contribuer à sa croissance et au développement de son image. Avec ma
-          mascotte Pigloo, je surfe sur les tendances du marketing digital et de
-          la communication !
+          Passionnée par le digital, je suis actuellement à la recherche d'une
+          entreprise pour poursuivre ma carrière en marketing et communication.
+          Mon objectif ? Relever des défis stimulants au sein d’une équipe
+          dynamique et contribuer activement au développement de projets
+          créatifs et impactants. Avec ma mascotte Pigloo, je surfe sur les
+          tendances du marketing digital et de la communication, toujours avec
+          enthousiasme et une volonté de faire la différence !
         </p>
         <h3>Soft Skills</h3>
         <div class="skills">
@@ -36,10 +35,18 @@
           <div class="skill-item">Stripo</div>
           <div class="skill-item">Figma</div>
           <div class="skill-item">Canva</div>
-          <div class="skill-item">Gestion d'Equipe</div>
-          <div class="skill-item">Gestion de Projets</div>
+          <div class="skill-item">SEO</div>
+          <div class="skill-item">SEA</div>
+          <div class="skill-item">Buffer</div>
+          <div class="skill-item">Gestion d'équipe</div>
+          <div class="skill-item">Gestion de projets</div>
           <div class="skill-item">CMS (Wordpress-Magento)</div>
+          <div class="skill-item">Outils de collaboration (Trello-Monday)</div>
           <div class="skill-item">Google Analytics</div>
+          <div class="skill-item">Rédaction de contenu (articles-posts)</div>
+          <div class="skill-item">
+            Gestion de réseaux sociaux (planification, stratégie)
+          </div>
           <div class="skill-item">LookerStudio</div>
         </div>
         <div class="about-tabs">
@@ -49,7 +56,7 @@
             (click)="activeFormation()"
             *ngIf="isActivedFormation"
           >
-            Formation
+            Formations
           </button>
           <button
             type="button"
@@ -57,7 +64,7 @@
             (click)="activeFormation()"
             *ngIf="!isActivedFormation"
           >
-            Formation
+            Formations
           </button>
           <button
             type="button"
@@ -65,7 +72,7 @@
             (click)="activeExperience()"
             *ngIf="isActivedExperience"
           >
-            Expérience
+            Expériences
           </button>
           <button
             type="button"
@@ -73,17 +80,18 @@
             (click)="activeExperience()"
             *ngIf="!isActivedExperience"
           >
-            Expérience
+            Expériences
           </button>
         </div>
 
         <div class="tab-content active" *ngIf="isActivedFormation">
           <div class="timeline">
             <div class="timeline-item">
-              <span class="date">2024 - 2026</span>
+              <span class="date">2024 - 2025</span>
               <h4>
-                [RECHERCHE ALTERNANCE] Mastère Content Marketing & Brand
-                Entertainment - <span>YNOV</span>
+                Master Intensif Manager des Stratégies Marketing et
+                Communication -
+                <span>OPENCLASSROOMS</span>
               </h4>
             </div>
             <div class="timeline-item">
@@ -96,7 +104,7 @@
             <div class="timeline-item">
               <span class="date">2021 - 2022</span>
               <h4>
-                Bachelor 2 de Développeuse Web - <span>OPENCLASSROOM</span>
+                Bachelor 2 de Développeuse Web - <span>OPENCLASSROOMS</span>
               </h4>
             </div>
             <div class="timeline-item">
@@ -118,13 +126,6 @@
 
         <div class="tab-content active" *ngIf="isActivedExperience">
           <div class="timeline">
-            <div class="timeline-item">
-              <span class="date">2024 - 2026</span>
-              <h4>
-                [RECHERCHE ALTERNANCE] Mastère Content Marketing & Brand
-                Entertainment
-              </h4>
-            </div>
             <div class="timeline-item">
               <span class="date">2023 - 2024</span>
               <h4>
