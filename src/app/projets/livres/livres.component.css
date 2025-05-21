@@ -117,8 +117,7 @@ button {
 .projets-item-thumbnail {
   border: 3px solid var(--secondary-color);
   border-radius: var(--light-radius);
-  width: auto;
-  height: 240px;
+  width: 200px;
   display: flex;
   align-content: center;
   justify-content: center;
