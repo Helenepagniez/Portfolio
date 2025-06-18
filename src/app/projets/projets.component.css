@@ -64,24 +64,26 @@ section {
 }
 
 .projets-item {
-  width: 300px;
   margin: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border: 3px solid var(--secondary-color);
+  justify-content: space-between;
+  background-color: var(--secondary-color);
   border-radius: var(--strong-radius);
-  height: 150px;
-  color: var(--text-primary-color);
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  vertical-align: middle;
+  padding: 10px 25px;
+  width: 270px;
+  color: var(--tertiary-color);
   transition: 0.5s ease;
 }
 
+.projets-item i {
+  font-size: 30px;
+}
+
 .projets-item h2 {
+  width: 200px;
+  text-align: center;
   font-family: var(--font-family-title);
   margin-bottom: 0;
 }
