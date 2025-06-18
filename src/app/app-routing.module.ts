@@ -19,11 +19,15 @@ import { ArticlesComponent } from './projets/articles/articles.component';
 import { BannieresComponent } from './projets/bannieres/bannieres.component';
 import { LivresComponent } from './projets/livres/livres.component';
 import { ProjetsComponent } from './projets/projets.component';
+import { DefisMarketingComponent } from './projets/defis-marketing/defis-marketing.component';
+import { ProjetsMasterComponent } from './projets/projets-master/projets-master.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'projets', component: ProjetsComponent },
+  { path: 'projets/defis-marketing', component: DefisMarketingComponent },
+  { path: 'projets/projets-master', component: ProjetsMasterComponent },
   { path: 'projets/livres', component: LivresComponent },
   {
     path: 'projets/bannieres',
