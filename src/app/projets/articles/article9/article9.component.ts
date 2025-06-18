@@ -7,6 +7,5 @@ import { environment } from 'src/app/environments/environment';
   styleUrls: ['./article9.component.css'],
 })
 export class Article9Component {
-  imagePath: string =
-    environment.imagePath + 'creations-contenu/articles/article9/';
+  imagePath: string = environment.imagePath + 'articles/article9/';
 }

@@ -7,5 +7,5 @@ import { environment } from 'src/app/environments/environment';
   styleUrls: ['./bannieres.component.css'],
 })
 export class BannieresComponent {
-  imagePath: string = environment.imagePath + 'creations-contenu/bannieres/';
+  imagePath: string = environment.imagePath + 'bannieres/';
 }
