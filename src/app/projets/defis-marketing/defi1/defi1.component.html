@@ -5,6 +5,11 @@
     </a>
   </div>
   <section class="projets-section sec-padding">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
     <div class="container">
       <div class="section-title">
         <h2 class="title">Défi n°1 : Néolink</h2>
