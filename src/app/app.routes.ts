@@ -21,6 +21,7 @@ import { DefisMarketingComponent } from './projets/defis-marketing/defis-marketi
 import { ProjetsMasterComponent } from './projets/projets-master/projets-master.component';
 import { Defi1Component } from './projets/defis-marketing/defi1/defi1.component';
 import { Routes } from '@angular/router';
+import { Projet1Component } from './projets/projets-master/projet1/projet1.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -32,6 +33,7 @@ export const routes: Routes = [
     component: Defi1Component,
   },
   { path: 'projets/projets-master', component: ProjetsMasterComponent },
+  { path: 'projets/projets-master/1', component: Projet1Component },
   { path: 'projets/livres', component: LivresComponent },
   {
     path: 'projets/bannieres',
