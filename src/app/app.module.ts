@@ -29,6 +29,7 @@ import { LivresComponent } from './projets/livres/livres.component';
 import { ProjetsComponent } from './projets/projets.component';
 import { DefisMarketingComponent } from './projets/defis-marketing/defis-marketing.component';
 import { ProjetsMasterComponent } from './projets/projets-master/projets-master.component';
+import { Defi1Component } from './projets/defis-marketing/defi1/defi1.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { ProjetsMasterComponent } from './projets/projets-master/projets-master.
     Article12Component,
     DefisMarketingComponent,
     ProjetsMasterComponent,
+    Defi1Component,
   ],
   imports: [
     BrowserModule,

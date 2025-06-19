@@ -21,12 +21,17 @@ import { LivresComponent } from './projets/livres/livres.component';
 import { ProjetsComponent } from './projets/projets.component';
 import { DefisMarketingComponent } from './projets/defis-marketing/defis-marketing.component';
 import { ProjetsMasterComponent } from './projets/projets-master/projets-master.component';
+import { Defi1Component } from './projets/defis-marketing/defi1/defi1.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'projets', component: ProjetsComponent },
   { path: 'projets/defis-marketing', component: DefisMarketingComponent },
+  {
+    path: 'projets/defis-marketing/1',
+    component: Defi1Component,
+  },
   { path: 'projets/projets-master', component: ProjetsMasterComponent },
   { path: 'projets/livres', component: LivresComponent },
   {

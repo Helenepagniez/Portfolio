@@ -35,7 +35,7 @@ section {
   padding: 40px 0;
 }
 
-h2 {
+.title {
   font-weight: 600;
   margin-top: 20px;
 }
@@ -59,7 +59,7 @@ button {
   background-color: var(--secondary-color);
   padding: 10px 28px;
   border-radius: var(--strong-radius);
-  color: var(--text-primary-color);
+  color: var(--tertiary-color);
   font-weight: 700;
   font-size: 16px;
   font-family: var(--font-family-text);
@@ -68,23 +68,20 @@ button {
   transition: 0.5s ease;
   border: none;
   width: 220px;
-  margin: 5px;
+  margin: 10px;
   text-align: center;
 }
 
 .btn:hover {
-  color: var(--tertiary-color);
   transform: scale(1.1);
 }
 /* ------------- SECTION TITLE ------------------ */
 .section-title {
   width: 100%;
   text-align: center;
-  margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .section-title h2 {
@@ -92,15 +89,49 @@ button {
   font-family: var(--font-family-title);
   color: var(--secondary-color);
   font-weight: 600;
+  text-decoration: underline;
+  line-height: normal;
 }
 
 /* ------------- SECTION projets ------------------ */
 .projets-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  flex-direction: column;
+  margin: 20px;
+}
+
+.projets-container img {
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.projets-container p {
+  text-align: justify;
+  margin: 10px;
+}
+
+.projets-container .section-some-title {
+  color: var(--secondary-color);
+  margin-left: 30px;
+  text-decoration: underline;
+  font-family: var(--font-family-title);
+  font-size: 22px;
+}
+
+.projets-container .section-some p {
+  margin: 0 50px;
+  text-align: justify;
+}
+
+.projets-container .section-some ol {
+  margin-left: 90px;
+  margin-right: 40px;
+  text-align: justify;
+}
+
+.projets-container .section-some ol li h3 {
+  text-decoration: underline;
+  font-weight: 600;
+  margin: 0;
 }
 
 .projets-section {
@@ -108,35 +139,66 @@ button {
 }
 
 .projets-item {
+  max-width: 360px;
   width: 100%;
-  margin-bottom: 20px;
+  margin: 0 15px 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border: 3px solid var(--secondary-color);
+  border-radius: var(--light-radius);
 }
 
 .projets-item-thumbnail {
-  border: 3px solid var(--secondary-color);
-  border-radius: var(--light-radius);
   display: flex;
-  align-content: center;
   justify-content: center;
-  width: 80%;
+  align-items: center;
+  width: 100%;
 }
 
-.projets-item-thumbnail img {
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.images-container .projets-item-thumbnail-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.images-container .projets-item-thumbnail-img img {
   border-radius: var(--light-radius);
-  object-fit: contain;
+  border: 3px solid var(--secondary-color);
+  width: 100%;
+  max-width: 300px;
+  max-height: 150px;
+  height: 100%;
+  object-fit: cover;
+  margin: 20px 0;
 }
 
 .projets-item h3 {
   font-size: 20px;
   font-family: var(--font-family-title);
-  margin: 20px 0;
-  width: 80%;
+  margin: 10px 0;
   text-align: center;
+  white-space: nowrap;
+  width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.articles {
+  font-weight: 800;
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
 .retour-container {
@@ -147,10 +209,6 @@ button {
 }
 
 .retour {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
   background-color: var(--secondary-color);
   padding: 10px 28px;
   border-radius: var(--strong-radius);
@@ -159,15 +217,38 @@ button {
   font-size: 16px;
   font-family: var(--font-family-text);
   cursor: pointer;
+  overflow: hidden;
+  border: none;
+  width: 210px;
+  text-align: center;
   transition: 0.5s ease;
 }
 
-.retour:hover {
+.retour-container:hover {
   transform: scale(1.1);
+}
+
+.retour-container:hover .retour {
+  color: var(--tertiary-color);
 }
 
 @media screen and (max-width: 610px) {
   .section-title h2 {
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 800;
+  }
+
+  .projets-container .section-some-title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .projets-container .section-some p {
+    margin: 0 20px;
+  }
+
+  .projets-container .section-some ol {
+    margin-left: 40px;
+    margin-right: 20px;
   }
 }
