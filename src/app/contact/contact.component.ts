@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import {
-  HttpClient,
-  HttpErrorResponse,
-  HttpHeaders,
-} from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({

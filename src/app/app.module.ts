@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,43 +31,36 @@ import { DefisMarketingComponent } from './projets/defis-marketing/defis-marketi
 import { ProjetsMasterComponent } from './projets/projets-master/projets-master.component';
 import { Defi1Component } from './projets/defis-marketing/defi1/defi1.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutComponent,
-    ProjetsComponent,
-    ContactComponent,
-    HeaderComponent,
-    LivresComponent,
-    BannieresComponent,
-    ArticlesComponent,
-    Article1Component,
-    Article2Component,
-    Article3Component,
-    Article4Component,
-    Article5Component,
-    Article6Component,
-    Article7Component,
-    Article8Component,
-    Article9Component,
-    Article10Component,
-    Article11Component,
-    Article12Component,
-    DefisMarketingComponent,
-    ProjetsMasterComponent,
-    Defi1Component,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    MatSnackBarModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        AboutComponent,
+        ProjetsComponent,
+        ContactComponent,
+        HeaderComponent,
+        LivresComponent,
+        BannieresComponent,
+        ArticlesComponent,
+        Article1Component,
+        Article2Component,
+        Article3Component,
+        Article4Component,
+        Article5Component,
+        Article6Component,
+        Article7Component,
+        Article8Component,
+        Article9Component,
+        Article10Component,
+        Article11Component,
+        Article12Component,
+        DefisMarketingComponent,
+        ProjetsMasterComponent,
+        Defi1Component,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatSnackBarModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
