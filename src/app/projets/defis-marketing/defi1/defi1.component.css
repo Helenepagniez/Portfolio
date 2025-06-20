@@ -89,7 +89,6 @@ button {
   font-family: var(--font-family-title);
   color: var(--secondary-color);
   font-weight: 600;
-  text-decoration: underline;
   line-height: normal;
 }
 
@@ -106,7 +105,7 @@ button {
 
 .projets-container p {
   text-align: justify;
-  margin: 10px;
+  margin: 15px 0px 5px 0px;
 }
 
 .projets-container .section-some-title {
@@ -115,6 +114,7 @@ button {
   text-decoration: underline;
   font-family: var(--font-family-title);
   font-size: 22px;
+  margin-top: 25px;
 }
 
 .projets-container .section-some p {
@@ -122,16 +122,113 @@ button {
   text-align: justify;
 }
 
-.projets-container .section-some ol {
-  margin-left: 90px;
-  margin-right: 40px;
-  text-align: justify;
+.projets-container h3 i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: var(--primary-color);
+  margin-left: 10px;
 }
 
-.projets-container .section-some ol li h3 {
+.projets-container ul {
+  text-align: justify;
+  margin: 15px 0px 15px 70px;
+}
+
+.projets-container ul li {
+  margin-bottom: 10px;
+}
+
+.projets-container h3 {
   text-decoration: underline;
   font-weight: 600;
-  margin: 0;
+  margin: 15px 0px 5px 0px;
+}
+
+.projets-container .cartes {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.projets-container .cartes .carte {
+  border: 2px solid var(--primary-color);
+  justify-content: center;
+  margin: 20px 40px;
+  width: 100%;
+  max-width: 275px;
+  height: 370px;
+  border-radius: var(--light-radius);
+  box-shadow: 5px 5px 15px var(--primary-color);
+}
+
+.projets-container .cartes .carte .interieur {
+  position: relative;
+  padding: 12px 13px 0px 13px;
+  justify-items: center;
+  text-align: center;
+  align-content: center;
+  height: 100%;
+}
+
+.projets-container .cartes .carte .interieur .titre {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.projets-container .cartes .carte .interieur .details {
+  margin-top: 50px;
+}
+
+.projets-container .cartes .carte .interieur .titre .resultat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.projets-container .cartes .carte .interieur .titre .resultat i {
+  font-size: 35px;
+  color: var(--secondary-color);
+}
+
+.projets-container .cartes .carte .interieur .titre .resultat span {
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin-top: 10px;
+  min-height: 48px;
+  line-height: 48px;
+}
+
+.projets-container .cartes .carte .interieur .titre .resultat span.dernier {
+  line-height: normal;
+}
+
+.projets-container .cartes .carte .interieur .titre .separation {
+  background-color: var(--secondary-color);
+  width: 50%;
+  height: 2px;
+  margin-top: 5px;
+}
+
+.projets-container .cartes .carte .interieur .categorie {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  border-radius: var(--light-radius);
+  border: 2px solid rgba(0, 0, 0, 0.253);
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  align-content: center;
 }
 
 .projets-section {
@@ -188,13 +285,12 @@ button {
 
 .images-container .projets-item-thumbnail-img img {
   border-radius: var(--light-radius);
-  border: 3px solid var(--secondary-color);
+  border: 3px solid rgba(0, 0, 0, 0.253);
   width: 100%;
   max-width: 300px;
   max-height: 150px;
   height: 100%;
   object-fit: cover;
-  margin: 20px 0;
 }
 
 .projets-item h3 {
@@ -222,6 +318,10 @@ button {
 }
 
 .retour {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
   background-color: var(--secondary-color);
   padding: 10px 28px;
   border-radius: var(--strong-radius);
@@ -230,19 +330,11 @@ button {
   font-size: 16px;
   font-family: var(--font-family-text);
   cursor: pointer;
-  overflow: hidden;
-  border: none;
-  width: 210px;
-  text-align: center;
   transition: 0.5s ease;
 }
 
-.retour-container:hover {
+.retour:hover {
   transform: scale(1.1);
-}
-
-.retour-container:hover .retour {
-  color: var(--tertiary-color);
 }
 
 .overlay {

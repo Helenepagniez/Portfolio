@@ -1,9 +1,7 @@
 <div class="main">
-  <div class="retour-container">
-    <a class="retour" routerLink="/projets/defis-marketing" title="Retour">
-      <span>Retour</span>
-    </a>
-  </div>
+  <a class="retour" routerLink="/projets/defis-marketing" title="Retour">
+    <span>Retour</span>
+  </a>
   <section class="projets-section sec-padding">
     @if (expandedImageSrc()) {
     <div class="overlay" (click)="closeImage()">
@@ -18,26 +16,67 @@
         <h2 class="section-some-title">
           1 - Cartes tirées au hasard pour ce défi
         </h2>
-        <ul>
-          <li><strong>Livrable :</strong>Brand Board</li>
-          <p>
-            Un Brand Board est une planche graphique qui synthétise l'identité
-            visuelle d'une marque (logos, couleurs, typographies,
-            illustrations…).
-          </p>
-          <li><strong>Secteur d’activité :</strong>Banque</li>
-          <p>
-            Réservée aux jeunes actifs, une nouvelle banque s'implante à
-            Bordeaux. Forte d'une image de marque dynamique, elle est basée sur
-            la relation de confiance avec ses clients âgés entre 20 et 35 ans.
-          </p>
-          <li>
-            <strong>Contrainte créative :</strong>Utiliser uniquement des
-            couleurs froides (bleu, violet, vert, etc.)
-          </li>
-        </ul>
+        <div class="cartes">
+          <div class="carte">
+            <div class="interieur">
+              <div class="titre">
+                <div class="resultat">
+                  <i class="fa-regular fa-lightbulb"></i>
+                  <span>Un Brand Board</span>
+                </div>
+                <div class="separation"></div>
+              </div>
+              <div class="details">
+                <p>
+                  Un Brand Board est une planche graphique qui synthétise
+                  l'identité visuelle d'une marque (logos, couleurs,
+                  typographies, illustrations…).
+                </p>
+              </div>
+              <div class="categorie">CARTE SUPPORT</div>
+            </div>
+          </div>
+          <div class="carte">
+            <div class="interieur">
+              <div class="titre">
+                <div class="resultat">
+                  <i class="fa-regular fa-building"></i>
+                  <span>Une banque</span>
+                </div>
+                <div class="separation"></div>
+              </div>
+              <div class="details">
+                <p>
+                  Réservée aux jeunes actifs, une nouvelle banque s'implante à
+                  Bordeaux. Forte d'une image de marque dynamique, elle est
+                  basée sur la relation de confiance avec ses clients âgés entre
+                  20 et 35 ans.
+                </p>
+              </div>
+              <div class="categorie">CARTE SECTEUR D'ACTIVITE</div>
+            </div>
+          </div>
+          <div class="carte">
+            <div class="interieur">
+              <div class="titre">
+                <div class="resultat">
+                  <i class="fa-regular fa-circle-xmark"></i>
+                  <span class="dernier"
+                    >Utiliser uniquement des couleurs froides</span
+                  >
+                </div>
+                <div class="separation"></div>
+              </div>
+              <div class="details">
+                <p>Teintes bleues, violettes, vertes, etc...</p>
+              </div>
+              <div class="categorie">CARTE CONTRAINTE</div>
+            </div>
+          </div>
+        </div>
+        <h3><i class="fa-solid fa-bullseye"></i>Défi</h3>
         <p>
-          Défi : Créer une identité visuelle complète pour une banque moderne,
+          Créer une identité visuelle complète pour une banque moderne,
           implantée à Bordeaux, destinée aux jeunes actifs, en utilisant
           exclusivement des couleurs froides.
         </p>
@@ -50,7 +89,7 @@
           de concurrencer les banques en ligne déjà bien implantées, comme
           BoursoBank, Fortuneo ou Revolut.
         </p>
-        <h3>Nom de marque : Néolink</h3>
+        <h3><i class="fa-solid fa-circle-right"></i>Nom de marque</h3>
         <p>Le nom <strong>“Néolink”</strong> combine :</p>
         <ul>
           <li>
@@ -68,7 +107,7 @@
           Ce nom évoque une marque ancrée dans son époque, intuitive et
           connectée à ses utilisateurs.
         </p>
-        <h3>Slogan</h3>
+        <h3><i class="fa-solid fa-thumbtack"></i>Slogan</h3>
         <p>"Néolink – Votre avenir en un clic"</p>
         <p>
           Un slogan court et direct, qui reflète
@@ -76,7 +115,7 @@
           d’un accompagnement fluide et responsable.
         </p>
         <h2 class="section-some-title">3 - Identité visuelle</h2>
-        <h3>Palette de couleurs</h3>
+        <h3><i class="fa-solid fa-palette"></i>Palette de couleurs</h3>
         <p>
           La contrainte imposait une palette exclusivement composée de couleurs
           froides. J’ai donc sélectionné des teintes harmonieuses, modernes et
@@ -86,33 +125,45 @@
         <div class="couleurs-container">
           <div class="projets-item">
             <div class="couleur" style="background-color: #b3d7f5"></div>
-            <span style="font-weight: bold; color: #b3d7f5"
+            <span style="font-weight: bold; color: var(--primary-color)"
               >#B3D7F5 – Bleu pastel</span
             >
-            <span style="margin: 0">douceur, simplicité</span>
+            <span style="margin: 0">Douceur & Simplicité</span>
           </div>
           <div class="projets-item">
             <div class="couleur" style="background-color: #1e2e47"></div>
-            <span>#1E2E47 – Bleu nuit : confiance, stabilité</span>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#1E2E47 – Bleu nuit</span
+            >
+            <span style="margin: 0">Confiance & Stabilité</span>
           </div>
           <div class="projets-item">
             <div class="couleur" style="background-color: #a7e3c0"></div>
-            <span>#A7E3C0 – Vert menthe : responsabilité, écologie</span>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#A7E3C0 – Vert menthe</span
+            >
+            <span style="margin: 0">Responsabilité & Ecologie</span>
           </div>
           <div class="projets-item">
             <div class="couleur" style="background-color: #d5ccff"></div>
-            <span>#D5CCFF – Violet doux : modernité, innovation</span>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#D5CCFF – Violet doux</span
+            >
+            <span style="margin: 0">Modernité & Innovation</span>
           </div>
           <div class="projets-item">
             <div class="couleur" style="background-color: #f4f9fc"></div>
-            <span>#F4F9FC – Blanc froid : clarté, minimalisme</span>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#F4F9FC – Blanc froid</span
+            >
+            <span style="margin: 0">Clarté & Minimalisme</span>
           </div>
         </div>
         <p>
           Cette palette permet une belle flexibilité entre fonds, éléments de
           contraste et hiérarchies visuelles.
         </p>
-        <h3>Typographies</h3>
+        <h3><i class="fa-solid fa-pen-fancy"></i>Typographies</h3>
         <ul>
           <li>
             <strong>Racing Sans One</strong> (titres) : un caractère
@@ -124,7 +175,7 @@
             moderne, parfaite pour une marque jeune et accessible.
           </li>
         </ul>
-        <h3>Logos</h3>
+        <h3><i class="fa-regular fa-file"></i>Logos</h3>
         <p>Trois déclinaisons de logo ont été conçues :</p>
         <ul>
           <li>Un logo principal sur fond clair</li>
@@ -137,7 +188,7 @@
           Le tout renforce la cohérence graphique et la capacité d’adaptation à
           différents supports.
         </p>
-        <h3>Illustrations</h3>
+        <h3><i class="fa-regular fa-image"></i>Illustrations</h3>
         <p>
           J’ai sélectionné des <strong>illustrations Canva</strong> cohérentes
           avec les valeurs et le ton de la marque. Ces éléments aident à poser
@@ -148,14 +199,16 @@
           >
         </p>
         <h2 class="section-some-title">4 - Outils utilisés</h2>
-        <h3>Canva (version gratuite)</h3>
+        <h3><i class="fa-solid fa-gear"></i>Canva (version gratuite)</h3>
         <ul>
           <li>Création du Brand Board</li>
           <li>Définition des typographies et palette de couleurs</li>
           <li>Conception des logos et déclinaisons</li>
           <li>Sélection d’illustrations et icônes</li>
         </ul>
-        <h3>Méthodologie agile personnelle</h3>
+        <h3>
+          <i class="fa-solid fa-briefcase"></i>Méthodologie agile personnelle
+        </h3>
         <ul>
           <li>Travail par étapes claires (analyse, conception, exécution)</li>
           <li>Itérations selon mes ressentis et retours extérieurs</li>
@@ -167,9 +220,9 @@
               [src]="imagePath + '/brandboard.png'"
               alt="projets item thumb"
             />
-            <h3>Brand Board (planche de style complète)</h3>
+            <p style="font-weight: bold">Brand Board</p>
             <a
-              class="retour"
+              class="btn"
               (click)="onImageClick(imagePath + '/brandboard.png')"
               title="Voir"
             >
@@ -181,9 +234,9 @@
               [src]="imagePath + '/logo-principal.png'"
               alt="projets item thumb"
             />
-            <h3>Logo principal</h3>
+            <p style="font-weight: bold">Logo principal</p>
             <a
-              class="retour"
+              class="btn"
               (click)="onImageClick(imagePath + '/logo-principal.png')"
               title="Voir"
             >
@@ -195,9 +248,9 @@
               [src]="imagePath + '/logo-secondaire-1.png'"
               alt="projets item thumb"
             />
-            <h3>Logo secondaire (1ère déclinaison)</h3>
+            <p style="font-weight: bold">Logo secondaire (1)</p>
             <a
-              class="retour"
+              class="btn"
               (click)="onImageClick(imagePath + '/logo-secondaire-1.png')"
               title="Voir"
             >
@@ -209,9 +262,9 @@
               [src]="imagePath + '/logo-secondaire-2.png'"
               alt="projets item thumb"
             />
-            <h3>Logo secondaire (2ème déclinaison)</h3>
+            <p style="font-weight: bold">Logo secondaire (2)</p>
             <a
-              class="retour"
+              class="btn"
               (click)="onImageClick(imagePath + '/logo-secondaire-2.png')"
               title="Voir"
             >

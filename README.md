@@ -6,56 +6,57 @@
 
 Ce projet a été réalisé à l'aide d'Angular.
 Au travers de ce portfolio, vous y ferez ma découverte et vous pourrez également me joindre.  
-Bonne lecture !  
+Bonne lecture !
 
 <br/>
 
 <details>
   <summary>Pages de l'application</summary>
 
-  ### Accueil
+### Accueil
 
-  - Présentation rapide accompagnée d'une photo
+- Présentation rapide accompagnée d'une photo
+- Accès direct au téléchargement de mon CV et aux autres onglets
 
-  ### A propos de moi
+### A propos de moi
 
-  - Informations générales me concernant
-  - Mes soft skills
-  - Mes hard skills
-  - Mes formations et expériences
-  - Mon CV
+- Informations générales me concernant
+- Mes soft skills
+- Mes hard skills
+- Mes formations et expériences professionnelles
+- Mon CV
 
-  ### Projets
+### Projets
 
-  - Choix possibles : Sites, Livres ou Création de contenu
-  - Visualisation de ces derniers et liens 
+- Choix possibles : Articles de Blog, Bannières LinkedIn, Défis Marketing, Projets Master ou Livres
+- Visualisation de ces derniers et liens
 
-  ### Contact
+### Contact
 
-  - Formulaire de contact avec validateur pour m'envoyer un mail avec votre message
-  - Liens de mes réseaux professionnels
+- Formulaire de contact avec validateur pour m'envoyer un mail avec votre message
+- Liens de mes réseaux professionnels
 
 </details>
 
 <details>
   <summary>Lancer en local</summary>
 
-  ### Cloner le projet
+### Cloner le projet
 
-  ```bash
-    git clone https://github.com/Helenepagniez/Portfolio.git
-  ```
+```bash
+  git clone https://github.com/Helenepagniez/Portfolio.git
+```
 
-  ### Installer les dépendances
+### Installer les dépendances
 
-  ```bash
-    npm install
-  ```
+```bash
+  npm install
+```
 
-  ### Lancer l'application
+### Lancer l'application
 
-  ```bash
-    ng serve -o
-  ```
+```bash
+  ng serve -o
+```
 
 </details>
