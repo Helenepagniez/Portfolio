@@ -10,7 +10,8 @@ import { environment } from 'src/app/environments/environment';
   styleUrl: './projet1.component.css',
 })
 export class Projet1Component {
-  imagePath: string = environment.imagePath + 'defis-marketing/defi1/';
+  filePath: string = environment.filePath;
+  imagePath: string = environment.imagePath + 'projets-master/projet1/';
   expandedImageSrc = signal<string | null>(null);
 
   onImageClick(imageSrc: string): void {
