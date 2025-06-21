@@ -22,6 +22,14 @@ import { ProjetsMasterComponent } from './projets/projets-master/projets-master.
 import { Defi1Component } from './projets/defis-marketing/defi1/defi1.component';
 import { Routes } from '@angular/router';
 import { Projet1Component } from './projets/projets-master/projet1/projet1.component';
+import { Projet2Component } from './projets/projets-master/projet2/projet2.component';
+import { Projet3Component } from './projets/projets-master/projet3/projet3.component';
+import { Projet4Component } from './projets/projets-master/projet4/projet4.component';
+import { Projet5Component } from './projets/projets-master/projet5/projet5.component';
+import { Projet6Component } from './projets/projets-master/projet6/projet6.component';
+import { Projet7Component } from './projets/projets-master/projet7/projet7.component';
+import { Projet8Component } from './projets/projets-master/projet8/projet8.component';
+import { Projet9Component } from './projets/projets-master/projet9/projet9.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -34,6 +42,14 @@ export const routes: Routes = [
   },
   { path: 'projets/projets-master', component: ProjetsMasterComponent },
   { path: 'projets/projets-master/1', component: Projet1Component },
+  { path: 'projets/projets-master/2', component: Projet2Component },
+  { path: 'projets/projets-master/3', component: Projet3Component },
+  { path: 'projets/projets-master/4', component: Projet4Component },
+  { path: 'projets/projets-master/5', component: Projet5Component },
+  { path: 'projets/projets-master/6', component: Projet6Component },
+  { path: 'projets/projets-master/7', component: Projet7Component },
+  { path: 'projets/projets-master/8', component: Projet8Component },
+  { path: 'projets/projets-master/9', component: Projet9Component },
   { path: 'projets/livres', component: LivresComponent },
   {
     path: 'projets/bannieres',

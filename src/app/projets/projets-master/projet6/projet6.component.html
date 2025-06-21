@@ -1,0 +1,92 @@
+<div class="main">
+  <a class="retour" routerLink="/projets/projets-master" title="Retour">
+    <span>Retour</span>
+  </a>
+  <section class="projets-section sec-padding">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="container">
+      <div class="section-title">
+        <h2 class="title">Projet n°6 : Slow</h2>
+      </div>
+      <div class="projets-container">
+        <h2 class="section-some-title">1 - Contexte du projet</h2>
+
+        <h2 class="section-some-title">10 - Livrables produits</h2>
+        <h3><i class="fa-solid fa-eye"></i>Aperçus du projet</h3>
+        <div class="images-container">
+          <div class="projets-item-thumbnail-img">
+            <img [src]="imagePath + '/persona.png'" alt="projets item thumb" />
+            <p style="font-weight: bold">Nom livrable1</p>
+            <a
+              class="btn"
+              (click)="onImageClick(imagePath + '/persona.png')"
+              title="Voir"
+            >
+              <span>Voir</span>
+            </a>
+          </div>
+          <div class="projets-item-thumbnail-img">
+            <img
+              [src]="imagePath + '/concurrent.png'"
+              alt="projets item thumb"
+            />
+            <p style="font-weight: bold">Nom livrable2</p>
+            <a
+              class="btn"
+              (click)="onImageClick(imagePath + '/concurrent.png')"
+              title="Voir"
+            >
+              <span>Voir</span>
+            </a>
+          </div>
+          <div class="projets-item-thumbnail-img">
+            <img
+              [src]="imagePath + '/strategie.png'"
+              alt="projets item thumb"
+            />
+            <p style="font-weight: bold">Nom livrable3</p>
+            <a
+              class="btn"
+              (click)="onImageClick(imagePath + '/strategie.png')"
+              title="Voir"
+            >
+              <span>Voir</span>
+            </a>
+          </div>
+          <div class="projets-item-thumbnail-img">
+            <img [src]="imagePath + 'emailing.png'" alt="projets item thumb" />
+            <p style="font-weight: bold">Nom livrable4</p>
+            <a
+              class="btn"
+              (click)="onImageClick(imagePath + 'emailing.png')"
+              title="Voir"
+            >
+              <span>Voir</span>
+            </a>
+          </div>
+        </div>
+        <h3>
+          <i class="fa-solid fa-download"></i>Télécharger le plan marketing
+          digital complet (PDF)
+        </h3>
+        <div class="button-container">
+          <a
+            [href]="
+              filePath +
+              'images/projets-master/projet1/plan-marketing-digital.pdf'
+            "
+            download="Plan-marketing-digital.pdf"
+            title="Télécharger le plan marketing"
+            aria-label="plan-marketing"
+            class="btn"
+            >Télécharger le plan</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
