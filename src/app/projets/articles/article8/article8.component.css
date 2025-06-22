@@ -85,7 +85,7 @@ button {
   justify-content: center;
 }
 
-.section-title h2 {
+.section-title .title {
   font-size: 40px;
   font-family: var(--font-family-title);
   color: var(--secondary-color);
@@ -221,9 +221,10 @@ button {
 }
 
 @media screen and (max-width: 610px) {
-  .section-title h2 {
+  .section-title .title {
     font-size: 25px;
     font-weight: 800;
+    margin-top: 40px;
   }
 
   .projets-container .section-some-title {
@@ -237,9 +238,5 @@ button {
   .projets-container .section-some ol {
     margin-left: 40px;
     margin-right: 20px;
-  }
-
-  .section-title .title {
-    margin-top: 40px;
   }
 }
