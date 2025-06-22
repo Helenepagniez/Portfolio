@@ -29,7 +29,6 @@ import { Projet5Component } from './projets/projets-master/projet5/projet5.compo
 import { Projet6Component } from './projets/projets-master/projet6/projet6.component';
 import { Projet7Component } from './projets/projets-master/projet7/projet7.component';
 import { Projet8Component } from './projets/projets-master/projet8/projet8.component';
-import { Projet9Component } from './projets/projets-master/projet9/projet9.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -49,7 +48,6 @@ export const routes: Routes = [
   { path: 'projets/projets-master/6', component: Projet6Component },
   { path: 'projets/projets-master/7', component: Projet7Component },
   { path: 'projets/projets-master/8', component: Projet8Component },
-  { path: 'projets/projets-master/9', component: Projet9Component },
   { path: 'projets/livres', component: LivresComponent },
   {
     path: 'projets/bannieres',
