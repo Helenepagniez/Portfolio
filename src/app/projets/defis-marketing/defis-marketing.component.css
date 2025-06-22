@@ -220,7 +220,22 @@ button {
 }
 
 @media screen and (max-width: 610px) {
-  .section-title h2 {
+  .section-title .title {
+    margin-top: 40px;
     font-size: 30px;
+  }
+
+  .introduction-container .description {
+    margin: 10px 20px;
+  }
+
+  .introduction-container .description ul {
+    margin-left: 40px;
+    margin-right: 20px;
+    text-align: justify;
+  }
+
+  .introduction-container .description ul li {
+    margin-bottom: 10px;
   }
 }

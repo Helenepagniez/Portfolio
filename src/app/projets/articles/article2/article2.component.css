@@ -230,7 +230,6 @@ button {
 
   .projets-container .section-some-title {
     margin-left: 0;
-    text-align: center;
   }
 
   .projets-container .section-some p {
@@ -240,5 +239,9 @@ button {
   .projets-container .section-some ul {
     margin-left: 40px;
     margin-right: 20px;
+  }
+
+  .section-title .title {
+    margin-top: 40px;
   }
 }

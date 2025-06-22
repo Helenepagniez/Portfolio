@@ -362,6 +362,10 @@ button {
     font-weight: 800;
   }
 
+  .section-title .title {
+    margin-top: 40px;
+  }
+
   .projets-container .section-some-title {
     margin-left: 0;
   }

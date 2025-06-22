@@ -160,4 +160,8 @@ button {
   .section-title h2 {
     font-size: 30px;
   }
+
+  .section-title .title {
+    margin-top: 40px;
+  }
 }
