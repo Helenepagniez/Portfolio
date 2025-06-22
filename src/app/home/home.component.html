@@ -6,14 +6,17 @@
           <h1>Hélène Pagniez</h1>
           <h2>Votre future recrue | Prête à intégrer une équipe innovante</h2>
           <div class="button-container">
-            <a class="btn" routerLink="/about">A propos de moi</a>
-            <a class="btn" routerLink="/projets">Projets</a>
-            <a class="btn" routerLink="/contact">Contactez moi</a>
+            <a class="btn" title="À propos de moi" routerLink="/about"
+              >À propos de moi</a
+            >
+            <a class="btn" title="Projets" routerLink="/projets">Projets</a>
+            <a class="btn" title="Contactez moi" routerLink="/contact"
+              >Contactez moi</a
+            >
             <a
               [href]="filePath + 'cv.pdf'"
               download="images/cv.pdf"
               title="CV"
-              aria-label="cv"
               class="btn"
               >Téléchargement CV</a
             >

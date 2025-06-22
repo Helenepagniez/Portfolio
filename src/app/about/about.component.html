@@ -53,6 +53,7 @@
           <button
             type="button"
             class="tab-item active"
+            title="Formations"
             (click)="activeFormation()"
             *ngIf="isActivedFormation"
           >
@@ -61,6 +62,7 @@
           <button
             type="button"
             class="tab-item"
+            title="Formations"
             (click)="activeFormation()"
             *ngIf="!isActivedFormation"
           >
@@ -69,6 +71,7 @@
           <button
             type="button"
             class="tab-item active"
+            title="Expériences"
             (click)="activeExperience()"
             *ngIf="isActivedExperience"
           >
@@ -77,6 +80,7 @@
           <button
             type="button"
             class="tab-item"
+            title="Expériences"
             (click)="activeExperience()"
             *ngIf="!isActivedExperience"
           >
@@ -155,7 +159,9 @@
             class="btn"
             >Téléchargement CV</a
           >
-          <a class="btn" routerLink="/contact">Contactez moi</a>
+          <a class="btn" title="Contactez moi" routerLink="/contact"
+            >Contactez moi</a
+          >
         </div>
       </div>
     </div>
