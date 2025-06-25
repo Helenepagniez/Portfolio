@@ -92,34 +92,40 @@ button {
   font-weight: 600;
   text-decoration: underline;
   line-height: normal;
+  margin-bottom: 0;
+  padding-top: 15px;
 }
 
 /* ------------- SECTION projets ------------------ */
 .projets-container {
-  margin: 20px;
+  margin: 20px 40px;
 }
 
 .projets-container p {
   text-align: justify;
-  margin: 10px;
+  margin: 0;
 }
 
 .projets-container .section-some-title {
   color: var(--secondary-color);
-  margin-left: 30px;
+  margin-left: 0;
   text-decoration: underline;
   font-family: var(--font-family-title);
   font-size: 22px;
 }
 
 .projets-container .section-some p {
-  margin: 0 50px;
+  margin: 0px;
   text-align: justify;
 }
 
 .projets-container .section-some ul {
-  margin-left: 90px;
-  margin-right: 40px;
+  margin-left: 50px;
+  text-align: justify;
+}
+
+.projets-container .section-some ol {
+  margin-left: 50px;
   text-align: justify;
 }
 
@@ -240,5 +246,9 @@ button {
   .projets-container .section-some ul {
     margin-left: 40px;
     margin-right: 20px;
+  }
+
+  .projets-container {
+    margin: 10px 20px;
   }
 }
