@@ -111,6 +111,7 @@ button {
   color: var(--secondary-color);
   font-weight: 600;
   line-height: normal;
+  margin-bottom: 0;
 }
 
 /* ------------- SECTION projets ------------------ */
@@ -241,5 +242,9 @@ button {
 
   .introduction-container .description ul li {
     margin-bottom: 10px;
+  }
+
+  .projets-container {
+    flex-direction: column;
   }
 }
