@@ -274,6 +274,10 @@ button {
   width: 100%;
 }
 
+.button-container .btn {
+  width: auto;
+}
+
 @media screen and (max-width: 610px) {
   .section-title .title {
     font-size: 25px;
