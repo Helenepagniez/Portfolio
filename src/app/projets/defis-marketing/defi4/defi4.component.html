@@ -1,0 +1,140 @@
+<div class="main">
+  <a class="retour" routerLink="/projets/defis-marketing" title="Retour">
+    <span>Retour</span>
+  </a>
+  <section class="projets-section sec-padding">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="container">
+      <div class="section-title">
+        <h2 class="title">Défi n°4 : XXXXXX</h2>
+      </div>
+      <div class="projets-container">
+        <h2 class="section-some-title">
+          1 - Cartes tirées au hasard pour ce défi
+        </h2>
+        <div class="cartes">
+          <div class="carte">
+            <div class="interieur">
+              <div class="titre">
+                <div class="resultat">
+                  <i class="fa-regular fa-lightbulb"></i>
+                  <span>Une couverture LinkedIn</span>
+                </div>
+                <div class="separation"></div>
+              </div>
+              <div class="details">
+                <p>
+                  L'enjeu : faire passer le bon message et utiliser la bonne
+                  accroche en un espace très restreint sur une page entreprise
+                  LinkedIn.
+                </p>
+              </div>
+              <div class="categorie">CARTE SUPPORT</div>
+            </div>
+          </div>
+          <div class="carte">
+            <div class="interieur">
+              <div class="titre">
+                <div class="resultat">
+                  <i class="fa-regular fa-building"></i>
+                  <span>Un fleuriste</span>
+                </div>
+                <div class="separation"></div>
+              </div>
+              <div class="details">
+                <p>
+                  Jean est fleuriste indépendant. Sa spécialité : le travail des
+                  compositions en fleurs séchées pour tous les évènements de la
+                  vie : baptême, mariage, etc...
+                </p>
+              </div>
+              <div class="categorie">CARTE SECTEUR D'ACTIVITE</div>
+            </div>
+          </div>
+          <div class="carte">
+            <div class="interieur">
+              <div class="titre">
+                <div class="resultat">
+                  <i class="fa-regular fa-circle-xmark"></i>
+                  <span class="dernier">Ne pas utiliser la couleur verte</span>
+                </div>
+                <div class="separation"></div>
+              </div>
+              <div class="details">
+                <p>L'utilisation de la couleur verte est interdite.</p>
+              </div>
+              <div class="categorie">CARTE CONTRAINTE</div>
+            </div>
+          </div>
+        </div>
+        <h3><i class="fa-solid fa-bullseye"></i>Défi</h3>
+        <p>XXXXXXXX</p>
+        <h2 class="section-some-title">2 - Démarche créative</h2>
+
+        <h2 class="section-some-title">5 - Livrables produits</h2>
+        <div class="images-container">
+          <div class="projets-item-thumbnail-img">
+            <img
+              [src]="imagePath + '/brandboard.png'"
+              alt="projets item thumb"
+            />
+            <p style="font-weight: bold">Brand Board</p>
+            <a
+              class="btn"
+              (click)="onImageClick(imagePath + '/brandboard.png')"
+              title="Voir"
+            >
+              <span>Voir</span>
+            </a>
+          </div>
+          <div class="projets-item-thumbnail-img">
+            <img
+              [src]="imagePath + '/logo-principal.png'"
+              alt="projets item thumb"
+            />
+            <p style="font-weight: bold">Logo principal</p>
+            <a
+              class="btn"
+              (click)="onImageClick(imagePath + '/logo-principal.png')"
+              title="Voir"
+            >
+              <span>Voir</span>
+            </a>
+          </div>
+          <div class="projets-item-thumbnail-img">
+            <img
+              [src]="imagePath + '/logo-secondaire-1.png'"
+              alt="projets item thumb"
+            />
+            <p style="font-weight: bold">Logo secondaire (1)</p>
+            <a
+              class="btn"
+              (click)="onImageClick(imagePath + '/logo-secondaire-1.png')"
+              title="Voir"
+            >
+              <span>Voir</span>
+            </a>
+          </div>
+          <div class="projets-item-thumbnail-img">
+            <img
+              [src]="imagePath + '/logo-secondaire-2.png'"
+              alt="projets item thumb"
+            />
+            <p style="font-weight: bold">Logo secondaire (2)</p>
+            <a
+              class="btn"
+              (click)="onImageClick(imagePath + '/logo-secondaire-2.png')"
+              title="Voir"
+            >
+              <span>Voir</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

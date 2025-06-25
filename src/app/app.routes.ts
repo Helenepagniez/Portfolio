@@ -29,6 +29,9 @@ import { Projet5Component } from './projets/projets-master/projet5/projet5.compo
 import { Projet6Component } from './projets/projets-master/projet6/projet6.component';
 import { Projet7Component } from './projets/projets-master/projet7/projet7.component';
 import { Projet8Component } from './projets/projets-master/projet8/projet8.component';
+import { Defi2Component } from './projets/defis-marketing/defi2/defi2.component';
+import { Defi3Component } from './projets/defis-marketing/defi3/defi3.component';
+import { Defi4Component } from './projets/defis-marketing/defi4/defi4.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -38,6 +41,18 @@ export const routes: Routes = [
   {
     path: 'projets/defis-marketing/1',
     component: Defi1Component,
+  },
+  {
+    path: 'projets/defis-marketing/2',
+    component: Defi2Component,
+  },
+  {
+    path: 'projets/defis-marketing/3',
+    component: Defi3Component,
+  },
+  {
+    path: 'projets/defis-marketing/4',
+    component: Defi4Component,
   },
   { path: 'projets/projets-master', component: ProjetsMasterComponent },
   { path: 'projets/projets-master/1', component: Projet1Component },

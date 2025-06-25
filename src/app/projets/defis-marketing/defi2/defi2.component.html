@@ -1,0 +1,336 @@
+<div class="main">
+  <a class="retour" routerLink="/projets/defis-marketing" title="Retour">
+    <span>Retour</span>
+  </a>
+  <section class="projets-section sec-padding">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="container">
+      <div class="section-title">
+        <h2 class="title">Défi n°2 : Linfini</h2>
+      </div>
+      <div class="projets-container">
+        <h2 class="section-some-title">
+          1 - Cartes tirées au hasard pour ce défi
+        </h2>
+        <div class="cartes">
+          <div class="carte">
+            <div class="interieur">
+              <div class="titre">
+                <div class="resultat">
+                  <i class="fa-regular fa-lightbulb"></i>
+                  <span>Une Newsletter</span>
+                </div>
+                <div class="separation"></div>
+              </div>
+              <div class="details">
+                <p>
+                  La newsletter est devenue le rendez-vous privilégié d'une
+                  marque avec son audience. Amusez-vous à imaginer et à
+                  maquetter une communication par e-mail pertinente pour le
+                  secteur d'activité.
+                </p>
+              </div>
+              <div class="categorie">CARTE SUPPORT</div>
+            </div>
+          </div>
+          <div class="carte">
+            <div class="interieur">
+              <div class="titre">
+                <div class="resultat">
+                  <i class="fa-regular fa-building"></i>
+                  <span class="dernier">Une marque de vêtements engagée</span>
+                </div>
+                <div class="separation"></div>
+              </div>
+              <div class="details">
+                <p>
+                  Passionné par la mode et très engagé pour l'environnement,
+                  Adam vient de lancer sa marque de vêtements dont les fibres
+                  sont issues de vêtements recyclés.
+                </p>
+              </div>
+              <div class="categorie">CARTE SECTEUR D'ACTIVITE</div>
+            </div>
+          </div>
+          <div class="carte">
+            <div class="interieur">
+              <div class="titre">
+                <div class="resultat">
+                  <i class="fa-regular fa-circle-xmark"></i>
+                  <span class="dernier"
+                    >Choisir un évènement du mois en cours</span
+                  >
+                </div>
+                <div class="separation"></div>
+              </div>
+              <div class="details">
+                <p>
+                  Vous pouvez utiliser un marronnier marketing pour vous
+                  inspirer.
+                </p>
+              </div>
+              <div class="categorie">CARTE CONTRAINTE</div>
+            </div>
+          </div>
+        </div>
+        <h3><i class="fa-solid fa-bullseye"></i>Défi</h3>
+        <p>
+          Créer une identité visuelle complète pour une marque de vêtements
+          éco-responsable, imaginée par un entrepreneur engagé afin de lui
+          concevoir une newsletter inspirante en lien avec un événement du mois
+          de juin.
+        </p>
+        <h2 class="section-some-title">2 - Démarche créative</h2>
+        <p>
+          Ce défi m’a conduite à créer une marque engagée dans l’upcycling
+          textile, à concevoir son identité visuelle à travers un Brand Board,
+          puis à imaginer une newsletter inspirante pour marquer l’engagement de
+          la marque à l’occasion de la Journée Mondiale de l’Environnement.
+        </p>
+        <p>
+          L’objectif est de combiner écologie, esthétisme et impact émotionnel,
+          sans tomber dans un ton moralisateur.
+        </p>
+        <h2 class="section-some-title">3 - Identité de marque</h2>
+        <h3>Nom de marque : Linfini</h3>
+        <p>
+          Un nom qui joue sur la matière textile “lin” et le mot “infini”. Il
+          évoque :
+        </p>
+        <ul>
+          <li>La circularité des vêtements (upcycling, seconde vie)</li>
+          <li>La durabilité du style</li>
+          <li>Un univers poétique, doux et responsable</li>
+        </ul>
+        <p>Linfini incarne une marque consciente, élégante et en mouvement.</p>
+        <h3>Slogan</h3>
+        <p>“Changer la mode. Pas la planète.”</p>
+        <p>
+          J’ai choisi ce slogan pour sa force de contraste et sa simplicité
+          percutante. Il exprime en quelques mots la mission de la marque :
+          proposer une alternative à l’industrie textile traditionnelle, sans
+          compromis sur l’impact écologique.
+        </p>
+        <p>
+          Il fonctionne comme un manifeste condensé : changer notre manière de
+          consommer la mode, tout en respectant profondément la planète.
+        </p>
+        <p>
+          Ce slogan ne cherche pas à culpabiliser, mais à responsabiliser de
+          façon positive. Il invite à faire un choix clair : soutenir une mode
+          plus juste, plus durable, et pleine de sens.
+        </p>
+        <h3>Palette de couleurs</h3>
+        <p>
+          Pour Linfini, j’ai souhaité construire une palette douce, naturelle et
+          intemporelle, qui évoque à la fois la matière textile, l’artisanat et
+          un engagement écologique.
+        </p>
+        <p>
+          Chaque teinte a été choisie pour sa capacité à créer une ambiance
+          apaisante, tout en transmettant des valeurs fortes : authenticité,
+          durabilité, élégance.
+        </p>
+        <div class="couleurs-container">
+          <div class="projets-item">
+            <div class="couleur" style="background-color: #a8cbb7"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#A8CBB7 – Vert sauge</span
+            >
+            <span style="margin: 0">Douceur & Durabilité</span>
+          </div>
+          <div class="projets-item">
+            <div class="couleur" style="background-color: #2f4858"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#2F4858 – Bleu ardoise</span
+            >
+            <span style="margin: 0">Sobriété & Confiance</span>
+          </div>
+          <div class="projets-item">
+            <div class="couleur" style="background-color: #f1eee7"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#F1EEE7 – Lin naturel</span
+            >
+            <span style="margin: 0">Épure & Textile</span>
+          </div>
+          <div class="projets-item">
+            <div class="couleur" style="background-color: #d9c4a1"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#D9C4A1 – Ocre pâle</span
+            >
+            <span style="margin: 0">Chaleur & Simplicité artisanale</span>
+          </div>
+          <div class="projets-item">
+            <div class="couleur" style="background-color: #ffffff"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#FFFFFF – Blanc pur</span
+            >
+            <span style="margin: 0">Clarté & Minimalisme</span>
+          </div>
+        </div>
+        <p>
+          Cette palette permet une belle flexibilité pour créer des visuels à la
+          fois sobres et chaleureux, compatibles avec l’univers du textile
+          éthique.
+        </p>
+        <h3>Typographies</h3>
+        <ul>
+          <li>
+            Titres : Playfair Display – Élégante, avec un aspect éditorial haut
+            de gamme
+          </li>
+          <li>Textes : Lato – Moderne, sobre, lisible sur écran</li>
+        </ul>
+        <h3>Logos</h3>
+        <p>
+          Le logo de Linfini associe une typographie élégante à des symboles
+          forts : des boutons pour évoquer le textile et un signe infini pour
+          incarner la mode circulaire. Trois déclinaisons ont été créées pour
+          s’adapter à différents fonds, tout en respectant la palette de la
+          marque. Chaque version assure lisibilité, cohérence et accessibilité.
+        </p>
+        <h3>Illustrations et univers visuel</h3>
+        <p>
+          Les illustrations sélectionnées traduisent l’univers doux, naturel et
+          artisanal de la marque, en mettant en valeur la matière, le geste et
+          l’engagement éthique de Linfini.
+        </p>
+        <h2 class="section-some-title">
+          4 - Stratégie éditoriale de la newsletter
+        </h2>
+        <h3>Objectif principal</h3>
+        <p>
+          Marquer un lancement éditorial fort à l’occasion de la Journée
+          Mondiale de l’Environnement (5 juin), en incarnant l’engagement
+          écologique de Linfini.
+        </p>
+        <h3>Cibles</h3>
+        <p>
+          25–40 ans, urbains ou périurbains, sensibles aux questions d’écologie,
+          de style durable et d’artisanat.
+        </p>
+        <h3>Message clé</h3>
+        <p>“Changer la mode, c’est déjà protéger la planète.”</p>
+        <p>
+          Ce message vient soutenir le slogan en ajoutant une valeur pédagogique
+          et accessible : il relie l’acte d’achat à un impact concret. Il invite
+          à l’action, sans culpabilisation.
+        </p>
+        <h3>Ton éditorial</h3>
+        <p>
+          Inspirant, doux, humain, jamais moralisateur. Poétique, ancré dans le
+          réel.
+        </p>
+        <h3>Workflow</h3>
+        <p>
+          Le système de workflow permet d’automatiser l’envoi de la newsletter
+          en réponse à une action ou à une date clé. Voici l’automatisation
+          envisagée dans le cadre de cette campagne :
+        </p>
+        <ul>
+          <li>
+            Déclencheur :
+            <ul>
+              <li>
+                Date programmée autour du 5 juin (Journée mondiale de
+                l’environnement)
+              </li>
+            </ul>
+          </li>
+          <li>
+            Audience cible :
+            <ul>
+              <li>
+                Utilisateurs ayant souscrit à la newsletter via le site ou les
+                réseaux sociaux
+              </li>
+            </ul>
+          </li>
+          <li>
+            Action automatisée :
+            <ul>
+              <li>
+                Envoi d’une newsletter éditoriale présentant l'engagement de la
+                marque + lancement de la collection “Seconde Vie”
+              </li>
+            </ul>
+          </li>
+          <li>
+            Outil potentiel :
+            <ul>
+              <li>
+                Mailchimp, Brevo, MailerLite ... (outils compatibles avec la
+                création de scénarios simples)
+              </li>
+            </ul>
+          </li>
+          <li>
+            Suivi intégré :
+            <ul>
+              <li>
+                Analyse des performances via les rapports natifs de l’outil
+                choisi (ouverture, clics, désinscription, etc...)
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h3>KPIs à suivre</h3>
+        <ul>
+          <li>Taux d'ouverture</li>
+          <li>Taux de clics sur le CTA (Call To Action)</li>
+          <li>Taux d'engagement (visites sur la landing page)</li>
+          <li>Taux de conversion éventuel (inscriptions, commandes, ...)</li>
+        </ul>
+        <h2 class="section-some-title">5 - Livrables produits</h2>
+        <div class="images-container">
+          <div class="projets-item-thumbnail-img">
+            <img
+              [src]="imagePath + '/newsletter.png'"
+              alt="projets item thumb"
+            />
+            <p style="font-weight: bold">Newsletter</p>
+            <a
+              class="btn"
+              (click)="onImageClick(imagePath + '/newsletter.png')"
+              title="Voir"
+            >
+              <span>Voir</span>
+            </a>
+          </div>
+          <div class="projets-item-thumbnail-img">
+            <img
+              [src]="imagePath + '/brandboard.png'"
+              alt="projets item thumb"
+            />
+            <p style="font-weight: bold">Brand Board</p>
+            <a
+              class="btn"
+              (click)="onImageClick(imagePath + '/brandboard.png')"
+              title="Voir"
+            >
+              <span>Voir</span>
+            </a>
+          </div>
+          <div class="projets-item-thumbnail-img">
+            <img
+              [src]="imagePath + '/logo-principal.png'"
+              alt="projets item thumb"
+            />
+            <p style="font-weight: bold">Logo principal</p>
+            <a
+              class="btn"
+              (click)="onImageClick(imagePath + '/logo-principal.png')"
+              title="Voir"
+            >
+              <span>Voir</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
