@@ -116,7 +116,7 @@ button {
   border-radius: var(--light-radius);
 }
 
-.projets-item-thumbnail {
+.conteneur-image {
   width: auto;
   height: 240px;
   display: flex;
@@ -124,7 +124,7 @@ button {
   justify-content: center;
 }
 
-.projets-item-thumbnail img {
+.conteneur-image img {
   width: 100%;
   border-radius: var(--light-radius);
 }

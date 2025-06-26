@@ -116,7 +116,7 @@ button {
   flex-direction: column;
 }
 
-.projets-item-thumbnail {
+.conteneur-image {
   border: 3px solid var(--secondary-color);
   border-radius: var(--light-radius);
   display: flex;
@@ -125,7 +125,7 @@ button {
   width: 80%;
 }
 
-.projets-item-thumbnail img {
+.conteneur-image img {
   width: 100%;
   border-radius: var(--light-radius);
   object-fit: contain;

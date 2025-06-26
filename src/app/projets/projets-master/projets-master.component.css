@@ -39,14 +39,14 @@ section {
   margin-bottom: 40px;
 }
 
-.container .introduction-container .projets-item-thumbnail {
+.container .introduction-container .conteneur-image {
   border: 3px solid var(--secondary-color);
   border-radius: var(--light-radius);
   width: 300px;
   margin: 20px;
 }
 
-.container .introduction-container .projets-item-thumbnail img {
+.container .introduction-container .conteneur-image img {
   width: 100%;
   border-radius: var(--light-radius);
   object-fit: contain;
@@ -163,7 +163,7 @@ button {
   margin-top: 10px;
 }
 
-.projets-item-thumbnail {
+.conteneur-image {
   border: 3px solid var(--secondary-color);
   border-radius: var(--light-radius);
   display: flex;
@@ -171,7 +171,7 @@ button {
   justify-content: center;
 }
 
-.projets-item-thumbnail-introduction {
+.conteneur-image-introduction {
   border: 3px solid var(--secondary-color);
   border-radius: var(--light-radius);
   display: flex;
@@ -181,14 +181,14 @@ button {
   width: 310px;
 }
 
-.projets-item-thumbnail-introduction img {
+.conteneur-image-introduction img {
   width: 300px;
   height: 300px;
   border-radius: var(--light-radius);
   object-fit: cover;
 }
 
-.projets-item-thumbnail img {
+.conteneur-image img {
   width: 100%;
   border-radius: var(--light-radius);
   object-fit: cover;
@@ -196,11 +196,11 @@ button {
   height: 150px;
 }
 
-.projets-item-thumbnail.small {
+.conteneur-image.small {
   padding: 50px 0;
 }
 
-.projets-item-thumbnail.small img {
+.conteneur-image.small img {
   height: 50px;
 }
 

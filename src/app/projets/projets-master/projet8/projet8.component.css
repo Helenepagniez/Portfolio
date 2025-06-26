@@ -170,7 +170,7 @@ button {
   border-radius: var(--light-radius);
 }
 
-.projets-item-thumbnail {
+.conteneur-image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,14 +186,14 @@ button {
   gap: 20px;
 }
 
-.images-container .projets-item-thumbnail-img {
+.images-container .conteneur-image-img {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.images-container .projets-item-thumbnail-img img {
+.images-container .conteneur-image-img img {
   border-radius: var(--light-radius);
   border: 3px solid rgba(0, 0, 0, 0.253);
   width: 100%;

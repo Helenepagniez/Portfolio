@@ -149,14 +149,14 @@ button {
   border-radius: var(--light-radius);
 }
 
-.projets-item-thumbnail {
+.conteneur-image {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.projets-item-thumbnail img {
+.conteneur-image img {
   border-radius: var(--light-radius);
   border: 3px solid var(--secondary-color);
   width: 100%;
@@ -167,7 +167,7 @@ button {
   margin: 20px 0;
 }
 
-.projets-item-thumbnail img.small {
+.conteneur-image img.small {
   border-radius: var(--light-radius);
   border: 3px solid var(--secondary-color);
   width: 100%;
@@ -178,7 +178,7 @@ button {
   margin: 20px 0;
 }
 
-.projets-item-thumbnail img.small.height {
+.conteneur-image img.small.height {
   max-height: 450px;
 }
 
