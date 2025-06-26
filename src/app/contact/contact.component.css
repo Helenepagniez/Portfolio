@@ -46,7 +46,7 @@ section {
   margin-bottom: 10px;
 }
 
-.container {
+.page {
   padding: 0 40px;
   width: 100%;
 }
@@ -187,7 +187,7 @@ i {
 }
 
 @media screen and (max-width: 600px) {
-  .container {
+  .page {
     padding: 0;
   }
 

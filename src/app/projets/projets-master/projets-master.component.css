@@ -26,12 +26,12 @@ section {
   position: relative;
 }
 
-.container {
+.page {
   width: 100%;
   position: relative;
 }
 
-.container .introduction-container {
+.page .introduction-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -39,14 +39,14 @@ section {
   margin-bottom: 40px;
 }
 
-.container .introduction-container .conteneur-image {
+.page .introduction-container .conteneur-image {
   border: 3px solid var(--secondary-color);
   border-radius: var(--light-radius);
   width: 300px;
   margin: 20px;
 }
 
-.container .introduction-container .conteneur-image img {
+.page .introduction-container .conteneur-image img {
   width: 100%;
   border-radius: var(--light-radius);
   object-fit: contain;

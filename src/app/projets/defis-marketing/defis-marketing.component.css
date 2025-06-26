@@ -26,25 +26,25 @@ section {
   position: relative;
 }
 
-.container {
+.page {
   width: 100%;
   position: relative;
 }
 
-.container .introduction-container {
+.page .introduction-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.container .introduction-container .conteneur-image {
+.page .introduction-container .conteneur-image {
   border: 3px solid var(--secondary-color);
   border-radius: var(--light-radius);
   width: 300px;
 }
 
-.container .introduction-container .conteneur-image img {
+.page .introduction-container .conteneur-image img {
   width: 300px;
   height: 300px;
   border-radius: var(--light-radius);
