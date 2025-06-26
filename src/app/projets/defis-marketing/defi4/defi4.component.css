@@ -261,7 +261,7 @@ button {
   width: 100%;
 }
 
-.images-container {
+.contenu-visuels {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,14 +270,14 @@ button {
   gap: 20px;
 }
 
-.images-container .conteneur-image-img {
+.contenu-visuels .conteneur-preview {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.images-container .conteneur-image-img img {
+.contenu-visuels .conteneur-preview img {
   border-radius: var(--light-radius);
   border: 3px solid rgba(0, 0, 0, 0.253);
   width: 100%;
