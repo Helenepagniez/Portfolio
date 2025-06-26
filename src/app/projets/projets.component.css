@@ -32,7 +32,7 @@ section {
 }
 
 /* ------------- SECTION TITRE DE PAGE ------------------ */
-.section-titre {
+.titre-page {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
@@ -41,7 +41,7 @@ section {
   justify-content: center;
 }
 
-.section-titre h2 {
+.titre-page h1 {
   font-size: 40px;
   font-family: var(--font-family-title);
   color: var(--secondary-color);
@@ -100,7 +100,7 @@ section {
 }
 
 @media screen and (max-width: 610px) {
-  .section-titre h2 {
+  .titre-page h1 {
     font-size: 30px;
   }
 }

@@ -87,14 +87,14 @@ button {
 }
 
 /* ------------- SECTION TITRE DE PAGE ------------------ */
-.section-titre {
+.titre-page {
   padding: 0 15px;
   width: 100%;
   text-align: center;
   margin-bottom: 10px;
 }
 
-.section-titre .titre-page {
+.titre-page h1 {
   font-size: 40px;
   font-family: var(--font-family-title);
   color: var(--secondary-color);

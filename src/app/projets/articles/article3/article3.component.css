@@ -31,11 +31,6 @@ section {
   position: relative;
 }
 
-.titre-page {
-  font-weight: 600;
-  margin-top: 20px;
-}
-
 h3 {
   font-weight: 500;
 }
@@ -73,7 +68,7 @@ button {
   transform: scale(1.1);
 }
 /* ------------- SECTION TITRE DE PAGE ------------------ */
-.section-titre {
+.titre-page {
   width: 100%;
   text-align: center;
   display: flex;
@@ -81,14 +76,14 @@ button {
   justify-content: center;
 }
 
-.section-titre .titre-page {
+.titre-page h1 {
   font-size: 40px;
   font-family: var(--font-family-title);
   color: var(--secondary-color);
   font-weight: 600;
   line-height: normal;
   margin-bottom: 0;
-  padding-top: 15px;
+  margin-top: 35px;
 }
 
 /* ------------- SECTION projets ------------------ */
@@ -234,7 +229,7 @@ button {
 }
 
 @media screen and (max-width: 610px) {
-  .section-titre .titre-page {
+  .titre-page h1 {
     font-size: 25px;
     font-weight: 800;
     margin-top: 40px;
