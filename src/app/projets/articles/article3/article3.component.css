@@ -35,7 +35,7 @@ section {
   padding: 40px 0;
 }
 
-.title {
+.titre-page {
   font-weight: 600;
   margin-top: 20px;
 }
@@ -76,8 +76,8 @@ button {
   color: var(--tertiary-color);
   transform: scale(1.1);
 }
-/* ------------- SECTION TITLE ------------------ */
-.section-title {
+/* ------------- SECTION titre-page ------------------ */
+.section-titre {
   width: 100%;
   text-align: center;
   display: flex;
@@ -85,12 +85,11 @@ button {
   justify-content: center;
 }
 
-.section-title .title {
+.section-titre .titre-page {
   font-size: 40px;
   font-family: var(--font-family-title);
   color: var(--secondary-color);
   font-weight: 600;
-  text-decoration: underline;
   line-height: normal;
   margin-bottom: 0;
   padding-top: 15px;
@@ -238,7 +237,7 @@ button {
 }
 
 @media screen and (max-width: 610px) {
-  .section-title .title {
+  .section-titre .titre-page {
     font-size: 25px;
     font-weight: 800;
     margin-top: 40px;

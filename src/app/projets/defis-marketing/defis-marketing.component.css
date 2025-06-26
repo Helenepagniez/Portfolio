@@ -95,8 +95,8 @@ button {
 .btn:hover {
   transform: scale(1.1);
 }
-/* ------------- SECTION TITLE ------------------ */
-.section-title {
+/* ------------- SECTION titre-page ------------------ */
+.section-titre {
   width: 100%;
   text-align: center;
   margin-bottom: 40px;
@@ -105,7 +105,7 @@ button {
   justify-content: center;
 }
 
-.section-title .title {
+.section-titre .titre-page {
   font-size: 40px;
   font-family: var(--font-family-title);
   color: var(--secondary-color);
@@ -225,7 +225,7 @@ button {
 }
 
 @media screen and (max-width: 610px) {
-  .section-title .title {
+  .section-titre .titre-page {
     margin-top: 40px;
     font-size: 30px;
   }
