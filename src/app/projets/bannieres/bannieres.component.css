@@ -31,10 +31,6 @@ section {
   position: relative;
 }
 
-.sec-padding {
-  padding: 40px 0;
-}
-
 h2 {
   font-weight: 600;
   margin-top: 20px;
@@ -103,8 +99,9 @@ button {
   flex-direction: column;
 }
 
-.projets-section {
+.conteneur-page {
   padding-bottom: 50px;
+  padding: 40px 0;
 }
 
 .projets-item {

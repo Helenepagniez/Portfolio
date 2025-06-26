@@ -31,10 +31,6 @@ section {
   position: relative;
 }
 
-.sec-padding {
-  padding: 40px 0;
-}
-
 .titre-page {
   font-weight: 600;
   margin-top: 20px;
@@ -134,8 +130,9 @@ button {
   margin: 0;
 }
 
-.projets-section {
+.conteneur-page {
   padding-bottom: 50px;
+  padding: 40px 0;
 }
 
 .projets-item {

@@ -52,10 +52,6 @@ section {
   object-fit: contain;
 }
 
-.sec-padding {
-  padding: 40px 0;
-}
-
 h2 {
   font-weight: 400;
   margin-top: 20px;
@@ -145,8 +141,9 @@ button {
   margin-bottom: 12px;
 }
 
-.projets-section {
+.conteneur-page {
   padding-bottom: 50px;
+  padding: 40px 0;
 }
 
 .projets-item {

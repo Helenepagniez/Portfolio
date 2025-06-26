@@ -2,7 +2,7 @@
   <a class="retour" routerLink="/projets/defis-marketing" title="Retour">
     <span>Retour</span>
   </a>
-  <section class="projets-section sec-padding">
+  <section class="conteneur-page">
     @if (expandedImageSrc()) {
     <div class="overlay" (click)="closeImage()">
       <img [src]="expandedImageSrc()" alt="Expanded Image" />

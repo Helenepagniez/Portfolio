@@ -31,9 +31,6 @@ section {
   position: relative;
 }
 
-.sec-padding {
-  padding: 40px 0;
-}
 /* ------------- SECTION TITRE DE PAGE ------------------ */
 .section-titre {
   width: 100%;
@@ -68,8 +65,9 @@ section {
   flex-wrap: wrap;
 }
 
-.projets-section {
+.conteneur-page {
   padding-bottom: 50px;
+  padding: 40px 0;
 }
 
 .projets-item {
