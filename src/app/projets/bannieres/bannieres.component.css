@@ -105,7 +105,7 @@ button {
   padding: 40px 0;
 }
 
-.projets-item {
+.conteneur-preview {
   width: 100%;
   margin-bottom: 20px;
   display: flex;
@@ -129,7 +129,7 @@ button {
   object-fit: contain;
 }
 
-.projets-item h3 {
+.conteneur-preview h3 {
   font-size: 20px;
   font-family: var(--font-family-title);
   margin: 20px 0;

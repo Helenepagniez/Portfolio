@@ -31,20 +31,20 @@ section {
   position: relative;
 }
 
-.page .introduction-container {
+.page .conteneur-introduction {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.page .introduction-container .conteneur-image {
+.page .conteneur-introduction .conteneur-image {
   border: 3px solid var(--secondary-color);
   border-radius: var(--light-radius);
   width: 300px;
 }
 
-.page .introduction-container .conteneur-image img {
+.page .conteneur-introduction .conteneur-image img {
   width: 300px;
   height: 300px;
   border-radius: var(--light-radius);
@@ -141,7 +141,7 @@ button {
   padding: 40px 0;
 }
 
-.projets-item {
+.conteneur-preview {
   max-width: 250px;
   width: 100%;
   margin: 0 15px 30px;
@@ -151,7 +151,7 @@ button {
   flex-direction: column;
 }
 
-.projets-item .btn {
+.conteneur-preview .btn {
   margin-top: 10px;
 }
 
@@ -170,7 +170,7 @@ button {
   object-fit: contain;
 }
 
-.projets-item h3 {
+.conteneur-preview h3 {
   font-size: 20px;
   font-family: var(--font-family-title);
   margin: 20px 0;
@@ -218,7 +218,7 @@ button {
   width: 100%;
 }
 
-.introduction-container {
+.conteneur-introduction {
   margin-bottom: 30px;
 }
 
@@ -228,17 +228,17 @@ button {
     font-size: 30px;
   }
 
-  .introduction-container .description {
+  .conteneur-introduction .description {
     margin: 10px 20px;
   }
 
-  .introduction-container .description ul {
+  .conteneur-introduction .description ul {
     margin-left: 40px;
     margin-right: 20px;
     text-align: justify;
   }
 
-  .introduction-container .description ul li {
+  .conteneur-introduction .description ul li {
     margin-bottom: 10px;
   }
 

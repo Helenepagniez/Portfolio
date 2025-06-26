@@ -151,18 +151,6 @@ button {
   padding: 40px 0;
 }
 
-.projets-item {
-  max-width: 360px;
-  width: 100%;
-  margin: 0 15px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border: 3px solid var(--secondary-color);
-  border-radius: var(--light-radius);
-}
-
 .conteneur-image {
   display: flex;
   justify-content: center;
@@ -194,17 +182,6 @@ button {
   max-height: 150px;
   height: 100%;
   object-fit: cover;
-}
-
-.projets-item h3 {
-  font-size: 20px;
-  font-family: var(--font-family-title);
-  margin: 10px 0;
-  text-align: center;
-  white-space: nowrap;
-  width: 90%;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .articles {

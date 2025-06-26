@@ -31,7 +31,7 @@ section {
   position: relative;
 }
 
-.page .introduction-container {
+.page .conteneur-introduction {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -39,14 +39,14 @@ section {
   margin-bottom: 40px;
 }
 
-.page .introduction-container .conteneur-image {
+.page .conteneur-introduction .conteneur-image {
   border: 3px solid var(--secondary-color);
   border-radius: var(--light-radius);
   width: 300px;
   margin: 20px;
 }
 
-.page .introduction-container .conteneur-image img {
+.page .conteneur-introduction .conteneur-image img {
   width: 100%;
   border-radius: var(--light-radius);
   object-fit: contain;
@@ -147,7 +147,7 @@ button {
   padding: 40px 0;
 }
 
-.projets-item {
+.conteneur-preview {
   max-width: 250px;
   width: 100%;
   margin: 0 15px 30px;
@@ -157,7 +157,7 @@ button {
   flex-direction: column;
 }
 
-.projets-item .btn {
+.conteneur-preview .btn {
   margin-top: 10px;
 }
 
@@ -202,7 +202,7 @@ button {
   height: 50px;
 }
 
-.projets-item h3 {
+.conteneur-preview h3 {
   font-size: 20px;
   font-family: var(--font-family-title);
   margin: 20px 0;

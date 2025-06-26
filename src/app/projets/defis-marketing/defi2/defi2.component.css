@@ -237,7 +237,7 @@ button {
   flex-wrap: wrap;
 }
 
-.projets-item {
+.palette {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -247,7 +247,7 @@ button {
   border-radius: var(--light-radius);
 }
 
-.projets-item .couleur {
+.palette .couleur {
   background-color: var(--secondary-color);
   border-radius: var(--light-radius);
   width: 70px;
@@ -255,7 +255,7 @@ button {
   border: 2px solid rgba(0, 0, 0, 0.253);
 }
 
-.projets-item span {
+.palette span {
   text-align: center;
   margin-top: 10px;
   width: 100%;
@@ -287,7 +287,7 @@ button {
   object-fit: cover;
 }
 
-.projets-item h3 {
+.palette h3 {
   font-size: 20px;
   font-family: var(--font-family-title);
   margin: 10px 0;
