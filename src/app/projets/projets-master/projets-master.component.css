@@ -237,7 +237,7 @@ button {
   transform: scale(1.1);
 }
 
-.section-some-title {
+.titre-partie {
   color: var(--secondary-color);
   margin-left: 30px;
   text-decoration: underline;

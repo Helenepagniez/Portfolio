@@ -104,7 +104,7 @@ button {
   margin: 0;
 }
 
-.projets-container .section-some-title {
+.projets-container .titre-partie {
   color: var(--secondary-color);
   margin-left: 0;
   text-decoration: underline;
@@ -228,7 +228,7 @@ button {
     margin-top: 40px;
   }
 
-  .projets-container .section-some-title {
+  .projets-container .titre-partie {
     margin-left: 0;
   }
 

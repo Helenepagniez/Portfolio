@@ -109,7 +109,7 @@ button {
   margin: 15px 0px 5px 0px;
 }
 
-.projets-container .section-some-title {
+.projets-container .titre-partie {
   color: var(--secondary-color);
   margin-left: 0;
   text-decoration: underline;
@@ -364,7 +364,7 @@ button {
     font-weight: 800;
   }
 
-  .projets-container .section-some-title {
+  .projets-container .titre-partie {
     margin-left: 0;
   }
 
