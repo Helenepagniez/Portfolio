@@ -1,169 +1,174 @@
-<section class="conteneur-page">
-  <div class="page">
-    <div class="row">
-      <div class="titre-page">
-        <h1>À propos de moi</h1>
+<div class="main">
+  <section class="conteneur-page">
+    <div class="page">
+      <div class="bloc">
+        <div class="titre-page">
+          <h1>À propos de moi</h1>
+        </div>
+      </div>
+      <div class="bloc">
+        <div class="img-box">
+          <img [src]="imagePath + 'mascotte.png'" alt="about img" />
+        </div>
+        <div class="contenu">
+          <p>
+            Passionnée par le digital, je suis actuellement à la recherche d'une
+            entreprise pour poursuivre ma carrière en Marketing & Communication
+            / Gestion de Projet. Mon objectif ? Relever des défis stimulants au
+            sein d’une équipe dynamique et contribuer activement au
+            développement de projets créatifs et impactants. Avec ma mascotte
+            Pigloo, je surfe sur les tendances du marketing digital et de la
+            communication, toujours avec enthousiasme et une volonté de faire la
+            différence !
+          </p>
+          <h3>Soft Skills</h3>
+          <div class="skills">
+            <div class="skill-item">Curieuse</div>
+            <div class="skill-item">Polyvalente</div>
+            <div class="skill-item">Organisée</div>
+            <div class="skill-item">Joyeuse</div>
+            <div class="skill-item">Rigoureuse</div>
+            <div class="skill-item">Autonome</div>
+          </div>
+          <h3>Hard Skills</h3>
+          <div class="skills">
+            <div class="skill-item">Ranxplorer</div>
+            <div class="skill-item">Google Ads</div>
+            <div class="skill-item">Stripo</div>
+            <div class="skill-item">Figma</div>
+            <div class="skill-item">Canva</div>
+            <div class="skill-item">SEO</div>
+            <div class="skill-item">SEA</div>
+            <div class="skill-item">Buffer</div>
+            <div class="skill-item">Gestion d'équipe</div>
+            <div class="skill-item">Gestion de projets</div>
+            <div class="skill-item">CMS (Wordpress-Magento)</div>
+            <div class="skill-item">
+              Outils de collaboration (Trello-Monday)
+            </div>
+            <div class="skill-item">Google Analytics</div>
+            <div class="skill-item">Rédaction de contenu (articles-posts)</div>
+            <div class="skill-item">
+              Gestion de réseaux sociaux (planification, stratégie)
+            </div>
+            <div class="skill-item">LookerStudio</div>
+          </div>
+          <div class="about-tabs">
+            <button
+              type="button"
+              class="tab-item active"
+              title="Formations"
+              (click)="activeFormation()"
+              *ngIf="isActivedFormation"
+            >
+              Formations
+            </button>
+            <button
+              type="button"
+              class="tab-item"
+              title="Formations"
+              (click)="activeFormation()"
+              *ngIf="!isActivedFormation"
+            >
+              Formations
+            </button>
+            <button
+              type="button"
+              class="tab-item active"
+              title="Expériences"
+              (click)="activeExperience()"
+              *ngIf="isActivedExperience"
+            >
+              Expériences
+            </button>
+            <button
+              type="button"
+              class="tab-item"
+              title="Expériences"
+              (click)="activeExperience()"
+              *ngIf="!isActivedExperience"
+            >
+              Expériences
+            </button>
+          </div>
+
+          <div class="tab-content active" *ngIf="isActivedFormation">
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="date">2024 - 2025</span>
+                <h4>
+                  Master Intensif Manager des Stratégies Marketing et
+                  Communication -
+                  <span>OPENCLASSROOMS</span>
+                </h4>
+              </div>
+              <div class="timeline-item">
+                <span class="date">2023 - 2024</span>
+                <h4>
+                  Licence Chef de Projet Digitale -
+                  <span>ECOLE 301 / GUILLEMOT CORPORATION</span>
+                </h4>
+              </div>
+              <div class="timeline-item">
+                <span class="date">2021 - 2022</span>
+                <h4>
+                  Bachelor 2 de Développeuse Web - <span>OPENCLASSROOMS</span>
+                </h4>
+              </div>
+              <div class="timeline-item">
+                <span class="date">2019 - 2021</span>
+                <h4>
+                  Bachelor 2 d'Attachée de Direction -
+                  <span>PIGIER / SILEC CABLE</span>
+                </h4>
+              </div>
+              <div class="timeline-item">
+                <span class="date">2018</span>
+                <h4>
+                  Baccalauréat Sciences et Technologies du Sanitaire et du
+                  Social - <span>LES PANNEVELLES</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content active" *ngIf="isActivedExperience">
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="date">2023 - 2024</span>
+                <h4>
+                  Assitante Marketing Digitale en Alternance - GUILLEMOT
+                  CORPORATION
+                </h4>
+              </div>
+              <div class="timeline-item">
+                <span class="date">Novembre 2021 - Décembre 2021</span>
+                <h4>Assistante Manager en Intérim - GRTGAZ</h4>
+              </div>
+              <div class="timeline-item">
+                <span class="date">2019 - 2021</span>
+                <h4>Attaché de Direction - SILEC CABLE</h4>
+              </div>
+              <div class="timeline-item">
+                <span class="date">2018 - 2019</span>
+                <h4>Polyvalente - AUX VIEUX REMPARTS</h4>
+              </div>
+            </div>
+          </div>
+          <div class="button-container">
+            <a
+              [href]="filePath + 'cv.pdf'"
+              download="CV.pdf"
+              title="Téléchargement CV"
+              class="btn"
+              >Téléchargement CV</a
+            >
+            <a class="btn" title="Contactez moi" routerLink="/contact"
+              >Contactez moi</a
+            >
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="img-box">
-        <img [src]="imagePath + 'mascotte.png'" alt="about img" />
-      </div>
-      <div class="contenu">
-        <p>
-          Passionnée par le digital, je suis actuellement à la recherche d'une
-          entreprise pour poursuivre ma carrière en Marketing & Communication /
-          Gestion de Projet. Mon objectif ? Relever des défis stimulants au sein
-          d’une équipe dynamique et contribuer activement au développement de
-          projets créatifs et impactants. Avec ma mascotte Pigloo, je surfe sur
-          les tendances du marketing digital et de la communication, toujours
-          avec enthousiasme et une volonté de faire la différence !
-        </p>
-        <h3>Soft Skills</h3>
-        <div class="skills">
-          <div class="skill-item">Curieuse</div>
-          <div class="skill-item">Polyvalente</div>
-          <div class="skill-item">Organisée</div>
-          <div class="skill-item">Joyeuse</div>
-          <div class="skill-item">Rigoureuse</div>
-          <div class="skill-item">Autonome</div>
-        </div>
-        <h3>Hard Skills</h3>
-        <div class="skills">
-          <div class="skill-item">Ranxplorer</div>
-          <div class="skill-item">Google Ads</div>
-          <div class="skill-item">Stripo</div>
-          <div class="skill-item">Figma</div>
-          <div class="skill-item">Canva</div>
-          <div class="skill-item">SEO</div>
-          <div class="skill-item">SEA</div>
-          <div class="skill-item">Buffer</div>
-          <div class="skill-item">Gestion d'équipe</div>
-          <div class="skill-item">Gestion de projets</div>
-          <div class="skill-item">CMS (Wordpress-Magento)</div>
-          <div class="skill-item">Outils de collaboration (Trello-Monday)</div>
-          <div class="skill-item">Google Analytics</div>
-          <div class="skill-item">Rédaction de contenu (articles-posts)</div>
-          <div class="skill-item">
-            Gestion de réseaux sociaux (planification, stratégie)
-          </div>
-          <div class="skill-item">LookerStudio</div>
-        </div>
-        <div class="about-tabs">
-          <button
-            type="button"
-            class="tab-item active"
-            title="Formations"
-            (click)="activeFormation()"
-            *ngIf="isActivedFormation"
-          >
-            Formations
-          </button>
-          <button
-            type="button"
-            class="tab-item"
-            title="Formations"
-            (click)="activeFormation()"
-            *ngIf="!isActivedFormation"
-          >
-            Formations
-          </button>
-          <button
-            type="button"
-            class="tab-item active"
-            title="Expériences"
-            (click)="activeExperience()"
-            *ngIf="isActivedExperience"
-          >
-            Expériences
-          </button>
-          <button
-            type="button"
-            class="tab-item"
-            title="Expériences"
-            (click)="activeExperience()"
-            *ngIf="!isActivedExperience"
-          >
-            Expériences
-          </button>
-        </div>
-
-        <div class="tab-content active" *ngIf="isActivedFormation">
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="date">2024 - 2025</span>
-              <h4>
-                Master Intensif Manager des Stratégies Marketing et
-                Communication -
-                <span>OPENCLASSROOMS</span>
-              </h4>
-            </div>
-            <div class="timeline-item">
-              <span class="date">2023 - 2024</span>
-              <h4>
-                Licence Chef de Projet Digitale -
-                <span>ECOLE 301 / GUILLEMOT CORPORATION</span>
-              </h4>
-            </div>
-            <div class="timeline-item">
-              <span class="date">2021 - 2022</span>
-              <h4>
-                Bachelor 2 de Développeuse Web - <span>OPENCLASSROOMS</span>
-              </h4>
-            </div>
-            <div class="timeline-item">
-              <span class="date">2019 - 2021</span>
-              <h4>
-                Bachelor 2 d'Attachée de Direction -
-                <span>PIGIER / SILEC CABLE</span>
-              </h4>
-            </div>
-            <div class="timeline-item">
-              <span class="date">2018</span>
-              <h4>
-                Baccalauréat Sciences et Technologies du Sanitaire et du Social
-                - <span>LES PANNEVELLES</span>
-              </h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-content active" *ngIf="isActivedExperience">
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="date">2023 - 2024</span>
-              <h4>
-                Assitante Marketing Digitale en Alternance - GUILLEMOT
-                CORPORATION
-              </h4>
-            </div>
-            <div class="timeline-item">
-              <span class="date">Novembre 2021 - Décembre 2021</span>
-              <h4>Assistante Manager en Intérim - GRTGAZ</h4>
-            </div>
-            <div class="timeline-item">
-              <span class="date">2019 - 2021</span>
-              <h4>Attaché de Direction - SILEC CABLE</h4>
-            </div>
-            <div class="timeline-item">
-              <span class="date">2018 - 2019</span>
-              <h4>Polyvalente - AUX VIEUX REMPARTS</h4>
-            </div>
-          </div>
-        </div>
-        <div class="button-container">
-          <a
-            [href]="filePath + 'cv.pdf'"
-            download="CV.pdf"
-            title="Téléchargement CV"
-            class="btn"
-            >Téléchargement CV</a
-          >
-          <a class="btn" title="Contactez moi" routerLink="/contact"
-            >Contactez moi</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+</div>

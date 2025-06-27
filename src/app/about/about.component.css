@@ -36,22 +36,24 @@ section {
   border-radius: var(--strong-radius);
 }
 
-.conteneur-page {
+.main {
   max-width: 1200px;
   width: 95%;
   margin-bottom: 10px;
+  position: relative;
+}
+
+.conteneur-page {
+  padding-bottom: 50px;
   padding: 40px 0;
 }
 
 .page {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  position: relative;
+  margin: 20px 40px;
 }
 
-.row {
+.bloc {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,10 +90,12 @@ button {
 
 /* ------------- SECTION TITRE DE PAGE ------------------ */
 .titre-page {
-  padding: 0 15px;
   width: 100%;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .titre-page h1 {
@@ -102,10 +106,6 @@ button {
 }
 
 /* ------------- SECTION ABOUT ------------------ */
-.contenu {
-  width: 90%;
-  max-width: 1100px;
-}
 
 .contenu p {
   text-align: justify;
@@ -258,4 +258,18 @@ button {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+}
+
+@media screen and (max-width: 610px) {
+  .titre-page {
+    margin-bottom: 20px;
+  }
+
+  .titre-page h1 {
+    font-size: 30px;
+  }
+
+  .page {
+    margin: 10px 20px;
+  }
 }

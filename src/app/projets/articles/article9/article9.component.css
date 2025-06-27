@@ -27,8 +27,8 @@ section {
 }
 
 .page {
-  width: 100%;
   position: relative;
+  margin: 20px 40px;
 }
 
 h3 {
@@ -87,9 +87,6 @@ button {
 }
 
 /* ------------- SECTION projets ------------------ */
-.projets-container {
-  margin: 20px 40px;
-}
 
 .projets-container p {
   text-align: justify;
@@ -98,10 +95,10 @@ button {
 
 .projets-container .titre-partie {
   color: var(--secondary-color);
-  margin-left: 0;
   text-decoration: underline;
   font-family: var(--font-family-title);
   font-size: 22px;
+  font-weight: 400;
 }
 
 .projets-container .section-some p {
@@ -225,12 +222,12 @@ button {
 @media screen and (max-width: 610px) {
   .titre-page h1 {
     font-size: 25px;
-    font-weight: 800;
     margin-top: 40px;
   }
 
   .projets-container .titre-partie {
     margin-left: 0;
+    margin-bottom: 20px;
   }
 
   .projets-container .section-some ol {
@@ -238,7 +235,7 @@ button {
     margin-right: 20px;
   }
 
-  .projets-container {
+  .page {
     margin: 10px 20px;
   }
 }

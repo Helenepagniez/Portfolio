@@ -27,8 +27,8 @@ section {
 }
 
 .page {
-  width: 100%;
   position: relative;
+  margin: 20px 40px;
 }
 
 h2 {
@@ -165,8 +165,20 @@ button {
 }
 
 @media screen and (max-width: 610px) {
+  .titre-page {
+    margin-bottom: 20px;
+  }
+
   .titre-page h1 {
-    margin-top: 40px;
     font-size: 30px;
+    margin-top: 40px;
+  }
+
+  .page {
+    margin: 10px 20px;
+  }
+
+  .conteneur-image {
+    width: 100%;
   }
 }

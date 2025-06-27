@@ -44,21 +44,27 @@ section {
   max-width: 1200px;
   width: 95%;
   margin-bottom: 10px;
+  position: relative;
+}
+
+.conteneur-page {
+  padding-bottom: 50px;
+  padding: 40px 0;
 }
 
 .page {
-  padding: 0 40px;
-  width: 100%;
+  position: relative;
+  margin: 20px 40px;
 }
 
-.row {
+.bloc {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.conteneur-page {
-  padding: 40px 0;
+.bloc.top {
+  margin-top: 20px;
 }
 
 /* ------------- BOUTONS ------------------ */
@@ -90,10 +96,12 @@ button {
 
 /* ------------- SECTION TITRE DE PAGE ------------------ */
 .titre-page {
-  padding: 0 15px;
   width: 100%;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .titre-page h1 {
@@ -108,6 +116,12 @@ button {
 .contact-info {
   width: 50%;
   padding: 0 15px;
+}
+
+.contact-form form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .contact-form .input-group {
@@ -188,17 +202,20 @@ i {
 
 @media screen and (max-width: 600px) {
   .page {
-    padding: 0;
+    margin: 10px 20px;
   }
 
-  .row {
+  .titre-page {
+    margin-bottom: 20px;
+  }
+
+  .titre-page h1 {
+    font-size: 30px;
+  }
+
+  .bloc {
     flex-direction: column;
     align-items: center;
-  }
-
-  .row h2 {
-    font-size: 30px;
-    font-family: var(--font-family-title);
   }
 
   .contact-form,

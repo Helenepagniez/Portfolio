@@ -27,34 +27,28 @@ section {
 }
 
 .page {
-  width: 100%;
   position: relative;
+  margin: 20px 40px;
 }
 
 .page .conteneur-introduction {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .page .conteneur-introduction .conteneur-image {
   border: 3px solid var(--secondary-color);
   border-radius: var(--light-radius);
   width: 300px;
-  margin: 20px;
 }
 
 .page .conteneur-introduction .conteneur-image img {
-  width: 100%;
+  width: 300px;
+  height: 270px;
   border-radius: var(--light-radius);
   object-fit: contain;
-}
-
-h2 {
-  font-weight: 400;
-  margin-top: 20px;
 }
 
 h3 {
@@ -101,7 +95,6 @@ button {
 .titre-page {
   width: 100%;
   text-align: center;
-  margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,13 +112,7 @@ button {
 
 /* ------------- SECTION projets ------------------ */
 .description {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 700px;
-  margin-right: 50px;
+  max-width: 750px;
 }
 
 .description p {
@@ -237,10 +224,11 @@ button {
 
 .titre-partie {
   color: var(--secondary-color);
-  margin-left: 30px;
   text-decoration: underline;
   font-family: var(--font-family-title);
   font-size: 22px;
+  font-weight: 400;
+  margin-top: 20px;
 }
 
 .projets-container {
@@ -251,9 +239,29 @@ button {
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 1210px) {
+  .page .conteneur-introduction {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .conteneur-introduction .description {
+    max-width: unset;
+    margin-top: 20px;
+  }
+}
+
 @media screen and (max-width: 610px) {
+  .titre-page {
+    margin-bottom: 20px;
+  }
+
   .titre-page h1 {
     font-size: 30px;
     margin-top: 40px;
+  }
+
+  .page {
+    margin: 10px 20px;
   }
 }

@@ -27,8 +27,8 @@ section {
 }
 
 .page {
-  width: 100%;
   position: relative;
+  margin: 20px 40px;
 }
 
 h3 {
@@ -81,6 +81,8 @@ button {
   font-family: var(--font-family-title);
   color: var(--secondary-color);
   font-weight: 600;
+  line-height: normal;
+  margin-bottom: 0;
   margin-top: 20px;
 }
 
@@ -98,7 +100,7 @@ button {
 }
 
 .conteneur-preview {
-  max-width: 360px;
+  max-width: 340px;
   width: 100%;
   margin: 0 15px 30px;
   display: flex;
@@ -150,8 +152,19 @@ button {
 }
 
 @media screen and (max-width: 610px) {
+  .titre-page {
+    margin-bottom: 20px;
+  }
+
   .titre-page h1 {
-    margin-top: 40px;
     font-size: 30px;
+  }
+
+  .page {
+    margin: 10px 20px;
+  }
+
+  .conteneur-preview {
+    margin: 0px 0px 30px;
   }
 }
