@@ -1,6 +1,6 @@
 import { environment } from 'src/app/environments/environment';
-import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, HostListener, Inject, signal } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -12,6 +12,9 @@ import { RouterModule } from '@angular/router';
 export class Defi1Component {
   imagePath: string = environment.imagePath + 'defis-marketing/defi1/';
   expandedImageSrc = signal<string | null>(null);
+  windowScrolled = false;
+
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
   onImageClick(imageSrc: string): void {
     this.expandedImageSrc.set(imageSrc);
@@ -19,5 +22,19 @@ export class Defi1Component {
 
   closeImage(): void {
     this.expandedImageSrc.set(null);
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop =
+      window.pageYOffset ||
+      this.document.documentElement.scrollTop ||
+      this.document.body.scrollTop ||
+      0;
+    this.windowScrolled = scrollTop > 100;
   }
 }

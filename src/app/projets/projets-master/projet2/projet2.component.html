@@ -464,5 +464,14 @@
         </div>
       </div>
     </div>
+    <div
+      class="scroll-to-top"
+      title="Haut de page"
+      [ngClass]="{ 'show-scrollTop': windowScrolled }"
+    >
+      <button class="btn-scroll" (click)="scrollToTop()">
+        <i class="fa fa-chevron-up"></i>
+      </button>
+    </div>
   </section>
 </div>

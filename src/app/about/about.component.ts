@@ -1,6 +1,6 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { environment } from '../environments/environment';
-import { Component } from '@angular/core';
+import { Component, HostListener, Inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -14,6 +14,9 @@ export class AboutComponent {
   imagePath: string = environment.imagePath;
   isActivedFormation: boolean = true;
   isActivedExperience: boolean = false;
+  windowScrolled = false;
+
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
   activeFormation() {
     this.isActivedFormation = true;
@@ -23,5 +26,19 @@ export class AboutComponent {
   activeExperience() {
     this.isActivedFormation = false;
     this.isActivedExperience = true;
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop =
+      window.pageYOffset ||
+      this.document.documentElement.scrollTop ||
+      this.document.body.scrollTop ||
+      0;
+    this.windowScrolled = scrollTop > 100;
   }
 }

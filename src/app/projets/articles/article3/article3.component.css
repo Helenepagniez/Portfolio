@@ -224,6 +224,37 @@ button {
   transform: scale(1.1);
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.1);
+}
+
+.scroll-to-top .btn-scroll {
+  background-color: var(--secondary-color);
+  border-radius: var(--strong-radius);
+  color: var(--tertiary-color);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px 18px;
+  border-width: 0;
+}
+
+.scroll-to-top .btn-scroll i {
+  font-size: 20px;
+}
+
+.show-scrollTop {
+  opacity: 1;
+}
+
 @media screen and (max-width: 610px) {
   .titre-page h1 {
     font-size: 25px;
