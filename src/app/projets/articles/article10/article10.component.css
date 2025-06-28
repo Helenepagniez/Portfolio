@@ -135,9 +135,9 @@ caption {
   font-size: 22px;
   font-family: var(--font-family-title);
   color: var(--secondary-color);
-  font-weight: 600;
   text-decoration: underline;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 th,
@@ -319,6 +319,15 @@ table th {
     display: none;
   }
 
+  caption {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
   td {
     position: relative;
     text-align: right;
@@ -337,8 +346,10 @@ table th {
     font-weight: bold;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     border-right: 2px solid var(--text-primary-color);
+    color: var(--tertiary-color);
+    font-size: 13px;
   }
 
   tr {
@@ -361,10 +372,18 @@ table th {
 
   tr td:first-child {
     background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    font-weight: 500;
   }
 }
 
 @media screen and (max-width: 430px) {
+  td {
+    padding-left: 35%;
+  }
+}
+
+@media screen and (max-width: 400px) {
   td {
     padding-left: 40%;
   }
