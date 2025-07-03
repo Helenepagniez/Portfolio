@@ -101,22 +101,22 @@ button {
   font-weight: 400;
 }
 
-.contenu-article .section-some p {
+.contenu-article .partie-article p {
   margin: 0px;
   text-align: justify;
 }
 
-.contenu-article .section-some ul {
+.contenu-article .partie-article ul {
   margin-left: 50px;
   text-align: justify;
 }
 
-.contenu-article .section-some ol {
+.contenu-article .partie-article ol {
   margin-left: 50px;
   text-align: justify;
 }
 
-.contenu-article .section-some ul li h3 {
+.contenu-article .partie-article ul li h3 {
   text-decoration: underline;
   font-weight: 600;
   margin: 0;
@@ -258,7 +258,7 @@ button {
     margin-bottom: 20px;
   }
 
-  .contenu-article .section-some ul {
+  .contenu-article .partie-article ul {
     margin-left: 40px;
     margin-right: 20px;
   }

@@ -137,11 +137,6 @@ button {
   font-weight: 400;
 }
 
-.contenu-projet .section-some p {
-  margin: 0 50px;
-  text-align: justify;
-}
-
 .conteneur-page {
   padding-bottom: 50px;
   padding: 40px 0;
@@ -284,15 +279,6 @@ button {
   .contenu-projet .titre-partie {
     margin-left: 0;
     margin-bottom: 20px;
-  }
-
-  .contenu-projet .section-some p {
-    margin: 0 20px;
-  }
-
-  .contenu-projet .section-some ol {
-    margin-left: 40px;
-    margin-right: 20px;
   }
 
   .page {

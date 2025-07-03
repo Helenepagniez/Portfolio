@@ -100,28 +100,28 @@ button {
   font-weight: 400;
 }
 
-.contenu-article .section-some p {
+.contenu-article .partie-article p {
   margin: 0px;
   text-align: justify;
 }
 
-.contenu-article .section-some ol {
+.contenu-article .partie-article ol {
   margin-left: 50px;
   text-align: justify;
 }
 
-.contenu-article .section-some ul {
+.contenu-article .partie-article ul {
   margin-left: 50px;
   text-align: justify;
 }
 
-.contenu-article .section-some li h4 {
+.contenu-article .partie-article li h4 {
   font-weight: 600;
   text-decoration: underline;
   margin-bottom: 2px;
 }
 
-.contenu-article .section-some h3 {
+.contenu-article .partie-article h3 {
   font-weight: 800px;
   color: var(--secondary-color);
   margin-left: 50px;
@@ -266,7 +266,7 @@ button {
     margin-bottom: 20px;
   }
 
-  .contenu-article .section-some ol {
+  .contenu-article .partie-article ol {
     margin-left: 40px;
     margin-right: 20px;
   }
