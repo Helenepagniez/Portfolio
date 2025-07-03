@@ -92,7 +92,7 @@ button {
 }
 
 /* ------------- SECTION projets ------------------ */
-.projets-container {
+.conteneur-bannieres {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -164,7 +164,7 @@ button {
   transform: scale(1.1);
 }
 
-.scroll-to-top {
+.scroll-page {
   position: fixed;
   bottom: 15px;
   right: 15px;
@@ -173,11 +173,11 @@ button {
   z-index: 1000;
 }
 
-.scroll-to-top:hover {
+.scroll-page:hover {
   transform: scale(1.1);
 }
 
-.scroll-to-top .btn-scroll {
+.scroll-page .btn-scroll {
   background-color: var(--secondary-color);
   border-radius: var(--strong-radius);
   color: var(--tertiary-color);
@@ -187,7 +187,7 @@ button {
   border-width: 0;
 }
 
-.scroll-to-top .btn-scroll i {
+.scroll-page .btn-scroll i {
   font-size: 20px;
 }
 

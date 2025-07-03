@@ -90,7 +90,7 @@ button {
 }
 
 /* ------------- SECTION projets ------------------ */
-.projets-container {
+.conteneur-livres {
   display: flex;
   align-items: center;
   justify-content: space-around;

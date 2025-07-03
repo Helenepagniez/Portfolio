@@ -86,49 +86,49 @@ button {
 }
 
 /* ------------- SECTION projets ------------------ */
-.projets-container img {
+.contenu-projet img {
   width: 300px;
   height: 150px;
   object-fit: cover;
 }
 
-.projets-container p {
+.contenu-projet p {
   text-align: justify;
   margin: 15px 0px 5px 0px;
 }
 
-.projets-container ul {
+.contenu-projet ul {
   text-align: justify;
   margin: 15px 0px 15px 70px;
 }
 
-.projets-container ul li {
+.contenu-projet ul li {
   margin-bottom: 10px;
 }
 
-.projets-container ol {
+.contenu-projet ol {
   text-align: justify;
   margin: 15px 0px 15px 70px;
 }
 
-.projets-container ol li {
+.contenu-projet ol li {
   margin-bottom: 10px;
 }
 
-.projets-container h3 {
+.contenu-projet h3 {
   text-decoration: underline;
   font-weight: 600;
   margin: 15px 0px 5px 0px;
 }
 
-.projets-container h3 i {
+.contenu-projet h3 i {
   font-size: 20px;
   margin-right: 10px;
   color: var(--primary-color);
   margin-left: 10px;
 }
 
-.projets-container .titre-partie {
+.contenu-projet .titre-partie {
   color: var(--secondary-color);
   text-decoration: underline;
   font-family: var(--font-family-title);
@@ -137,7 +137,7 @@ button {
   font-weight: 400;
 }
 
-.projets-container .section-some p {
+.contenu-projet .section-some p {
   margin: 0 50px;
   text-align: justify;
 }
@@ -244,7 +244,7 @@ button {
   width: auto;
 }
 
-.scroll-to-top {
+.scroll-page {
   position: fixed;
   bottom: 15px;
   right: 15px;
@@ -253,11 +253,11 @@ button {
   z-index: 1000;
 }
 
-.scroll-to-top:hover {
+.scroll-page:hover {
   transform: scale(1.1);
 }
 
-.scroll-to-top .btn-scroll {
+.scroll-page .btn-scroll {
   background-color: var(--secondary-color);
   border-radius: var(--strong-radius);
   color: var(--tertiary-color);
@@ -267,7 +267,7 @@ button {
   border-width: 0;
 }
 
-.scroll-to-top .btn-scroll i {
+.scroll-page .btn-scroll i {
   font-size: 20px;
 }
 
@@ -281,16 +281,16 @@ button {
     margin-top: 40px;
   }
 
-  .projets-container .titre-partie {
+  .contenu-projet .titre-partie {
     margin-left: 0;
     margin-bottom: 20px;
   }
 
-  .projets-container .section-some p {
+  .contenu-projet .section-some p {
     margin: 0 20px;
   }
 
-  .projets-container .section-some ol {
+  .contenu-projet .section-some ol {
     margin-left: 40px;
     margin-right: 20px;
   }
@@ -299,11 +299,11 @@ button {
     margin: 10px 20px;
   }
 
-  .projets-container ul {
+  .contenu-projet ul {
     margin: 15px 0px 15px 30px;
   }
 
-  .projets-container ol {
+  .contenu-projet ol {
     margin: 15px 0px 15px 30px;
   }
 }

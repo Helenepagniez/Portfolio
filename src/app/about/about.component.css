@@ -111,14 +111,14 @@ button {
   text-align: justify;
 }
 
-.img-box {
+.conteneur-image {
   max-width: 380px;
   width: 100%;
   padding: 0 15px;
   margin-bottom: 15px;
 }
 
-.img-box img {
+.conteneur-image img {
   width: 100%;
   border-radius: var(--strong-radius);
 }
@@ -141,11 +141,11 @@ button {
   border-radius: var(--strong-radius);
 }
 
-.about-tabs {
+.onglets-about {
   margin-top: 20px;
 }
 
-.about-tabs .tab-item {
+.onglets-about .item-onglet {
   padding: 2px 0;
   background-color: transparent;
   border: none;
@@ -161,11 +161,11 @@ button {
   transition: all 0.3s ease;
 }
 
-.about-tabs .tab-item:last-child {
+.onglets-about .item-onglet:last-child {
   margin: 0;
 }
 
-.about-tabs .tab-item::before {
+.onglets-about .item-onglet::before {
   content: "";
   position: absolute;
   left: 0;
@@ -176,26 +176,26 @@ button {
   transition: width 0.3s ease;
 }
 
-.about-tabs .tab-item:hover::before {
+.onglets-about .item-onglet:hover::before {
   width: 100%;
 }
 
-.about-tabs .tab-item.active::before {
+.onglets-about .item-onglet.active::before {
   width: 100%;
   background-color: var(--secondary-color);
 }
 
-.about-tabs .tab-item.active {
+.onglets-about .item-onglet.active {
   color: var(--secondary-color);
   opacity: 1;
   cursor: auto;
 }
 
-.contenu .timeline {
+.contenu .frise-chronologique {
   position: relative;
 }
 
-.contenu .timeline::before {
+.contenu .frise-chronologique::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -205,22 +205,22 @@ button {
   background-color: var(--secondary-color);
 }
 
-.contenu .tab-content {
+.contenu .contenu-onglet {
   padding: 40px 0;
   display: none;
 }
 
-.contenu .tab-content.active {
+.contenu .contenu-onglet.active {
   display: block;
 }
 
-.contenu .timeline-item {
+.contenu .periode {
   margin-bottom: 30px;
   position: relative;
   padding: 10px 0 0 40px;
 }
 
-.contenu .timeline-item::before {
+.contenu .periode::before {
   content: "";
   position: absolute;
   height: 11px;
@@ -231,24 +231,24 @@ button {
   border-radius: 50%;
 }
 
-.contenu .timeline-item:last-child {
+.contenu .periode:last-child {
   margin-bottom: 0;
 }
 
-.contenu .timeline-item .date {
+.contenu .periode .date {
   display: block;
   color: var(--secondary-color);
   font-weight: 700;
   margin: 0 0 10px;
 }
 
-.contenu .timeline-item h4 {
+.contenu .periode h4 {
   font-size: 18px;
   font-family: var(--font-family-text);
   margin: 0 0 10px;
 }
 
-.contenu .timeline-item h4 span {
+.contenu .periode h4 span {
   font-weight: 400;
 }
 
@@ -260,7 +260,7 @@ button {
   width: 100%;
 }
 
-.scroll-to-top {
+.scroll-page {
   position: fixed;
   bottom: 15px;
   right: 15px;
@@ -269,11 +269,11 @@ button {
   z-index: 1000;
 }
 
-.scroll-to-top:hover {
+.scroll-page:hover {
   transform: scale(1.1);
 }
 
-.scroll-to-top .btn-scroll {
+.scroll-page .btn-scroll {
   background-color: var(--secondary-color);
   border-radius: var(--strong-radius);
   color: var(--tertiary-color);
@@ -283,7 +283,7 @@ button {
   border-width: 0;
 }
 
-.scroll-to-top .btn-scroll i {
+.scroll-page .btn-scroll i {
   font-size: 20px;
 }
 

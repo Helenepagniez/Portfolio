@@ -87,7 +87,7 @@ button {
 }
 
 /* ------------- SECTION projets ------------------ */
-.projets-container {
+.conteneur-articles {
   display: flex;
   align-items: center;
   justify-content: space-around;

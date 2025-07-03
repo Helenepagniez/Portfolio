@@ -49,7 +49,7 @@ section {
 }
 
 /* ------------- SECTION projets ------------------ */
-.projets-container {
+.conteneur-projets {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +57,7 @@ section {
   gap: 30px;
 }
 
-.projets-container .flex {
+.conteneur-projets .flex {
   display: flex;
   justify-content: center;
   align-items: center;

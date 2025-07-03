@@ -87,12 +87,12 @@ button {
 }
 
 /* ------------- SECTION projets ------------------ */
-.projets-container p {
+.contenu-article p {
   text-align: justify;
   margin: 0;
 }
 
-.projets-container .titre-partie {
+.contenu-article .titre-partie {
   color: var(--secondary-color);
   text-decoration: underline;
   font-family: var(--font-family-title);
@@ -100,28 +100,28 @@ button {
   font-weight: 400;
 }
 
-.projets-container .section-some p {
+.contenu-article .section-some p {
   margin: 0px;
   text-align: justify;
 }
 
-.projets-container .section-some ol {
+.contenu-article .section-some ol {
   margin-left: 50px;
   text-align: justify;
 }
 
-.projets-container .section-some ul {
+.contenu-article .section-some ul {
   margin-left: 50px;
   text-align: justify;
 }
 
-.projets-container .section-some li h4 {
+.contenu-article .section-some li h4 {
   font-weight: 600;
   text-decoration: underline;
   margin-bottom: 2px;
 }
 
-.projets-container .section-some h3 {
+.contenu-article .section-some h3 {
   font-weight: 800px;
   color: var(--secondary-color);
   margin-left: 50px;
@@ -224,7 +224,7 @@ button {
   transform: scale(1.1);
 }
 
-.scroll-to-top {
+.scroll-page {
   position: fixed;
   bottom: 15px;
   right: 15px;
@@ -233,11 +233,11 @@ button {
   z-index: 1000;
 }
 
-.scroll-to-top:hover {
+.scroll-page:hover {
   transform: scale(1.1);
 }
 
-.scroll-to-top .btn-scroll {
+.scroll-page .btn-scroll {
   background-color: var(--secondary-color);
   border-radius: var(--strong-radius);
   color: var(--tertiary-color);
@@ -247,7 +247,7 @@ button {
   border-width: 0;
 }
 
-.scroll-to-top .btn-scroll i {
+.scroll-page .btn-scroll i {
   font-size: 20px;
 }
 
@@ -261,12 +261,12 @@ button {
     margin-top: 40px;
   }
 
-  .projets-container .titre-partie {
+  .contenu-article .titre-partie {
     margin-left: 0;
     margin-bottom: 20px;
   }
 
-  .projets-container .section-some ol {
+  .contenu-article .section-some ol {
     margin-left: 40px;
     margin-right: 20px;
   }

@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="bloc">
-        <div class="img-box">
+        <div class="conteneur-image">
           <img [src]="imagePath + 'mascotte.png'" alt="about img" />
         </div>
         <div class="contenu">
@@ -53,10 +53,10 @@
             </div>
             <div class="skill-item">LookerStudio</div>
           </div>
-          <div class="about-tabs">
+          <div class="onglets-about">
             <button
               type="button"
-              class="tab-item active"
+              class="item-onglet active"
               title="Formations"
               (click)="activeFormation()"
               *ngIf="isActivedFormation"
@@ -65,7 +65,7 @@
             </button>
             <button
               type="button"
-              class="tab-item"
+              class="item-onglet"
               title="Formations"
               (click)="activeFormation()"
               *ngIf="!isActivedFormation"
@@ -74,7 +74,7 @@
             </button>
             <button
               type="button"
-              class="tab-item active"
+              class="item-onglet active"
               title="Expériences"
               (click)="activeExperience()"
               *ngIf="isActivedExperience"
@@ -83,7 +83,7 @@
             </button>
             <button
               type="button"
-              class="tab-item"
+              class="item-onglet"
               title="Expériences"
               (click)="activeExperience()"
               *ngIf="!isActivedExperience"
@@ -92,9 +92,9 @@
             </button>
           </div>
 
-          <div class="tab-content active" *ngIf="isActivedFormation">
-            <div class="timeline">
-              <div class="timeline-item">
+          <div class="contenu-onglet active" *ngIf="isActivedFormation">
+            <div class="frise-chronologique">
+              <div class="periode">
                 <span class="date">2024 - 2025</span>
                 <h4>
                   Master Intensif Manager des Stratégies Marketing et
@@ -102,27 +102,27 @@
                   <span>OPENCLASSROOMS</span>
                 </h4>
               </div>
-              <div class="timeline-item">
+              <div class="periode">
                 <span class="date">2023 - 2024</span>
                 <h4>
                   Licence Chef de Projet Digitale -
                   <span>ECOLE 301 / GUILLEMOT CORPORATION</span>
                 </h4>
               </div>
-              <div class="timeline-item">
+              <div class="periode">
                 <span class="date">2021 - 2022</span>
                 <h4>
                   Bachelor 2 de Développeuse Web - <span>OPENCLASSROOMS</span>
                 </h4>
               </div>
-              <div class="timeline-item">
+              <div class="periode">
                 <span class="date">2019 - 2021</span>
                 <h4>
                   Bachelor 2 d'Attachée de Direction -
                   <span>PIGIER / SILEC CABLE</span>
                 </h4>
               </div>
-              <div class="timeline-item">
+              <div class="periode">
                 <span class="date">2018</span>
                 <h4>
                   Baccalauréat Sciences et Technologies du Sanitaire et du
@@ -132,24 +132,24 @@
             </div>
           </div>
 
-          <div class="tab-content active" *ngIf="isActivedExperience">
-            <div class="timeline">
-              <div class="timeline-item">
+          <div class="contenu-onglet active" *ngIf="isActivedExperience">
+            <div class="frise-chronologique">
+              <div class="periode">
                 <span class="date">2023 - 2024</span>
                 <h4>
                   Assitante Marketing Digitale en Alternance - GUILLEMOT
                   CORPORATION
                 </h4>
               </div>
-              <div class="timeline-item">
+              <div class="periode">
                 <span class="date">Novembre 2021 - Décembre 2021</span>
                 <h4>Assistante Manager en Intérim - GRTGAZ</h4>
               </div>
-              <div class="timeline-item">
+              <div class="periode">
                 <span class="date">2019 - 2021</span>
                 <h4>Attaché de Direction - SILEC CABLE</h4>
               </div>
-              <div class="timeline-item">
+              <div class="periode">
                 <span class="date">2018 - 2019</span>
                 <h4>Polyvalente - AUX VIEUX REMPARTS</h4>
               </div>
@@ -171,7 +171,7 @@
       </div>
     </div>
     <div
-      class="scroll-to-top"
+      class="scroll-page"
       title="Haut de page"
       [ngClass]="{ 'show-scrollTop': windowScrolled }"
     >
