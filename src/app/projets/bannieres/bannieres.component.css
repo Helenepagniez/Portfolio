@@ -72,7 +72,68 @@ button {
   color: var(--tertiary-color);
   transform: scale(1.1);
 }
-/* ------------- SECTION TITRE DE PAGE ------------------ */
+
+.retour-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: 0.5s ease;
+}
+
+.retour {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: var(--secondary-color);
+  padding: 10px 28px;
+  border-radius: var(--strong-radius);
+  color: var(--tertiary-color);
+  font-weight: 700;
+  font-size: 16px;
+  font-family: var(--font-family-text);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.retour:hover {
+  transform: scale(1.1);
+}
+
+/* ------------- SCROLL PAGE ------------------ */
+
+.scroll-page {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+.scroll-page:hover {
+  transform: scale(1.1);
+}
+
+.scroll-page .btn-scroll {
+  background-color: var(--secondary-color);
+  border-radius: var(--strong-radius);
+  color: var(--tertiary-color);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px 18px;
+  border-width: 0;
+}
+
+.scroll-page .btn-scroll i {
+  font-size: 20px;
+}
+
+.show-scrollTop {
+  opacity: 1;
+}
+
+/* ------------- TITRE DE PAGE ------------------ */
 .titre-page {
   width: 100%;
   text-align: center;
@@ -91,7 +152,7 @@ button {
   margin-top: 20px;
 }
 
-/* ------------- SECTION projets ------------------ */
+/* ------------- BANNIERES ------------------ */
 .conteneur-bannieres {
   display: flex;
   align-items: center;
@@ -137,63 +198,7 @@ button {
   text-align: center;
 }
 
-.retour-container {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  transition: 0.5s ease;
-}
-
-.retour {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  background-color: var(--secondary-color);
-  padding: 10px 28px;
-  border-radius: var(--strong-radius);
-  color: var(--tertiary-color);
-  font-weight: 700;
-  font-size: 16px;
-  font-family: var(--font-family-text);
-  cursor: pointer;
-  transition: 0.5s ease;
-}
-
-.retour:hover {
-  transform: scale(1.1);
-}
-
-.scroll-page {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-  z-index: 1000;
-}
-
-.scroll-page:hover {
-  transform: scale(1.1);
-}
-
-.scroll-page .btn-scroll {
-  background-color: var(--secondary-color);
-  border-radius: var(--strong-radius);
-  color: var(--tertiary-color);
-  font-weight: 700;
-  cursor: pointer;
-  padding: 8px 18px;
-  border-width: 0;
-}
-
-.scroll-page .btn-scroll i {
-  font-size: 20px;
-}
-
-.show-scrollTop {
-  opacity: 1;
-}
+/* ------------- RESPONSIVE ------------------ */
 
 @media screen and (max-width: 610px) {
   .titre-page {

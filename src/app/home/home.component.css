@@ -78,7 +78,7 @@ section {
   transform: scale(1.1);
 }
 
-/* ------------- SECTION HOME------------------ */
+/* ------------- HOME------------------ */
 .home-section {
   display: flex;
   align-items: center;
@@ -133,6 +133,8 @@ section {
   border-radius: 50%;
   background-color: var(--secondary-color);
 }
+
+/* ------------- RESPONSIVE ------------------ */
 
 @media screen and (max-width: 760px) {
   .home-text {

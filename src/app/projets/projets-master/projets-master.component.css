@@ -91,7 +91,35 @@ button {
 .btn:hover {
   transform: scale(1.1);
 }
-/* ------------- SECTION TITRE DE PAGE ------------------ */
+
+.retour-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: 0.5s ease;
+}
+
+.retour {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: var(--secondary-color);
+  padding: 10px 28px;
+  border-radius: var(--strong-radius);
+  color: var(--tertiary-color);
+  font-weight: 700;
+  font-size: 16px;
+  font-family: var(--font-family-text);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.retour:hover {
+  transform: scale(1.1);
+}
+
+/* ------------- TITRE DE PAGE ------------------ */
 .titre-page {
   width: 100%;
   text-align: center;
@@ -110,7 +138,7 @@ button {
   margin-top: 20px;
 }
 
-/* ------------- SECTION projets ------------------ */
+/* ------------- PROJETS ------------------ */
 .description {
   max-width: 750px;
 }
@@ -195,33 +223,6 @@ button {
   margin: 20px 0;
 }
 
-.retour-container {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  transition: 0.5s ease;
-}
-
-.retour {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  background-color: var(--secondary-color);
-  padding: 10px 28px;
-  border-radius: var(--strong-radius);
-  color: var(--tertiary-color);
-  font-weight: 700;
-  font-size: 16px;
-  font-family: var(--font-family-text);
-  cursor: pointer;
-  transition: 0.5s ease;
-}
-
-.retour:hover {
-  transform: scale(1.1);
-}
-
 .titre-partie {
   color: var(--secondary-color);
   text-decoration: underline;
@@ -238,6 +239,8 @@ button {
   width: 100%;
   flex-wrap: wrap;
 }
+
+/* ------------- RESPONSIVE ------------------ */
 
 @media screen and (max-width: 1210px) {
   .page .conteneur-introduction {

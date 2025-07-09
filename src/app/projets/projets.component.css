@@ -31,7 +31,7 @@ section {
   margin: 20px 40px;
 }
 
-/* ------------- SECTION TITRE DE PAGE ------------------ */
+/* ------------- TITRE DE PAGE ------------------ */
 .titre-page {
   width: 100%;
   text-align: center;
@@ -48,7 +48,7 @@ section {
   font-weight: 600;
 }
 
-/* ------------- SECTION projets ------------------ */
+/* ------------- PROJETS ------------------ */
 .conteneur-projets {
   display: flex;
   align-items: center;
@@ -98,6 +98,8 @@ section {
 .projets-item:hover {
   transform: scale(1.1);
 }
+
+/* ------------- RESPONSIVE ------------------ */
 
 @media screen and (max-width: 610px) {
   .titre-page h1 {

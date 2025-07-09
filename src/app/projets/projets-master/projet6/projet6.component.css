@@ -66,7 +66,80 @@ button {
 .btn:hover {
   transform: scale(1.1);
 }
-/* ------------- SECTION TITRE DE PAGE ------------------ */
+
+.retour-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: 0.5s ease;
+}
+
+.retour {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: var(--secondary-color);
+  padding: 10px 28px;
+  border-radius: var(--strong-radius);
+  color: var(--tertiary-color);
+  font-weight: 700;
+  font-size: 16px;
+  font-family: var(--font-family-text);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.retour:hover {
+  transform: scale(1.1);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.button-container .btn {
+  width: auto;
+}
+
+/* ------------- SCROLL PAGE ------------------ */
+
+.scroll-page {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+.scroll-page:hover {
+  transform: scale(1.1);
+}
+
+.scroll-page .btn-scroll {
+  background-color: var(--secondary-color);
+  border-radius: var(--strong-radius);
+  color: var(--tertiary-color);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px 18px;
+  border-width: 0;
+}
+
+.scroll-page .btn-scroll i {
+  font-size: 20px;
+}
+
+.show-scrollTop {
+  opacity: 1;
+}
+
+/* ------------- TITRE DE PAGE ------------------ */
 .titre-page {
   width: 100%;
   text-align: center;
@@ -85,7 +158,7 @@ button {
   margin-top: 20px;
 }
 
-/* ------------- SECTION projets ------------------ */
+/* ------------- PROJET ------------------ */
 .contenu-projet img {
   width: 300px;
   height: 150px;
@@ -149,7 +222,7 @@ button {
   width: 100%;
 }
 
-.contenu-visuels {
+.contenu-projet .contenu-visuels {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,14 +231,14 @@ button {
   gap: 20px;
 }
 
-.contenu-visuels .conteneur-preview {
+.contenu-projet .contenu-visuels .conteneur-preview {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.contenu-visuels .conteneur-preview img {
+.contenu-projet .contenu-visuels .conteneur-preview img {
   border-radius: var(--light-radius);
   border: 3px solid rgba(0, 0, 0, 0.253);
   width: 100%;
@@ -173,39 +246,6 @@ button {
   max-height: 150px;
   height: 100%;
   object-fit: cover;
-}
-
-.articles {
-  font-weight: 800;
-  color: var(--primary-color);
-  text-decoration: underline;
-}
-
-.retour-container {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  transition: 0.5s ease;
-}
-
-.retour {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  background-color: var(--secondary-color);
-  padding: 10px 28px;
-  border-radius: var(--strong-radius);
-  color: var(--tertiary-color);
-  font-weight: 700;
-  font-size: 16px;
-  font-family: var(--font-family-text);
-  cursor: pointer;
-  transition: 0.5s ease;
-}
-
-.retour:hover {
-  transform: scale(1.1);
 }
 
 .overlay {
@@ -227,48 +267,7 @@ button {
   border-radius: var(--light-radius);
 }
 
-.button-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.button-container .btn {
-  width: auto;
-}
-
-.scroll-page {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-  z-index: 1000;
-}
-
-.scroll-page:hover {
-  transform: scale(1.1);
-}
-
-.scroll-page .btn-scroll {
-  background-color: var(--secondary-color);
-  border-radius: var(--strong-radius);
-  color: var(--tertiary-color);
-  font-weight: 700;
-  cursor: pointer;
-  padding: 8px 18px;
-  border-width: 0;
-}
-
-.scroll-page .btn-scroll i {
-  font-size: 20px;
-}
-
-.show-scrollTop {
-  opacity: 1;
-}
+/* ------------- RESPONSIVE ------------------ */
 
 @media screen and (max-width: 610px) {
   .titre-page h1 {
@@ -286,6 +285,10 @@ button {
   }
 
   .contenu-projet ul {
+    margin: 15px 0px 15px 30px;
+  }
+
+  .contenu-projet ol {
     margin: 15px 0px 15px 30px;
   }
 }

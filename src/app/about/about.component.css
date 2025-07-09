@@ -88,7 +88,48 @@ button {
   transform: scale(1.1);
 }
 
-/* ------------- SECTION TITRE DE PAGE ------------------ */
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* ------------- SCROLL PAGE ------------------ */
+
+.scroll-page {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+.scroll-page:hover {
+  transform: scale(1.1);
+}
+
+.scroll-page .btn-scroll {
+  background-color: var(--secondary-color);
+  border-radius: var(--strong-radius);
+  color: var(--tertiary-color);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px 18px;
+  border-width: 0;
+}
+
+.scroll-page .btn-scroll i {
+  font-size: 20px;
+}
+
+.show-scrollTop {
+  opacity: 1;
+}
+
+/* ------------- TITRE DE PAGE ------------------ */
 .titre-page {
   width: 100%;
   text-align: center;
@@ -105,7 +146,7 @@ button {
   font-weight: 600;
 }
 
-/* ------------- SECTION ABOUT ------------------ */
+/* ------------- ABOUT ------------------ */
 
 .contenu p {
   text-align: justify;
@@ -140,6 +181,8 @@ button {
   margin: 0 10px 10px 0;
   border-radius: var(--strong-radius);
 }
+
+/* ------------- FRISES CHRONOLOGIQUES ------------------ */
 
 .onglets-about {
   margin-top: 20px;
@@ -252,44 +295,7 @@ button {
   font-weight: 400;
 }
 
-.button-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.scroll-page {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-  z-index: 1000;
-}
-
-.scroll-page:hover {
-  transform: scale(1.1);
-}
-
-.scroll-page .btn-scroll {
-  background-color: var(--secondary-color);
-  border-radius: var(--strong-radius);
-  color: var(--tertiary-color);
-  font-weight: 700;
-  cursor: pointer;
-  padding: 8px 18px;
-  border-width: 0;
-}
-
-.scroll-page .btn-scroll i {
-  font-size: 20px;
-}
-
-.show-scrollTop {
-  opacity: 1;
-}
+/* ------------- RESPONSIVE ------------------ */
 
 @media screen and (max-width: 610px) {
   .titre-page {

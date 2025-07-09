@@ -94,7 +94,7 @@ button {
   transform: scale(1.1);
 }
 
-/* ------------- SECTION TITRE DE PAGE ------------------ */
+/* ------------- TITRE DE PAGE ------------------ */
 .titre-page {
   width: 100%;
   text-align: center;
@@ -111,7 +111,7 @@ button {
   font-weight: 600;
 }
 
-/* ------------- SECTION CONTACT ------------------ */
+/* ------------- FORMULAIRE DE CONTACT ------------------ */
 .contact-form,
 .contact-info {
   width: 50%;
@@ -156,6 +156,8 @@ button {
   padding-top: 15px;
 }
 
+/* ------------- INFORMATIONS DE CONTACT ------------------ */
+
 .contact-info-item {
   margin: 0 0 30px;
   padding: 0 0 0 20px;
@@ -199,6 +201,8 @@ button {
 i {
   color: var(--secondary-color);
 }
+
+/* ------------- RESPONSIVE ------------------ */
 
 @media screen and (max-width: 600px) {
   .page {

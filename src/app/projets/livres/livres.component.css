@@ -71,7 +71,7 @@ button {
 .btn:hover {
   transform: scale(1.1);
 }
-/* ------------- SECTION TITRE DE PAGE ------------------ */
+/* ------------- TITRE DE PAGE ------------------ */
 .titre-page {
   width: 100%;
   text-align: center;
@@ -89,7 +89,7 @@ button {
   margin-top: 20px;
 }
 
-/* ------------- SECTION projets ------------------ */
+/* ------------- LIVRES ------------------ */
 .conteneur-livres {
   display: flex;
   align-items: center;
@@ -158,6 +158,8 @@ button {
 .retour:hover {
   transform: scale(1.1);
 }
+
+/* ------------- RESPONSIVE ------------------ */
 
 @media screen and (max-width: 610px) {
   .titre-page h1 {
