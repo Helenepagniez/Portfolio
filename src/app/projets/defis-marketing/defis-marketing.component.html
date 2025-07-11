@@ -13,8 +13,9 @@
       <div class="conteneur-introduction">
         <div class="conteneur-image">
           <img
-            [src]="imagePath + 'briefs-créatifs.jpg'"
-            alt="projets item thumb"
+            [src]="imagePath + 'briefs-créatifs.webp'"
+            alt="Briefs créatifs"
+            title="Briefs créatifs"
           />
         </div>
         <div class="description">
@@ -40,8 +41,9 @@
         <div class="conteneur-preview">
           <div class="conteneur-image small">
             <img
-              [src]="imagePath + 'defi1/logo-principal.png'"
-              alt="projets item thumb"
+              [src]="imagePath + 'defi1/logo-principal.webp'"
+              alt="Néolink"
+              title="Néolink"
             />
           </div>
           <a class="btn" routerLink="1" title="Découvrir Néolink">
@@ -51,8 +53,9 @@
         <div class="conteneur-preview">
           <div class="conteneur-image medium">
             <img
-              [src]="imagePath + 'defi2/logo-principal.png'"
-              alt="projets item thumb"
+              [src]="imagePath + 'defi2/logo-principal.webp'"
+              alt="Linfini"
+              title="Linfini"
             />
           </div>
           <a class="btn" routerLink="2" title="Découvrir Linfini">
@@ -62,7 +65,7 @@
         @if(false) {
         <div class="conteneur-preview">
           <div class="conteneur-image">
-            <img [src]="imagePath + ''" alt="projets item thumb" />
+            <img [src]="imagePath + ''" alt="Perlora" title="Perlora" />
           </div>
           <a class="btn" routerLink="3" title="Découvrir Perlora">
             <span>Découvrir Perlora</span>
@@ -70,7 +73,11 @@
         </div>
         <div class="conteneur-preview">
           <div class="conteneur-image">
-            <img [src]="imagePath + ''" alt="projets item thumb" />
+            <img
+              [src]="imagePath + ''"
+              alt="projets item thumb"
+              title="projets item thumb"
+            />
           </div>
           <a class="btn" routerLink="4" title="Découvrir XXXXX">
             <span>Découvrir XXXXX</span>
