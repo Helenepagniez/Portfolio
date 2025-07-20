@@ -195,6 +195,15 @@ button {
   margin-bottom: 10px;
 }
 
+.contenu-defi ol {
+  text-align: justify;
+  margin: 15px 0px 15px 70px;
+}
+
+.contenu-defi ol li {
+  margin-bottom: 10px;
+}
+
 .contenu-defi .couleurs-container {
   display: flex;
   justify-content: space-evenly;
@@ -378,6 +387,10 @@ button {
   }
 
   .contenu-defi ul {
+    margin: 15px 0px 15px 30px;
+  }
+
+  .contenu-defi ol {
     margin: 15px 0px 15px 30px;
   }
 }
