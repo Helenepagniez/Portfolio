@@ -1,5 +1,10 @@
 <div class="main">
   <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
     <div class="page">
       <div class="bloc">
         <div class="titre-page">
@@ -9,7 +14,7 @@
       <div class="bloc">
         <div class="conteneur-image">
           <img
-            [src]="imagePath + 'mascotte.webp'"
+            [src]="imagePath + '../mascotte.webp'"
             alt="about img"
             title="Mascotte"
           />
@@ -25,38 +30,19 @@
             communication, toujours avec enthousiasme et une volonté de faire la
             différence !
           </p>
-          <h3>Soft Skills</h3>
-          <div class="skills">
-            <div class="skill-item">Curieuse</div>
-            <div class="skill-item">Polyvalente</div>
-            <div class="skill-item">Organisée</div>
-            <div class="skill-item">Joyeuse</div>
-            <div class="skill-item">Rigoureuse</div>
-            <div class="skill-item">Autonome</div>
+          <div class="button-container">
+            <a
+              [href]="filePath + 'cv.pdf'"
+              download="CV.pdf"
+              title="Téléchargement CV"
+              class="btn"
+              >Téléchargement CV</a
+            >
+            <a class="btn" title="Contactez moi" routerLink="/contact"
+              >Contactez moi</a
+            >
           </div>
-          <h3>Hard Skills</h3>
-          <div class="skills">
-            <div class="skill-item">Ranxplorer</div>
-            <div class="skill-item">Google Ads</div>
-            <div class="skill-item">Stripo</div>
-            <div class="skill-item">Figma</div>
-            <div class="skill-item">Canva</div>
-            <div class="skill-item">SEO</div>
-            <div class="skill-item">SEA</div>
-            <div class="skill-item">Buffer</div>
-            <div class="skill-item">Gestion d'équipe</div>
-            <div class="skill-item">Gestion de projets</div>
-            <div class="skill-item">CMS (Wordpress-Magento)</div>
-            <div class="skill-item">
-              Outils de collaboration (Trello-Monday)
-            </div>
-            <div class="skill-item">Google Analytics</div>
-            <div class="skill-item">Rédaction de contenu (articles-posts)</div>
-            <div class="skill-item">
-              Gestion de réseaux sociaux (planification, stratégie)
-            </div>
-            <div class="skill-item">LookerStudio</div>
-          </div>
+
           <div class="onglets-about">
             <button
               type="button"
@@ -105,6 +91,19 @@
                   Communication -
                   <span>OPENCLASSROOMS</span>
                 </h4>
+                <div class="contenu-visuels-formations">
+                  <div class="conteneur-preview-formations">
+                    <a
+                      class="btn"
+                      (click)="
+                        onImageClick(imagePath + '/attestation-master.webp')
+                      "
+                      title="Voir"
+                    >
+                      <span>Voir l'attestation - Master</span>
+                    </a>
+                  </div>
+                </div>
               </div>
               <div class="periode">
                 <span class="date">2023 - 2024</span>
@@ -112,12 +111,47 @@
                   Licence Chef de Projet Digitale -
                   <span>ECOLE 301 / GUILLEMOT CORPORATION</span>
                 </h4>
+                <div class="contenu-visuels-formations">
+                  <div class="conteneur-preview-formations">
+                    <a
+                      class="btn"
+                      (click)="
+                        onImageClick(imagePath + '/diplome-chef-projet.webp')
+                      "
+                      title="Voir"
+                    >
+                      <span>Voir le diplôme - Licence</span>
+                    </a>
+                  </div>
+                  <div class="conteneur-preview-formations">
+                    <a
+                      class="btn"
+                      (click)="
+                        onImageClick(imagePath + '/certificat-licence.webp')
+                      "
+                      title="Voir"
+                    >
+                      <span>Voir le certificat - Licence</span>
+                    </a>
+                  </div>
+                </div>
               </div>
               <div class="periode">
                 <span class="date">2021 - 2022</span>
                 <h4>
                   Bachelor 2 de Développeuse Web - <span>OPENCLASSROOMS</span>
                 </h4>
+                <div class="contenu-visuels-formations">
+                  <div class="conteneur-preview-formations">
+                    <a
+                      class="btn"
+                      (click)="onImageClick(imagePath + '/diplome-dev.webp')"
+                      title="Voir"
+                    >
+                      <span>Voir le diplôme - Bac+2</span>
+                    </a>
+                  </div>
+                </div>
               </div>
               <div class="periode">
                 <span class="date">2019 - 2021</span>
@@ -125,13 +159,19 @@
                   Bachelor 2 d'Attachée de Direction -
                   <span>PIGIER / SILEC CABLE</span>
                 </h4>
-              </div>
-              <div class="periode">
-                <span class="date">2018</span>
-                <h4>
-                  Baccalauréat Sciences et Technologies du Sanitaire et du
-                  Social - <span>LES PANNEVELLES</span>
-                </h4>
+                <div class="contenu-visuels-formations">
+                  <div class="conteneur-preview-formations">
+                    <a
+                      class="btn"
+                      (click)="
+                        onImageClick(imagePath + '/diplome-assistante.webp')
+                      "
+                      title="Voir"
+                    >
+                      <span>Voir le diplôme - Bac+2</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -159,17 +199,254 @@
               </div>
             </div>
           </div>
-          <div class="button-container">
-            <a
-              [href]="filePath + 'cv.pdf'"
-              download="CV.pdf"
-              title="Téléchargement CV"
-              class="btn"
-              >Téléchargement CV</a
-            >
-            <a class="btn" title="Contactez moi" routerLink="/contact"
-              >Contactez moi</a
-            >
+          <div class="ensemble-accordeon">
+            <mat-accordion class="accordeon">
+              <mat-expansion-panel
+                class="infos"
+                (opened)="panelOpenState.set(true)"
+                (closed)="panelOpenState.set(false)"
+              >
+                <mat-expansion-panel-header class="etage">
+                  <mat-panel-title class="etage-title">
+                    Soft Skills
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="groupe">
+                  <div class="skill-item">Curieuse</div>
+                  <div class="skill-item">Polyvalente</div>
+                  <div class="skill-item">Organisée</div>
+                  <div class="skill-item">Joyeuse</div>
+                  <div class="skill-item">Rigoureuse</div>
+                  <div class="skill-item">Autonome</div>
+                  <div class="skill-item">À l'écoute</div>
+                  <div class="skill-item">Proactive</div>
+                  <div class="skill-item">Créative</div>
+                  <div class="skill-item">Pensée data-driven</div>
+                  <div class="skill-item">Esprit stratégique</div>
+                  <div class="skill-item">Adaptabilité</div>
+                </div>
+              </mat-expansion-panel>
+            </mat-accordion>
+            <mat-accordion class="accordeon">
+              <mat-expansion-panel
+                class="infos"
+                (opened)="panelOpenState.set(true)"
+                (closed)="panelOpenState.set(false)"
+              >
+                <mat-expansion-panel-header class="etage">
+                  <mat-panel-title class="etage-title">
+                    Hard Skills
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <h4>Gestion de projet et coordination</h4>
+                <div class="groupe">
+                  <div class="skill-item">
+                    Coordination d'équipe et de ressources
+                  </div>
+                  <div class="skill-item">
+                    Planification et suivi multi-projets
+                  </div>
+                  <div class="skill-item">
+                    Préparation et animation de réunions
+                  </div>
+                </div>
+                <h4>Rédaction et contenu</h4>
+                <div class="groupe">
+                  <div class="skill-item">
+                    Rédaction web (articles, posts, romans)
+                  </div>
+                  <div class="skill-item">
+                    Création de contenus optimisés SEO
+                  </div>
+                  <div class="skill-item">
+                    Adaptation du ton et du style selon la cible
+                  </div>
+                </div>
+                <h4>SEO & SEA</h4>
+                <div class="groupe">
+                  <div class="skill-item">
+                    Recherche et optimisation de mots-clés
+                  </div>
+                  <div class="skill-item">Optimisation on-page et off-page</div>
+                  <div class="skill-item">
+                    Analyse des performances et reporting
+                  </div>
+                  <div class="skill-item">
+                    Gestion et optimisation de campagnes SEA
+                  </div>
+                  <div class="skill-item">Stratégie de netlinking</div>
+                </div>
+                <h4>Social Media et Community Management</h4>
+                <div class="groupe">
+                  <div class="skill-item">
+                    Élaboration de stratégies social media
+                  </div>
+                  <div class="skill-item">Création et gestion de contenu</div>
+                  <div class="skill-item">
+                    Animation et modération des communautés
+                  </div>
+                  <div class="skill-item">
+                    Analyse des KPI's et optimisation
+                  </div>
+                </div>
+                <h4>Création visuelle</h4>
+                <div class="groupe">
+                  <div class="skill-item">
+                    Conception graphique (print et digital)
+                  </div>
+                  <div class="skill-item">Création de supports visuels</div>
+                </div>
+                <h4>Email Marketing et automation</h4>
+                <div class="groupe">
+                  <div class="skill-item">
+                    Segmentation et scoring des leads
+                  </div>
+                  <div class="skill-item">
+                    Création de workflows automatisés
+                  </div>
+                </div>
+                <h4>Analyse et data visualisation</h4>
+                <div class="groupe">
+                  <div class="skill-item">Audit et recommandations</div>
+                  <div class="skill-item">Suivi des KPI's et veille</div>
+                  <div class="skill-item">
+                    Création de tableaux de bord et reporting
+                  </div>
+                  <div class="skill-item">
+                    Analyse de performances multicanal
+                  </div>
+                  <div class="skill-item">Optimisation data-driven</div>
+                </div>
+              </mat-expansion-panel>
+            </mat-accordion>
+            <mat-accordion class="accordeon">
+              <mat-expansion-panel
+                class="infos"
+                (opened)="panelOpenState.set(true)"
+                (closed)="panelOpenState.set(false)"
+              >
+                <mat-expansion-panel-header class="etage">
+                  <mat-panel-title class="etage-title">
+                    Outils
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <h4>Collaboration</h4>
+                <div class="groupe">
+                  <div class="skill-item">
+                    <i class="fa-brands fa-trello"></i> Trello
+                  </div>
+                  <div class="skill-item">Monday</div>
+                  <div class="skill-item">Miro</div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-notion"></i> Notion
+                  </div>
+                </div>
+                <h4>Data & Analyse</h4>
+                <div class="groupe">
+                  <div class="skill-item">Google Analytics</div>
+                  <div class="skill-item">Google Ads</div>
+                  <div class="skill-item">LookerStudio</div>
+                  <div class="skill-item">GT Metrix</div>
+                </div>
+                <h4>SEO & SEA</h4>
+                <div class="groupe">
+                  <div class="skill-item">SEO Meta in 1 click</div>
+                  <div class="skill-item">Ranxplorer</div>
+                  <div class="skill-item">Sreaming Frog</div>
+                  <div class="skill-item">PageSpeed Insights</div>
+                  <div class="skill-item">Siteliner</div>
+                  <div class="skill-item">Bibliothèque Publicitaire Meta</div>
+                </div>
+                <h4>Réseaux Sociaux</h4>
+                <div class="groupe">
+                  <div class="skill-item">
+                    <i class="fa-brands fa-facebook"></i> Facebook
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-buffer"></i> Buffer
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-meta"></i> Meta Business Suite
+                  </div>
+                  <div class="skill-item">Hootsuite</div>
+                </div>
+                <h4>Design/ Graphisme</h4>
+                <div class="groupe">
+                  <div class="skill-item">
+                    <img src="../outils/canva.jpg" alt="Canva" />Canva
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-figma"></i> Figma
+                  </div>
+                  <div class="skill-item">Adobe Express</div>
+                  <div class="skill-item">GitMind</div>
+                  <div class="skill-item">Genially</div>
+                </div>
+                <h4>CMS</h4>
+                <div class="groupe">
+                  <div class="skill-item">
+                    <i class="fa-brands fa-wordpress"></i> Wordpress
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-magento"></i> Magento
+                  </div>
+                </div>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+          <h3>Certifications</h3>
+          <div class="contenu-visuels">
+            <div class="conteneur-preview">
+              <img
+                [src]="imagePath + '/certificat-ads.webp'"
+                alt="Certificat Ads"
+                title="Certificat Ads"
+              />
+              <p style="font-weight: bold">Certificat Ads</p>
+              <a
+                class="btn"
+                (click)="onImageClick(imagePath + '/certificat-ads.webp')"
+                title="Voir"
+              >
+                <span>Voir</span>
+              </a>
+            </div>
+            <div class="conteneur-preview">
+              <img
+                [src]="imagePath + '/certificat-canva.webp'"
+                alt="Certificat Canva"
+                title="Certificat Canva"
+              />
+              <p style="font-weight: bold">Certificat Canva</p>
+              <a
+                class="btn"
+                (click)="onImageClick(imagePath + '/certificat-canva.webp')"
+                title="Voir"
+              >
+                <span>Voir</span>
+              </a>
+            </div>
+            <div class="conteneur-preview">
+              <img
+                [src]="imagePath + '/certificat-hootsuite.webp'"
+                alt="Certificat Hootsuite"
+                title="Certificat Hootsuite"
+              />
+              <p style="font-weight: bold">Certificat Hootsuite</p>
+              <a
+                class="btn"
+                (click)="onImageClick(imagePath + '/certificat-hootsuite.webp')"
+                title="Voir"
+              >
+                <span>Voir</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

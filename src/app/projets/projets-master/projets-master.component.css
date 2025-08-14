@@ -39,7 +39,7 @@ section {
 }
 
 .page .conteneur-introduction .conteneur-image {
-  border: 3px solid rgba(0, 0, 0, 0.253);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: var(--light-radius);
   width: 300px;
 }
@@ -177,7 +177,7 @@ button {
 }
 
 .conteneur-image {
-  border: 3px solid rgba(0, 0, 0, 0.253);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: var(--light-radius);
   display: flex;
   align-content: center;
@@ -230,6 +230,7 @@ button {
   font-size: 22px;
   font-weight: 400;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .conteneur-projets {

@@ -1,20 +1,23 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { environment } from '../environments/environment';
-import { Component, HostListener, Inject } from '@angular/core';
+import { Component, HostListener, Inject, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-about',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MatExpansionModule],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })
 export class AboutComponent {
   filePath: string = environment.filePath;
-  imagePath: string = environment.imagePath;
+  imagePath: string = environment.imagePath + 'certificats/';
   isActivedFormation: boolean = true;
   isActivedExperience: boolean = false;
+  expandedImageSrc = signal<string | null>(null);
   windowScrolled = false;
+  readonly panelOpenState = signal(false);
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
@@ -26,6 +29,14 @@ export class AboutComponent {
   activeExperience() {
     this.isActivedFormation = false;
     this.isActivedExperience = true;
+  }
+
+  onImageClick(imageSrc: string): void {
+    this.expandedImageSrc.set(imageSrc);
+  }
+
+  closeImage(): void {
+    this.expandedImageSrc.set(null);
   }
 
   scrollToTop() {

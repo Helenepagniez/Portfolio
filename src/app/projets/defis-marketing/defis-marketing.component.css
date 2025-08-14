@@ -39,7 +39,7 @@ section {
 }
 
 .page .conteneur-introduction .conteneur-image {
-  border: 3px solid rgba(0, 0, 0, 0.253);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: var(--light-radius);
   width: 300px;
 }
@@ -190,7 +190,7 @@ button {
 }
 
 .conteneur-image {
-  border: 3px solid rgba(0, 0, 0, 0.253);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: var(--light-radius);
   width: 200px;
   display: flex;
@@ -215,6 +215,7 @@ button {
   text-decoration: underline;
   font-family: var(--font-family-title);
   font-size: 22px;
+  margin-bottom: 20px;
 }
 
 .conteneur-defis {

@@ -196,7 +196,7 @@ button {
 
 .contenu-article .conteneur-image img {
   border-radius: var(--light-radius);
-  border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 700px;
   max-height: 400px;
@@ -207,7 +207,7 @@ button {
 
 .contenu-article .conteneur-image img.small {
   border-radius: var(--light-radius);
-  border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 500px;
   max-height: 300px;

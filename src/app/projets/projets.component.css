@@ -93,6 +93,7 @@ section {
 .projets-item h2 {
   font-family: var(--font-family-title);
   margin-bottom: 0;
+  font-weight: 500;
 }
 
 .projets-item:hover {
