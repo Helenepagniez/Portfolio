@@ -386,3 +386,9 @@ button {
     margin: 15px 0px 15px 30px;
   }
 }
+
+@media screen and (max-width: 440px) {
+  .carte {
+    margin: 0;
+  }
+}
