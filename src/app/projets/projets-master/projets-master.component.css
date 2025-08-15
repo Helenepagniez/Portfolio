@@ -51,10 +51,6 @@ section {
   object-fit: contain;
 }
 
-h3 {
-  font-weight: 500;
-}
-
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -72,13 +68,11 @@ button {
   border-radius: var(--strong-radius);
   color: var(--tertiary-color);
   font-weight: 700;
-  font-size: 16px;
-  font-family: var(--font-family-text);
   cursor: pointer;
   overflow: hidden;
   transition: 0.5s ease;
   border: none;
-  width: 220px;
+  width: 230px;
   margin: 5px;
   text-align: center;
 }
@@ -129,10 +123,6 @@ button {
 }
 
 .titre-page h1 {
-  font-size: 40px;
-  font-family: var(--font-family-title);
-  color: var(--secondary-color);
-  font-weight: 600;
   line-height: normal;
   margin-bottom: 0;
   margin-top: 20px;
@@ -218,8 +208,6 @@ button {
 }
 
 .conteneur-preview h3 {
-  font-size: 20px;
-  font-family: var(--font-family-title);
   margin: 20px 0;
 }
 

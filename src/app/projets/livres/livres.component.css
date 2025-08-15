@@ -32,12 +32,7 @@ section {
 }
 
 h2 {
-  font-weight: 600;
   margin-top: 20px;
-}
-
-h3 {
-  font-weight: 500;
 }
 
 img {
@@ -57,8 +52,6 @@ button {
   border-radius: var(--strong-radius);
   color: var(--tertiary-color);
   font-weight: 700;
-  font-size: 16px;
-  font-family: var(--font-family-text);
   cursor: pointer;
   overflow: hidden;
   transition: 0.5s ease;
@@ -82,10 +75,6 @@ button {
 }
 
 .titre-page h1 {
-  font-size: 40px;
-  font-family: var(--font-family-title);
-  color: var(--secondary-color);
-  font-weight: 600;
   margin-top: 20px;
 }
 
@@ -127,9 +116,8 @@ button {
 }
 
 .conteneur-preview h3 {
-  font-size: 20px;
-  font-family: var(--font-family-title);
   margin: 20px 0;
+  font-weight: 700;
 }
 
 .retour-container {

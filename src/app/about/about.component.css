@@ -13,18 +13,6 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-weight: 600;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 500;
-}
-
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -73,13 +61,11 @@ button {
   border-radius: var(--strong-radius);
   color: var(--tertiary-color);
   font-weight: 700;
-  font-size: 16px;
-  font-family: var(--font-family-text);
   cursor: pointer;
   overflow: hidden;
   transition: 0.5s ease;
   border: none;
-  width: 220px;
+  width: 230px;
   margin: 5px;
   text-align: center;
 }
@@ -139,17 +125,11 @@ button {
   justify-content: center;
 }
 
-.titre-page h1 {
-  font-size: 40px;
-  font-family: var(--font-family-title);
-  color: var(--secondary-color);
-  font-weight: 600;
-}
-
 /* ------------- ABOUT ------------------ */
 
 .contenu p {
   text-align: justify;
+  margin-top: 2px;
 }
 
 .conteneur-image {
@@ -166,16 +146,12 @@ button {
 }
 
 .contenu h3 {
-  font-size: 20px;
   margin: 20px 0;
-  font-family: var(--font-family-title);
 }
 
 .titre-partie {
   color: var(--secondary-color);
   text-decoration: underline;
-  font-family: var(--font-family-title);
-  font-size: 22px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -284,7 +260,7 @@ button {
 }
 
 .contenu .periode h4 {
-  font-size: 18px;
+  font-size: 17px;
   font-family: var(--font-family-text);
   margin: 0 0 25px;
 }
@@ -415,9 +391,9 @@ button {
 ::ng-deep .mat-expansion-panel-body h4 {
   font-weight: 400;
   text-align: left;
-  justify-content: left;
   font-family: var(--font-family-title);
   margin-bottom: 7px;
+  font-size: 17px;
 }
 
 ::ng-deep .mat-expansion-panel-body h4:not(:first-child) {
@@ -446,7 +422,7 @@ button {
   border: 2px solid var(--primary-color);
   border-radius: var(--strong-radius);
   font-family: var(--font-family-text);
-  font-size: 15px;
+  font-size: 17px;
   display: flex;
   justify-content: center;
   align-items: center;
