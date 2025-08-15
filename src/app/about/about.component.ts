@@ -12,7 +12,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 })
 export class AboutComponent {
   filePath: string = environment.filePath;
-  imagePath: string = environment.imagePath + 'certificats/';
+  imagePath: string = environment.imagePath;
   isActivedFormation: boolean = true;
   isActivedExperience: boolean = false;
   expandedImageSrc = signal<string | null>(null);

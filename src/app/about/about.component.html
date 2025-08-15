@@ -14,7 +14,7 @@
       <div class="bloc">
         <div class="conteneur-image">
           <img
-            [src]="imagePath + '../mascotte.webp'"
+            [src]="imagePath + '/mascotte.webp'"
             alt="about img"
             title="Mascotte"
           />
@@ -34,12 +34,12 @@
             <a
               [href]="filePath + 'cv.pdf'"
               download="CV.pdf"
-              title="Téléchargement CV"
+              title="Télécharger mon CV"
               class="btn"
-              >Téléchargement CV</a
+              >Télécharger mon CV</a
             >
-            <a class="btn" title="Contactez moi" routerLink="/contact"
-              >Contactez moi</a
+            <a class="btn" title="Me contacter" routerLink="/contact"
+              >Me contacter</a
             >
           </div>
 
@@ -96,11 +96,13 @@
                     <a
                       class="btn"
                       (click)="
-                        onImageClick(imagePath + '/attestation-master.webp')
+                        onImageClick(
+                          imagePath + '/certificats/attestation-master.webp'
+                        )
                       "
-                      title="Voir"
+                      title="Consulter l'attestation"
                     >
-                      <span>Voir l'attestation - Master</span>
+                      <span>Consulter l'attestation</span>
                     </a>
                   </div>
                 </div>
@@ -116,22 +118,26 @@
                     <a
                       class="btn"
                       (click)="
-                        onImageClick(imagePath + '/diplome-chef-projet.webp')
+                        onImageClick(
+                          imagePath + '/certificats/diplome-chef-projet.webp'
+                        )
                       "
-                      title="Voir"
+                      title="Consulter le diplôme"
                     >
-                      <span>Voir le diplôme - Licence</span>
+                      <span>Consulter le diplôme</span>
                     </a>
                   </div>
                   <div class="conteneur-preview-formations">
                     <a
                       class="btn"
                       (click)="
-                        onImageClick(imagePath + '/certificat-licence.webp')
+                        onImageClick(
+                          imagePath + '/certificats/certificat-licence.webp'
+                        )
                       "
-                      title="Voir"
+                      title="Consulter le certificat"
                     >
-                      <span>Voir le certificat - Licence</span>
+                      <span>Consulter le certificat</span>
                     </a>
                   </div>
                 </div>
@@ -145,10 +151,14 @@
                   <div class="conteneur-preview-formations">
                     <a
                       class="btn"
-                      (click)="onImageClick(imagePath + '/diplome-dev.webp')"
-                      title="Voir"
+                      (click)="
+                        onImageClick(
+                          imagePath + '/certificats/diplome-dev.webp'
+                        )
+                      "
+                      title="Consulter le diplôme"
                     >
-                      <span>Voir le diplôme - Bac+2</span>
+                      <span>Consulter le diplôme</span>
                     </a>
                   </div>
                 </div>
@@ -164,11 +174,13 @@
                     <a
                       class="btn"
                       (click)="
-                        onImageClick(imagePath + '/diplome-assistante.webp')
+                        onImageClick(
+                          imagePath + '/certificats/diplome-assistante.webp'
+                        )
                       "
-                      title="Voir"
+                      title="Consulter le diplôme"
                     >
-                      <span>Voir le diplôme - Bac+2</span>
+                      <span>Consulter le diplôme</span>
                     </a>
                   </div>
                 </div>
@@ -226,10 +238,8 @@
                   <div class="skill-item">Adaptabilité</div>
                 </div>
               </mat-expansion-panel>
-            </mat-accordion>
-            <mat-accordion class="accordeon">
               <mat-expansion-panel
-                class="infos"
+                class="infos angle"
                 (opened)="panelOpenState.set(true)"
                 (closed)="panelOpenState.set(false)"
               >
@@ -318,10 +328,8 @@
                   <div class="skill-item">Optimisation data-driven</div>
                 </div>
               </mat-expansion-panel>
-            </mat-accordion>
-            <mat-accordion class="accordeon">
               <mat-expansion-panel
-                class="infos"
+                class="infos angle"
                 (opened)="panelOpenState.set(true)"
                 (closed)="panelOpenState.set(false)"
               >
@@ -333,118 +341,229 @@
                 <h4>Collaboration</h4>
                 <div class="groupe">
                   <div class="skill-item">
-                    <i class="fa-brands fa-trello"></i> Trello
+                    <i class="fa-brands fa-trello" style="color: #007fc9"></i>
+                    Trello
                   </div>
-                  <div class="skill-item">Monday</div>
-                  <div class="skill-item">Miro</div>
                   <div class="skill-item">
-                    <i class="fa-brands fa-notion"></i> Notion
+                    <img
+                      [src]="imagePath + '/outils/monday.png'"
+                      alt="Monday"
+                      class="larger"
+                    />Monday
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/miro.webp'"
+                      alt="Miro"
+                      class="large"
+                    />Miro
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/notion.webp'"
+                      alt="Notion"
+                    />
+                    Notion
                   </div>
                 </div>
                 <h4>Data & Analyse</h4>
                 <div class="groupe">
-                  <div class="skill-item">Google Analytics</div>
-                  <div class="skill-item">Google Ads</div>
-                  <div class="skill-item">LookerStudio</div>
-                  <div class="skill-item">GT Metrix</div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/analytics.webp'"
+                      alt="Google Analytics"
+                    />Google Analytics
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/ads.webp'"
+                      alt="Google Ads"
+                    />Google Ads
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/lookerstudio.png'"
+                      alt="LookerStudio"
+                    />LookerStudio
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/gtmetrix.webp'"
+                      alt="GT Metrix"
+                    />GT Metrix
+                  </div>
                 </div>
                 <h4>SEO & SEA</h4>
                 <div class="groupe">
-                  <div class="skill-item">SEO Meta in 1 click</div>
-                  <div class="skill-item">Ranxplorer</div>
-                  <div class="skill-item">Sreaming Frog</div>
-                  <div class="skill-item">PageSpeed Insights</div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/seo-meta.png'"
+                      alt="SEO Meta in 1 click"
+                    />SEO Meta in 1 click
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/ranxplorer.webp'"
+                      alt="Ranxplorer"
+                      class="large"
+                    />Ranxplorer
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/screaming-frog.png'"
+                      alt="Screaming Frog"
+                    />Screaming Frog
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/pagespeed.png'"
+                      alt="PageSpeed Insights"
+                      class="big"
+                    /><span>PageSpeed Insights</span>
+                  </div>
                   <div class="skill-item">Siteliner</div>
-                  <div class="skill-item">Bibliothèque Publicitaire Meta</div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-meta small" style="color: blue"></i>
+                    <span>Bibliothèque Publicitaire Meta</span>
+                  </div>
                 </div>
                 <h4>Réseaux Sociaux</h4>
                 <div class="groupe">
                   <div class="skill-item">
-                    <i class="fa-brands fa-facebook"></i> Facebook
+                    <i class="fa-brands fa-facebook" style="color: blue"></i>
+                    Facebook
                   </div>
                   <div class="skill-item">
-                    <i class="fa-brands fa-instagram"></i> Instagram
+                    <i
+                      class="fa-brands fa-instagram"
+                      style="color: deeppink"
+                    ></i>
+                    Instagram
                   </div>
                   <div class="skill-item">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    <i
+                      class="fa-brands fa-linkedin"
+                      style="color: deepskyblue"
+                    ></i>
+                    LinkedIn
                   </div>
                   <div class="skill-item">
-                    <i class="fa-brands fa-buffer"></i> Buffer
+                    <i class="fa-brands fa-buffer" style="color: black"></i>
+                    Buffer
                   </div>
                   <div class="skill-item">
-                    <i class="fa-brands fa-meta"></i> Meta Business Suite
+                    <i class="fa-brands fa-meta small" style="color: blue"></i>
+                    Meta Business Suite
                   </div>
-                  <div class="skill-item">Hootsuite</div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/hootsuite.png'"
+                      alt="Hootsuite"
+                    />Hootsuite
+                  </div>
                 </div>
                 <h4>Design/ Graphisme</h4>
                 <div class="groupe">
                   <div class="skill-item">
-                    <img src="../outils/canva.jpg" alt="Canva" />Canva
+                    <img
+                      [src]="imagePath + '/outils/canva.png'"
+                      alt="Canva"
+                    />Canva
                   </div>
                   <div class="skill-item">
-                    <i class="fa-brands fa-figma"></i> Figma
+                    <img [src]="imagePath + '/outils/figma.png'" alt="Figma" />
+                    <span>Figma</span>
                   </div>
-                  <div class="skill-item">Adobe Express</div>
-                  <div class="skill-item">GitMind</div>
-                  <div class="skill-item">Genially</div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/adobe.png'"
+                      alt="Adobe Express"
+                      class="big"
+                    />Adobe Express
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/gitmind.webp'"
+                      alt="GitMind"
+                    />GitMind
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/genially.png'"
+                      alt="Genially"
+                    />Genially
+                  </div>
                 </div>
                 <h4>CMS</h4>
                 <div class="groupe">
                   <div class="skill-item">
-                    <i class="fa-brands fa-wordpress"></i> Wordpress
+                    <i
+                      class="fa-brands fa-wordpress"
+                      style="color: rgb(21, 78, 185)"
+                    ></i>
+                    Wordpress
                   </div>
                   <div class="skill-item">
-                    <i class="fa-brands fa-magento"></i> Magento
+                    <i class="fa-brands fa-magento" style="color: orange"></i>
+                    Magento
                   </div>
                 </div>
               </mat-expansion-panel>
             </mat-accordion>
           </div>
-          <h3>Certifications</h3>
+          <h2 class="titre-partie">Certifications</h2>
           <div class="contenu-visuels">
             <div class="conteneur-preview">
               <img
-                [src]="imagePath + '/certificat-ads.webp'"
+                [src]="imagePath + '/certificats/certificat-ads.webp'"
                 alt="Certificat Ads"
                 title="Certificat Ads"
               />
               <p style="font-weight: bold">Certificat Ads</p>
               <a
                 class="btn"
-                (click)="onImageClick(imagePath + '/certificat-ads.webp')"
-                title="Voir"
+                (click)="
+                  onImageClick(imagePath + '/certificats/certificat-ads.webp')
+                "
+                title="Consulter"
               >
-                <span>Voir</span>
+                <span>Consulter</span>
               </a>
             </div>
             <div class="conteneur-preview">
               <img
-                [src]="imagePath + '/certificat-canva.webp'"
+                [src]="imagePath + '/certificats/certificat-canva.webp'"
                 alt="Certificat Canva"
                 title="Certificat Canva"
               />
               <p style="font-weight: bold">Certificat Canva</p>
               <a
                 class="btn"
-                (click)="onImageClick(imagePath + '/certificat-canva.webp')"
-                title="Voir"
+                (click)="
+                  onImageClick(imagePath + '/certificats/certificat-canva.webp')
+                "
+                title="Consulter"
               >
-                <span>Voir</span>
+                <span>Consulter</span>
               </a>
             </div>
             <div class="conteneur-preview">
               <img
-                [src]="imagePath + '/certificat-hootsuite.webp'"
+                [src]="imagePath + '/certificats/certificat-hootsuite.webp'"
                 alt="Certificat Hootsuite"
                 title="Certificat Hootsuite"
               />
               <p style="font-weight: bold">Certificat Hootsuite</p>
               <a
                 class="btn"
-                (click)="onImageClick(imagePath + '/certificat-hootsuite.webp')"
-                title="Voir"
+                (click)="
+                  onImageClick(
+                    imagePath + '/certificats/certificat-hootsuite.webp'
+                  )
+                "
+                title="Consulter"
               >
-                <span>Voir</span>
+                <span>Consulter</span>
               </a>
             </div>
           </div>
