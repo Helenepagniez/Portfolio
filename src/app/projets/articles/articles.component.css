@@ -31,10 +31,6 @@ section {
   margin: 20px 40px;
 }
 
-h3 {
-  font-weight: 500;
-}
-
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -105,10 +101,6 @@ button {
 }
 
 .titre-page h1 {
-  font-size: 40px;
-  font-family: var(--font-family-title);
-  color: var(--secondary-color);
-  font-weight: 600;
   line-height: normal;
   margin-bottom: 0;
   margin-top: 20px;
@@ -135,7 +127,7 @@ button {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: var(--light-radius);
 }
 

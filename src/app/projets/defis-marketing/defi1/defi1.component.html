@@ -15,35 +15,51 @@
       <div class="contenu-defi">
         <h2 class="titre-partie">1 - Cartes tirées au hasard pour ce défi</h2>
         <div class="cartes">
+          <!-- Carte 1 -->
           <div class="carte">
             <div class="interieur">
-              <div class="titre">
-                <div class="resultat">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
                   <i class="fa-regular fa-lightbulb"></i>
+                  <div class="categorie">CARTE SUPPORT</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
                   <span>Un Brand Board</span>
                 </div>
-                <div class="separation"></div>
-              </div>
-              <div class="details">
                 <p>
                   Un Brand Board est une planche graphique qui synthétise
                   l'identité visuelle d'une marque (logos, couleurs,
                   typographies, illustrations…).
                 </p>
               </div>
-              <div class="categorie">CARTE SUPPORT</div>
             </div>
           </div>
+
+          <!-- Carte 2 -->
           <div class="carte">
             <div class="interieur">
-              <div class="titre">
-                <div class="resultat">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
                   <i class="fa-regular fa-building"></i>
+                  <div class="categorie">CARTE SECTEUR D'ACTIVITE</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
                   <span>Une banque</span>
                 </div>
-                <div class="separation"></div>
-              </div>
-              <div class="details">
                 <p>
                   Réservée aux jeunes actifs, une nouvelle banque s'implante à
                   Bordeaux. Forte d'une image de marque dynamique, elle est
@@ -51,27 +67,35 @@
                   20 et 35 ans.
                 </p>
               </div>
-              <div class="categorie">CARTE SECTEUR D'ACTIVITE</div>
             </div>
           </div>
+
+          <!-- Carte 3 -->
           <div class="carte">
             <div class="interieur">
-              <div class="titre">
-                <div class="resultat">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
                   <i class="fa-regular fa-circle-xmark"></i>
+                  <div class="categorie">CARTE CONTRAINTE</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
                   <span class="dernier"
                     >Utiliser uniquement des couleurs froides</span
                   >
                 </div>
-                <div class="separation"></div>
-              </div>
-              <div class="details">
                 <p>Teintes bleues, violettes, vertes, etc...</p>
               </div>
-              <div class="categorie">CARTE CONTRAINTE</div>
             </div>
           </div>
         </div>
+
         <h3><i class="fa-solid fa-bullseye"></i>Défi</h3>
         <p>
           Créer une identité visuelle complète pour une banque moderne,
@@ -223,9 +247,9 @@
             <a
               class="btn"
               (click)="onImageClick(imagePath + '/brandboard.webp')"
-              title="Voir"
+              title="Consulter"
             >
-              <span>Voir</span>
+              <span>Consulter</span>
             </a>
           </div>
           <div class="conteneur-preview">
@@ -238,9 +262,9 @@
             <a
               class="btn"
               (click)="onImageClick(imagePath + '/logo-principal.webp')"
-              title="Voir"
+              title="Consulter"
             >
-              <span>Voir</span>
+              <span>Consulter</span>
             </a>
           </div>
           <div class="conteneur-preview">
@@ -253,9 +277,9 @@
             <a
               class="btn"
               (click)="onImageClick(imagePath + '/logo-secondaire-1.webp')"
-              title="Voir"
+              title="Consulter"
             >
-              <span>Voir</span>
+              <span>Consulter</span>
             </a>
           </div>
           <div class="conteneur-preview">
@@ -268,9 +292,9 @@
             <a
               class="btn"
               (click)="onImageClick(imagePath + '/logo-secondaire-2.webp')"
-              title="Voir"
+              title="Consulter"
             >
-              <span>Voir</span>
+              <span>Consulter</span>
             </a>
           </div>
         </div>

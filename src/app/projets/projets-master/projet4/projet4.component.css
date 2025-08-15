@@ -31,10 +31,6 @@ section {
   margin: 20px 40px;
 }
 
-h3 {
-  font-weight: 500;
-}
-
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -149,10 +145,6 @@ button {
 }
 
 .titre-page h1 {
-  font-size: 40px;
-  font-family: var(--font-family-title);
-  color: var(--secondary-color);
-  font-weight: 600;
   line-height: normal;
   margin-bottom: 0;
   margin-top: 20px;
@@ -190,8 +182,9 @@ button {
 
 .contenu-projet h3 {
   text-decoration: underline;
-  font-weight: 600;
   margin: 15px 0px 5px 0px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .contenu-projet h3 i {
@@ -208,6 +201,7 @@ button {
   font-size: 22px;
   margin-top: 25px;
   font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .conteneur-page {
@@ -240,7 +234,8 @@ button {
 
 .contenu-projet .contenu-visuels .conteneur-preview img {
   border-radius: var(--light-radius);
-  border: 3px solid rgba(0, 0, 0, 0.253);
+  border: 3px solid transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 300px;
   max-height: 150px;
@@ -278,6 +273,15 @@ button {
   .contenu-projet .titre-partie {
     margin-left: 0;
     margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .contenu-projet h3 {
+    font-size: 17px;
+  }
+
+  .contenu-projet h4 {
+    font-size: 17px;
   }
 
   .page {

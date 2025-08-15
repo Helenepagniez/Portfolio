@@ -13,18 +13,6 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2 {
-  font-weight: 600;
-}
-
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 500;
-}
-
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -79,13 +67,11 @@ button {
   border-radius: var(--strong-radius);
   color: var(--tertiary-color);
   font-weight: 700;
-  font-size: 16px;
   cursor: pointer;
-  font-family: var(--font-family-text);
   overflow: hidden;
   transition: 0.5s ease;
   border: none;
-  width: 220px;
+  width: 230px;
   margin: 5px;
   text-align: center;
 }
@@ -102,13 +88,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.titre-page h1 {
-  font-size: 40px;
-  font-family: var(--font-family-title);
-  color: var(--secondary-color);
-  font-weight: 600;
 }
 
 /* ------------- FORMULAIRE DE CONTACT ------------------ */
@@ -143,7 +122,7 @@ button {
   border: none;
   font-family: inherit;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   font-family: var(--font-family-text);
   padding: 0 20px;
   color: var(--text-primary-color);
@@ -164,9 +143,8 @@ button {
 }
 
 .contact-info-item h3 {
-  font-size: 20px;
-  font-family: var(--font-family-title);
   margin: 0 0 5px;
+  font-weight: 700;
 }
 
 .contact-info-item .social-links {

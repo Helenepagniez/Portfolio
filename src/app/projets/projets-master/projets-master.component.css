@@ -39,7 +39,7 @@ section {
 }
 
 .page .conteneur-introduction .conteneur-image {
-  border: 3px solid rgba(0, 0, 0, 0.253);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: var(--light-radius);
   width: 300px;
 }
@@ -49,10 +49,6 @@ section {
   height: 270px;
   border-radius: var(--light-radius);
   object-fit: contain;
-}
-
-h3 {
-  font-weight: 500;
 }
 
 img {
@@ -72,13 +68,11 @@ button {
   border-radius: var(--strong-radius);
   color: var(--tertiary-color);
   font-weight: 700;
-  font-size: 16px;
-  font-family: var(--font-family-text);
   cursor: pointer;
   overflow: hidden;
   transition: 0.5s ease;
   border: none;
-  width: 220px;
+  width: 230px;
   margin: 5px;
   text-align: center;
 }
@@ -129,10 +123,6 @@ button {
 }
 
 .titre-page h1 {
-  font-size: 40px;
-  font-family: var(--font-family-title);
-  color: var(--secondary-color);
-  font-weight: 600;
   line-height: normal;
   margin-bottom: 0;
   margin-top: 20px;
@@ -177,7 +167,7 @@ button {
 }
 
 .conteneur-image {
-  border: 3px solid rgba(0, 0, 0, 0.253);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: var(--light-radius);
   display: flex;
   align-content: center;
@@ -218,8 +208,6 @@ button {
 }
 
 .conteneur-preview h3 {
-  font-size: 20px;
-  font-family: var(--font-family-title);
   margin: 20px 0;
 }
 
@@ -230,6 +218,7 @@ button {
   font-size: 22px;
   font-weight: 400;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .conteneur-projets {

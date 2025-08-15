@@ -31,10 +31,6 @@ section {
   margin: 20px 40px;
 }
 
-h3 {
-  font-weight: 500;
-}
-
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -138,10 +134,6 @@ button {
 }
 
 .titre-page h1 {
-  font-size: 40px;
-  font-family: var(--font-family-title);
-  color: var(--secondary-color);
-  font-weight: 600;
   line-height: normal;
   margin-bottom: 0;
   margin-top: 35px;
@@ -160,6 +152,7 @@ button {
   font-family: var(--font-family-title);
   font-size: 22px;
   font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .contenu-article .partie-article p {
@@ -178,18 +171,16 @@ button {
 }
 
 .contenu-article .partie-article h3 {
-  font-weight: 800px;
   color: var(--secondary-color);
   margin-left: 50px;
   text-decoration: underline;
-  font-size: 18px;
-  font-family: var(--font-family-title);
+  margin-bottom: 10px;
 }
 
 .contenu-article .partie-article li h4 {
   font-weight: 600;
-  text-decoration: underline;
   margin-bottom: 2px;
+  margin-top: 2px;
 }
 
 caption {
@@ -238,7 +229,7 @@ table th {
 
 .contenu-article .conteneur-image img {
   border-radius: var(--light-radius);
-  border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 700px;
   max-height: 400px;
@@ -249,7 +240,7 @@ table th {
 
 .contenu-article .conteneur-image img.small {
   border-radius: var(--light-radius);
-  border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 500px;
   max-height: 300px;
@@ -275,8 +266,6 @@ table th {
 }
 
 .projets-item h3 {
-  font-size: 20px;
-  font-family: var(--font-family-title);
   margin: 10px 0;
   text-align: center;
   white-space: nowrap;
@@ -289,6 +278,7 @@ table th {
   font-weight: 800;
   color: var(--primary-color);
   text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 /* ------------- RESPONSIVE ------------------ */
@@ -301,6 +291,15 @@ table th {
 
   .contenu-article .titre-partie {
     margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .contenu-article h3 {
+    font-size: 17px;
+  }
+
+  .contenu-article h4 {
+    font-size: 17px;
   }
 
   .contenu-article .partie-article ol {
@@ -330,7 +329,7 @@ table th {
   }
 
   table {
-    font-size: 13px;
+    font-size: 17px;
   }
 
   td {

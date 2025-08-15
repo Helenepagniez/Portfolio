@@ -41,13 +41,6 @@ section {
   justify-content: center;
 }
 
-.titre-page h1 {
-  font-size: 40px;
-  font-family: var(--font-family-title);
-  color: var(--secondary-color);
-  font-weight: 600;
-}
-
 /* ------------- PROJETS ------------------ */
 .conteneur-projets {
   display: flex;
@@ -91,7 +84,6 @@ section {
 }
 
 .projets-item h2 {
-  font-family: var(--font-family-title);
   margin-bottom: 0;
 }
 

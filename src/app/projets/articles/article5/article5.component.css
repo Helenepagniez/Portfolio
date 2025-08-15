@@ -31,10 +31,6 @@ section {
   margin: 20px 40px;
 }
 
-h3 {
-  font-weight: 500;
-}
-
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -138,10 +134,6 @@ button {
 }
 
 .titre-page h1 {
-  font-size: 40px;
-  font-family: var(--font-family-title);
-  color: var(--secondary-color);
-  font-weight: 600;
   line-height: normal;
   margin-bottom: 0;
   margin-top: 35px;
@@ -159,6 +151,7 @@ button {
   font-family: var(--font-family-title);
   font-size: 22px;
   font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .contenu-article .partie-article p {
@@ -178,7 +171,6 @@ button {
 
 .contenu-article .partie-article ol li h3 {
   text-decoration: underline;
-  font-weight: 600;
 }
 
 .conteneur-page {
@@ -195,7 +187,7 @@ button {
 
 .contenu-article .conteneur-image img {
   border-radius: var(--light-radius);
-  border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 700px;
   max-height: 400px;
@@ -206,7 +198,7 @@ button {
 
 .contenu-article .conteneur-image img.small {
   border-radius: var(--light-radius);
-  border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 500px;
   max-height: 300px;
@@ -232,8 +224,6 @@ button {
 }
 
 .projets-item h3 {
-  font-size: 20px;
-  font-family: var(--font-family-title);
   margin: 10px 0;
   text-align: center;
   white-space: nowrap;
@@ -246,6 +236,7 @@ button {
   font-weight: 800;
   color: var(--primary-color);
   text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 /* ------------- RESPONSIVE ------------------ */
@@ -259,6 +250,7 @@ button {
   .contenu-article .titre-partie {
     margin-left: 0;
     margin-bottom: 20px;
+    font-size: 20px;
   }
 
   .contenu-article .partie-article ol {

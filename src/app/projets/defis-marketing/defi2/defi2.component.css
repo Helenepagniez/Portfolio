@@ -31,10 +31,6 @@ section {
   margin: 20px 40px;
 }
 
-h3 {
-  font-weight: 500;
-}
-
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -137,10 +133,6 @@ button {
 }
 
 .titre-page h1 {
-  font-size: 40px;
-  font-family: var(--font-family-title);
-  color: var(--secondary-color);
-  font-weight: 600;
   line-height: normal;
   margin-bottom: 0;
   margin-top: 20px;
@@ -171,12 +163,13 @@ button {
   font-size: 22px;
   margin-top: 25px;
   font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .contenu-defi h3 {
   text-decoration: underline;
-  font-weight: 600;
   margin: 15px 0px 5px 0px;
+  font-weight: 600;
 }
 
 .contenu-defi h3 i {
@@ -217,7 +210,7 @@ button {
   border-radius: var(--light-radius);
   width: 70px;
   height: 70px;
-  border: 2px solid rgba(0, 0, 0, 0.253);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .contenu-defi .couleurs-container .palette span {
@@ -244,7 +237,7 @@ button {
 
 .contenu-defi .contenu-visuels .conteneur-preview img {
   border-radius: var(--light-radius);
-  border: 3px solid rgba(0, 0, 0, 0.253);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 300px;
   max-height: 150px;
@@ -273,91 +266,96 @@ button {
 
 /* ------------- CARTES ------------------ */
 
-.contenu-defi .cartes {
+.cartes {
   display: flex;
+  gap: 20px;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.contenu-defi .cartes .carte {
-  border: 2px solid var(--primary-color);
-  justify-content: center;
-  margin: 20px 40px;
+.carte {
   width: 100%;
   max-width: 275px;
   height: 370px;
-  border-radius: var(--light-radius);
-  box-shadow: 5px 5px 15px var(--primary-color);
+  margin: 10px 30px;
 }
 
-.contenu-defi .cartes .carte .interieur {
+.interieur {
   position: relative;
-  padding: 12px 13px 0px 13px;
-  justify-items: center;
-  text-align: center;
-  align-content: center;
+  width: 100%;
   height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: var(--light-radius);
 }
 
-.contenu-defi .cartes .carte .interieur .titre {
+.carte:hover .interieur {
+  transform: rotateY(180deg);
+}
+
+.recto,
+.verso {
   position: absolute;
-  top: 15px;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   width: 100%;
-}
-
-.contenu-defi .cartes .carte .interieur .details {
-  margin-top: 50px;
-}
-
-.contenu-defi .cartes .carte .interieur .titre .resultat {
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-.contenu-defi .cartes .carte .interieur .titre .resultat i {
-  font-size: 35px;
-  color: var(--secondary-color);
+.recto {
+  background: #f8f8f8;
 }
 
-.contenu-defi .cartes .carte .interieur .titre .resultat span {
+.categorie {
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+  margin: 5px 20px;
+  color: var(--tertiary-color);
+}
+
+.cercle {
+  width: 80%;
+  height: 60%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.verso {
+  background: #f8f8f8;
+  transform: rotateY(180deg);
+  padding: 20px;
+  text-align: center;
+}
+
+.verso .resultat span {
   color: var(--secondary-color);
   font-weight: bold;
   margin-top: 10px;
   min-height: 48px;
   line-height: 48px;
+  font-size: 20px;
 }
 
-.contenu-defi .cartes .carte .interieur .titre .resultat span.dernier {
+.verso .resultat span.dernier {
   line-height: normal;
 }
 
-.contenu-defi .cartes .carte .interieur .titre .separation {
-  background-color: var(--secondary-color);
-  width: 50%;
-  height: 2px;
-  margin-top: 5px;
-}
-
-.contenu-defi .cartes .carte .interieur .categorie {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: var(--primary-color);
-  border-radius: var(--light-radius);
-  border: 2px solid rgba(0, 0, 0, 0.253);
-  width: 100%;
-  height: 50px;
-  font-weight: bold;
-  align-content: center;
+.cartes .carte .interieur .recto .cercle i {
+  font-size: 60px;
+  color: var(--tertiary-color);
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 /* ------------- RESPONSIVE ------------------ */
@@ -371,6 +369,15 @@ button {
   .contenu-defi .titre-partie {
     margin-left: 0;
     margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .contenu-defi h3 {
+    font-size: 17px;
+  }
+
+  .contenu-defi h4 {
+    font-size: 17px;
   }
 
   .page {
@@ -379,5 +386,11 @@ button {
 
   .contenu-defi ul {
     margin: 15px 0px 15px 30px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .carte {
+    margin: 0;
   }
 }
