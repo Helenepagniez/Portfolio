@@ -383,7 +383,7 @@
                   </div>
                   <div class="skill-item">
                     <img
-                      [src]="imagePath + '/outils/lookerstudio.png'"
+                      [src]="imagePath + '/outils/looker.webp'"
                       alt="LookerStudio"
                     /><span>LookerStudio</span>
                   </div>
@@ -398,7 +398,7 @@
                 <div class="groupe">
                   <div class="skill-item">
                     <img
-                      [src]="imagePath + '/outils/seo-meta.png'"
+                      [src]="imagePath + '/outils/seo-meta.webp'"
                       alt="SEO Meta in 1 click"
                     /><span>SEO Meta in 1 click</span>
                   </div>
@@ -411,13 +411,13 @@
                   </div>
                   <div class="skill-item">
                     <img
-                      [src]="imagePath + '/outils/screaming-frog.png'"
+                      [src]="imagePath + '/outils/screaming-frog.webp'"
                       alt="Screaming Frog"
                     /><span>Screaming Frog</span>
                   </div>
                   <div class="skill-item">
                     <img
-                      [src]="imagePath + '/outils/pagespeed.png'"
+                      [src]="imagePath + '/outils/pagespeed.webp'"
                       alt="PageSpeed Insights"
                       class="big"
                     /><span>PageSpeed Insights</span>
@@ -464,7 +464,7 @@
                   </div>
                   <div class="skill-item">
                     <img
-                      [src]="imagePath + '/outils/hootsuite.png'"
+                      [src]="imagePath + '/outils/hootsuite.webp'"
                       alt="Hootsuite"
                     /><span>Hootsuite</span>
                   </div>
@@ -478,12 +478,12 @@
                     /><span>Canva</span>
                   </div>
                   <div class="skill-item">
-                    <img [src]="imagePath + '/outils/figma.png'" alt="Figma" />
+                    <img [src]="imagePath + '/outils/figma.webp'" alt="Figma" />
                     <span>Figma</span>
                   </div>
                   <div class="skill-item">
                     <img
-                      [src]="imagePath + '/outils/adobe.png'"
+                      [src]="imagePath + '/outils/adobe.webp'"
                       alt="Adobe Express"
                       class="big"
                     /><span>Adobe Express</span>
@@ -496,7 +496,7 @@
                   </div>
                   <div class="skill-item">
                     <img
-                      [src]="imagePath + '/outils/genially.png'"
+                      [src]="imagePath + '/outils/genially.webp'"
                       alt="Genially"
                     /><span>Genially</span>
                   </div>
@@ -520,6 +520,25 @@
           </div>
           <h2 class="titre-partie">Certifications</h2>
           <div class="contenu-visuels">
+            <div class="conteneur-preview">
+              <img
+                [src]="imagePath + '/certificats/certificat-analytics.webp'"
+                alt="Certificat Analytics"
+                title="Certificat Analytics"
+              />
+              <p style="font-weight: bold">Certificat Analytics</p>
+              <a
+                class="btn"
+                (click)="
+                  onImageClick(
+                    imagePath + '/certificats/certificat-analytics.webp'
+                  )
+                "
+                title="Consulter"
+              >
+                <span>Consulter</span>
+              </a>
+            </div>
             <div class="conteneur-preview">
               <img
                 [src]="imagePath + '/certificats/certificat-ads.webp'"
