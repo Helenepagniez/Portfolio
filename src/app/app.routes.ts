@@ -32,6 +32,26 @@ import { Projet8Component } from './projets/projets-master/projet8/projet8.compo
 import { Defi2Component } from './projets/defis-marketing/defi2/defi2.component';
 import { Defi3Component } from './projets/defis-marketing/defi3/defi3.component';
 import { Defi4Component } from './projets/defis-marketing/defi4/defi4.component';
+import { AdobeComponent } from './projets/adobe/adobe.component';
+import { Adobe1Component } from './projets/adobe/adobe1/adobe1.component';
+import { Adobe2Component } from './projets/adobe/adobe2/adobe2.component';
+import { Adobe3Component } from './projets/adobe/adobe3/adobe3.component';
+import { Adobe4Component } from './projets/adobe/adobe4/adobe4.component';
+import { Adobe5Component } from './projets/adobe/adobe5/adobe5.component';
+import { Adobe6Component } from './projets/adobe/adobe6/adobe6.component';
+import { Adobe7Component } from './projets/adobe/adobe7/adobe7.component';
+import { Adobe8Component } from './projets/adobe/adobe8/adobe8.component';
+import { Adobe9Component } from './projets/adobe/adobe9/adobe9.component';
+import { Adobe10Component } from './projets/adobe/adobe10/adobe10.component';
+import { Adobe11Component } from './projets/adobe/adobe11/adobe11.component';
+import { Adobe12Component } from './projets/adobe/adobe12/adobe12.component';
+import { Adobe13Component } from './projets/adobe/adobe13/adobe13.component';
+import { Adobe14Component } from './projets/adobe/adobe14/adobe14.component';
+import { Adobe15Component } from './projets/adobe/adobe15/adobe15.component';
+import { Adobe16Component } from './projets/adobe/adobe16/adobe16.component';
+import { Adobe17Component } from './projets/adobe/adobe17/adobe17.component';
+import { Adobe18Component } from './projets/adobe/adobe18/adobe18.component';
+import { Adobe19Component } from './projets/adobe/adobe19/adobe19.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -64,6 +84,26 @@ export const routes: Routes = [
   { path: 'projets/projets-master/7', component: Projet7Component },
   { path: 'projets/projets-master/8', component: Projet8Component },
   { path: 'projets/livres', component: LivresComponent },
+  { path: 'projets/adobe', component: AdobeComponent },
+  { path: 'projets/adobe/1', component: Adobe1Component },
+  { path: 'projets/adobe/2', component: Adobe2Component },
+  { path: 'projets/adobe/3', component: Adobe3Component },
+  { path: 'projets/adobe/4', component: Adobe4Component },
+  { path: 'projets/adobe/5', component: Adobe5Component },
+  { path: 'projets/adobe/6', component: Adobe6Component },
+  { path: 'projets/adobe/7', component: Adobe7Component },
+  { path: 'projets/adobe/8', component: Adobe8Component },
+  { path: 'projets/adobe/9', component: Adobe9Component },
+  { path: 'projets/adobe/10', component: Adobe10Component },
+  { path: 'projets/adobe/11', component: Adobe11Component },
+  { path: 'projets/adobe/12', component: Adobe12Component },
+  { path: 'projets/adobe/13', component: Adobe13Component },
+  { path: 'projets/adobe/14', component: Adobe14Component },
+  { path: 'projets/adobe/15', component: Adobe15Component },
+  { path: 'projets/adobe/16', component: Adobe16Component },
+  { path: 'projets/adobe/17', component: Adobe17Component },
+  { path: 'projets/adobe/18', component: Adobe18Component },
+  { path: 'projets/adobe/19', component: Adobe19Component },
   {
     path: 'projets/bannieres',
     component: BannieresComponent,

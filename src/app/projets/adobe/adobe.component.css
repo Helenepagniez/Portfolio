@@ -1,0 +1,165 @@
+/* ------------- FONTS ------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ------------- GENERAUX ------------------ */
+:host {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  background-color: var(--tertiary-color);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  border-radius: var(--strong-radius);
+}
+
+.main {
+  max-width: 1200px;
+  width: 95%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.page {
+  position: relative;
+  margin: 20px 40px;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* ------------- BOUTONS ------------------ */
+button {
+  font-family: inherit;
+  user-select: none;
+}
+
+.btn {
+  background-color: var(--secondary-color);
+  padding: 10px 28px;
+  border-radius: var(--strong-radius);
+  color: var(--tertiary-color);
+  font-weight: 700;
+  font-size: 16px;
+  font-family: var(--font-family-text);
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.5s ease;
+  border: none;
+  width: 220px;
+  margin: 10px;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.retour-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: 0.5s ease;
+}
+
+.retour {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: var(--secondary-color);
+  padding: 10px 28px;
+  border-radius: var(--strong-radius);
+  color: var(--tertiary-color);
+  font-weight: 700;
+  font-size: 16px;
+  font-family: var(--font-family-text);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.retour:hover {
+  transform: scale(1.1);
+}
+
+/* ------------- TITRE DE PAGE ------------------ */
+.titre-page {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titre-page h1 {
+  line-height: normal;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+/* ------------- DESIGN ------------------ */
+.conteneur-adobe {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.conteneur-page {
+  padding-bottom: 50px;
+  padding: 40px 0;
+}
+
+.conteneur-preview {
+  max-width: 330px;
+  width: 100%;
+  margin: 0 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: var(--light-radius);
+}
+
+.conteneur-image {
+  width: auto;
+  height: 240px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.conteneur-image img {
+  width: 100%;
+  border-radius: var(--light-radius);
+}
+
+/* ------------- RESPONSIVE ------------------ */
+
+@media screen and (max-width: 610px) {
+  .titre-page {
+    margin-bottom: 20px;
+  }
+
+  .titre-page h1 {
+    font-size: 30px;
+  }
+
+  .page {
+    margin: 10px 20px;
+  }
+
+  .conteneur-preview {
+    margin: 0px 0px 30px;
+  }
+}
