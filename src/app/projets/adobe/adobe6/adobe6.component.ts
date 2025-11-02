@@ -1,5 +1,11 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
-import { Component, HostListener, Inject, signal } from '@angular/core';
+import {
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  HostListener,
+  Inject,
+  signal,
+} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { environment } from 'src/app/environments/environment';
 
@@ -8,10 +14,11 @@ import { environment } from 'src/app/environments/environment';
   imports: [CommonModule, RouterModule],
   templateUrl: './adobe6.component.html',
   styleUrl: './adobe6.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Adobe6Component {
   filePath: string = environment.filePath;
-  imagePath: string = environment.imagePath + 'adobe/adobe6/';
+  imagePath: string = environment.imagePath + 'adobe/';
   expandedImageSrc = signal<string | null>(null);
   windowScrolled = false;
 

@@ -262,6 +262,51 @@ button {
   border-radius: var(--light-radius);
 }
 
+.contenu-design {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+swiper-container {
+  width: 80%;
+  height: 450px;
+  max-width: 800px;
+}
+
+swiper-slide {
+  width: 100%;
+  cursor: grab;
+}
+
+swiper-slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.contenu-design .description-container {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenu-design .description-container img {
+  width: 50px;
+}
+
+.contenu-design .description-container span {
+  margin-right: 50px;
+  margin-left: 50px;
+  font-weight: 600;
+}
+
 /* ------------- RESPONSIVE ------------------ */
 
 @media screen and (max-width: 610px) {

@@ -1,6 +1,12 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { computeMsgId } from '@angular/compiler';
-import { Component, HostListener, Inject, signal } from '@angular/core';
+import {
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  HostListener,
+  Inject,
+  signal,
+} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { environment } from 'src/app/environments/environment';
 
@@ -9,10 +15,11 @@ import { environment } from 'src/app/environments/environment';
   imports: [CommonModule, RouterModule],
   templateUrl: './adobe16.component.html',
   styleUrl: './adobe16.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Adobe16Component {
   filePath: string = environment.filePath;
-  imagePath: string = environment.imagePath + 'adobe/adobe16/';
+  imagePath: string = environment.imagePath + 'adobe/';
   expandedImageSrc = signal<string | null>(null);
   windowScrolled = false;
 
