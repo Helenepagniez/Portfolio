@@ -12,23 +12,44 @@
         </div>
       </div>
       <div class="bloc">
-        <div class="conteneur-image">
-          <img
-            [src]="imagePath + '/mascotte.webp'"
-            alt="about img"
-            title="Mascotte"
-          />
+        <div class="haut-page">
+          <div class="conteneur-image">
+            <img
+              [src]="imagePath + '/mascotte.webp'"
+              alt="about img"
+              title="Mascotte"
+            />
+          </div>
+          <div class="description">
+            <p>
+              Je travaille au croisement du marketing digital, de la
+              communication et de la gestion de projet. Ce qui me motive est de
+              comprendre une marque, clarifier son message et l’exprimer de
+              façon créative, cohérente et engageante. Je recherche un poste de
+              <strong style="font-weight: 650"
+                >Chargée de Marketing ou Consultante Marketing</strong
+              >
+              dans une équipe où l’on partage les idées, où l’on teste, où l’on
+              construit ensemble. Pigloo (le pingouin) représente ma touche
+              personnelle : une manière d’aborder les projets avec sérieux, sans
+              jamais perdre l’enthousiasme ni l’envie d’innover. Ensemble, nous
+              surfons sur les tendances avec le sourire, prêts à apporter une
+              touche de fraîcheur et d’énergie à chaque projet.
+            </p>
+          </div>
         </div>
         <div class="contenu">
-          <p style="margin-bottom: 20px">
-            Passionnée par le digital, je suis actuellement à la recherche d'une
-            entreprise pour poursuivre ma carrière en Marketing & Communication
-            / Gestion de Projet. Mon objectif ? Relever des défis stimulants au
-            sein d’une équipe dynamique et contribuer activement au
-            développement de projets créatifs et impactants. Avec ma mascotte
-            Pigloo, je surfe sur les tendances du marketing digital et de la
-            communication, toujours avec enthousiasme et une volonté de faire la
-            différence !
+          <p style="margin-bottom: 20px" class="autre">
+            J’aime apprendre chaque jour, poser des questions, comprendre les
+            mécaniques derrière une stratégie et affiner les actions au fur et à
+            mesure. J’apporte de la rigueur, de la créativité, de
+            l’organisation, une vraie envie de m’impliquer et une capacité à
+            progresser grâce à l’observation, l’écoute et la pratique.
+            J’apprécie particulièrement les environnements bienveillants où l’on
+            se forme en faisant, et où chaque contribution, même petite, a du
+            sens. J’avance avec l’envie de grandir aux côtés d’une équipe,
+            d’enrichir mes compétences et de participer à des projets qui se
+            construisent pas à pas, avec intention et coopération.
           </p>
           <div class="button-container">
             <a
@@ -84,6 +105,28 @@
 
           <div class="contenu-onglet active" *ngIf="isActivedFormation">
             <div class="frise-chronologique">
+              <div class="periode">
+                <span class="date">2025</span>
+                <h4>
+                  Formation TOSA Adobe InDesign -
+                  <span>EDAA</span>
+                </h4>
+                <div class="contenu-visuels-formations">
+                  <div class="conteneur-preview-formations">
+                    <a
+                      class="btn"
+                      (click)="
+                        onImageClick(
+                          imagePath + '/certificats/attestation-edaa.webp'
+                        )
+                      "
+                      title="Consulter l'attestation'"
+                    >
+                      <span>Consulter l'attestation</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
               <div class="periode">
                 <span class="date">2024 - 2025</span>
                 <h4>
@@ -529,11 +572,28 @@
           <div class="contenu-visuels">
             <div class="conteneur-preview">
               <img
+                [src]="imagePath + '/certificats/certificat-tosa.webp'"
+                alt="Certificat TOSA InDesign"
+                title="Certificat TOSA InDesign"
+              />
+              <p style="font-weight: bold">Adobe InDesign</p>
+              <a
+                class="btn"
+                (click)="
+                  onImageClick(imagePath + '/certificats/certificat-tosa.webp')
+                "
+                title="Consulter"
+              >
+                <span>Consulter</span>
+              </a>
+            </div>
+            <div class="conteneur-preview">
+              <img
                 [src]="imagePath + '/certificats/certificat-analytics.webp'"
                 alt="Certificat Analytics"
                 title="Certificat Analytics"
               />
-              <p style="font-weight: bold">Certificat Analytics</p>
+              <p style="font-weight: bold">Google Analytics</p>
               <a
                 class="btn"
                 (click)="
@@ -552,7 +612,7 @@
                 alt="Certificat Ads"
                 title="Certificat Ads"
               />
-              <p style="font-weight: bold">Certificat Ads</p>
+              <p style="font-weight: bold">Google Ads</p>
               <a
                 class="btn"
                 (click)="
@@ -569,7 +629,7 @@
                 alt="Certificat Canva"
                 title="Certificat Canva"
               />
-              <p style="font-weight: bold">Certificat Canva</p>
+              <p style="font-weight: bold">Canva</p>
               <a
                 class="btn"
                 (click)="
@@ -586,7 +646,7 @@
                 alt="Certificat Hootsuite"
                 title="Certificat Hootsuite"
               />
-              <p style="font-weight: bold">Certificat Hootsuite</p>
+              <p style="font-weight: bold">Hootsuite</p>
               <a
                 class="btn"
                 (click)="

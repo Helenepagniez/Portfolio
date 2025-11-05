@@ -27,7 +27,7 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: var(--text-primary-color);
+  color: var(--tertiary-color);
   font-size: 2em;
   backdrop-filter: 5px;
   transition: 0.5s;
