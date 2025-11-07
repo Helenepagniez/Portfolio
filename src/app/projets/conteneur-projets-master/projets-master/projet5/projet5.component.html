@@ -1,0 +1,106 @@
+<div class="main">
+  <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="page">
+      <div class="titre-page">
+        <h1>Slow</h1>
+      </div>
+      <div class="contenu-projet">
+        <div class="carousel">
+          <swiper-container
+            effect="coverflow"
+            mousewheel="false"
+            autoplay="true"
+            loop="true"
+            pagination="true"
+            pagination-clickable="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            navigation="true"
+            style="
+              --swiper-navigation-color: #ce0045;
+              --swiper-pagination-color: #ce0045;
+              --swiper-theme-color: #ce0045;
+            "
+          >
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/avant-crm.webp'"
+                alt="Mapping avant CRM"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/apres-crm.webp'"
+                alt="Mapping après CRM"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/retroplanning.webp'"
+                alt="Rétroplanning"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/synthese-donnees.webp'"
+                alt="Synthèse des données"
+              />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <h2 class="titre-partie">Contexte du projet</h2>
+        <p>
+          Structuration d’une stratégie CRM sur 12 mois pour Slow, enseigne de
+          sports de glisse, afin de centraliser les données clients, optimiser
+          la fidélisation et améliorer la relation client omnicanale.
+        </p>
+        <h2 class="titre-partie">Approche</h2>
+        <ul>
+          <li>
+            <strong>Élaboration d’une stratégie CRM personnalisée :</strong>
+            segmentation clients, parcours omnicanal, objectifs SMART et KPIs.
+          </li>
+          <li>
+            <strong>Préparation opérationnelle :</strong> mapping des données,
+            cahier des charges, benchmark CRM, sélection de Hubspot et
+            construction d’un rétroplanning détaillé avec matrice RACI.
+          </li>
+          <li>
+            <strong>Affinage de la connaissance client :</strong> analyse des
+            données, création de personas et définition d’une stratégie
+            d’acquisition multicanale.
+          </li>
+          <li>
+            Conduite d’une enquête client via brief pour EchoSphere afin
+            d’enrichir la compréhension des attentes et leviers de fidélisation.
+          </li>
+        </ul>
+        <h2 class="titre-partie">Ce projet m’a permis de</h2>
+        <p>
+          Développer mes compétences en CRM, gestion de projet digital et
+          segmentation marketing, tout en pilotant une stratégie centrée sur la
+          relation client et l’optimisation des données.
+        </p>
+        <h2 class="titre-partie">Livrables</h2>
+        <div class="button-container">
+          <a
+            [href]="
+              filePath +
+              'images/projets-master/projet5/support-presentation.pdf'
+            "
+            download="Support-présentation.pdf"
+            title="Télécharger le support de présentation"
+            aria-label="Support de présentation"
+            class="btn"
+            >Télécharger le support de présentation</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

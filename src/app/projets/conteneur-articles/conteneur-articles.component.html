@@ -1,0 +1,10 @@
+<p>
+  Une série d’articles qui décodent les enjeux actuels du monde du travail :
+  bien-être, management, reconversion, nouveaux modes d’emploi. Des idées
+  concrètes et des pistes d’action pour avancer en confiance.
+</p>
+<div class="conteneur">
+  @for (projet of articles; track $index) {
+  <app-carte [projet]="projet"></app-carte>
+  }
+</div>

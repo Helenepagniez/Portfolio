@@ -1,0 +1,112 @@
+<div class="main">
+  <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="page">
+      <div class="titre-page">
+        <h1>SNCF</h1>
+      </div>
+      <div class="contenu-projet">
+        <div class="carousel">
+          <swiper-container
+            effect="coverflow"
+            mousewheel="false"
+            autoplay="true"
+            loop="true"
+            pagination="true"
+            pagination-clickable="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            navigation="true"
+            style="
+              --swiper-navigation-color: #ce0045;
+              --swiper-pagination-color: #ce0045;
+              --swiper-theme-color: #ce0045;
+            "
+          >
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/historique.webp'"
+                alt="Historique SNCF"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/plateforme-de-marque.webp'"
+                alt="Plateforme de marque"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/exemples-campagne.webp'"
+                alt="Exemples de Campagne"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/brandboard.webp'"
+                alt="Brandboard Flix&Go"
+              />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <h2 class="titre-partie">Contexte du projet</h2>
+        <p>
+          Lancement de Flix&Go, un service de divertissement embarqué accessible
+          hors connexion, pour fidéliser les voyageurs existants et séduire les
+          18–30 ans, sensibles à la technologie et aux valeurs
+          environnementales.
+        </p>
+        <h2 class="titre-partie">Approche</h2>
+        <ul>
+          <li>
+            Audit complet de la marque SNCF pour analyser image perçue et
+            leviers d’attractivité, via études internes, externes, enquêtes
+            clients et veille concurrentielle.
+          </li>
+          <li>
+            Création de l’identité de marque Flix&Go (nom, slogan, brandboard,
+            charte éditoriale) et d’un plan de communication multicanal
+            intégrant réseaux sociaux, site, emailing, affichages en gare et
+            événements.
+          </li>
+          <li>
+            Définition d’objectifs SMART et déploiement d’outils de suivi pour
+            mesurer notoriété, engagement et impact sur l’image de marque.
+          </li>
+        </ul>
+        <h2 class="titre-partie">Ce projet m’a permis de</h2>
+        <p>
+          Renforcer mes compétences en audit stratégique, branding et
+          communication multicanale, et de coordonner un projet complet alliant
+          innovation digitale et expérience utilisateur.
+        </p>
+        <h2 class="titre-partie">Livrables</h2>
+        <div class="button-container">
+          <a
+            [href]="filePath + 'images/projets-master/projet2/etude-marque.pdf'"
+            download="Etude de marque.pdf"
+            title="Télécharger l'étude de marque"
+            aria-label="Étude de marque"
+            class="btn"
+            >Télécharger l'étude de marque</a
+          >
+          <a
+            [href]="
+              filePath +
+              'images/projets-master/projet2/plateforme-de-marque.pdf'
+            "
+            download="Plateforme-de-marque.pdf"
+            title="Télécharger la plateforme de marque"
+            aria-label="PLateforme de marque"
+            class="btn"
+            >Télécharger la plateforme de marque</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

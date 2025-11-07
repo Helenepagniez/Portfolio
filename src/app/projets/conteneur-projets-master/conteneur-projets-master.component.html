@@ -1,0 +1,10 @@
+<p>
+  Des projets académiques traités comme de véritables missions professionnelles,
+  alliant réflexion stratégique, mise en place opérationnelle et création de
+  livrables concrets.
+</p>
+<div class="conteneur">
+  @for (projet of projetsMaster; track $index) {
+  <app-carte [projet]="projet"></app-carte>
+  }
+</div>

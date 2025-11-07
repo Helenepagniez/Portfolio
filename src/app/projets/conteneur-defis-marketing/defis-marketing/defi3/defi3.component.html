@@ -1,0 +1,210 @@
+<div class="main">
+  <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="page">
+      <div class="titre-page">
+        <h1>Perlora</h1>
+      </div>
+      <div class="contenu-defi">
+        <div class="carousel">
+          <swiper-container
+            effect="coverflow"
+            mousewheel="false"
+            autoplay="true"
+            loop="true"
+            pagination="true"
+            pagination-clickable="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            navigation="true"
+            style="
+              --swiper-navigation-color: #ce0045;
+              --swiper-pagination-color: #ce0045;
+              --swiper-theme-color: #ce0045;
+            "
+          >
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/brandboard.webp'"
+                alt="BrandBoard"
+                class="haute"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/logo-principal.webp'"
+                alt="Logo principal"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/affichage-gare.webp'"
+                alt="Affichage gare"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/abribus.webp'"
+                alt="Affichage Abribus"
+              />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <h2 class="titre-partie">Contexte</h2>
+
+        <div class="cartes">
+          <!-- Carte 1 -->
+          <div class="carte">
+            <div class="interieur">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
+                  <i class="fa-regular fa-lightbulb"></i>
+                  <div class="categorie">CARTE SUPPORT</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
+                  <span class="dernier">Une Publicité Extérieure</span>
+                </div>
+                <p>
+                  Que la publicité soit en 4x3, en affichette ou encore en
+                  format abribus, réfléchissez aux cibles, au message à
+                  transmettre et à la saisonnalité.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 2 -->
+          <div class="carte">
+            <div class="interieur">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
+                  <i class="fa-regular fa-building"></i>
+                  <div class="categorie">CARTE SECTEUR D'ACTIVITE</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
+                  <span>Une bijouterie</span>
+                </div>
+                <p>
+                  Experte dans le travail de la perle, la bijouterie Perlora
+                  puise son inspiration dans l'écosystème marin. Boucles
+                  d'oreilles en motif écaille, colliers de perles, bagues aux
+                  tonalités naturelles : toutes les créations sont uniques !
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 3 -->
+          <div class="carte">
+            <div class="interieur">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
+                  <i class="fa-regular fa-circle-xmark"></i>
+                  <div class="categorie">CARTE CONTRAINTE</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
+                  <span class="dernier"
+                    >Intégrer un élément cliché du secteur</span
+                  >
+                </div>
+                <p>Exemple : une paire de ciseaux pour une coiffeuse.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          Création d’une affiche publicitaire pour Perlora, bijouterie
+          spécialisée dans les perles et inspirée de l’univers marin. Le visuel
+          devait intégrer un élément cliché du secteur, tout en valorisant
+          l’élégance et l’unicité des créations.
+        </p>
+        <h2 class="titre-partie">Palette de couleurs</h2>
+        <div class="couleurs-container">
+          <div class="palette">
+            <div class="couleur" style="background-color: #1d354c"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#1D354C – Bleu algue</span
+            >
+            <span style="margin: 0">Marin & Élégance</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #336d74"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#336D74 – Turquoise</span
+            >
+            <span style="margin: 0">Océan & Fraicheur</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #efefeb"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#EFEFEB – Nacre douce</span
+            >
+            <span style="margin: 0">Raffinement & Lumière</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #cac9c3"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#CAC9C3 – Gris</span
+            >
+            <span style="margin: 0">Neutralité & Matière</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #ffad9e"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#FFAD9E – Corail clair</span
+            >
+            <span style="margin: 0">Chaleur & Humain</span>
+          </div>
+        </div>
+        <h2 class="titre-partie">Approche</h2>
+        <ul>
+          <li>
+            Création du nom “Perlora” et du slogan “Éclat de l’océan”, évoquant
+            la mer, la nature et la lumière.
+          </li>
+          <li>
+            <strong>Construction du Brand Board :</strong> typographies (Cinzel
+            pour les titres, Libre Franklin pour les textes), logos décliné en
+            trois versions et univers visuel basé sur textures marines et formes
+            organiques.
+          </li>
+          <li>
+            <strong>Conception de l’affiche abribus :</strong> femme portant des
+            bijoux dans un cadre lumineux et poétique, intégrant l’élément
+            cliché du secteur de manière subtile.
+          </li>
+          <li>
+            <strong>Positionnement :</strong> capter l’attention dans l’espace
+            urbain tout en exprimant l’unicité et la sensibilité artisanale des
+            bijoux.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

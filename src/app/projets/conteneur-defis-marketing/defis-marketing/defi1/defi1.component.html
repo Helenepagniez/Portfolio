@@ -1,0 +1,205 @@
+<div class="main">
+  <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="page">
+      <div class="titre-page">
+        <h1>Néolink</h1>
+      </div>
+      <div class="contenu-defi">
+        <div class="carousel">
+          <swiper-container
+            effect="coverflow"
+            mousewheel="false"
+            autoplay="true"
+            loop="true"
+            pagination="true"
+            pagination-clickable="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            navigation="true"
+            style="
+              --swiper-navigation-color: #ce0045;
+              --swiper-pagination-color: #ce0045;
+              --swiper-theme-color: #ce0045;
+            "
+          >
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/brandboard.webp'"
+                alt="Brandboard"
+                class="haute"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/logo-principal.webp'"
+                alt="Logo principal"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/logo-secondaire-1.webp'"
+                alt="Logo secondaire (1)"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/logo-secondaire-2.webp'"
+                alt="Logo secondaire (2)"
+              />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <h2 class="titre-partie">Contexte</h2>
+        <div class="cartes">
+          <!-- Carte 1 -->
+          <div class="carte">
+            <div class="interieur">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
+                  <i class="fa-regular fa-lightbulb"></i>
+                  <div class="categorie">CARTE SUPPORT</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
+                  <span>Un Brand Board</span>
+                </div>
+                <p>
+                  Un Brand Board est une planche graphique qui synthétise
+                  l'identité visuelle d'une marque (logos, couleurs,
+                  typographies, illustrations…).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 2 -->
+          <div class="carte">
+            <div class="interieur">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
+                  <i class="fa-regular fa-building"></i>
+                  <div class="categorie">CARTE SECTEUR D'ACTIVITE</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
+                  <span>Une banque</span>
+                </div>
+                <p>
+                  Réservée aux jeunes actifs, une nouvelle banque s'implante à
+                  Bordeaux. Forte d'une image de marque dynamique, elle est
+                  basée sur la relation de confiance avec ses clients âgés entre
+                  20 et 35 ans.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 3 -->
+          <div class="carte">
+            <div class="interieur">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
+                  <i class="fa-regular fa-circle-xmark"></i>
+                  <div class="categorie">CARTE CONTRAINTE</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
+                  <span class="dernier"
+                    >Utiliser uniquement des couleurs froides</span
+                  >
+                </div>
+                <p>Teintes bleues, violettes, vertes, etc...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          Création de l’identité visuelle d’une néobanque moderne destinée aux
+          jeunes actifs (20–35 ans) à Bordeaux, avec la contrainte d’utiliser
+          uniquement des couleurs froides.
+        </p>
+        <h2 class="titre-partie">Palette de couleurs</h2>
+        <div class="couleurs-container">
+          <div class="palette">
+            <div class="couleur" style="background-color: #b3d7f5"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#B3D7F5 – Bleu pastel</span
+            >
+            <span style="margin: 0">Douceur & Simplicité</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #1e2e47"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#1E2E47 – Bleu nuit</span
+            >
+            <span style="margin: 0">Confiance & Stabilité</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #a7e3c0"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#A7E3C0 – Vert menthe</span
+            >
+            <span style="margin: 0">Responsabilité & Ecologie</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #d5ccff"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#D5CCFF – Violet doux</span
+            >
+            <span style="margin: 0">Modernité & Innovation</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #f4f9fc"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#F4F9FC – Blanc froid</span
+            >
+            <span style="margin: 0">Clarté & Minimalisme</span>
+          </div>
+        </div>
+        <h2 class="titre-partie">Approche</h2>
+        <ul>
+          <li>
+            Création du nom “Néolink” et formulation du slogan “Votre avenir en
+            un clic” pour refléter innovation, connexion et accessibilité.
+          </li>
+          <li>
+            Construction du Brand Board incluant palette, typographies (Racing
+            Sans One pour les titres, Poppins pour les textes) et illustrations
+            cohérentes avec l’univers digital et humain.
+          </li>
+          <li>
+            Conception du logo principal et de deux déclinaisons adaptées à
+            différents fonds et supports.
+          </li>
+          <li>
+            Sélection d’illustrations et éléments visuels alignés avec le ton et
+            les valeurs de la marque (moderne, responsable, accessible).
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

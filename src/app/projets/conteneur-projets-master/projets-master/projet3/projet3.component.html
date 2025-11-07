@@ -1,0 +1,116 @@
+<div class="main">
+  <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="page">
+      <div class="titre-page">
+        <h1>Blune</h1>
+      </div>
+      <div class="contenu-projet">
+        <div class="carousel">
+          <swiper-container
+            effect="coverflow"
+            mousewheel="false"
+            autoplay="true"
+            loop="true"
+            pagination="true"
+            pagination-clickable="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            navigation="true"
+            style="
+              --swiper-navigation-color: #ce0045;
+              --swiper-pagination-color: #ce0045;
+              --swiper-theme-color: #ce0045;
+            "
+          >
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/persona.webp'"
+                alt="Exemple de Persona"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/benchmark.webp'"
+                alt="Exemple de Benchmark RS"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/plan-action.webp'"
+                alt="Plan d'action"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/roi.webp'"
+                alt="Roi et seuil de rentabilité"
+              />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <h2 class="titre-partie">Contexte du projet</h2>
+        <p>
+          Relance de Blune, marque de prêt-à-porter féminin et enfantin à
+          l’univers poétique et responsable, avec pour objectif d’élaborer une
+          stratégie marketing-communication complète et cohérente avec ses
+          valeurs fondatrices.
+        </p>
+        <h2 class="titre-partie">Approche</h2>
+        <ul>
+          <li>
+            <strong>Analyse stratégique du marché et de la marque :</strong>
+            étude des tendances, benchmarking concurrentiel et identification
+            des leviers différenciants.
+          </li>
+          <li>
+            <strong
+              >Définition de la stratégie marketing-communication :</strong
+            >
+            positionnement, objectifs SMART, personas cibles et thématiques
+            éditoriales.
+          </li>
+          <li>
+            <strong
+              >Élaboration d’un plan d’action omnicanal sur 12 mois :</strong
+            >
+            réseaux sociaux, e-commerce, pop-up stores, e-mailing, relations
+            presse et partenariats, avec budget et ROI estimé.
+          </li>
+        </ul>
+        <h2 class="titre-partie">Ce projet m’a permis de</h2>
+        <p>
+          Renforcer mes compétences en stratégie marketing, planification
+          budgétaire et communication omnicanale, tout en coordonnant un projet
+          complet de relance de marque.
+        </p>
+        <h2 class="titre-partie">Livrables</h2>
+        <div class="button-container">
+          <a
+            [href]="filePath + 'images/projets-master/projet3/strategie.pdf'"
+            download="Stratégie.pdf"
+            title="Télécharger la stratégie"
+            aria-label="Stratégie"
+            class="btn"
+            >Télécharger la stratégie</a
+          >
+          <a
+            [href]="
+              filePath +
+              'images/projets-master/projet3/support-presentation.pdf'
+            "
+            download="Support-présentation.pdf"
+            title="Télécharger le support de présentation"
+            aria-label="Support de présentation"
+            class="btn"
+            >Télécharger le support de présentation</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

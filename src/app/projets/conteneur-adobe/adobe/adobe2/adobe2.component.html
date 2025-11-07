@@ -1,0 +1,46 @@
+<div class="main">
+  <section class="conteneur-page">
+    <div class="page">
+      <div class="titre-page">
+        <h1>Menu d'un restaurant de sushi</h1>
+      </div>
+      <div class="contenu-design">
+        <swiper-container
+          effect="coverflow"
+          mousewheel="false"
+          autoplay="true"
+          loop="true"
+          pagination="true"
+          pagination-clickable="true"
+          autoplay-delay="2500"
+          autoplay-disable-on-interaction="false"
+          navigation="true"
+          style="
+            --swiper-navigation-color: #ce0045;
+            --swiper-pagination-color: #ce0045;
+            --swiper-theme-color: #ce0045;
+          "
+        >
+          <swiper-slide class="mockup">
+            <img [src]="imagePath + '/2/mockup.webp'" alt="Mockup" />
+          </swiper-slide>
+          <swiper-slide>
+            <img [src]="imagePath + '/2/exterieur.webp'" alt="Extérieur" />
+          </swiper-slide>
+          <swiper-slide>
+            <img [src]="imagePath + '/2/interieur.webp'" alt="Intérieur" />
+          </swiper-slide>
+        </swiper-container>
+        <div class="description-container">
+          <img
+            [src]="imagePath + '../outils/indesign.webp'"
+            alt="Adobe InDesign"
+          />
+          <span class="logiciel">Adobe InDesign</span> |
+          <span class="type">Brochure </span> |
+          <span class="date">Octobre 2025 </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,122 @@
+<div class="main">
+  <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="page">
+      <div class="titre-page">
+        <h1>Thrustmaster</h1>
+      </div>
+      <div class="contenu-projet">
+        <div class="carousel">
+          <swiper-container
+            effect="coverflow"
+            mousewheel="false"
+            autoplay="true"
+            loop="true"
+            pagination="true"
+            pagination-clickable="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            navigation="true"
+            style="
+              --swiper-navigation-color: #ce0045;
+              --swiper-pagination-color: #ce0045;
+              --swiper-theme-color: #ce0045;
+            "
+          >
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/benchmark.webp'"
+                alt="Benchmark concurentiel"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/parcours-client.webp'"
+                alt="Parcours client"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/recommandations.webp'"
+                alt="Recommandations"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/budget.webp'"
+                alt="Répartition du budget"
+              />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <h2 class="titre-partie">Contexte du projet</h2>
+        <p>
+          Audit marketing stratégique pour Thrustmaster, filiale de Guillemot
+          Corporation, afin d’identifier les leviers d’optimisation marketing,
+          communication et RSE pour améliorer la performance de la marque dans
+          le secteur du gaming.
+        </p>
+        <h2 class="titre-partie">Approche</h2>
+        <ul>
+          <li>
+            <strong>Analyse globale de l’entreprise et diagnostic :</strong>
+            définition de personas, plateforme de marque complète, utilisation
+            d’outils stratégiques (SWOT, PESTEL, BCG, 4P, parcours client).
+          </li>
+          <li>
+            <strong>Audit de la stratégie digitale :</strong> SEO/SEA, UX/UI,
+            réseaux sociaux et emailing, identification des forces et axes
+            d’amélioration.
+          </li>
+          <li>
+            Entretiens qualitatifs avec collaborateurs fictifs pour prioriser
+            les besoins internes et recommandations d’optimisation.
+          </li>
+          <li>
+            <strong
+              >Construction d’un plan d’action marketing en 5 axes :</strong
+            >
+            marketing digital, innovation produit, expérience client,
+            communication RSE, suivi et pilotage avec KPIs et roadmap 12 mois.
+          </li>
+          <li>
+            Élaboration d’un budget détaillé de 50 000 € réparti par levier
+            (SEO, SEA, UX/UI, réseaux sociaux, CRM, fidélisation, RSE).
+          </li>
+        </ul>
+        <h2 class="titre-partie">Ce projet m’a permis de</h2>
+        <p>
+          Développer mes compétences en audit stratégique, marketing digital,
+          planification budgétaire et communication responsable, tout en
+          concevant un plan d’action concret et mesurable pour une marque
+          internationale.
+        </p>
+        <h2 class="titre-partie">Livrables</h2>
+        <div class="button-container">
+          <a
+            [href]="filePath + 'images/projets-master/projet8/rapport.pdf'"
+            download="Rapport.pdf"
+            title="Télécharger le rapport"
+            aria-label="Rapport"
+            class="btn"
+            >Télécharger le rapport</a
+          >
+          <a
+            [href]="
+              filePath + 'images/projets-master/projet8/support-soutenance.pdf'
+            "
+            download="Support-présentation.pdf"
+            title="Télécharger le support de présentation"
+            aria-label="Support de présentation"
+            class="btn"
+            >Télécharger le support de présentation</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

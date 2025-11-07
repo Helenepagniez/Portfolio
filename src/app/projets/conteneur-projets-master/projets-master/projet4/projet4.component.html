@@ -1,0 +1,111 @@
+<div class="main">
+  <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="page">
+      <div class="titre-page">
+        <h1>Avenirs</h1>
+      </div>
+      <div class="contenu-projet">
+        <div class="carousel">
+          <swiper-container
+            effect="coverflow"
+            mousewheel="false"
+            autoplay="true"
+            loop="true"
+            pagination="true"
+            pagination-clickable="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            navigation="true"
+            style="
+              --swiper-navigation-color: #ce0045;
+              --swiper-pagination-color: #ce0045;
+              --swiper-theme-color: #ce0045;
+            "
+          >
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/communication-responsable.webp'"
+                alt="Communication Responsable"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/methodologie-agile.webp'"
+                alt="Méthodologie Agile"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/equipe-projet.webp'"
+                alt="Equipe Projet"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/matrice-raci.webp'"
+                alt="Matrice Raci"
+              />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <h2 class="titre-partie">Contexte du projet</h2>
+        <p>
+          Participation à un projet d’appel d’offres pour l’association
+          caritative Avenirs, avec pour mission de cadrer et lancer un projet de
+          communication digitale responsable, en privilégiant méthodologie et
+          collaboration efficace.
+        </p>
+        <h2 class="titre-partie">Approche</h2>
+        <ul>
+          <li>
+            <strong>Mise en place d’une communication responsable :</strong>
+            contenus éco-conçus, transparence, inclusion et respect des parties
+            prenantes.
+          </li>
+          <li>
+            Choix et paramétrage de Trello comme outil collaboratif pour gérer
+            tâches, échéances et documents en temps réel.
+          </li>
+          <li>
+            <strong>Application de la méthodologie Agile :</strong> livraisons
+            progressives, itérations courtes et centrées sur la valeur
+            utilisateur.
+          </li>
+          <li>
+            Constitution et organisation de l’équipe projet pluridisciplinaire
+            avec matrice RACI pour clarifier responsabilités et rôles.
+          </li>
+          <li>
+            Préparation d’une réunion de lancement structurée pour aligner
+            l’équipe et valider les étapes clés.
+          </li>
+        </ul>
+        <h2 class="titre-partie">Ce projet m’a permis de</h2>
+        <p>
+          Renforcer mes compétences en gestion de projet digital, communication
+          responsable et coordination d’équipe pluridisciplinaire sur un projet
+          à forte valeur sociétale.
+        </p>
+        <h2 class="titre-partie">Livrables</h2>
+        <div class="button-container">
+          <a
+            [href]="
+              filePath +
+              'images/projets-master/projet4/support-presentation.pdf'
+            "
+            download="Support-présentation.pdf"
+            title="Télécharger le support de présentation"
+            aria-label="Support de présentation"
+            class="btn"
+            >Télécharger le support de présentation</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

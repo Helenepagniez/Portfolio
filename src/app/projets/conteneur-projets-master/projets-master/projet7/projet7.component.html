@@ -1,0 +1,110 @@
+<div class="main">
+  <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="page">
+      <div class="titre-page">
+        <h1>TerreCacao</h1>
+      </div>
+      <div class="contenu-projet">
+        <div class="carousel">
+          <swiper-container
+            effect="coverflow"
+            mousewheel="false"
+            autoplay="true"
+            loop="true"
+            pagination="true"
+            pagination-clickable="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            navigation="true"
+            style="
+              --swiper-navigation-color: #ce0045;
+              --swiper-pagination-color: #ce0045;
+              --swiper-theme-color: #ce0045;
+            "
+          >
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/mapping-invites.webp'"
+                alt="Mapping des invités"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/plan-communication.webp'"
+                alt="Plan de communication"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/diagramme-decision.webp'"
+                alt="Diagramme de décision"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img [src]="imagePath + '/veille.webp'" alt="Système de veille" />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <h2 class="titre-partie">Contexte du projet</h2>
+        <p>
+          Accompagnement du lancement de Kongolicieux, marque de chocolats bio
+          et équitables, avec pour objectifs de structurer un événement à fort
+          impact, activer des leviers d’influence et gérer la réputation en
+          ligne, tout en intégrant les engagements RSE de la marque.
+        </p>
+        <h2 class="titre-partie">Approche</h2>
+        <ul>
+          <li>
+            <strong
+              >Préparation et organisation de l’événement de lancement :</strong
+            >
+            lieu écoresponsable, programme immersif, communication multicanale
+            et budget détaillé.
+          </li>
+          <li>
+            <strong
+              >Mise en place de partenariats et actions d’influence :</strong
+            >
+            rédaction de mails personnalisés, contrats influenceurs, suivi des
+            KPI de visibilité et engagement.
+          </li>
+          <li>
+            <strong>Gestion de l’image et anticipation des crises :</strong>
+            plan d’action face à une polémique environnementale, protocole
+            social media et charte de modération.
+          </li>
+          <li>
+            <strong>Système de veille e-réputation :</strong> outils de
+            monitoring, dashboard centralisé et réponses proactives aux
+            critiques.
+          </li>
+        </ul>
+        <h2 class="titre-partie">Ce projet m’a permis de</h2>
+        <p>
+          Renforcer mes compétences en organisation événementielle,
+          communication responsable, gestion de crise et e-réputation, tout en
+          coordonnant des actions d’influence et de visibilité pour une marque
+          engagée.
+        </p>
+        <h2 class="titre-partie">Livrables</h2>
+        <div class="button-container">
+          <a
+            [href]="
+              filePath + 'images/projets-master/projet7/support-soutenance.pdf'
+            "
+            download="Support-présentation.pdf"
+            title="Télécharger le support de présentation"
+            aria-label="Support de présentation"
+            class="btn"
+            >Télécharger le support de présentation</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

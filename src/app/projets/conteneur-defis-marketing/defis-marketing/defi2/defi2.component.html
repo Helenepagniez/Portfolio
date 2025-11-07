@@ -1,0 +1,211 @@
+<div class="main">
+  <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="page">
+      <div class="titre-page">
+        <h1>Linfini</h1>
+      </div>
+      <div class="contenu-defi">
+        <div class="carousel">
+          <swiper-container
+            effect="coverflow"
+            mousewheel="false"
+            autoplay="true"
+            loop="true"
+            pagination="true"
+            pagination-clickable="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            navigation="true"
+            style="
+              --swiper-navigation-color: #ce0045;
+              --swiper-pagination-color: #ce0045;
+              --swiper-theme-color: #ce0045;
+            "
+          >
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/newsletter.webp'"
+                alt="Newsletter"
+                class="haute"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/brandboard.webp'"
+                alt="BrandBoard"
+                class="haute"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/logo-principal.webp'"
+                alt="Logo principal"
+              />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <h2 class="titre-partie">Contexte</h2>
+        <div class="cartes">
+          <!-- Carte 1 -->
+          <div class="carte">
+            <div class="interieur">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
+                  <i class="fa-regular fa-lightbulb"></i>
+                  <div class="categorie">CARTE SUPPORT</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
+                  <span>Une Newsletter</span>
+                </div>
+                <p>
+                  La newsletter est devenue le rendez-vous privilégié d'une
+                  marque avec son audience. Amusez-vous à imaginer et à
+                  maquetter une communication par e-mail pertinente pour le
+                  secteur d'activité.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 2 -->
+          <div class="carte">
+            <div class="interieur">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
+                  <i class="fa-regular fa-building"></i>
+                  <div class="categorie">CARTE SECTEUR D'ACTIVITE</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
+                  <span class="dernier">Une marque de vêtements engagée</span>
+                </div>
+                <p>
+                  Passionné par la mode et très engagé pour l'environnement,
+                  Adam vient de lancer sa marque de vêtements dont les fibres
+                  sont issues de vêtements recyclés.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 3 -->
+          <div class="carte">
+            <div class="interieur">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
+                  <i class="fa-regular fa-circle-xmark"></i>
+                  <div class="categorie">CARTE CONTRAINTE</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
+                  <span class="dernier"
+                    >Choisir un évènement du mois en cours</span
+                  >
+                </div>
+                <p>
+                  Vous pouvez utiliser un marronnier marketing pour vous
+                  inspirer.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          Création d’une newsletter (et son identité visuelle) pour une marque
+          de vêtements éco-responsable, lancée par un entrepreneur engagé, à
+          l’occasion de la Journée Mondiale de l’Environnement (5 juin).
+        </p>
+        <h2 class="titre-partie">Palette de couleurs</h2>
+        <div class="couleurs-container">
+          <div class="palette">
+            <div class="couleur" style="background-color: #a8cbb7"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#A8CBB7 – Vert sauge</span
+            >
+            <span style="margin: 0">Douceur & Durabilité</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #2f4858"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#2F4858 – Bleu ardoise</span
+            >
+            <span style="margin: 0">Sobriété & Confiance</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #f1eee7"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#F1EEE7 – Lin naturel</span
+            >
+            <span style="margin: 0">Épure & Textile</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #d9c4a1"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#D9C4A1 – Ocre pâle</span
+            >
+            <span style="margin: 0">Chaleur & Artisanal</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #ffffff"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#FFFFFF – Blanc pur</span
+            >
+            <span style="margin: 0">Clarté & Minimalisme</span>
+          </div>
+        </div>
+        <h2 class="titre-partie">Approche</h2>
+        <ul>
+          <li>
+            Création du nom “Linfini” et du slogan “Changer la mode. Pas la
+            planète.” pour refléter l’univers circulaire et responsable de la
+            marque.
+          </li>
+          <li>
+            <strong>Construction du Brand Board :</strong> palette, typographies
+            (Playfair Display pour les titres, Lato pour les textes) et
+            illustrations cohérentes avec le textile artisanal et engagé.
+          </li>
+          <li>
+            Conception du logo principal et de trois déclinaisons adaptées à
+            différents fonds et supports.
+          </li>
+          <li>
+            <strong
+              >Élaboration de la stratégie éditoriale de la newsletter :</strong
+            >
+            message clé inspirant, ton doux et humain, workflow automatisé
+            autour du 5 juin.
+          </li>
+          <li>
+            <strong>Définition des KPIs :</strong> taux d’ouverture, taux de
+            clics sur le CTA, engagement et conversion.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,9 @@
+<p>
+  Des romans entièrement conçus et rédigés par mes soins, où chaque intrigue et
+  chaque personnage sont pensés pour créer des univers riches et captivants.
+</p>
+<div class="conteneur">
+  @for (projet of livres; track $index) {
+  <app-carte-livre [projet]="projet"></app-carte-livre>
+  }
+</div>

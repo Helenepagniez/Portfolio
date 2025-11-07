@@ -1,0 +1,12 @@
+<div class="carte">
+  <div class="conteneur-image">
+    <img
+      [src]="imagePath + projet().image"
+      [alt]="projet().titre"
+      [title]="projet().titre"
+    />
+  </div>
+  <a class="btn" [routerLink]="projet().lien" [title]="projet().titreBouton">
+    <span>{{ projet().titreBouton }}</span>
+  </a>
+</div>

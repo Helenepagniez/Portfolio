@@ -1,0 +1,10 @@
+<p>
+  Des projets graphiques réalisés avec Adobe Creative Suite, mêlant créativité
+  et rigueur technique pour concevoir des visuels impactants et adaptés à
+  différents supports numériques et print.
+</p>
+<div class="conteneur">
+  @for (projet of designsAdobe; track $index) {
+  <app-carte [projet]="projet"></app-carte>
+  }
+</div>

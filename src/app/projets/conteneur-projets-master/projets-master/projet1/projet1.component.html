@@ -1,0 +1,100 @@
+<div class="main">
+  <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="page">
+      <div class="titre-page">
+        <h1>Hôtel Hyatt Regency Paris Étoile</h1>
+      </div>
+      <div class="contenu-projet">
+        <div class="carousel">
+          <swiper-container
+            effect="coverflow"
+            mousewheel="false"
+            autoplay="true"
+            loop="true"
+            pagination="true"
+            pagination-clickable="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            navigation="true"
+            style="
+              --swiper-navigation-color: #ce0045;
+              --swiper-pagination-color: #ce0045;
+              --swiper-theme-color: #ce0045;
+            "
+          >
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/persona.webp'"
+                alt="Description Persona"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/concurrent.webp'"
+                alt="Audit Concurrent"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/strategie.webp'"
+                alt="Stratégie Marketing"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/emailing.webp'"
+                alt="Workflow Emailing"
+              />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <h2 class="titre-partie">Contexte</h2>
+        <p>
+          Relance de l’identité digitale de l’Hôtel Hyatt Regency Paris Étoile
+          suite à rénovation, afin de renforcer sa visibilité et attirer une
+          clientèle européenne connectée.
+        </p>
+        <h2 class="titre-partie">Approche</h2>
+        <p>Définition d’une stratégie marketing multicanale :</p>
+        <ul>
+          <li>
+            <strong>SEO :</strong> audit + optimisation du contenu et des
+            mots-clés prioritaires
+          </li>
+          <li>
+            <strong>SEA :</strong> campagnes search, display et retargeting
+          </li>
+          <li>
+            <strong>Réseaux sociaux :</strong> plan d’animation éditorial et
+            storytelling adaptés aux différents publics
+          </li>
+        </ul>
+        <h2 class="titre-partie">Ce projet m’a permis de</h2>
+        <p>
+          Structurer une stratégie mesurable, analyser une concurrence premium
+          et adapter le positionnement en fonction des attentes de plusieurs
+          segments de clientèle.
+        </p>
+        <h2 class="titre-partie">Livrables</h2>
+        <div class="button-container">
+          <a
+            [href]="
+              filePath +
+              'images/projets-master/projet1/plan-marketing-digital.pdf'
+            "
+            download="Plan-marketing-digital.pdf"
+            title="Télécharger le plan marketing"
+            aria-label="plan-marketing"
+            class="btn"
+            >Télécharger le plan marketing</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

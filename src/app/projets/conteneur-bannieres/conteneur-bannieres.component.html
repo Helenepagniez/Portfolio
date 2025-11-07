@@ -1,0 +1,10 @@
+<p>
+  Des bannières LinkedIn conçues comme des portraits visuels : univers
+  pop-culture, héros fictifs et profils réels transformés en storytelling
+  graphique pour rendre chaque page immédiatement reconnaissable.
+</p>
+<div class="conteneur">
+  @for (projet of bannieres; track $index) {
+  <app-carte-banniere [projet]="projet"></app-carte-banniere>
+  }
+</div>

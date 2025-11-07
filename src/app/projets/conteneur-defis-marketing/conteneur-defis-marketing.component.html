@@ -1,0 +1,10 @@
+<p>
+  Des missions créatives basées sur le jeu de cartes "Briefs Créatifs", mêlant
+  contraintes et contextes réalistes, pour explorer le branding, la
+  communication visuelle et la stratégie marketing.
+</p>
+<div class="conteneur">
+  @for (projet of defisMarketing; track $index) {
+  <app-carte [projet]="projet"></app-carte>
+  }
+</div>

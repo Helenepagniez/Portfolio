@@ -1,0 +1,110 @@
+<div class="main">
+  <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="page">
+      <div class="titre-page">
+        <h1>KungFood</h1>
+      </div>
+      <div class="contenu-projet">
+        <div class="carousel">
+          <swiper-container
+            effect="coverflow"
+            mousewheel="false"
+            autoplay="true"
+            loop="true"
+            pagination="true"
+            pagination-clickable="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            navigation="true"
+            style="
+              --swiper-navigation-color: #ce0045;
+              --swiper-pagination-color: #ce0045;
+              --swiper-theme-color: #ce0045;
+            "
+          >
+            <swiper-slide>
+              <img [src]="imagePath + '/benchmark.webp'" alt="Benchmark" />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/maquettes.webp'"
+                alt="Aperçu des maquettes"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/synthese-donnees.webp'"
+                alt="Synthèse post-lancement"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/recommandations.webp'"
+                alt="Recommandations correctives"
+              />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <h2 class="titre-partie">Contexte du projet</h2>
+        <p>
+          Structuration et déploiement d’une stratégie de communication digitale
+          multicanale pour KungFood, start-up foodtech, afin de renforcer sa
+          présence digitale et suivre les performances des actions.
+        </p>
+        <h2 class="titre-partie">Approche</h2>
+        <ul>
+          <li>
+            <strong>Élaboration d’une stratégie digitale complète :</strong>
+            analyse SWOT, création de personas, benchmark concurrentiel et
+            définition de la plateforme de marque (mission, valeurs, promesse
+            client, identité visuelle et éditoriale).
+          </li>
+          <li>
+            <strong>Déploiement de la stratégie multicanale :</strong>
+            Instagram, LinkedIn, newsletter mensuelle et site web vitrine, avec
+            calendrier éditorial et plan d’action opérationnel sur 8 mois.
+          </li>
+          <li>
+            <strong>Production des documents techniques et créatifs :</strong>
+            cahier des charges du site web, brief technique et créatif,
+            maquettes réalisées sur Figma.
+          </li>
+          <li>
+            <strong>Gestion de projet Agile :</strong> découpage en sprints,
+            réunions hebdomadaires, suivi via Notion et matrice RACI,
+            structuration RH avec fiches de poste inclusives.
+          </li>
+          <li>
+            <strong>Analyse des performances post-lancement :</strong> suivi des
+            KPI, identification des canaux les plus efficaces et recommandations
+            d’ajustement stratégique.
+          </li>
+        </ul>
+        <h2 class="titre-partie">Ce projet m’a permis de</h2>
+        <p>
+          Renforcer mes compétences en communication digitale, pilotage de
+          projet Agile, création de documents techniques et maquettes, tout en
+          coordonnant un lancement multicanal pour une start-up innovante.
+        </p>
+        <h2 class="titre-partie">Livrables</h2>
+        <div class="button-container">
+          <a
+            [href]="
+              filePath + 'images/projets-master/projet6/support-soutenance.pdf'
+            "
+            download="Support-présentation.pdf"
+            title="Télécharger le support de présentation"
+            aria-label="Support de présentation"
+            class="btn"
+            >Télécharger le support de présentation</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

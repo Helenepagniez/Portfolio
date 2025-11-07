@@ -1,0 +1,219 @@
+<div class="main">
+  <section class="conteneur-page">
+    @if (expandedImageSrc()) {
+    <div class="overlay" (click)="closeImage()">
+      <img [src]="expandedImageSrc()" alt="Expanded Image" />
+    </div>
+    }
+    <div class="page">
+      <div class="titre-page">
+        <h1>Saisons de Jean</h1>
+      </div>
+      <div class="contenu-defi">
+        <div class="carousel">
+          <swiper-container
+            effect="coverflow"
+            mousewheel="false"
+            autoplay="true"
+            loop="true"
+            pagination="true"
+            pagination-clickable="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            navigation="true"
+            style="
+              --swiper-navigation-color: #ce0045;
+              --swiper-pagination-color: #ce0045;
+              --swiper-theme-color: #ce0045;
+            "
+          >
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/brandboard.webp'"
+                alt="BrandBoard"
+                class="haute"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/page-profil.webp'"
+                alt="Page LinkedIn"
+                style="object-fit: contain"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/selection-1.webp'"
+                alt="Vignette (1)"
+                style="object-fit: contain"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/selection-2.webp'"
+                alt="Vignette (2)"
+                style="object-fit: contain"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                [src]="imagePath + '/banniere.webp'"
+                alt="Bannière"
+                style="object-fit: contain"
+              />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+        <h2 class="titre-partie">Contexte</h2>
+        <div class="cartes">
+          <!-- Carte 1 -->
+          <div class="carte">
+            <div class="interieur">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
+                  <i class="fa-regular fa-lightbulb"></i>
+                  <div class="categorie">CARTE SUPPORT</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
+                  <span class="dernier">Une couverture LinkedIn</span>
+                </div>
+                <p>
+                  L'enjeu : faire passer le bon message et utiliser la bonne
+                  accroche en un espace très restreint sur une page entreprise
+                  LinkedIn.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 2 -->
+          <div class="carte">
+            <div class="interieur">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
+                  <i class="fa-regular fa-building"></i>
+                  <div class="categorie">CARTE SECTEUR D'ACTIVITE</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
+                  <span>Un fleuriste</span>
+                </div>
+                <p>
+                  Jean est fleuriste indépendant. Sa spécialité : le travail des
+                  compositions en fleurs séchées pour tous les évènements de la
+                  vie (baptême, mariage, etc...)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte 3 -->
+          <div class="carte">
+            <div class="interieur">
+              <!-- RECTO -->
+              <div class="recto">
+                <div
+                  class="cercle"
+                  style="background-color: var(--primary-color)"
+                >
+                  <i class="fa-regular fa-circle-xmark"></i>
+                  <div class="categorie">CARTE CONTRAINTE</div>
+                </div>
+              </div>
+              <!-- VERSO -->
+              <div class="verso">
+                <div class="resultat">
+                  <span class="dernier">Ne pas utiliser la couleur verte</span>
+                </div>
+                <p>L'utilisation de la couleur verte est interdite.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          Création de l’identité visuelle d’un fleuriste spécialisé dans les
+          fleurs séchées, puis conception d’une couverture LinkedIn
+          professionnelle, chaleureuse et mémorable, avec une contrainte forte :
+          ne pas utiliser la couleur verte.
+        </p>
+        <h2 class="titre-partie">Palette de couleurs</h2>
+        <div class="couleurs-container">
+          <div class="palette">
+            <div class="couleur" style="background-color: #eda58a"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#EDA58A – Rose poudre</span
+            >
+            <span style="margin: 0">Douceur & Féminité</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #f1c991"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#F1C991 – Jaune miel</span
+            >
+            <span style="margin: 0">Chaleur & Gaieté</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #f49285"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#F49285 – Corail floral</span
+            >
+            <span style="margin: 0">Modernité & Convivialité</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #474747"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#474747 – Anthracite</span
+            >
+            <span style="margin: 0">Élégant & Équilibré</span>
+          </div>
+          <div class="palette">
+            <div class="couleur" style="background-color: #f8f5e8"></div>
+            <span style="font-weight: bold; color: var(--primary-color)"
+              >#F8F5E8 – Ivoire</span
+            >
+            <span style="margin: 0">Naturel & Raffiné</span>
+          </div>
+        </div>
+        <h2 class="titre-partie">Approche</h2>
+        <ul>
+          <li>
+            Création du nom “Saisons de Jean”, inspiré du cycle de la nature et
+            de l’émotion associée aux moments de vie.
+          </li>
+          <li>
+            <strong>Élaboration du slogan :</strong> “Pas de panique, c’est
+            botanique”, pour ancrer une personnalité joyeuse, humaine et
+            complice.
+          </li>
+          <li>
+            <strong>Construction du brand board :</strong> palette solaire sans
+            vert, typographies (Courgette + Libre Baskerville), logos et
+            illustrations florales douces.
+          </li>
+          <li>
+            <strong>Conception de la bannière LinkedIn :</strong> logo + bouquet
+            illustré, accroche claire, appel à action, preuve sociale visuelle
+            et avatar illustré de Jean pour incarner la marque.
+          </li>
+          <li>
+            Rédaction d’un "À propos" narratif, chaleureux et accessible, aligné
+            sur l’esprit artisanal et bienveillant.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
