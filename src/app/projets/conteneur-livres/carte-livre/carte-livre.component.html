@@ -6,7 +6,7 @@
       [title]="projet().titre"
     />
   </div>
-  <a class="btn" [routerLink]="projet().lien" [title]="projet().titreBouton">
+  <a class="btn" (click)="openDialog()" [title]="projet().titreBouton">
     <span>{{ projet().titreBouton }}</span>
   </a>
 </div>

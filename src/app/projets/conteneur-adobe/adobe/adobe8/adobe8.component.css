@@ -13,22 +13,12 @@ a {
   text-decoration: none;
 }
 
-section {
-  background-color: var(--tertiary-color);
-  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
-  border-radius: var(--strong-radius);
-}
-
 .main {
-  max-width: 1200px;
-  width: 95%;
-  margin-bottom: 10px;
-  position: relative;
+  width: 100%;
 }
 
 .page {
-  position: relative;
-  margin: 20px 40px;
+  margin: 0 40px;
 }
 
 img {
@@ -169,11 +159,6 @@ button {
   margin-top: 25px;
   font-weight: 400;
   margin-bottom: 10px;
-}
-
-.conteneur-page {
-  padding-bottom: 50px;
-  padding: 40px 0;
 }
 
 .conteneur-image {

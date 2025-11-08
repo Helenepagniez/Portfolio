@@ -5,6 +5,9 @@
 </p>
 <div class="conteneur">
   @for (projet of designsAdobe; track $index) {
-  <app-carte [projet]="projet"></app-carte>
+  <app-carte
+    [projet]="projet"
+    (openDialogEvent)="openDialog(projet)"
+  ></app-carte>
   }
 </div>

@@ -4,6 +4,9 @@
 </p>
 <div class="conteneur">
   @for (projet of livres; track $index) {
-  <app-carte-livre [projet]="projet"></app-carte-livre>
+  <app-carte-livre
+    [projet]="projet"
+    (openDialogEvent)="openDialog(projet)"
+  ></app-carte-livre>
   }
 </div>
