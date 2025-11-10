@@ -42,7 +42,7 @@ section {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  width: 100%;
+  width: 480px;
 }
 
 .btn {
@@ -94,6 +94,7 @@ section {
 .home-text h2 {
   margin: 0 0 30px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .conteneur-image {
@@ -108,12 +109,12 @@ section {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 /* ------------- RESPONSIVE ------------------ */
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 1023px) {
   .home-text {
     width: 90%;
   }
@@ -128,10 +129,18 @@ section {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .conteneur-image img {
     width: 300px;
     height: 300px;
+  }
+
+  .button-container {
+    width: 100%;
+  }
+
+  .home-text h2 {
+    white-space: wrap;
   }
 }
 
