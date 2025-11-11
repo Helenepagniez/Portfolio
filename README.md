@@ -1,5 +1,5 @@
 <div align="center">
-<img height="auto" width="180px" src="./src/assets/images/profile.png" >
+<img height="auto" width="180px" src="./src/assets/images/profile.webp" >
 </div>
 
 # Portfolio
@@ -21,15 +21,17 @@ Bonne lecture !
 ### A propos de moi
 
 - Informations générales me concernant
+- Mon CV
+- Mes formations et expériences professionnelles
 - Mes soft skills
 - Mes hard skills
-- Mes formations et expériences professionnelles
-- Mon CV
+- Mes outils
+- Mes certifications
 
 ### Projets
 
-- Choix possibles : Articles de Blog, Bannières LinkedIn, Défis Marketing, Projets Master ou Livres
-- Visualisation de ces derniers et liens
+- Filtres possibles : Designs Adobe, Articles de Blog, Projets Master, Défis Marketing, Bannières LinkedIn ou Livres
+- Pop-up de visualisation de ces derniers et informations associées
 
 ### Contact
 
