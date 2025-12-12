@@ -46,12 +46,12 @@
           </div>
           <div
             class="projets-item"
-            title="Bannières LinkedIn"
-            [ngClass]="{ active: activePage === 'bannieres' }"
-            (click)="changeActivePage('bannieres')"
+            title="Sites Web"
+            [ngClass]="{ active: activePage === 'sites' }"
+            (click)="changeActivePage('sites')"
           >
-            <i class="fa-brands fa-linkedin"></i>
-            <h2>Bannières LinkedIn</h2>
+            <i class="fa-solid fa-desktop"></i>
+            <h2>Sites Web</h2>
           </div>
           <div
             class="projets-item"
@@ -61,6 +61,17 @@
           >
             <i class="fa-solid fa-book"></i>
             <h2>Livres</h2>
+          </div>
+        </div>
+        <div class="flex">
+          <div
+            class="projets-item"
+            title="Bannières LinkedIn"
+            [ngClass]="{ active: activePage === 'bannieres' }"
+            (click)="changeActivePage('bannieres')"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+            <h2>Bannières LinkedIn</h2>
           </div>
         </div>
       </div>
@@ -76,6 +87,8 @@
       <app-conteneur-bannieres></app-conteneur-bannieres>
       }@else if (activePage === 'livres') {
       <app-conteneur-livres></app-conteneur-livres>
+      }@else if (activePage === 'sites') {
+      <app-conteneur-sites></app-conteneur-sites>
       }
     </div>
     <div

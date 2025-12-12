@@ -1,0 +1,43 @@
+<div class="main">
+  <section class="conteneur-page">
+    <div class="page">
+      <div class="titre-page">
+        <h1>Maison Sofa</h1>
+      </div>
+      <div class="contenu-design">
+        <swiper-container
+          effect="coverflow"
+          mousewheel="false"
+          autoplay="true"
+          loop="true"
+          pagination="true"
+          pagination-clickable="true"
+          autoplay-delay="2500"
+          autoplay-disable-on-interaction="false"
+          navigation="true"
+          style="
+            --swiper-navigation-color: #852b56;
+            --swiper-pagination-color: #852b56;
+            --swiper-theme-color: #852b56;
+          "
+        >
+          <swiper-slide>
+            <img [src]="imagePath + '/1/page2.webp'" alt="Page 2" />
+          </swiper-slide>
+          <swiper-slide>
+            <img [src]="imagePath + '/1/page3.webp'" alt="Page 3" />
+          </swiper-slide>
+        </swiper-container>
+        <div class="description-container">
+          <img
+            [src]="imagePath + '../outils/antigravity.webp'"
+            alt="Antigravity"
+          />
+          <span class="logiciel">Google Antigravity - React</span> |
+          <span class="type">Site E-commerce </span> |
+          <span class="date">Novembre 2025 </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

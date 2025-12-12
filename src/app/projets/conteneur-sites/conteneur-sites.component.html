@@ -1,0 +1,13 @@
+<p>
+  Des sites web pensés pour mettre en valeur des projets et des idées, avec une
+  attention particulière portée à la clarté, à la navigation et à l’expérience
+  utilisateur.
+</p>
+<div class="conteneur">
+  @for (projet of sites; track $index) {
+  <app-carte
+    [projet]="projet"
+    (openDialogEvent)="openDialog(projet)"
+  ></app-carte>
+  }
+</div>

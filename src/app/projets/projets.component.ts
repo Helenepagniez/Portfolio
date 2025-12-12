@@ -8,6 +8,7 @@ import { ConteneurBannieresComponent } from './conteneur-bannieres/conteneur-ban
 import { ConteneurDefisMarketingComponent } from './conteneur-defis-marketing/conteneur-defis-marketing.component';
 import { ConteneurLivresComponent } from './conteneur-livres/conteneur-livres.component';
 import { ConteneurProjetsMasterComponent } from './conteneur-projets-master/conteneur-projets-master.component';
+import { ConteneurSitesComponent } from './conteneur-sites/conteneur-sites.component';
 
 @Component({
   selector: 'app-projets',
@@ -20,6 +21,7 @@ import { ConteneurProjetsMasterComponent } from './conteneur-projets-master/cont
     ConteneurDefisMarketingComponent,
     ConteneurBannieresComponent,
     ConteneurLivresComponent,
+    ConteneurSitesComponent,
   ],
   templateUrl: './projets.component.html',
   styleUrls: ['./projets.component.css'],

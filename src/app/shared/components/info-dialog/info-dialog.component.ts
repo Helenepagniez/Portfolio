@@ -47,6 +47,8 @@ import { Projet5Component } from 'src/app/projets/conteneur-projets-master/proje
 import { Projet6Component } from 'src/app/projets/conteneur-projets-master/projets-master/projet6/projet6.component';
 import { Projet7Component } from 'src/app/projets/conteneur-projets-master/projets-master/projet7/projet7.component';
 import { Projet8Component } from 'src/app/projets/conteneur-projets-master/projets-master/projet8/projet8.component';
+import { Site1Component } from 'src/app/projets/conteneur-sites/sites/site1/site1.component';
+import { Site2Component } from 'src/app/projets/conteneur-sites/sites/site2/site2.component';
 
 @Component({
   selector: 'app-info-dialog',
@@ -97,6 +99,8 @@ import { Projet8Component } from 'src/app/projets/conteneur-projets-master/proje
     Defi4Component,
     Livre1Component,
     Livre2Component,
+    Site1Component,
+    Site2Component,
   ],
   templateUrl: './info-dialog.component.html',
   styleUrl: './info-dialog.component.css',
