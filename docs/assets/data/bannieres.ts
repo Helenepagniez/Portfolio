@@ -8,6 +8,25 @@ export const bannieres: Projet[] = [
     lien: '',
   },
   {
+    titre: "La bannière d'un fleuriste fictif",
+    image: 'bannieres/Banniere-Jean.webp',
+    titreBouton: '',
+    lien: '',
+  },
+
+  {
+    titre: 'La bannière de Marina Gayraud',
+    image: 'bannieres/Banniere-Marina-G.webp',
+    titreBouton: '',
+    lien: '',
+  },
+  {
+    titre: 'La bannière de Breaking Bad',
+    image: 'bannieres/Banniere-Breaking.webp',
+    titreBouton: '',
+    lien: '',
+  },
+  {
     titre: 'La bannière de James Bond',
     image: 'bannieres/Banniere-Bond.webp',
     titreBouton: '',
@@ -62,12 +81,6 @@ export const bannieres: Projet[] = [
     lien: '',
   },
   {
-    titre: 'La bannière de Breaking Bad',
-    image: 'bannieres/Banniere-Breaking.webp',
-    titreBouton: '',
-    lien: '',
-  },
-  {
     titre: 'La bannière de Avatar',
     image: 'bannieres/Banniere-Avatar.webp',
     titreBouton: '',
@@ -76,18 +89,6 @@ export const bannieres: Projet[] = [
   {
     titre: 'La bannière de Mario',
     image: 'bannieres/Banniere-Mario.webp',
-    titreBouton: '',
-    lien: '',
-  },
-  {
-    titre: 'La bannière de Marina Gayraud',
-    image: 'bannieres/Banniere-Marina-G.webp',
-    titreBouton: '',
-    lien: '',
-  },
-  {
-    titre: "La bannière d'un fleuriste fictif",
-    image: 'bannieres/Banniere-Jean.webp',
     titreBouton: '',
     lien: '',
   },
