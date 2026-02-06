@@ -30,7 +30,7 @@ Bonne lecture !
 
 ### Projets
 
-- Filtres possibles : Designs Adobe, Articles de Blog, Projets Master, Défis Marketing, Bannières LinkedIn ou Livres
+- Filtres possibles : Designs Adobe, Articles de Blog, Projets Master, Défis Marketing, Sites Web, Livres ou Bannières LinkedIn
 - Pop-up de visualisation de ces derniers et informations associées
 
 ### Contact
