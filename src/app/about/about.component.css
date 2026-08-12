@@ -147,6 +147,7 @@ button {
 .conteneur-image-about {
   width: 35%;
   display: flex;
+  margin-top: -25px;
   justify-content: flex-end;
   align-items: center;
   border-radius: var(--strong-radius);
