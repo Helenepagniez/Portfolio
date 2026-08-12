@@ -140,19 +140,24 @@ button {
   text-align: justify;
 }
 
+.description p strong {
+  color: var(--secondary-color);
+}
+
 .conteneur-image-about {
-  width: 40%;
+  width: 35%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  border-radius: var(--strong-radius);
+  overflow: hidden;
 }
 
 .conteneur-image-about img {
   width: 100%;
-  max-width: 500px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: right 25%;
+  object-position: center;
   border-radius: var(--strong-radius);
 }
 
@@ -163,17 +168,12 @@ button {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .encart-icon {
   font-size: 30px;
-  color: var(--secondary-color);
-}
-
-.highlight {
-  background-color: #faeef1;
-  padding: 2px 5px;
-  border-radius: 4px;
+  color: white;
 }
 
 .contenu p {
