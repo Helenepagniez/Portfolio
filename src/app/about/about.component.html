@@ -1,9 +1,9 @@
 <div class="main">
   <section class="conteneur-page">
     @if (expandedImageSrc()) {
-    <div class="overlay" (click)="closeImage()">
-      <img [src]="expandedImageSrc()" alt="Expanded Image" />
-    </div>
+      <div class="overlay" (click)="closeImage()">
+        <img [src]="expandedImageSrc()" alt="Expanded Image" />
+      </div>
     }
     <div class="page">
       <div class="bloc">
@@ -12,49 +12,61 @@
         </div>
       </div>
       <div class="bloc">
-        <div class="haut-page">
-          <div class="conteneur-image">
-            <img
-              [src]="imagePath + '/mascotte.webp'"
-              alt="about img"
-              title="Mascotte"
-            />
-          </div>
-          <div class="description">
-            <p>
-              Je travaille au croisement du marketing digital, de la
-              communication et de la gestion de projet. Ce qui me motive est de
-              comprendre une marque, clarifier son message et l’exprimer de
-              façon créative, cohérente et engageante. Je recherche un poste de
-              <strong style="font-weight: 650"
-                >Chargée de Marketing ou Consultante Marketing</strong
-              >
-              dans une équipe où l’on partage les idées, où l’on teste, où l’on
-              construit ensemble. Pigloo (le pingouin) représente ma touche
-              personnelle : une manière d’aborder les projets avec sérieux, sans
-              jamais perdre l’enthousiasme ni l’envie d’innover. Ensemble, nous
-              surfons sur les tendances avec le sourire, prêts à apporter une
-              touche de fraîcheur et d’énergie à chaque projet.
-            </p>
-          </div>
+        <div class="description">
+          <p>
+            <strong style="font-weight: 650">Bonjour, moi c’est Hélène !</strong
+            ><br />
+          </p>
+          <p style="margin-bottom: 20px" class="autre">
+            Curieuse, créative et toujours à la recherche de nouvelles idées à
+            explorer.
+          </p>
+          <p style="margin-bottom: 20px" class="autre">
+            Aujourd’hui, je me tourne vers le
+            <strong style="font-weight: 650">Product Management</strong>, un
+            domaine qui correspond à mon intérêt pour le digital, la créativité,
+            la gestion de projet et la compréhension des besoins utilisateurs.
+            J’aime réfléchir à des solutions, structurer les idées et voir un
+            projet évoluer de la réflexion à sa réalisation.
+          </p>
+
+          <p style="margin-bottom: 20px" class="autre">
+            J’aime apprendre continuellement, poser des questions, explorer de
+            nouvelles possibilités et comprendre ce qui se cache derrière un
+            projet. Je suis particulièrement attirée par les environnements où
+            l’on peut
+            <strong style="font-weight: 650"
+              >réfléchir, expérimenter, collaborer et progresser
+              ensemble</strong
+            >.
+          </p>
+
+          <p style="margin-bottom: 20px" class="autre">
+            Je recherche actuellement une
+            <strong style="font-weight: 650"
+              >alternance en Product Management à Rennes</strong
+            >, dans le cadre de mon futur Master Product Manager.
+          </p>
+
+          <p style="margin-bottom: 20px" class="autre">
+            Ce portfolio rassemble une partie de mes
+            <strong style="font-weight: 650"
+              >projets, réalisations et compétences</strong
+            >, pour vous donner un aperçu de mon univers, de ma façon de
+            travailler et de ce que je peux apporter à une équipe.
+          </p>
+
+          <p style="margin-bottom: 20px" class="autre">
+            Et parce que la créativité fait partie de moi bien au-delà du
+            professionnel, j’écris également des romans. Une passion qui nourrit
+            mon imagination et m’accompagne au quotidien.
+          </p>
         </div>
         <div class="contenu">
-          <p style="margin-bottom: 20px" class="autre">
-            J’aime apprendre chaque jour, poser des questions, comprendre les
-            mécaniques derrière une stratégie et affiner les actions au fur et à
-            mesure. J’apporte de la rigueur, de la créativité, de
-            l’organisation, une vraie envie de m’impliquer et une capacité à
-            progresser grâce à l’observation, l’écoute et la pratique.
-            J’apprécie particulièrement les environnements bienveillants où l’on
-            se forme en faisant, et où chaque contribution, même petite, a du
-            sens. J’avance avec l’envie de grandir aux côtés d’une équipe,
-            d’enrichir mes compétences et de participer à des projets qui se
-            construisent pas à pas, avec intention et coopération.
-          </p>
           <div class="button-container">
             <a
               [href]="filePath + 'cv.pdf'"
-              download="CV.pdf"
+              download="CV_Pagniez_Alternance_Product_Manager.pdf"
               title="Télécharger mon CV"
               class="btn"
               >Télécharger mon CV</a
@@ -105,6 +117,13 @@
 
           <div class="contenu-onglet active" *ngIf="isActivedFormation">
             <div class="frise-chronologique">
+              <div class="periode">
+                <span class="date">2026 - 2028</span>
+                <h4>
+                  Master Product Manager -
+                  <span>OPENCLASSROOMS / EN RECHERCHE ENTREPRISE</span>
+                </h4>
+              </div>
               <div class="periode">
                 <span class="date">2025</span>
                 <h4>
@@ -234,6 +253,13 @@
           <div class="contenu-onglet active" *ngIf="isActivedExperience">
             <div class="frise-chronologique">
               <div class="periode">
+                <span class="date">Mai 2026 - Juillet 2026</span>
+                <h4>
+                  Assitante Administration des Ventes -
+                  <span>ADX Groupe</span>
+                </h4>
+              </div>
+              <div class="periode">
                 <span class="date">2023 - 2024</span>
                 <h4>
                   Assitante Marketing Digitale en Alternance -
@@ -270,13 +296,12 @@
                   <div class="skill-item">Curieuse</div>
                   <div class="skill-item">Polyvalente</div>
                   <div class="skill-item">Organisée</div>
-                  <div class="skill-item">Joyeuse</div>
                   <div class="skill-item">Rigoureuse</div>
                   <div class="skill-item">Autonome</div>
                   <div class="skill-item">À l'écoute</div>
                   <div class="skill-item">Proactive</div>
                   <div class="skill-item">Créative</div>
-                  <div class="skill-item">Pensée data-driven</div>
+                  <div class="skill-item">Esprit analytique</div>
                   <div class="skill-item">Esprit stratégique</div>
                   <div class="skill-item">Adaptabilité</div>
                 </div>
@@ -302,6 +327,45 @@
                   <div class="skill-item">
                     Préparation et animation de réunions
                   </div>
+                  <div class="skill-item">
+                    Suivi des actions et des échéances
+                  </div>
+                  <div class="skill-item">
+                    Coordination de parties prenantes
+                  </div>
+                </div>
+                <h4>Analyse et stratégie produit</h4>
+                <div class="groupe">
+                  <div class="skill-item">Analyse des besoins</div>
+                  <div class="skill-item">
+                    Analyse de données et des performances
+                  </div>
+                  <div class="skill-item">Identification d'opportunités</div>
+                  <div class="skill-item">Veille concurrentielle</div>
+                  <div class="skill-item">Élaboration de recommandations</div>
+                  <div class="skill-item">Suivi et analyse des KPI</div>
+                </div>
+                <h4>Cadrage et Conception</h4>
+                <div class="groupe">
+                  <div class="skill-item">
+                    Élaboration de cahiers des charges
+                  </div>
+                  <div class="skill-item">Formalisation des besoins</div>
+                  <div class="skill-item">Structuration des projets</div>
+                  <div class="skill-item">
+                    Conception de parcours / réflexions UX
+                  </div>
+                  <div class="skill-item">Prototypage</div>
+                </div>
+                <h4>Marketing Digital</h4>
+                <div class="groupe">
+                  <div class="skill-item">Référencement Naturel (SEO)</div>
+                  <div class="skill-item">Référencement Payant (SEA)</div>
+                  <div class="skill-item">Stratégie de contenu</div>
+                  <div class="skill-item">Social Media</div>
+                  <div class="skill-item">Email Marketing</div>
+                  <div class="skill-item">Reporting marketing</div>
+                  <div class="skill-item">Optimisation des performances</div>
                 </div>
                 <h4>Rédaction et contenu</h4>
                 <div class="groupe">
@@ -315,60 +379,16 @@
                     Adaptation du ton et du style selon la cible
                   </div>
                 </div>
-                <h4>SEO & SEA</h4>
+                <h4>Culture numérique et technique</h4>
                 <div class="groupe">
                   <div class="skill-item">
-                    Recherche et optimisation de mots-clés
+                    Compréhension des environnements web
                   </div>
-                  <div class="skill-item">Optimisation on-page et off-page</div>
+                  <div class="skill-item">Notions de développement web</div>
                   <div class="skill-item">
-                    Analyse des performances et reporting
+                    Compréhension des contraintes techniques
                   </div>
-                  <div class="skill-item">
-                    Gestion et optimisation de campagnes SEA
-                  </div>
-                  <div class="skill-item">Stratégie de netlinking</div>
-                </div>
-                <h4>Social Media et Community Management</h4>
-                <div class="groupe">
-                  <div class="skill-item">
-                    Élaboration de stratégies social media
-                  </div>
-                  <div class="skill-item">Création et gestion de contenu</div>
-                  <div class="skill-item">
-                    Animation et modération des communautés
-                  </div>
-                  <div class="skill-item">
-                    Analyse des KPI's et optimisation
-                  </div>
-                </div>
-                <h4>Création visuelle</h4>
-                <div class="groupe">
-                  <div class="skill-item">
-                    Conception graphique (print et digital)
-                  </div>
-                  <div class="skill-item">Création de supports visuels</div>
-                </div>
-                <h4>Email Marketing et automation</h4>
-                <div class="groupe">
-                  <div class="skill-item">
-                    Segmentation et scoring des leads
-                  </div>
-                  <div class="skill-item">
-                    Création de workflows automatisés
-                  </div>
-                </div>
-                <h4>Analyse et data visualisation</h4>
-                <div class="groupe">
-                  <div class="skill-item">Audit et recommandations</div>
-                  <div class="skill-item">Suivi des KPI's et veille</div>
-                  <div class="skill-item">
-                    Création de tableaux de bord et reporting
-                  </div>
-                  <div class="skill-item">
-                    Analyse de performances multicanal
-                  </div>
-                  <div class="skill-item">Optimisation data-driven</div>
+                  <div class="skill-item">CMS et outils numériques</div>
                 </div>
               </mat-expansion-panel>
               <mat-expansion-panel
@@ -381,7 +401,7 @@
                     Outils
                   </mat-panel-title>
                 </mat-expansion-panel-header>
-                <h4>Collaboration</h4>
+                <h4>Collaboration et Gestion de Projet</h4>
                 <div class="groupe">
                   <div class="skill-item">
                     <i class="fa-brands fa-trello" style="color: #007fc9"></i>
@@ -410,7 +430,33 @@
                     <span>Notion</span>
                   </div>
                 </div>
-                <h4>Data & Analyse</h4>
+                <h4>Produit et Conception</h4>
+                <div class="groupe">
+                  <div class="skill-item">
+                    <img [src]="imagePath + '/outils/figma.webp'" alt="Figma" />
+                    <span>Figma</span>
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/miro.webp'"
+                      alt="Miro"
+                      class="large"
+                    /><span>Miro</span>
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/canva.webp'"
+                      alt="Canva"
+                    /><span>Canva</span>
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/genially.webp'"
+                      alt="Genially"
+                    /><span>Genially</span>
+                  </div>
+                </div>
+                <h4>Data et Analytics</h4>
                 <div class="groupe">
                   <div class="skill-item">
                     <img
@@ -436,8 +482,15 @@
                       alt="GT Metrix"
                     /><span>GT Metrix</span>
                   </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/pagespeed.webp'"
+                      alt="PageSpeed Insights"
+                      class="big"
+                    /><span>PageSpeed Insights</span>
+                  </div>
                 </div>
-                <h4>SEO & SEA</h4>
+                <h4>SEO et SEA</h4>
                 <div class="groupe">
                   <div class="skill-item">
                     <img
@@ -477,8 +530,22 @@
                     <span>Bibliothèque Publicitaire Meta</span>
                   </div>
                 </div>
-                <h4>Réseaux Sociaux</h4>
+                <h4>Social Media</h4>
                 <div class="groupe">
+                  <div class="skill-item">
+                    <i class="fa-brands fa-meta small" style="color: blue"></i>
+                    <span>Meta Business Suite</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fa-brands fa-buffer" style="color: black"></i>
+                    <span>Buffer</span>
+                  </div>
+                  <div class="skill-item">
+                    <img
+                      [src]="imagePath + '/outils/hootsuite.webp'"
+                      alt="Hootsuite"
+                    /><span>Hootsuite</span>
+                  </div>
                   <div class="skill-item">
                     <i class="fa-brands fa-facebook" style="color: blue"></i>
                     <span>Facebook</span>
@@ -497,22 +564,8 @@
                     ></i>
                     <span>LinkedIn</span>
                   </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-buffer" style="color: black"></i>
-                    <span>Buffer</span>
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-meta small" style="color: blue"></i>
-                    <span>Meta Business Suite</span>
-                  </div>
-                  <div class="skill-item">
-                    <img
-                      [src]="imagePath + '/outils/hootsuite.webp'"
-                      alt="Hootsuite"
-                    /><span>Hootsuite</span>
-                  </div>
                 </div>
-                <h4>Design/ Graphisme</h4>
+                <h4>Design et Création</h4>
                 <div class="groupe">
                   <div class="skill-item">
                     <img
