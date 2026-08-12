@@ -162,7 +162,7 @@ button {
 }
 
 .encart {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   padding: 15px 20px;
   border-radius: var(--strong-radius);
   margin-bottom: 20px;
@@ -171,8 +171,12 @@ button {
   color: white;
 }
 
+.encart .autre {
+  font-size: 14.5px;
+}
+
 .encart-icon {
-  font-size: 30px;
+  font-size: 26px;
   color: white;
 }
 
