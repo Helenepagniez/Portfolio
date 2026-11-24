@@ -40,16 +40,14 @@
           <dt class="last">Expérience</dt>
           <dd class="last">≈ 4 ans en assistanat<span class="sub">4 entreprises · Master obtenu en 2025</span></dd>
         </dl>
-        <div class="fiche-foot">
-          <a class="btn btn-primary btn-block" [href]="contact.cv" [attr.download]="contact.cvFileName">
-            <app-icon name="download" [size]="18" />Télécharger le CV
-          </a>
-        </div>
+        <a class="fiche-cta" [href]="contact.cv" [attr.download]="contact.cvFileName">
+          <app-icon name="download" [size]="17" [stroke]="2.2" />Télécharger le CV
+        </a>
       </div>
     </aside>
 
     <div class="area-stats dark kpi-panel rv" appReveal aria-label="Mon expérience en chiffres" role="group">
-      <div class="stat">
+      <div class="stat stat-main">
         <span class="stat-n">≈ {{ stats().years }}<small>ans</small></span>
         <span class="stat-l">d’expérience cumulée sur des postes variés d’assistanat</span>
       </div>
@@ -128,11 +126,11 @@
     <ul class="sectors">
       @for (s of sectors; track s.name; let i = $index) {
         <li class="card sector hover-lift rv" [appReveal]="i * 80">
-          <span class="ico-soft"><app-icon [name]="s.icon" [size]="22" /></span>
-          <span class="stack gap-3">
+          <span class="sector-head">
+            <span class="ico-soft"><app-icon [name]="s.icon" [size]="22" /></span>
             <span class="sector-name">{{ s.name }}</span>
-            <span class="sector-co">{{ s.company }}</span>
           </span>
+          <span class="sector-co">{{ s.company }}</span>
         </li>
       }
     </ul>

@@ -43,6 +43,8 @@
 }
 
 html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-ink) var(--soft);
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 16px);
 }
@@ -55,6 +57,22 @@ body {
   line-height: 1.5;
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Barre de défilement fine, aux couleurs du site (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--soft);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-ink);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark);
 }
 
 a {
@@ -225,6 +243,12 @@ textarea:focus-visible {
   border-color: var(--accent);
   color: #ffffff;
 }
+/* Bouton blanc, pour les surfaces sombres (pied de page) */
+.btn-light,
+.dark .btn-light {
+  background: #ffffff;
+  color: var(--dark);
+}
 
 /* Survol : une seule règle par surface, quelle que soit la variante.
    Fond clair  → le bouton se remplit en prune vif, texte blanc.
@@ -243,6 +267,12 @@ textarea:focus-visible {
   border-color: #ffffff;
   color: var(--dark);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+/* Le bouton blanc est déjà blanc : au survol, il passe en rose poudré */
+.dark .btn-light:hover,
+.dark .btn-light.is-hover {
+  background: var(--accent);
+  border-color: var(--accent);
 }
 .btn-block {
   width: 100%;
@@ -323,7 +353,7 @@ textarea:focus-visible {
 }
 .pill-outline-light {
   border: 1px solid rgba(255, 255, 255, 0.3);
-  color: var(--on-dark);
+  color: #ffffff;
 }
 
 .list {
@@ -343,7 +373,7 @@ textarea:focus-visible {
   height: 52px;
   border-radius: 14px;
   background: var(--dark);
-  color: var(--accent);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;

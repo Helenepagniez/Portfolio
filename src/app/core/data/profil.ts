@@ -20,7 +20,7 @@ export const NAV: NavItem[] = [
   { path: '/home', label: 'Accueil' },
   { path: '/parcours', label: 'Parcours' },
   { path: '/competences', label: 'Compétences' },
-  { path: '/passions', label: 'Mes passions' },
+  { path: '/passions', label: 'Passions' },
   { path: '/contact', label: 'Contact' },
 ];
 
@@ -69,7 +69,7 @@ export interface Experience {
 export const EXPERIENCES: Experience[] = [
   {
     title: 'Assistante Administration des Ventes',
-    period: 'Mai — Juil. 2026',
+    period: 'Mai — Juil. 2026 · CDD',
     company: 'ADX Groupe',
     duration: '3 mois',
     place: 'Cesson-Sévigné (35510)',

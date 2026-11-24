@@ -62,27 +62,41 @@
 }
 .fiche dl { margin: 0; padding: 6px 24px 8px; display: grid; grid-template-columns: 124px minmax(0, 1fr); }
 .fiche dt {
-  padding: 14px 0; border-bottom: 1px dashed var(--line-strong); font-size: 12px; font-weight: 700;
-  color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px;
+  padding: 16px 0 12px; border-bottom: 1px dashed var(--line-strong); font-size: 12px; font-weight: 700;
+  line-height: 21px; color: var(--accent-ink); text-transform: uppercase; letter-spacing: 0.8px;
 }
 .fiche dd { margin: 0; padding: 14px 0; border-bottom: 1px dashed var(--line-strong); font-size: 15px; font-weight: 600; line-height: 1.4; }
 .fiche .last { border-bottom: 0; }
 .sub { display: block; font-weight: 500; color: var(--muted); font-size: 14px; }
-.inline { display: inline-flex; align-items: center; gap: 8px; }
-.fiche-foot { border-top: 1px solid var(--line); padding: 18px 24px 22px; background: var(--soft); }
+.inline { display: flex; align-items: center; gap: 8px; height: 21px; }
+/* Le bas de la fiche est lui-même le bouton de téléchargement */
+.fiche-cta {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 13px 24px; background: var(--accent-ink); color: #ffffff;
+  font-size: 15px; font-weight: 700; text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.fiche-cta:hover { background: var(--dark); }
+.fiche-cta:focus-visible { outline-offset: -4px; }
 
 /* ---------- Chiffres ---------- */
+/* Le chiffre principal occupe la colonne de gauche, les quatre autres se rangent en 2 × 2 */
 .kpi-panel {
-  border-radius: var(--radius-panel); padding: 40px;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 32px 28px;
+  border-radius: var(--radius-panel); padding: 32px 36px;
+  display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 28px 32px;
 }
-.stat { display: flex; flex-direction: column; gap: 10px; }
+.stat { display: flex; flex-direction: column; gap: 8px; }
+.stat-main {
+  grid-row: span 2; justify-content: center; padding-right: 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+}
+.stat-main .stat-n { font-size: 64px; }
 .stat-n {
-  font-size: 56px; font-weight: var(--hw); line-height: 1;
+  font-size: 42px; font-weight: var(--hw); line-height: 1;
   color: #ffffff; font-variant-numeric: tabular-nums;
 }
-.stat-n small { font-size: 26px; margin-left: 6px; }
-.stat-l { font-size: 15px; line-height: 1.5; color: var(--on-dark); }
+.stat-n small { font-size: 24px; margin-left: 6px; }
+.stat-l { font-size: 14px; line-height: 1.45; color: var(--on-dark); }
 
 /* ---------- Frise : la ligne se remplit de gauche à droite ---------- */
 .head-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px; }
@@ -130,7 +144,8 @@
   list-style: none; margin: 0; padding: 0;
   display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;
 }
-.sector { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-radius: 16px; }
+.sector { display: flex; flex-direction: column; gap: 10px; padding: 18px 20px; border-radius: 16px; }
+.sector-head { display: flex; align-items: center; gap: 12px; }
 .sector-name { font-weight: 700; font-size: 16px; }
 .sector-co { font-size: 13px; color: var(--muted); }
 
@@ -166,7 +181,10 @@
 @media (max-width: 860px) {
   .hero { padding: 40px 16px 8px; }
   .kpi-panel { padding: 28px 22px; }
-  .stat-n { font-size: 46px; }
+  .kpi-panel { grid-template-columns: 1fr 1fr; }
+  .stat-main { grid-row: auto; grid-column: 1 / -1; padding-right: 0; padding-bottom: 20px; border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
+  .stat-main .stat-n { font-size: 52px; }
+  .stat-n { font-size: 38px; }
   .fiche dl { grid-template-columns: 108px minmax(0, 1fr); padding: 6px 18px 8px; }
   .duo { grid-template-columns: 1fr; }
   .passions-teaser, .cta { padding: 26px; }

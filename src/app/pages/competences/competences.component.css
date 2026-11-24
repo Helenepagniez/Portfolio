@@ -32,7 +32,8 @@
   display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px;
 }
 .tool { background: rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 4px; }
-.tool-outline { background: transparent; border: 1.5px solid rgba(255, 255, 255, 0.2); }
+.tool-outline { background: #ffffff; color: var(--ink); }
+.tool-outline .tool-use { color: var(--muted); }
 .tool-name { font-weight: 700; font-size: 18px; }
 .tool-use { font-size: 14px; color: var(--on-dark-2); }
 .task-tools { display: flex; flex-direction: column; gap: 14px; border-top: 1px solid rgba(255, 255, 255, 0.16); }

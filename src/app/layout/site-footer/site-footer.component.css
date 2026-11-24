@@ -55,7 +55,12 @@
   gap: 10px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--on-dark);
+  color: #ffffff;
+}
+.foot-dispo .live {
+  background: #ffffff;
+  --pulse: rgba(255, 255, 255, 0.6);
+  --pulse-0: rgba(255, 255, 255, 0);
 }
 
 .foot-col {
@@ -69,7 +74,7 @@
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #ffffff;
   padding-bottom: 6px;
 }
 
@@ -98,7 +103,7 @@
 }
 
 .acc {
-  color: var(--accent);
+  color: #ffffff;
 }
 
 .foot-bottom {
