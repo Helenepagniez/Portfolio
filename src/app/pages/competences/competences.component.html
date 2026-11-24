@@ -10,8 +10,10 @@
   <div class="wrap groups">
     @for (g of groups; track g.title; let i = $index) {
       <article class="card hover-lift skill-card rv" [appReveal]="i * 120">
-        <span class="ico"><app-icon [name]="g.icon" [size]="26" /></span>
-        <h2 class="h3 group-title">{{ g.title }}</h2>
+        <div class="card-head">
+          <span class="ico"><app-icon [name]="g.icon" [size]="26" /></span>
+          <h2 class="h3 group-title">{{ g.title }}</h2>
+        </div>
         <ul class="list items">
           @for (it of g.items; track it.text) {
             <li>

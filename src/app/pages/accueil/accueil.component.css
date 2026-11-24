@@ -8,7 +8,7 @@
 
 /* ---------- Haut de page en deux colonnes ---------- */
 .hero {
-  padding: 72px 24px 24px;
+  padding: 36px 24px 24px;
   background:
     radial-gradient(circle at 88% 12%, var(--soft) 0, transparent 34%),
     radial-gradient(circle at 6% 40%, var(--soft) 0, transparent 26%),
@@ -179,7 +179,7 @@
 }
 
 @media (max-width: 860px) {
-  .hero { padding: 40px 16px 8px; }
+  .hero { padding: 28px 16px 8px; }
   .kpi-panel { padding: 28px 22px; }
   .kpi-panel { grid-template-columns: 1fr 1fr; }
   .stat-main { grid-row: auto; grid-column: 1 / -1; padding-right: 0; padding-bottom: 20px; border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.16); }

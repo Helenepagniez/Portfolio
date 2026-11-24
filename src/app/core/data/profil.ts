@@ -35,20 +35,20 @@ export const CHAPTERS: Chapter[] = [
   {
     n: '1',
     years: '2018 — 2021',
-    name: 'Les bases',
+    name: 'Les bases de l’assistanat',
     text: 'Premier emploi à Provins, puis Bac +2 Attachée de Direction en alternance chez Prysmian.',
   },
   {
     n: '2',
     years: '2021 — 2025',
-    name: 'Le détour par le digital',
-    text: 'Intérim chez GRTgaz, puis alternance chez Guillemot jusqu’au Master : données, outils numériques et audit.',
+    name: 'De nouveaux outils',
+    text: 'Intérim chez GRTgaz, puis alternance chez Guillemot jusqu’au Master : gestion des données, outils numériques et audit, au service de l’organisation.',
   },
   {
     n: '3',
     years: '2026',
-    name: 'Le retour à l’administratif',
-    text: 'Assistante ADV chez ADX Groupe avec un portefeuille de clients : un choix assumé.',
+    name: 'L’administration des ventes',
+    text: 'Assistante ADV chez ADX Groupe : toutes ces compétences au service d’un portefeuille de clients.',
   },
 ];
 

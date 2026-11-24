@@ -201,6 +201,22 @@ textarea:focus-visible {
   flex-direction: column;
   gap: 14px;
 }
+/* Dans les bandeaux, le texte prend toute la largeur. */
+.page-hero .lead,
+.page-hero .h1-page {
+  max-width: none;
+}
+/* Pleine largeur pour un en-tête de section et son chapô */
+.section-head.full,
+.section-head.full .lead {
+  max-width: none;
+}
+/* Pastille d’icône et titre de carte sur la même ligne */
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
 /* ---------- 4. Composants ---------- */
 

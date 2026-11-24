@@ -2,7 +2,7 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="area-intro hero-text">
-      <span class="badge reveal"><span class="live"></span>Disponible immédiatement · Rennes de préférence</span>
+      <span class="badge reveal"><span class="live"></span>Disponible immédiatement · Rennes ou Caen</span>
       <span class="eyebrow reveal d1">Assistante administrative · Back office · ADV</span>
       <h1 class="h1 reveal d1">
         Des dossiers complets, des échéances tenues, des <span class="hl">clients bien suivis</span>.
@@ -73,7 +73,7 @@
       <div class="head-row">
         <div class="section-head">
           <span class="eyebrow">Mon parcours en bref</span>
-          <h2 class="h2">Un parcours atypique, un même fil conducteur</h2>
+          <h2 class="h2">Trois étapes, un même fil conducteur</h2>
         </div>
         <a routerLink="/parcours" class="btn btn-secondary">Voir mes expériences en détail</a>
       </div>
@@ -103,8 +103,10 @@
     <div class="grid-3">
       @for (g of skills; track g.title; let i = $index) {
         <article class="card hover-lift skill-card rv" [appReveal]="i * 120">
-          <span class="ico"><app-icon [name]="g.icon" [size]="26" /></span>
-          <h3 class="h3">{{ g.title }}</h3>
+          <div class="card-head">
+            <span class="ico"><app-icon [name]="g.icon" [size]="26" /></span>
+            <h3 class="h3">{{ g.title }}</h3>
+          </div>
           <ul class="list">
             @for (s of g.short; track s) {
               <li>{{ s }}</li>
