@@ -58,7 +58,7 @@ Près de **4 ans d'expérience** sur des postes variés d'assistanat (Prysmian, 
   <summary><strong>Technique</strong></summary>
 
 - **Angular 19** : composants autonomes, signaux, nouvelle syntaxe de templates (`@if`, `@for`)
-- Petit design system en CSS (`src/styles.css`) : jetons de couleurs (palette prune), police Plus Jakarta Sans, boutons, cartes et animations communs
+- Petit design system en CSS (`src/styles.css`) : jetons de couleurs (palette prune), police Plus Jakarta Sans, boutons, cartes et animations communs, présenté sur la page [/design-system](https://helenepagniez.github.io/Portfolio/design-system)
 - Animations au défilement grâce à la directive `appReveal`
 - Icônes en SVG intégrées
 - Site adapté au mobile et accessible : navigation au clavier, textes alternatifs, animations réduites si l'appareil le demande

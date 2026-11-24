@@ -57,6 +57,9 @@ export interface Experience {
   period: string;
   company: string;
   place: string;
+  /** Durée du poste, affichée à côté de la période. */
+  duration: string;
+  /** Activité de l’entreprise, affichée à côté de son nom. */
   note?: string;
   current?: boolean;
   missions: string[];
@@ -68,8 +71,9 @@ export const EXPERIENCES: Experience[] = [
     title: 'Assistante Administration des Ventes',
     period: 'Mai — Juil. 2026',
     company: 'ADX Groupe',
-    place: 'Cesson-Sévigné',
-    note: 'diagnostics immobiliers (DPE, PPPT…)',
+    duration: '3 mois',
+    place: 'Cesson-Sévigné (35510)',
+    note: 'Diagnostics immobiliers (DPE, PPPT…)',
     current: true,
     missions: [
       'Gestion de bout en bout des dossiers DPE et PPPT sur trois secteurs : constitution, contrôle des pièces et mise à jour.',
@@ -84,8 +88,9 @@ export const EXPERIENCES: Experience[] = [
     title: 'Assistante Marketing Digital',
     period: '2023 — 2024 · Alternance',
     company: 'Guillemot Corporation',
-    place: 'Rennes',
-    note: 'marques Thrustmaster (accessoires de gaming) et Hercules (accessoires de DJing)',
+    duration: '1 an',
+    place: 'Rennes (35000)',
+    note: 'Marques Thrustmaster (accessoires de gaming) et Hercules (accessoires de DJing)',
     missions: [
       'Saisie, contrôle et fiabilisation des données du catalogue produit sur plusieurs sites.',
       'Mise à jour et refonte de pages produits sur Magento.',
@@ -100,8 +105,9 @@ export const EXPERIENCES: Experience[] = [
     title: 'Assistante Manager',
     period: 'Nov. — Déc. 2021 · Intérim',
     company: 'GRTgaz',
-    place: 'Croissy-Beaubourg',
-    note: 'gestionnaire du réseau de transport de gaz naturel',
+    duration: '2 mois',
+    place: 'Croissy-Beaubourg (77183)',
+    note: 'Gestionnaire du réseau de transport de gaz naturel',
     missions: [
       'Analyse de l’organisation documentaire du service et refonte de l’arborescence de classement.',
       'Archivage, transfert et sécurisation des données sur l’espace collaboratif.',
@@ -112,8 +118,9 @@ export const EXPERIENCES: Experience[] = [
     title: 'Attachée de Direction',
     period: '2019 — 2021 · Alternance',
     company: 'Prysmian Group / Silec Cable',
-    place: 'Montereau-Fault-Yonne',
-    note: 'fabricant de câbles d’énergie et de télécommunications',
+    duration: '2 ans',
+    place: 'Montereau-Fault-Yonne (77130)',
+    note: 'Fabricant de câbles d’énergie et de télécommunications',
     missions: [
       'Suivi administratif du service au contact quotidien des équipes ; gestion des accès visiteurs et des EPI.',
       'Réservations : salles, hôtels, traiteurs, voitures.',
@@ -128,8 +135,9 @@ export const EXPERIENCES: Experience[] = [
     title: 'Polyvalente',
     period: 'Août 2018 — Août 2019 · Extra et CDD',
     company: 'Aux Vieux Remparts',
-    place: 'Provins',
-    note: 'groupe The Originals Relais : hôtel, restaurant, bar et boutiques de glaces',
+    duration: '1 an',
+    place: 'Provins (77160)',
+    note: 'Groupe The Originals Relais : hôtel, restaurant, bar et boutiques de glaces',
     missions: [
       'Accueil et réception des clients ; gestion d’une caisse et vente.',
       'Gestion autonome d’une boutique (ventes, stocks…) ; contrôle de l’inventaire.',
@@ -285,6 +293,7 @@ export interface Book {
   genres: string;
   cover: string;
   url: string;
+  pages: number;
   summary: string;
 }
 
@@ -296,6 +305,7 @@ export const BOOKS: Book[] = [
     genres: 'New romance · Romance contemporaine',
     cover: 'assets/images/livres/fascination.webp',
     url: 'https://www.amazon.fr/dp/B0F9FP49GS',
+    pages: 504,
     summary:
       'Elle a renoncé à ses projets et à sa carrière pour Édouard, son amour depuis ses 16 ans. Jusqu’au jour où le dirigeant de son entreprise est remplacé par un homme d’affaires reconnu et très séducteur…',
   },
@@ -305,6 +315,7 @@ export const BOOKS: Book[] = [
     genres: 'Romance · Développement personnel · Policier',
     cover: 'assets/images/livres/ascension.webp',
     url: 'https://www.amazon.fr/dp/B0C7T9JQ4B',
+    pages: 57,
     summary:
       'Orpheline depuis ses deux ans, Juana grandit auprès de son oncle Miguel dans les favelas. À travers de nombreuses péripéties, elle va chercher à venger la mort de ses parents — et peut-être avouer ses sentiments à son voisin d’enfance.',
   },

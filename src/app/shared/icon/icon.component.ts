@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-export type IconName =
-  | 'folder-check' | 'chart' | 'calendar' | 'house' | 'factory' | 'flame' | 'gamepad' | 'bed'
-  | 'building' | 'eye' | 'zoom' | 'close' | 'download' | 'mail' | 'phone' | 'linkedin'
-  | 'external' | 'info' | 'key' | 'cake' | 'trophy' | 'check' | 'menu' | 'pen' | 'arrow-up';
+export const ICON_NAMES = [
+  'folder-check', 'chart', 'calendar', 'house', 'factory', 'flame', 'gamepad', 'bed', 'building', 'eye', 'zoom', 'close', 'download', 'mail', 'phone', 'linkedin', 'external', 'info', 'key', 'cake', 'trophy', 'check', 'menu', 'pen', 'arrow-up', 'clock', 'pin', 'book',
+] as const;
+export type IconName = (typeof ICON_NAMES)[number];
 
 /** Icônes en trait (SVG en ligne), décoratives : masquées aux lecteurs d’écran. */
 @Component({
@@ -17,6 +17,9 @@ export type IconName =
         @case ('folder-check') { <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 13l2 2 4-4"/> }
         @case ('chart') { <path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/> }
         @case ('calendar') { <rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/> }
+        @case ('clock') { <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/> }
+        @case ('pin') { <path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/> }
+        @case ('book') { <path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/> }
         @case ('house') { <path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/> }
         @case ('factory') { <path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h2M12 17h2M17 17h2"/> }
         @case ('flame') { <path d="M12 3c1 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-4 3-6 1 2 2 2 3 2 0-3-1-5 0-7z"/> }

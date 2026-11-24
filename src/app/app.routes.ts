@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { CompetencesComponent } from './pages/competences/competences.component';
+import { DesignSystemComponent } from './pages/design-system/design-system.component';
 import { ContactPageComponent } from './pages/contact/contact-page.component';
 import { ParcoursComponent } from './pages/parcours/parcours.component';
 import { PassionsComponent } from './pages/passions/passions.component';
@@ -13,6 +14,7 @@ export const routes: Routes = [
   { path: 'competences', component: CompetencesComponent, title: 'Compétences · ' + SITE },
   { path: 'passions', component: PassionsComponent, title: 'Mes passions · ' + SITE },
   { path: 'contact', component: ContactPageComponent, title: 'Contact · ' + SITE },
+  { path: 'design-system', component: DesignSystemComponent, title: 'Design system · ' + SITE },
   // Anciennes adresses du portfolio
   { path: 'about', redirectTo: '/parcours' },
   { path: 'projets', redirectTo: '/home' },

@@ -16,11 +16,15 @@
 
 <section class="overlap">
   <ol class="wrap chapters reveal d2">
-    @for (c of chapters; track c.n) {
-      <li class="chapter">
+    @for (c of chapters; track c.n; let i = $index, last = $last) {
+      <li class="chapter" [style.--i]="i">
         <div class="chapter-top">
           <span class="num" aria-hidden="true">{{ c.n }}</span><span class="years">{{ c.years }}</span>
+          @if (last) {
+            <span class="now-tag"><span class="now-dot" aria-hidden="true"></span>Aujourd’hui</span>
+          }
         </div>
+        <span class="rail" aria-hidden="true"></span>
         <span class="h3 chapter-name">{{ c.name }}</span>
         <span class="chapter-text">{{ c.text }}</span>
       </li>
@@ -38,14 +42,20 @@
           <span class="tl-dot" [class.now]="xp.current" aria-hidden="true"></span>
           <div class="tl-head">
             <h3 class="h3">{{ xp.title }}</h3>
-            <span class="pill" [class.pill-dark]="xp.current" [class.pill-soft]="!xp.current">{{ xp.period }}</span>
+            <span class="tl-pills">
+              <span class="pill" [class.pill-dark]="xp.current" [class.pill-soft]="!xp.current">{{ xp.period }}</span>
+              <span class="pill pill-outline"><app-icon name="clock" [size]="14" [stroke]="2.2" />{{ xp.duration }}</span>
+            </span>
           </div>
-          <span class="where">
-            <strong>{{ xp.company }}</strong> · {{ xp.place }}
-            @if (xp.note) {
-              · {{ xp.note }}
-            }
-          </span>
+          <div class="where">
+            <span class="company">
+              <strong>{{ xp.company }}</strong>
+              @if (xp.note) {
+                <span class="company-note">— {{ xp.note }}</span>
+              }
+            </span>
+            <span class="place"><app-icon name="pin" [size]="15" />{{ xp.place }}</span>
+          </div>
           <ul class="list">
             @for (m of xp.missions; track m) {
               <li>{{ m }}</li>
@@ -87,8 +97,7 @@
       </div>
       <button type="button" class="thumb" (click)="open(master)" aria-label="Agrandir le diplôme du Master">
         <img [src]="master.image" alt="" />
-        <span class="thumb-tag"><app-icon name="zoom" [size]="14" [stroke]="2.4" />Agrandir</span>
-      </button>
+              </button>
     </article>
 
     <div class="dips">

@@ -207,49 +207,52 @@ textarea:focus-visible {
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease,
     border-color 0.2s ease;
 }
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px var(--shadow);
-}
 .btn-primary {
   background: var(--dark);
   color: #ffffff;
-}
-.btn-primary:hover {
-  background: var(--accent-ink);
 }
 .btn-secondary {
   background: transparent;
   border-color: var(--dark);
   color: var(--dark);
 }
-.btn-secondary:hover {
-  background: var(--dark);
-  color: #ffffff;
-}
 .btn-accent,
 .dark .btn-primary {
   background: var(--accent);
-  color: var(--dark);
-}
-.btn-accent:hover {
-  background: var(--dark);
-  color: #ffffff;
-}
-.dark .btn-primary:hover {
-  background: #ffffff;
   color: var(--dark);
 }
 .dark .btn-secondary {
   border-color: var(--accent);
   color: #ffffff;
 }
-.dark .btn-secondary:hover {
-  background: var(--accent);
+
+/* Survol : une seule règle par surface, quelle que soit la variante.
+   Fond clair  → le bouton se remplit en prune vif, texte blanc.
+   Fond sombre → le bouton se remplit en blanc, texte prune. */
+.btn:hover,
+.btn.is-hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px var(--shadow);
+  background: var(--accent-ink);
+  border-color: var(--accent-ink);
+  color: #ffffff;
+}
+.dark .btn:hover,
+.dark .btn.is-hover {
+  background: #ffffff;
+  border-color: #ffffff;
   color: var(--dark);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 .btn-block {
   width: 100%;
+}
+
+.btn:disabled {
+  cursor: progress;
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
 }
 
 /* Cartes : même contour partout ; .hover-lift = carte qui réagit au survol */
@@ -261,11 +264,13 @@ textarea:focus-visible {
 .hover-lift {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
-.hover-lift:hover {
+.hover-lift:hover,
+.hover-lift.is-hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 40px var(--shadow);
 }
-.card.hover-lift:hover {
+.card.hover-lift:hover,
+.card.hover-lift.is-hover {
   border-color: var(--accent-ink);
 }
 
@@ -310,6 +315,11 @@ textarea:focus-visible {
 .pill-soft {
   background: var(--soft);
   color: var(--dark);
+}
+.pill-outline {
+  border: 1.5px solid var(--line-strong);
+  color: var(--ink);
+  padding: 5px 11px;
 }
 .pill-outline-light {
   border: 1px solid rgba(255, 255, 255, 0.3);

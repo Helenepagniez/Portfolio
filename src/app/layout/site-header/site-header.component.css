@@ -81,6 +81,12 @@
   padding: 9px 14px;
   border-radius: 999px;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.menu-btn:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--dark);
 }
 
 

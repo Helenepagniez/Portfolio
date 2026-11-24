@@ -20,9 +20,33 @@
   border-radius: 20px; overflow: hidden; border: 1.5px solid var(--line-strong);
   box-shadow: 0 16px 40px var(--shadow); background: var(--card);
 }
-.chapter { padding: 26px; display: flex; flex-direction: column; gap: 6px; border-top: 4px solid var(--accent-ink); }
+.chapter { padding: 26px; display: flex; flex-direction: column; gap: 6px; }
+/* Rail de progression : il se remplit étape après étape, de 2018 jusqu’en 2026. */
+.rail { display: block; height: 4px; margin: 10px -26px 4px; background: var(--line); overflow: hidden; }
+.chapter:first-child .rail { margin-left: 0; border-radius: 4px 0 0 4px; }
+.chapter:last-child .rail { margin-right: 0; border-radius: 0 4px 4px 0; }
+.rail::after {
+  content: ''; display: block; height: 100%;
+  background: var(--accent-ink); transform: scaleX(0); transform-origin: left;
+  animation: fill-bar 0.9s cubic-bezier(0.45, 0, 0.25, 1) forwards;
+  animation-delay: calc(0.5s + var(--i) * 0.9s);
+}
+.chapter:last-child .rail::after { animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1); }
+.chapter .num { transition: background-color 0.3s ease, color 0.3s ease; animation: num-on 0.3s ease forwards; animation-delay: calc(0.5s + var(--i) * 0.9s); }
+.now-tag {
+  display: inline-flex; align-items: center; gap: 6px; margin-left: auto; font-size: 12px; font-weight: 700;
+  color: var(--accent-ink); opacity: 0; animation: fade-in 0.4s ease forwards; animation-delay: calc(0.5s + 3 * 0.9s);
+}
+.now-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent-ink); animation: pulse 2s infinite; }
+@keyframes fill-bar { to { transform: scaleX(1); } }
+@keyframes num-on { to { background: var(--accent-ink); color: #ffffff; } }
+@keyframes fade-in { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .rail::after { animation: none; transform: none; }
+  .chapter .num { animation: none; background: var(--accent-ink); color: #ffffff; }
+  .now-tag { animation: none; opacity: 1; }
+}
 .chapter + .chapter { border-left: 1px solid var(--line); }
-.chapters .chapter { border-top-color: var(--accent-ink); }
 .chapter-top { display: flex; align-items: center; gap: 12px; }
 .num {
   width: 32px; height: 32px; border-radius: 50%; background: var(--dark); color: var(--accent);
@@ -48,8 +72,11 @@
   animation: pulse 2s infinite;
 }
 .tl-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; align-items: baseline; }
-.where { font-size: 15px; color: var(--muted); }
-.where strong { color: var(--accent-ink); }
+.tl-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.where { display: flex; flex-direction: column; gap: 4px; font-size: 15px; color: var(--muted); }
+.company strong { color: var(--accent-ink); font-size: 16px; }
+.company-note { color: var(--body); margin-left: 6px; }
+.place { display: inline-flex; align-items: center; gap: 6px; }
 
 /* Master */
 .master {
