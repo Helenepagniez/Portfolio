@@ -1,0 +1,167 @@
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="badge reveal"><span class="live"></span>Disponible immédiatement · Rennes de préférence</span>
+      <span class="eyebrow reveal d1">Assistante administrative · Back office · ADV</span>
+      <h1 class="h1 reveal d1">
+        Des dossiers complets, des échéances tenues, des <span class="hl">clients bien suivis</span>.
+      </h1>
+      <p class="lead hero-lead reveal d2">
+        Près de <strong>4 ans d’expérience</strong> sur des postes variés d’assistanat, de l’assistanat de direction à
+        l’administration des ventes, où j’ai géré un <strong>portefeuille de clients Grands Comptes nationaux</strong>.
+        Je recherche un poste d’assistante administrative, de préférence en CDI.
+      </p>
+      <div class="actions reveal d3">
+        <a routerLink="/contact" class="btn btn-dark">Me contacter</a>
+        <a routerLink="/parcours" class="btn btn-ghost">Découvrir mon parcours</a>
+      </div>
+    </div>
+
+    <aside class="fiche-wrap reveal d2" aria-label="Fiche candidate">
+      <div class="fiche">
+        <div class="fiche-top">
+          <img src="assets/images/profile.webp" alt="Portrait d’Hélène Pagniez" width="66" height="66" />
+          <div class="fiche-name">
+            <span class="fiche-kicker">Fiche candidate</span>
+            <span class="fiche-title">Hélène Pagniez</span>
+          </div>
+          <span class="fiche-tag">EN RECHERCHE</span>
+        </div>
+        <dl>
+          <dt>Poste</dt>
+          <dd>Assistante administrative<span class="sub">back office, ADV, assistanat de direction</span></dd>
+          <dt>Contrat</dt>
+          <dd>CDI de préférence<span class="sub">CDD et intérim possibles</span></dd>
+          <dt>Lieu</dt>
+          <dd>Rennes de préférence<span class="sub">ouverte à Caen</span></dd>
+          <dt>Disponibilité</dt>
+          <dd><span class="inline"><span class="live"></span>Immédiate</span></dd>
+          <dt class="last">Expérience</dt>
+          <dd class="last">≈ 4 ans en assistanat<span class="sub">4 entreprises · Master obtenu en 2025</span></dd>
+        </dl>
+        <div class="fiche-foot">
+          <span>CV à jour</span>
+          <a [href]="contact.cv" [attr.download]="contact.cvFileName"><app-icon name="download" [size]="16" />Télécharger (PDF)</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="dark stats-band" aria-label="Mon expérience en chiffres">
+  <div class="wrap stats">
+    <div class="stat reveal d1">
+      <span class="stat-n">≈ {{ stats().years }}<small>ans</small></span>
+      <span class="stat-l">d’expérience cumulée sur des postes variés d’assistanat</span>
+    </div>
+    <div class="stat reveal d2">
+      <span class="stat-n">≈ {{ stats().weekly }}</span>
+      <span class="stat-l">dossiers par semaine dans mon portefeuille de clients</span>
+    </div>
+    <div class="stat reveal d3">
+      <span class="stat-n">{{ stats().grandsComptes }}</span>
+      <span class="stat-l">dossiers Grands Comptes nationaux suivis en parallèle</span>
+    </div>
+    <div class="stat reveal d4">
+      <span class="stat-n">{{ stats().sectors }}</span>
+      <span class="stat-l">secteurs géographiques gérés en autonomie</span>
+    </div>
+    <div class="stat reveal d5">
+      <span class="stat-n">{{ stats().companies }}</span>
+      <span class="stat-l">entreprises en assistanat et administration des ventes</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap stack gap-40">
+    <div class="head-row">
+      <div class="section-head">
+        <span class="eyebrow">Mon parcours en bref</span>
+        <h2 class="h2">Un parcours atypique, un même fil conducteur</h2>
+      </div>
+      <a routerLink="/parcours" class="btn btn-ghost btn-sm">Voir mes expériences en détail →</a>
+    </div>
+    <div class="frise">
+    <span class="frise-line" aria-hidden="true"></span>
+    <ol class="frise-list">
+      @for (c of chapters; track c.n) {
+        <li class="frise-step reveal">
+          <span class="frise-dot" aria-hidden="true"></span>
+          <span class="frise-years">{{ c.years }}</span>
+          <span class="h3">{{ c.n }} · {{ c.name }}</span>
+          <span class="frise-text">{{ c.text }}</span>
+        </li>
+      }
+    </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap stack gap-36">
+    <div class="section-head">
+      <span class="eyebrow">Ce que je fais</span>
+      <h2 class="h2">Trois métiers de l’assistanat, exercés en entreprise</h2>
+    </div>
+    <div class="grid-3">
+      @for (g of skills; track g.title; let i = $index) {
+        <article class="card lift reveal skill" [class.card-featured]="g.featured" [class]="'d' + (i + 1)">
+          <span class="ico"><app-icon [name]="g.icon" [size]="26" /></span>
+          <h3 class="h3">{{ g.title }}</h3>
+          <ul class="list">
+            @for (s of g.short; track s) {
+              <li>{{ s }}</li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+    <a routerLink="/competences" class="btn btn-dark self-start">Voir toutes mes compétences →</a>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap stack gap-28">
+    <div class="section-head">
+      <span class="eyebrow">Secteurs que je connais</span>
+      <h2 class="h2">Opérationnelle vite, quel que soit le métier de l’entreprise</h2>
+    </div>
+    <ul class="sectors">
+      @for (s of sectors; track s.name) {
+        <li class="sector lift">
+          <span class="ico-soft"><app-icon [name]="s.icon" [size]="22" /></span>
+          <span class="stack gap-3">
+            <span class="sector-name">{{ s.name }}</span>
+            <span class="sector-co">{{ s.company }}</span>
+          </span>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap duo">
+    <div class="passions-teaser lift">
+      <div class="covers" aria-hidden="true">
+        <img src="assets/images/livres/ascension.webp" alt="" width="96" height="144" />
+        <img src="assets/images/livres/fascination.webp" alt="" width="96" height="144" />
+      </div>
+      <div class="stack gap-10 grow">
+        <span class="eyebrow">En dehors du bureau</span>
+        <span class="h3 big">Mes passions</span>
+        <span class="teaser-text">L’écriture de mes romans, les jeux d’énigmes et la pâtisserie.</span>
+        <a routerLink="/passions" class="btn btn-ghost btn-sm self-start">Découvrir mes passions →</a>
+      </div>
+    </div>
+    <div class="dark cta">
+      <h2 class="h2 cta-title">Vous recrutez une assistante administrative ?</h2>
+      <p class="lead small">Disponible immédiatement, à Rennes de préférence et ouverte à Caen.</p>
+      <div class="actions">
+        <a routerLink="/contact" class="btn btn-accent">Me contacter</a>
+        <a [href]="contact.cv" [attr.download]="contact.cvFileName" class="btn btn-ghost-light">Télécharger mon CV</a>
+      </div>
+    </div>
+  </div>
+</section>

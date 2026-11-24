@@ -1,0 +1,47 @@
+.pt-72 { padding-top: 72px; }
+.mt-8 { margin-top: 8px; }
+
+.contact-grid { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; }
+.info { flex: 1 1 380px; display: flex; flex-direction: column; gap: 20px; }
+.title { font-size: 46px; }
+.rows { display: flex; flex-direction: column; gap: 12px; padding-top: 6px; }
+
+.contact-row {
+  display: flex; align-items: center; gap: 14px; background: var(--card); border: 1px solid var(--line);
+  border-radius: 14px; padding: 14px 16px; text-decoration: none; font-size: 16px; font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.split { justify-content: space-between; flex-wrap: wrap; }
+.row-link { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.acc { color: var(--accent-ink); }
+.copy { padding: 8px 14px; font-size: 13px; }
+
+.form-card { flex: 999 1 520px; min-width: 0; border-radius: 24px; padding: 36px; box-shadow: 0 20px 48px var(--shadow); }
+.form { display: flex; flex-direction: column; gap: 18px; }
+.form-title { font-size: 26px; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 700; }
+.input {
+  font-weight: 400; font-size: 16px; padding: 14px 16px; border: 1.5px solid var(--line);
+  border-radius: 12px; background: var(--bg); color: var(--ink);
+}
+textarea.input { resize: vertical; }
+.input:focus { outline: none; border-color: var(--accent-ink); box-shadow: 0 0 0 4px var(--soft); }
+.form-error {
+  margin: 0; padding: 12px 14px; border-radius: 12px; background: #fdecec; color: #8a1c1c;
+  font-size: 15px; font-weight: 600;
+}
+button[disabled] { opacity: 0.7; cursor: progress; }
+
+.sent { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; animation: pop 0.3s ease both; }
+.sent-ico {
+  width: 56px; height: 56px; border-radius: 50%; background: var(--soft); color: var(--accent-ink);
+  display: flex; align-items: center; justify-content: center;
+}
+.sent-p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--muted); }
+
+@media (max-width: 860px) {
+  .pt-72 { padding-top: 48px; }
+  .title { font-size: 34px; }
+  .form-card { padding: 24px; }
+}

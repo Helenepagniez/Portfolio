@@ -1,0 +1,128 @@
+.stack { display: flex; flex-direction: column; }
+.gap-2 { gap: 2px; }
+.gap-6 { gap: 6px; }
+.gap-16 { gap: 16px; }
+.gap-28 { gap: 28px; }
+.pt { padding-top: 6px; }
+.pt-24 { padding-top: 24px; }
+.pt-80 { padding-top: 80px; }
+.mt-8 { margin-top: 8px; }
+.mt-12 { margin-top: 12px; }
+.min0 { min-width: 0; }
+.h2-sm { font-size: 34px; }
+.page-hero { padding-bottom: 72px; }
+
+/* Les 3 étapes */
+.overlap { padding: 0 24px; }
+.chapters {
+  list-style: none; padding: 0; margin-top: -32px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  border-radius: 20px; overflow: hidden; border: 1px solid var(--line);
+  box-shadow: 0 16px 40px var(--shadow); background: var(--card);
+}
+.chapter { padding: 26px; display: flex; flex-direction: column; gap: 6px; border-top: 4px solid var(--accent-ink); }
+.chapter + .chapter { border-left: 1px solid var(--line); }
+.chapter-top { display: flex; align-items: center; gap: 12px; }
+.num {
+  width: 32px; height: 32px; border-radius: 50%; background: var(--dark); color: var(--accent);
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; flex: none;
+}
+.years { font-size: 14px; font-weight: 700; color: var(--accent-ink); }
+.chapter-name { font-size: 20px; padding-top: 6px; }
+.chapter-text { font-size: 15px; line-height: 1.55; color: var(--muted); }
+
+/* Frise des expériences */
+.tl { position: relative; display: flex; flex-direction: column; gap: 24px; margin-left: 10px; padding-left: 38px; }
+.tl-line {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--line);
+  transform-origin: top; animation: growY 1.4s 0.2s ease both;
+}
+.tl-item { position: relative; padding: 28px 32px; display: flex; flex-direction: column; gap: 12px; }
+.tl-dot {
+  position: absolute; left: -47px; top: 34px; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--card); border: 3px solid var(--accent-ink);
+}
+.tl-dot.now {
+  left: -49px; top: 32px; width: 20px; height: 20px; background: var(--dark); border-color: var(--accent);
+  animation: pulse 2s infinite;
+}
+.tl-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; align-items: baseline; }
+.where { font-size: 15px; color: var(--muted); }
+.where strong { color: var(--accent-ink); }
+
+/* Master */
+.master {
+  display: flex; flex-wrap: wrap; gap: 36px; align-items: center;
+  border-radius: 26px; padding: 40px; overflow: hidden;
+}
+.master-text { flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.master-title { font-size: 30px; line-height: 1.2; }
+.master-school { font-size: 16px; color: var(--on-dark); }
+.master-p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--on-dark-2); max-width: 560px; }
+.thumb {
+  position: relative; flex: 1 1 280px; max-width: 360px; height: 250px; padding: 0; border: 0;
+  background: transparent; cursor: pointer; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28); transform: rotate(2deg);
+}
+.thumb:hover { transform: rotate(0deg) scale(1.02); }
+.thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.thumb-tag {
+  position: absolute; left: 12px; bottom: 12px; display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255, 255, 255, 0.94); color: #14211f; font-size: 13px; font-weight: 700;
+  padding: 8px 12px; border-radius: 999px;
+}
+
+/* Autres diplômes */
+.dips { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.dip { padding: 26px; display: flex; flex-direction: column; gap: 6px; }
+.dip-years { font-size: 13px; font-weight: 700; color: var(--accent-ink); }
+.dip-title { font-weight: 700; font-size: 18px; line-height: 1.35; }
+.dip-school { font-size: 14px; color: var(--muted); }
+
+/* Langues */
+.lang-h { font-size: 24px; }
+.langs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.lang { display: flex; flex-direction: column; gap: 16px; padding: 24px 26px; }
+.lang-top { display: flex; align-items: center; gap: 16px; }
+.lang-badge {
+  width: 52px; height: 52px; border-radius: 14px; background: var(--dark); color: var(--accent);
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 17px; flex: none;
+}
+.lang-name { font-weight: 700; font-size: 18px; }
+.lang-level { font-size: 14px; color: var(--muted); }
+.scale, .scale-l { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.scale span { height: 8px; border-radius: 999px; background: var(--line); }
+.scale span.on { background: var(--accent-ink); }
+.scale-l { font-size: 12px; color: var(--muted); }
+.scale-l .on { color: var(--accent-ink); font-weight: 700; }
+
+/* Aperçu du diplôme */
+.dialog {
+  border: 0; padding: 0; border-radius: 22px; width: min(760px, calc(100vw - 32px));
+  max-height: calc(100vh - 48px); background: var(--card); color: var(--ink);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35); overflow: hidden;
+}
+.dialog[open] { display: flex; flex-direction: column; animation: pop 0.25s ease both; }
+.dialog::backdrop { background: rgba(10, 16, 15, 0.62); backdrop-filter: blur(4px); }
+.dialog-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px 22px; border-bottom: 1px solid var(--line);
+}
+.small-eyebrow { font-size: 12px; }
+.dialog-title { font-weight: 700; font-size: 17px; }
+.dialog-body { background: var(--soft); padding: 22px; display: flex; justify-content: center; overflow: auto; }
+.dialog-body img {
+  max-width: 100%; max-height: calc(100vh - 190px); object-fit: contain; border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); display: block;
+}
+
+@media (max-width: 860px) {
+  .overlap { padding: 0 16px; }
+  .chapter + .chapter { border-left: 0; }
+  .tl { padding-left: 28px; margin-left: 6px; }
+  .tl-item { padding: 22px 20px; }
+  .tl-dot { left: -37px; }
+  .tl-dot.now { left: -39px; }
+  .master { padding: 26px; }
+  .master-title { font-size: 24px; }
+}

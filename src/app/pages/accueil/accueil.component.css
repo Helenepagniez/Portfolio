@@ -1,0 +1,131 @@
+.stack { display: flex; flex-direction: column; }
+.gap-3 { gap: 3px; }
+.gap-10 { gap: 10px; }
+.gap-28 { gap: 28px; }
+.gap-36 { gap: 36px; }
+.gap-40 { gap: 40px; }
+.grow { flex: 1 1 200px; }
+
+/* Haut de page */
+.hero {
+  padding: 72px 24px 96px;
+  background:
+    radial-gradient(circle at 88% 18%, var(--soft) 0, transparent 42%),
+    radial-gradient(circle at 8% 100%, var(--soft) 0, transparent 30%),
+    var(--bg);
+}
+.hero-grid { display: flex; flex-wrap: wrap; gap: 56px; align-items: center; }
+.hero-text { flex: 999 1 540px; min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+.badge {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 10px;
+  background: var(--card); border: 1px solid var(--line); color: var(--accent-ink);
+  padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 700;
+}
+.hl { color: var(--accent-ink); }
+.hero-lead { font-size: 19px; }
+.hero-lead strong { color: var(--ink); }
+.actions { display: flex; gap: 14px; flex-wrap: wrap; padding-top: 6px; }
+
+/* Fiche candidate */
+.fiche-wrap { flex: 1 1 380px; min-width: 0; }
+.fiche {
+  background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+  box-shadow: 0 28px 60px var(--shadow); overflow: hidden;
+}
+.fiche-top { background: var(--dark); color: #fff; padding: 20px 24px; display: flex; align-items: center; gap: 16px; }
+.fiche-top img { width: 66px; height: 66px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); flex: none; }
+.fiche-name { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.fiche-kicker { font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--on-dark-2); }
+.fiche-title { font-family: var(--display); font-size: 22px; font-weight: 700; }
+.fiche-tag {
+  margin-left: auto; background: var(--accent); color: var(--dark); font-size: 12px; font-weight: 800;
+  padding: 6px 10px; border-radius: 6px; letter-spacing: 0.5px;
+}
+.fiche dl { margin: 0; padding: 6px 24px 8px; display: grid; grid-template-columns: 132px minmax(0, 1fr); }
+.fiche dt {
+  padding: 14px 0; border-bottom: 1px dashed var(--line); font-size: 12px; font-weight: 700;
+  color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px;
+}
+.fiche dd { margin: 0; padding: 14px 0; border-bottom: 1px dashed var(--line); font-size: 15px; font-weight: 600; line-height: 1.4; }
+.fiche .last { border-bottom: 0; }
+.sub { display: block; font-weight: 500; color: var(--muted); font-size: 14px; }
+.inline { display: inline-flex; align-items: center; gap: 8px; }
+.fiche-foot {
+  border-top: 1px solid var(--line); padding: 14px 24px; display: flex; justify-content: space-between;
+  align-items: center; gap: 12px; background: var(--soft); font-size: 14px; color: var(--body);
+}
+.fiche-foot a { font-weight: 700; color: var(--accent-ink); display: inline-flex; align-items: center; gap: 8px; }
+
+/* Chiffres */
+.stats-band { padding: 72px 24px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 32px; }
+.stat { display: flex; flex-direction: column; gap: 10px; border-top: 1px solid rgba(255, 255, 255, 0.22); padding-top: 22px; }
+.stat-n {
+  font-family: var(--display); font-size: 60px; font-weight: var(--hw); line-height: 1;
+  color: var(--accent); font-variant-numeric: tabular-nums;
+}
+.stat-n small { font-size: 28px; margin-left: 6px; }
+.stat-l { font-size: 16px; line-height: 1.5; color: var(--on-dark); }
+
+/* Frise */
+.head-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px; }
+.frise { position: relative; }
+.frise-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px;
+}
+.frise-line {
+  position: absolute; left: 12px; right: 12px; top: 11px; height: 2px; background: var(--line);
+  transform-origin: left; animation: growX 1.2s 0.3s ease both;
+}
+.frise-step { position: relative; display: flex; flex-direction: column; gap: 8px; padding-top: 40px; }
+.frise-dot {
+  position: absolute; top: 0; left: 0; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--card); border: 3px solid var(--accent-ink);
+}
+.frise-years { font-size: 14px; font-weight: 700; color: var(--accent-ink); }
+.frise-text { font-size: 16px; line-height: 1.55; color: var(--muted); }
+
+/* Savoir-faire */
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+.skill { padding: 30px; display: flex; flex-direction: column; gap: 16px; }
+
+/* Secteurs */
+.sectors {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;
+}
+.sector {
+  display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-radius: 16px;
+  background: var(--card); border: 1px solid var(--line);
+}
+.sector-name { font-weight: 700; font-size: 16px; }
+.sector-co { font-size: 13px; color: var(--muted); }
+
+/* Passions + appel à l’action */
+.duo { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 22px; }
+.passions-teaser {
+  background: var(--soft); border-radius: 26px; padding: 36px; display: flex; gap: 28px;
+  align-items: center; flex-wrap: wrap;
+}
+.covers { display: flex; flex: none; }
+.covers img {
+  width: 96px; height: 144px; object-fit: cover; border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2); transform: rotate(-4deg);
+}
+.covers img + img { transform: rotate(4deg); margin-left: -18px; }
+.big { font-size: 26px; }
+.teaser-text { font-size: 15px; line-height: 1.55; color: var(--body); }
+.cta { border-radius: 26px; padding: 40px; display: flex; flex-direction: column; gap: 18px; justify-content: center; }
+.cta-title { font-size: 32px; }
+.small { font-size: 16px; }
+
+@media (max-width: 860px) {
+  .hero { padding: 40px 16px 64px; }
+  .hero-grid { gap: 36px; }
+  .stats-band { padding: 56px 16px; }
+  .stat-n { font-size: 50px; }
+  .fiche dl { grid-template-columns: 112px minmax(0, 1fr); padding: 6px 18px 8px; }
+  .duo { grid-template-columns: 1fr; }
+  .passions-teaser, .cta { padding: 26px; }
+}

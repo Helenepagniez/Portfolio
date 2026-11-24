@@ -1,0 +1,150 @@
+<section class="dark page-hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">Mon parcours</span>
+    <h1 class="h1-page reveal d1">Un parcours varié, un même fil conducteur</h1>
+    <p class="lead reveal d2">
+      Formée à l’assistanat de direction, j’ai fait un détour par le digital avant de revenir à ce que je fais le mieux :
+      organiser, contrôler et fiabiliser l’information.
+    </p>
+    <div class="chips reveal d3 pt">
+      <span class="pill pill-accent">≈ 4 ans d’expérience en assistanat</span>
+      <span class="pill pill-outline-light">5 expériences</span>
+      <span class="pill pill-outline-light">4 diplômes, jusqu’au Master</span>
+    </div>
+  </div>
+</section>
+
+<section class="overlap">
+  <ol class="wrap chapters reveal d2">
+    @for (c of chapters; track c.n) {
+      <li class="chapter">
+        <div class="chapter-top">
+          <span class="num" aria-hidden="true">{{ c.n }}</span><span class="years">{{ c.years }}</span>
+        </div>
+        <span class="h3 chapter-name">{{ c.name }}</span>
+        <span class="chapter-text">{{ c.text }}</span>
+      </li>
+    }
+  </ol>
+</section>
+
+<section class="sec pt-80">
+  <div class="wrap stack gap-28">
+    <h2 class="h2 h2-sm">Expériences professionnelles</h2>
+    <div class="tl">
+      <span class="tl-line" aria-hidden="true"></span>
+      @for (xp of experiences; track xp.title; let i = $index) {
+        <article class="card tl-item lift reveal" [class]="'d' + (i + 1)">
+          <span class="tl-dot" [class.now]="xp.current" aria-hidden="true"></span>
+          <div class="tl-head">
+            <h3 class="h3">{{ xp.title }}</h3>
+            <span class="pill" [class.pill-dark]="xp.current" [class.pill-soft]="!xp.current">{{ xp.period }}</span>
+          </div>
+          <span class="where">
+            <strong>{{ xp.company }}</strong> · {{ xp.place }}
+            @if (xp.note) {
+              · {{ xp.note }}
+            }
+          </span>
+          <ul class="list">
+            @for (m of xp.missions; track m) {
+              <li>{{ m }}</li>
+            }
+          </ul>
+          <div class="chips">
+            @for (t of xp.tags; track t) {
+              <span class="chip">{{ t }}</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap stack gap-28">
+    <div class="section-head">
+      <span class="eyebrow">Formations et diplômes</span>
+      <h2 class="h2 h2-sm">Du plus récent au plus ancien</h2>
+    </div>
+
+    <article class="master dark reveal d1">
+      <div class="master-text">
+        <div class="chips">
+          <span class="pill pill-accent">Mon diplôme le plus récent</span>
+          <span class="pill pill-outline-light">Bac +5 · {{ master.years }}</span>
+        </div>
+        <h3 class="h3 master-title">{{ master.title }}</h3>
+        <span class="master-school">{{ master.school }}</span>
+        <p class="master-p">
+          Un niveau Bac +5 qui m’apporte une vision d’ensemble de l’entreprise, de ses clients et de ses priorités — utile
+          pour comprendre les enjeux derrière chaque dossier.
+        </p>
+        <button type="button" class="btn btn-accent self-start" (click)="open(master)">
+          <app-icon name="eye" [size]="18" />Aperçu du diplôme
+        </button>
+      </div>
+      <button type="button" class="thumb" (click)="open(master)" aria-label="Agrandir le diplôme du Master">
+        <img [src]="master.image" alt="" />
+        <span class="thumb-tag"><app-icon name="zoom" [size]="14" [stroke]="2.4" />Agrandir</span>
+      </button>
+    </article>
+
+    <div class="dips">
+      @for (d of diplomas; track d.id) {
+        <div class="card dip lift">
+          <span class="dip-years">{{ d.years }}</span>
+          <span class="dip-title">{{ d.title }}</span>
+          <span class="dip-school">{{ d.school }}</span>
+          <button type="button" class="btn btn-ghost btn-sm self-start mt-12" (click)="open(d)">
+            <app-icon name="eye" [size]="16" />Aperçu du diplôme
+          </button>
+        </div>
+      }
+    </div>
+
+    <div class="stack gap-16 pt-24">
+      <h3 class="h3 lang-h">Langues</h3>
+      <div class="langs">
+        @for (l of languages; track l.code) {
+          <div class="card lang lift">
+            <div class="lang-top">
+              <span class="lang-badge" aria-hidden="true">{{ l.code }}</span>
+              <span class="stack gap-2"><span class="lang-name">{{ l.name }}</span><span class="lang-level">{{ l.level }}</span></span>
+            </div>
+            <div class="stack gap-6" aria-hidden="true">
+              <div class="scale">
+                @for (lv of levels; track lv; let i = $index) {
+                  <span [class.on]="i < l.rank"></span>
+                }
+              </div>
+              <div class="scale-l">
+                @for (lv of levels; track lv; let i = $index) {
+                  <span [class.on]="i === l.rank - 1">{{ lv }}</span>
+                }
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <a routerLink="/competences" class="btn btn-dark self-start mt-8">Voir mes compétences →</a>
+  </div>
+</section>
+
+<dialog #apercu class="dialog" aria-labelledby="apercu-titre" (click)="onDialogClick($event)" (close)="preview.set(null)">
+  @if (preview(); as d) {
+    <div class="dialog-head">
+      <div class="stack gap-2 min0">
+        <span class="eyebrow small-eyebrow">Aperçu du diplôme</span>
+        <span id="apercu-titre" class="dialog-title">{{ d.title }} — {{ d.school }}</span>
+      </div>
+      <button type="button" class="btn btn-ghost btn-sm" (click)="close()"><app-icon name="close" [size]="14" [stroke]="2.6" />Fermer</button>
+    </div>
+    <div class="dialog-body">
+      <img [src]="d.image" [alt]="'Diplôme : ' + d.title" />
+    </div>
+  }
+</dialog>

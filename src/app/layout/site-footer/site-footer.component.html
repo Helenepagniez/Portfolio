@@ -1,0 +1,33 @@
+<footer class="dark foot">
+  <div class="foot-grid">
+    <div class="foot-id">
+      <span class="foot-brand"><span class="logo" aria-hidden="true">HP</span><span class="brand-name">Hélène Pagniez</span></span>
+      <span class="foot-desc">Assistante administrative · Back office · Administration des ventes · Assistanat de direction</span>
+      <span class="foot-dispo"><span class="live"></span>Disponible immédiatement · Rennes de préférence, ouverte à Caen</span>
+      <a class="btn btn-accent btn-sm self-start" [href]="contact.cv" [attr.download]="contact.cvFileName">
+        <app-icon name="download" [size]="16" />Télécharger mon CV
+      </a>
+    </div>
+
+    <nav aria-label="Plan du site" class="foot-col">
+      <span class="foot-h">Navigation</span>
+      @for (item of nav; track item.path) {
+        <a class="foot-link" [routerLink]="item.path" routerLinkActive="active" ariaCurrentWhenActive="page">{{ item.label }}</a>
+      }
+    </nav>
+
+    <div class="foot-col">
+      <span class="foot-h">Contact</span>
+      <a class="foot-link" [href]="'mailto:' + contact.email"><app-icon name="mail" [size]="16" class="acc" />{{ contact.email }}</a>
+      <a class="foot-link" [href]="contact.phoneHref"><app-icon name="phone" [size]="16" class="acc" />{{ contact.phone }}</a>
+      <a class="foot-link" [href]="contact.linkedin" target="_blank" rel="noopener noreferrer"
+        ><app-icon name="linkedin" [size]="16" class="acc" />LinkedIn<span class="sr-only"> (nouvel onglet)</span></a
+      >
+    </div>
+  </div>
+
+  <div class="foot-bottom">
+    <span>© {{ year }} Hélène Pagniez · Portfolio</span>
+    <button type="button" class="foot-link" (click)="toTop()">Retour en haut<app-icon name="arrow-up" [size]="14" [stroke]="2.4" /></button>
+  </div>
+</footer>

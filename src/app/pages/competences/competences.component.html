@@ -1,0 +1,65 @@
+<section class="dark page-hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">Mes compétences</span>
+    <h1 class="h1-page reveal d1">Trois métiers de l’assistanat, exercés en entreprise</h1>
+    <p class="lead reveal d2">Chaque compétence vient d’une mission réelle : l’entreprise concernée est indiquée en dessous.</p>
+  </div>
+</section>
+
+<section class="sec pt-64">
+  <div class="wrap groups">
+    @for (g of groups; track g.title; let i = $index) {
+      <article class="card lift reveal group" [class.card-featured]="g.featured" [class]="'d' + (i + 1)">
+        <span class="ico"><app-icon [name]="g.icon" [size]="26" /></span>
+        <h2 class="h3 group-title">{{ g.title }}</h2>
+        <ul class="list items">
+          @for (it of g.items; track it.text) {
+            <li>
+              {{ it.text }}<br />
+              <span class="src-tag"><app-icon name="building" [size]="13" [stroke]="2.2" /><span class="sr-only">Chez </span>{{ it.where }}</span>
+            </li>
+          }
+        </ul>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="sec pt-88">
+  <div class="wrap qualities-row">
+    <div class="q-head">
+      <span class="eyebrow">Qualités professionnelles</span>
+      <h2 class="h2 h2-md">Ce que mes responsables peuvent attendre de moi</h2>
+    </div>
+    <ul class="qualities">
+      @for (q of qualities; track q.name) {
+        <li class="card lift quality">
+          <span class="check"><app-icon name="check" [size]="16" [stroke]="2.6" /></span>
+          <span class="q-text"><span class="q-name">{{ q.name }}</span><span class="q-proof">{{ q.proof }}</span></span>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<section class="sec pt-88">
+  <div class="wrap dark tools-box">
+    <div class="section-head">
+      <span class="eyebrow">Mes outils</span>
+      <h2 class="h2 h2-md">Opérationnelle sur les outils du quotidien</h2>
+    </div>
+    <ul class="tools">
+      @for (t of tools; track t.name) {
+        <li class="lift tool"><span class="tool-name">{{ t.name }}</span><span class="tool-use">{{ t.use }}</span></li>
+      }
+    </ul>
+    <div class="task-tools">
+      <h3 class="tt-title">Organisation et suivi des tâches</h3>
+      <ul class="tools">
+        @for (t of taskTools; track t.name) {
+          <li class="lift tool tool-outline"><span class="tool-name">{{ t.name }}</span><span class="tool-use">{{ t.use }}</span></li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>
