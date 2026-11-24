@@ -8,18 +8,18 @@
         téléphone.
       </p>
       <div class="rows">
-        <div class="contact-row split">
+        <div class="contact-row split hover-lift">
           <a [href]="'mailto:' + contact.email" class="row-link"><app-icon name="mail" class="acc" />{{ contact.email }}</a>
-          <button type="button" class="btn btn-accent btn-sm copy" (click)="copyMail()">
+          <button type="button" class="btn btn-accent copy" (click)="copyMail()">
             {{ copied() ? 'Adresse copiée ✓' : 'Copier l’adresse' }}
           </button>
           <span class="sr-only" aria-live="polite">{{ copied() ? 'Adresse e-mail copiée' : '' }}</span>
         </div>
-        <a [href]="contact.phoneHref" class="contact-row lift"><app-icon name="phone" class="acc" />{{ contact.phone }}</a>
-        <a [href]="contact.linkedin" target="_blank" rel="noopener noreferrer" class="contact-row lift"
+        <a [href]="contact.phoneHref" class="contact-row hover-lift"><app-icon name="phone" class="acc" />{{ contact.phone }}</a>
+        <a [href]="contact.linkedin" target="_blank" rel="noopener noreferrer" class="contact-row hover-lift"
           ><app-icon name="linkedin" class="acc" />LinkedIn — helene-pagniez<span class="sr-only"> (nouvel onglet)</span></a
         >
-        <a [href]="contact.cv" [attr.download]="contact.cvFileName" class="btn btn-dark self-start mt-8">
+        <a [href]="contact.cv" [attr.download]="contact.cvFileName" class="btn btn-primary self-start mt-8">
           <app-icon name="download" [size]="18" />Télécharger mon CV (PDF)
         </a>
       </div>
@@ -31,7 +31,7 @@
           <span class="sent-ico"><app-icon name="check" [size]="28" [stroke]="2.6" /></span>
           <h2 class="h3 form-title">Merci, votre message est bien envoyé</h2>
           <p class="sent-p">Je reviens vers vous rapidement. En attendant, vous pouvez télécharger mon CV.</p>
-          <button type="button" class="btn btn-ghost btn-sm" (click)="newMessage()">Écrire un autre message</button>
+          <button type="button" class="btn btn-secondary" (click)="newMessage()">Écrire un autre message</button>
         </div>
       } @else {
         <form (ngSubmit)="send()" class="form" novalidate>
@@ -46,7 +46,7 @@
           @if (status() === 'error') {
             <p class="form-error" role="alert">{{ error() }}</p>
           }
-          <button type="submit" class="btn btn-dark self-start" [disabled]="status() === 'sending'">
+          <button type="submit" class="btn btn-primary self-start" [disabled]="status() === 'sending'">
             {{ status() === 'sending' ? 'Envoi en cours…' : 'Envoyer le message' }}
           </button>
         </form>

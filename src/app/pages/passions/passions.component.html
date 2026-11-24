@@ -1,10 +1,8 @@
-<section class="intro">
-  <div class="wrap intro-in">
-    <div class="intro-title">
-      <span class="eyebrow reveal">En dehors du bureau</span>
-      <h1 class="h1-page reveal d1">Mes passions</h1>
-    </div>
-    <p class="lead intro-lead reveal d2">
+<section class="dark page-hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">En dehors du bureau</span>
+    <h1 class="h1-page reveal d1">Mes passions</h1>
+    <p class="lead reveal d2">
       Écrire et autoéditer mes romans, résoudre des énigmes en équipe, réussir une recette au gramme près : de la méthode,
       de la patience et le goût du travail bien fait, comme dans mon métier.
     </p>
@@ -22,8 +20,8 @@
       </p>
     </div>
 
-    @for (b of books; track b.title; let i = $index) {
-      <article class="card book lift reveal" [class]="'d' + (i + 1)">
+    @for (b of books; track b.title) {
+      <article class="card book hover-lift rv" appReveal>
         <img class="cover" [src]="b.cover" [alt]="'Couverture du roman ' + b.title" width="220" height="330" />
         <div class="book-text">
           <div class="chips">
@@ -34,7 +32,7 @@
           <span class="role">Autrice — autoéditrice</span>
           <p class="summary">{{ b.summary }}</p>
           <div class="stack gap-10 mt-6">
-            <a class="btn btn-dark self-start" [href]="b.url" target="_blank" rel="noopener noreferrer">
+            <a class="btn btn-primary self-start" [href]="b.url" target="_blank" rel="noopener noreferrer">
               Acheter sur Amazon<span class="sr-only"> : {{ b.title }} (site d’achat, nouvel onglet)</span>
               <app-icon name="external" [size]="16" [stroke]="2.2" />
             </a>
@@ -53,7 +51,7 @@
     </div>
 
     <div class="hobbies">
-      <article class="card hobby lift reveal d1">
+      <article class="card hobby hover-lift rv" appReveal>
         <div class="hobby-head">
           <span class="ico"><app-icon name="key" [size]="26" /></span>
           <span class="stack gap-2"><span class="eyebrow">Passion n°2</span><h3 class="h3 h3-lg">Jeux d’énigmes et immersifs</h3></span>
@@ -77,7 +75,7 @@
         </div>
       </article>
 
-      <article class="card hobby lift reveal d2">
+      <article class="card hobby hover-lift rv" [appReveal]="120">
         <div class="hobby-head">
           <span class="ico"><app-icon name="cake" [size]="26" /></span>
           <span class="stack gap-2"><span class="eyebrow">Passion n°3</span><h3 class="h3 h3-lg">Pâtisserie</h3></span>

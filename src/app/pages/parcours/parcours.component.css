@@ -17,11 +17,12 @@
 .chapters {
   list-style: none; padding: 0; margin-top: -32px;
   display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  border-radius: 20px; overflow: hidden; border: 1px solid var(--line);
+  border-radius: 20px; overflow: hidden; border: 1.5px solid var(--line-strong);
   box-shadow: 0 16px 40px var(--shadow); background: var(--card);
 }
 .chapter { padding: 26px; display: flex; flex-direction: column; gap: 6px; border-top: 4px solid var(--accent-ink); }
 .chapter + .chapter { border-left: 1px solid var(--line); }
+.chapters .chapter { border-top-color: var(--accent-ink); }
 .chapter-top { display: flex; align-items: center; gap: 12px; }
 .num {
   width: 32px; height: 32px; border-radius: 50%; background: var(--dark); color: var(--accent);
@@ -33,15 +34,15 @@
 
 /* Frise des expériences */
 .tl { position: relative; display: flex; flex-direction: column; gap: 24px; margin-left: 10px; padding-left: 38px; }
-.tl-line {
-  position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--line);
-  transform-origin: top; animation: growY 1.4s 0.2s ease both;
-}
+.tl-line { position: absolute; left: 0; top: 0; bottom: 0; width: 3px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.tl-fill { display: block; height: 100%; background: var(--accent-ink); transform-origin: top; transform: scaleY(0); transition: transform 0.15s linear; }
 .tl-item { position: relative; padding: 28px 32px; display: flex; flex-direction: column; gap: 12px; }
 .tl-dot {
-  position: absolute; left: -47px; top: 34px; width: 16px; height: 16px; border-radius: 50%;
-  background: var(--card); border: 3px solid var(--accent-ink);
+  position: absolute; left: -47px; top: 34px; width: 17px; height: 17px; border-radius: 50%;
+  background: var(--card); border: 3px solid var(--line-strong);
+  transition: background-color 0.4s ease 0.3s, border-color 0.4s ease 0.3s, transform 0.4s ease 0.3s;
 }
+.tl-item.is-visible .tl-dot { background: var(--accent); border-color: var(--accent-ink); }
 .tl-dot.now {
   left: -49px; top: 32px; width: 20px; height: 20px; background: var(--dark); border-color: var(--accent);
   animation: pulse 2s infinite;

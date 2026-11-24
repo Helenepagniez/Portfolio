@@ -40,7 +40,7 @@
 }
 
 .brand-name {
-  font-family: var(--display);
+  font-family: var(--font);
   font-weight: 700;
   font-size: 18px;
 }
@@ -83,79 +83,6 @@
   cursor: pointer;
 }
 
-/* Barre de choix du style */
-.mk {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 14px;
-  padding: 8px 0 12px;
-  border-top: 1px dashed rgba(255, 255, 255, 0.22);
-}
-
-.mk-title {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.sw {
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2px;
-  padding: 4px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.09);
-}
-
-.sw-label {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  color: var(--on-dark-2);
-  padding: 0 8px 0 10px;
-}
-
-.sw button {
-  border: 0;
-  background: transparent;
-  color: var(--on-dark);
-  font-size: 13px;
-  font-weight: 600;
-  padding: 7px 12px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  cursor: pointer;
-}
-.sw button[aria-pressed="true"] {
-  background: #ffffff;
-  color: #14211f;
-}
-
-.dot2 {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  flex: none;
-  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.6);
-}
-.dot-emeraude {
-  background: linear-gradient(135deg, #0b3d37 50%, #5cd3b4 50%);
-}
-.dot-prune {
-  background: linear-gradient(135deg, #4a1631 50%, #e3b6c4 50%);
-}
 
 @media (max-width: 860px) {
   .hdr {
@@ -173,13 +100,6 @@
     padding: 4px 0 14px;
   }
   .navwrap.open {
-    display: flex;
-  }
-  /* Sur mobile, le choix du style s’affiche avec le menu pour garder l’en-tête compact */
-  .mk {
-    display: none;
-  }
-  .menu-open .mk {
     display: flex;
   }
   .navlink {

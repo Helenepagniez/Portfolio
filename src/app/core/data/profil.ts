@@ -69,6 +69,7 @@ export const EXPERIENCES: Experience[] = [
     period: 'Mai — Juil. 2026',
     company: 'ADX Groupe',
     place: 'Cesson-Sévigné',
+    note: 'diagnostics immobiliers (DPE, PPPT…)',
     current: true,
     missions: [
       'Gestion de bout en bout des dossiers DPE et PPPT sur trois secteurs : constitution, contrôle des pièces et mise à jour.',
@@ -100,6 +101,7 @@ export const EXPERIENCES: Experience[] = [
     period: 'Nov. — Déc. 2021 · Intérim',
     company: 'GRTgaz',
     place: 'Croissy-Beaubourg',
+    note: 'gestionnaire du réseau de transport de gaz naturel',
     missions: [
       'Analyse de l’organisation documentaire du service et refonte de l’arborescence de classement.',
       'Archivage, transfert et sécurisation des données sur l’espace collaboratif.',
@@ -111,6 +113,7 @@ export const EXPERIENCES: Experience[] = [
     period: '2019 — 2021 · Alternance',
     company: 'Prysmian Group / Silec Cable',
     place: 'Montereau-Fault-Yonne',
+    note: 'fabricant de câbles d’énergie et de télécommunications',
     missions: [
       'Suivi administratif du service au contact quotidien des équipes ; gestion des accès visiteurs et des EPI.',
       'Réservations : salles, hôtels, traiteurs, voitures.',
@@ -195,7 +198,6 @@ export const LANGUAGES: Language[] = [
 export interface SkillGroup {
   icon: IconName;
   title: string;
-  featured?: boolean;
   short: string[];
   items: { text: string; where: string }[];
 }
@@ -216,7 +218,6 @@ export const SKILL_GROUPS: SkillGroup[] = [
   {
     icon: 'chart',
     title: 'Administration des ventes',
-    featured: true,
     short: ['Gestion d’un portefeuille de clients, dont 60 Grands Comptes nationaux', 'Suivi des échéances et relances', 'Boîte mail et ligne téléphonique partagées'],
     items: [
       { text: 'Gestion d’un portefeuille de clients, dont 60 dossiers Grands Comptes nationaux', where: 'ADX Groupe' },
@@ -287,16 +288,8 @@ export interface Book {
   summary: string;
 }
 
+// Le plus récent en premier
 export const BOOKS: Book[] = [
-  {
-    title: 'L’Ascension',
-    year: '2023',
-    genres: 'Romance · Développement personnel · Policier',
-    cover: 'assets/images/livres/ascension.webp',
-    url: 'https://www.amazon.fr/dp/B0C7T9JQ4B',
-    summary:
-      'Orpheline depuis ses deux ans, Juana grandit auprès de son oncle Miguel dans les favelas. À travers de nombreuses péripéties, elle va chercher à venger la mort de ses parents — et peut-être avouer ses sentiments à son voisin d’enfance.',
-  },
   {
     title: 'Fascination ou Répulsion',
     year: '2025',
@@ -305,6 +298,15 @@ export const BOOKS: Book[] = [
     url: 'https://www.amazon.fr/dp/B0F9FP49GS',
     summary:
       'Elle a renoncé à ses projets et à sa carrière pour Édouard, son amour depuis ses 16 ans. Jusqu’au jour où le dirigeant de son entreprise est remplacé par un homme d’affaires reconnu et très séducteur…',
+  },
+  {
+    title: 'L’Ascension',
+    year: '2023',
+    genres: 'Romance · Développement personnel · Policier',
+    cover: 'assets/images/livres/ascension.webp',
+    url: 'https://www.amazon.fr/dp/B0C7T9JQ4B',
+    summary:
+      'Orpheline depuis ses deux ans, Juana grandit auprès de son oncle Miguel dans les favelas. À travers de nombreuses péripéties, elle va chercher à venger la mort de ses parents — et peut-être avouer ses sentiments à son voisin d’enfance.',
   },
 ];
 

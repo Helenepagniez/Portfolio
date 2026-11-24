@@ -3,7 +3,6 @@
 .h2-md { font-size: 36px; }
 
 .groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
-.group { padding: 30px; display: flex; flex-direction: column; gap: 18px; }
 .group-title { font-size: 24px; }
 .items { gap: 12px; }
 .src-tag {
@@ -24,7 +23,7 @@
   display: flex; align-items: center; justify-content: center; flex: none;
 }
 .q-text { display: flex; flex-direction: column; gap: 3px; }
-.q-name { font-family: var(--display); font-size: 18px; font-weight: var(--hw); color: var(--accent-ink); }
+.q-name { font-family: var(--font); font-size: 18px; font-weight: var(--hw); color: var(--accent-ink); }
 .q-proof { font-size: 15px; line-height: 1.5; color: var(--body); }
 
 .tools-box { border-radius: 28px; padding: 52px; display: flex; flex-direction: column; gap: 32px; }

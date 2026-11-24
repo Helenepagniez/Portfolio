@@ -1,7 +1,6 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NAV } from '../../core/data/profil';
-import { StyleService } from '../../core/services/style.service';
 import { IconComponent } from '../../shared/icon/icon.component';
 
 @Component({
@@ -12,7 +11,6 @@ import { IconComponent } from '../../shared/icon/icon.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SiteHeaderComponent {
-  protected readonly style = inject(StyleService);
   protected readonly nav = NAV;
   protected readonly menuOpen = signal(false);
 

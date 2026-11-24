@@ -31,10 +31,10 @@
 <section class="sec pt-80">
   <div class="wrap stack gap-28">
     <h2 class="h2 h2-sm">Expériences professionnelles</h2>
-    <div class="tl">
-      <span class="tl-line" aria-hidden="true"></span>
-      @for (xp of experiences; track xp.title; let i = $index) {
-        <article class="card tl-item lift reveal" [class]="'d' + (i + 1)">
+    <div class="tl" #timeline>
+      <span class="tl-line" aria-hidden="true"><span class="tl-fill" [style.transform]="'scaleY(' + progress() + ')'"></span></span>
+      @for (xp of experiences; track xp.title) {
+        <article class="card tl-item hover-lift rv" appReveal>
           <span class="tl-dot" [class.now]="xp.current" aria-hidden="true"></span>
           <div class="tl-head">
             <h3 class="h3">{{ xp.title }}</h3>
@@ -69,7 +69,7 @@
       <h2 class="h2 h2-sm">Du plus récent au plus ancien</h2>
     </div>
 
-    <article class="master dark reveal d1">
+    <article class="master dark hover-lift rv" appReveal>
       <div class="master-text">
         <div class="chips">
           <span class="pill pill-accent">Mon diplôme le plus récent</span>
@@ -92,12 +92,12 @@
     </article>
 
     <div class="dips">
-      @for (d of diplomas; track d.id) {
-        <div class="card dip lift">
+      @for (d of diplomas; track d.id; let i = $index) {
+        <div class="card dip hover-lift rv" [appReveal]="i * 100">
           <span class="dip-years">{{ d.years }}</span>
           <span class="dip-title">{{ d.title }}</span>
           <span class="dip-school">{{ d.school }}</span>
-          <button type="button" class="btn btn-ghost btn-sm self-start mt-12" (click)="open(d)">
+          <button type="button" class="btn btn-secondary self-start mt-12" (click)="open(d)">
             <app-icon name="eye" [size]="16" />Aperçu du diplôme
           </button>
         </div>
@@ -108,7 +108,7 @@
       <h3 class="h3 lang-h">Langues</h3>
       <div class="langs">
         @for (l of languages; track l.code) {
-          <div class="card lang lift">
+          <div class="card lang hover-lift">
             <div class="lang-top">
               <span class="lang-badge" aria-hidden="true">{{ l.code }}</span>
               <span class="stack gap-2"><span class="lang-name">{{ l.name }}</span><span class="lang-level">{{ l.level }}</span></span>
@@ -130,7 +130,7 @@
       </div>
     </div>
 
-    <a routerLink="/competences" class="btn btn-dark self-start mt-8">Voir mes compétences →</a>
+    <a routerLink="/competences" class="btn btn-primary self-start mt-8">Voir mes compétences</a>
   </div>
 </section>
 
@@ -141,7 +141,7 @@
         <span class="eyebrow small-eyebrow">Aperçu du diplôme</span>
         <span id="apercu-titre" class="dialog-title">{{ d.title }} — {{ d.school }}</span>
       </div>
-      <button type="button" class="btn btn-ghost btn-sm" (click)="close()"><app-icon name="close" [size]="14" [stroke]="2.6" />Fermer</button>
+      <button type="button" class="btn btn-secondary" (click)="close()"><app-icon name="close" [size]="14" [stroke]="2.6" />Fermer</button>
     </div>
     <div class="dialog-body">
       <img [src]="d.image" [alt]="'Diplôme : ' + d.title" />

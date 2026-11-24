@@ -10,10 +10,6 @@
 .h3-lg { font-size: 24px; }
 .body { color: var(--body); }
 
-.intro { background: var(--soft); padding: 64px 24px; }
-.intro-in { display: flex; flex-wrap: wrap; gap: 24px 64px; align-items: flex-end; }
-.intro-title { flex: 1 1 460px; display: flex; flex-direction: column; gap: 14px; }
-.intro-lead { flex: 1 1 420px; color: var(--body); }
 
 /* Romans */
 .book { border-radius: 24px; padding: 36px; display: flex; flex-wrap: wrap; gap: 40px; }
@@ -34,7 +30,7 @@
 .hobby-p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--body); }
 .kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 .kpi { background: var(--soft); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 6px; }
-.kpi-n { font-family: var(--display); font-size: 36px; font-weight: var(--hw); color: var(--dark); line-height: 1; }
+.kpi-n { font-family: var(--font); font-size: 36px; font-weight: var(--hw); color: var(--dark); line-height: 1; }
 .kpi-l { font-size: 14px; color: var(--body); }
 .record { border-radius: 16px; padding: 18px 20px; display: flex; align-items: center; gap: 16px; }
 .trophy {
@@ -59,7 +55,6 @@
 .pastry-name { padding: 12px 14px; font-weight: 700; font-size: 15px; line-height: 1.35; }
 
 @media (max-width: 860px) {
-  .intro { padding: 40px 16px; }
   .book { padding: 22px; gap: 24px; }
   .cover { width: 150px; height: 225px; }
   .hobbies { grid-template-columns: 1fr; }

@@ -58,7 +58,8 @@ Près de **4 ans d'expérience** sur des postes variés d'assistanat (Prysmian, 
   <summary><strong>Technique</strong></summary>
 
 - **Angular 19** : composants autonomes, signaux, nouvelle syntaxe de templates (`@if`, `@for`)
-- CSS sur mesure, sans bibliothèque d'interface : couleurs et polices en variables CSS
+- Petit design system en CSS (`src/styles.css`) : jetons de couleurs (palette prune), police Plus Jakarta Sans, boutons, cartes et animations communs
+- Animations au défilement grâce à la directive `appReveal`
 - Icônes en SVG intégrées
 - Site adapté au mobile et accessible : navigation au clavier, textes alternatifs, animations réduites si l'appareil le demande
 - Hébergement sur **GitHub Pages** (dossier `docs`)
@@ -68,8 +69,7 @@ Près de **4 ans d'expérience** sur des postes variés d'assistanat (Prysmian, 
 | Je veux modifier…                         | Fichier                                    |
 | ----------------------------------------- | ------------------------------------------ |
 | Un texte, une mission, un chiffre, un lien | `src/app/core/data/profil.ts`              |
-| Les couleurs ou les polices                | `src/styles.css`                           |
-| Le choix de style par défaut               | `src/app/core/services/style.service.ts`   |
+| Les couleurs, la police, les boutons, les cartes (design system) | `src/styles.css` |
 | Le CV téléchargeable                       | `src/assets/cv.pdf`                        |
 
 </details>

@@ -1,4 +1,4 @@
-<header class="hdr" [class.menu-open]="menuOpen()">
+<header class="hdr">
   <div class="hdr-in">
     <a routerLink="/home" class="brand" (click)="closeMenu()">
       <span class="logo" aria-hidden="true">HP</span>
@@ -27,32 +27,5 @@
         >
       }
     </nav>
-  </div>
-
-  <!-- Choix temporaire, à retirer une fois les couleurs et la police choisies -->
-  <div class="mk" role="region" aria-label="Choix des couleurs et de la police">
-    <span class="mk-title"><app-icon name="pen" [size]="15" />Style — à choisir</span>
-    <div class="sw" role="group" aria-label="Couleurs">
-      <span class="sw-label">Couleurs</span>
-      <button type="button" [attr.aria-pressed]="style.palette() === 'emeraude'" (click)="style.palette.set('emeraude')">
-        <span class="dot2 dot-emeraude"></span>Émeraude
-      </button>
-      <button type="button" [attr.aria-pressed]="style.palette() === 'prune'" (click)="style.palette.set('prune')">
-        <span class="dot2 dot-prune"></span>Prune
-      </button>
-    </div>
-    <div class="sw" role="group" aria-label="Police d’écriture">
-      <span class="sw-label">Police</span>
-      @for (f of style.fonts; track f.id) {
-        <button
-          type="button"
-          [attr.aria-pressed]="style.font() === f.id"
-          [style.font-family]="f.family"
-          (click)="style.font.set(f.id)"
-        >
-          {{ f.label }}
-        </button>
-      }
-    </div>
   </div>
 </header>

@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { QUALITIES, SKILL_GROUPS, TASK_TOOLS, TOOLS } from '../../core/data/profil';
 import { IconComponent } from '../../shared/icon/icon.component';
+import { RevealDirective } from '../../shared/reveal/reveal.directive';
 
 @Component({
   selector: 'app-competences',
-  imports: [IconComponent],
+  imports: [IconComponent, RevealDirective],
   templateUrl: './competences.component.html',
   styleUrl: './competences.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
