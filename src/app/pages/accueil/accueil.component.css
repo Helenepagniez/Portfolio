@@ -50,13 +50,13 @@
   box-shadow: 0 28px 60px var(--shadow); overflow: hidden;
 }
 .fiche-top { background: var(--dark); color: #fff; padding: 20px 24px; display: flex; align-items: center; gap: 16px; }
-.fiche-top img { width: 66px; height: 66px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); flex: none; }
+.fiche-top img { width: 66px; height: 66px; border-radius: 50%; object-fit: cover; border: 2px solid #ffffff; flex: none; }
 .fiche-name { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .fiche-kicker { font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--on-dark-2); }
 .fiche-title { font-size: 22px; font-weight: 700; line-height: 1.2; }
 .fiche-tag {
   margin-left: auto; align-self: center; text-align: center; line-height: 1.25;
-  background: var(--accent); color: var(--dark); font-size: 12px; font-weight: 800;
+  background: #ffffff; color: var(--dark); font-size: 12px; font-weight: 800;
   padding: 7px 10px; border-radius: 6px; letter-spacing: 0.5px; text-transform: uppercase;
   max-width: 96px;
 }

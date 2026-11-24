@@ -194,7 +194,7 @@ textarea:focus-visible {
 
 /* Bandeau sombre en haut des pages intérieures */
 .page-hero {
-  padding: 56px 24px 64px;
+  padding: 36px 24px 64px;
 }
 .page-hero .wrap {
   display: flex;
@@ -211,11 +211,15 @@ textarea:focus-visible {
 .section-head.full .lead {
   max-width: none;
 }
-/* Pastille d’icône et titre de carte sur la même ligne */
+/* Pastille d’icône et titre de carte sur la même ligne : titre en 2 lignes au plus, jamais plus haut que la pastille */
 .card-head {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+.card-head .h3 {
+  font-size: 20px;
+  line-height: 1.25;
 }
 
 /* ---------- 4. Composants ---------- */
@@ -484,7 +488,7 @@ textarea:focus-visible {
     padding: 64px 16px 0;
   }
   .page-hero {
-    padding: 40px 16px 48px;
+    padding: 28px 16px 48px;
   }
   .h1 {
     font-size: 40px;
