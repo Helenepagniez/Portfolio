@@ -43,7 +43,7 @@ Près de **4 ans d'expérience** sur des postes variés d'assistanat (Prysmian, 
 
 ### Mes passions
 
-- L'écriture de mes romans, _L'Ascension_ et _Fascination ou Répulsion_
+- L'écriture : [Écris en vain](https://ecri-en-vain.web.app/), l'application d'écriture que j'ai créée en 2026 pour répondre à un besoin que rien sur le marché ne couvrait (elle sera un jour ouverte au public), et mes romans _L'Ascension_ et _Fascination ou Répulsion_
 - Les jeux d'énigmes et immersifs
 - La pâtisserie
 
