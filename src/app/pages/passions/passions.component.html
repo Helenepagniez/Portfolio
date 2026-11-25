@@ -20,6 +20,42 @@
       </p>
     </div>
 
+    <article class="card app hover-lift rv" appReveal>
+      <div class="app-text">
+        <div class="chips">
+          <span class="chip chip-round">2026</span>
+          <span class="chip chip-round">Application web</span>
+          <span class="chip chip-round">Projet personnel</span>
+        </div>
+        <h3 class="h2 h2-sm">Écris en vain, mon application d’écriture</h3>
+        <span class="role">Créatrice — de l’idée à la mise en ligne</span>
+        <p class="summary">
+          Pour écrire mes romans, j’avais besoin d’un outil qui réunisse tout au même endroit : le texte, les
+          personnages, les relectures et la mise en page. Rien sur le marché ne répondait vraiment à ce besoin, alors en
+          2026, j’ai créé ma propre application.
+        </p>
+        <p class="summary">
+          Elle m’accompagne aujourd’hui de l’idée jusqu’au fichier prêt à imprimer, et sera un jour mise à disposition
+          du public.
+        </p>
+        <div class="stack gap-10 mt-6">
+          <a class="btn btn-primary self-start" href="https://ecri-en-vain.web.app/" target="_blank" rel="noopener noreferrer">
+            Découvrir l’application<span class="sr-only"> Écris en vain (nouvel onglet)</span>
+            <app-icon name="external" [size]="16" [stroke]="2.2" />
+          </a>
+          <span class="ext-note">
+            <app-icon name="info" [size]="16" />Lien externe : vous serez redirigé vers le site de l’application.
+          </span>
+        </div>
+      </div>
+      <div class="app-shots">
+        <img class="shot shot-main" src="assets/images/passions/ecris-en-vain-accueil.png"
+          alt="Page d’accueil de l’application Écris en vain : suivi d’un roman en cinq étapes" width="800" height="380" loading="lazy" />
+        <img class="shot shot-mini" src="assets/images/passions/ecris-en-vain-ecriture.png"
+          alt="Zone d’écriture d’Écris en vain, avec un dialogue et une lettre repérés dans le texte" width="384" height="224" loading="lazy" />
+      </div>
+    </article>
+
     @for (b of books; track b.title) {
       <article class="card book hover-lift rv" appReveal>
         <img class="cover" [src]="b.cover" [alt]="'Couverture du roman ' + b.title" width="220" height="330" />
