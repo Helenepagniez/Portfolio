@@ -3,7 +3,7 @@
 .mt-8 { margin-top: 8px; }
 
 .contact-grid { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; }
-.info { flex: 1 1 380px; display: flex; flex-direction: column; gap: 20px; }
+.info { flex: 1 1 380px; align-self: center; display: flex; flex-direction: column; gap: 20px; }
 .rows { display: flex; flex-direction: column; gap: 12px; padding-top: 6px; }
 
 .contact-row {

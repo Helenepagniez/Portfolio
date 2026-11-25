@@ -100,7 +100,7 @@
       <h3 class="h3 lang-h">Langues</h3>
       <div class="langs">
         @for (l of languages; track l.code) {
-          <div class="card lang hover-lift">
+          <div class="card lang hover-lift" appReveal>
             <div class="lang-top">
               <span class="lang-badge" aria-hidden="true">{{ l.code }}</span>
               <span class="stack gap-2"><span class="lang-name">{{ l.name }}</span><span class="lang-level">{{ l.level }}</span></span>
@@ -108,12 +108,12 @@
             <div class="stack gap-6" aria-hidden="true">
               <div class="scale">
                 @for (lv of levels; track lv; let i = $index) {
-                  <span [class.on]="i < l.rank"></span>
+                  <span [class.on]="i < l.rank" [style.--i]="i"></span>
                 }
               </div>
               <div class="scale-l">
                 @for (lv of levels; track lv; let i = $index) {
-                  <span [class.on]="i === l.rank - 1">{{ lv }}</span>
+                  <span [class.on]="i === l.rank - 1" [style.--i]="i">{{ lv }}</span>
                 }
               </div>
             </div>
