@@ -1,0 +1,210 @@
+<section class="dark page-hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">Design system</span>
+    <h1 class="h1-page reveal d1">Les pièces du portfolio</h1>
+    <p class="lead reveal d2">
+      Chaque élément du site, dans son style et dans tous ses états. Les pages se construisent avec ces pièces, et
+      seulement avec elles : tout vient de <code class="code-light">src/styles.css</code>, donc changer une pièce là-bas
+      la change partout.
+    </p>
+  </div>
+</section>
+
+<div class="ds">
+  <nav class="sommaire" aria-label="Sommaire du design system">
+    <span class="sommaire-titre">Sommaire</span>
+    @for (s of sommaire; track s.id) {
+      <button type="button" class="sommaire-lien" (click)="allerA(s.id)">{{ s.label }}</button>
+    }
+  </nav>
+
+  <div class="contenu">
+    <!-- ═══ COULEURS ═══ -->
+    <section id="couleurs" class="ds-section">
+      <h2 class="h2 h2-sm">Couleurs</h2>
+      <p class="chapo">Le prune pour agir, le rose poudré pour souligner. Le fond est teinté : jamais de gris neutre.</p>
+      <div class="nuancier">
+        @for (c of couleurs; track c.variable) {
+          <div class="teinte">
+            <span class="echantillon" [style.background]="'var(' + c.variable + ')'"></span>
+            <strong>{{ c.name }}</strong>
+            <code>{{ c.variable }} · {{ valeurs()[c.variable] }}</code>
+            <span class="usage">{{ c.usage }}</span>
+          </div>
+        }
+      </div>
+      <h3 class="h3 sous-titre">Textes et traits</h3>
+      <div class="nuancier">
+        @for (c of textes; track c.variable) {
+          <div class="teinte">
+            <span class="echantillon" [style.background]="'var(' + c.variable + ')'"></span>
+            <strong>{{ c.name }}</strong>
+            <code>{{ c.variable }} · {{ valeurs()[c.variable] }}</code>
+            <span class="usage">{{ c.usage }}</span>
+          </div>
+        }
+      </div>
+    </section>
+
+    <!-- ═══ TYPOGRAPHIE ═══ -->
+    <section id="typographie" class="ds-section">
+      <h2 class="h2 h2-sm">Typographie</h2>
+      <p class="chapo">Une seule police, Plus Jakarta Sans : titres en extra-gras (<code>--hw: 800</code>), texte en normal.</p>
+      <div class="card demo echelle">
+        <div class="ligne"><code>.h1</code><span class="h1">Assistante administrative</span></div>
+        <div class="ligne"><code>.h1-page</code><span class="h1-page">Mon parcours</span></div>
+        <div class="ligne"><code>.h2</code><span class="h2">Expériences professionnelles</span></div>
+        <div class="ligne"><code>.h3</code><span class="h3">Assistante Administration des Ventes</span></div>
+        <div class="ligne"><code>.eyebrow</code><span class="eyebrow">Sur-titre de section</span></div>
+        <div class="ligne"><code>.lead</code><p class="lead">Un paragraphe d’introduction, plus grand et plus aéré que le texte courant.</p></div>
+        <div class="ligne">
+          <code>.list</code>
+          <ul class="list">
+            <li>Suivi des échéances et relances.</li>
+            <li>Contrôle et fiabilisation des données.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FORMES ═══ -->
+    <section id="formes" class="ds-section">
+      <h2 class="h2 h2-sm">Formes et ombres</h2>
+      <p class="chapo">Trois arrondis seulement, et une ombre teintée de prune qui n’apparaît qu’au survol.</p>
+      <div class="grille-3">
+        @for (r of arrondis; track r.variable) {
+          <div class="forme">
+            <span class="forme-boite" [style.border-radius]="'var(' + r.variable + ')'"></span>
+            <strong>{{ r.name }}</strong>
+            <code>{{ r.variable }} · {{ valeurs()[r.variable] }}</code>
+            <span class="usage">{{ r.usage }}</span>
+          </div>
+        }
+      </div>
+      <div class="grille-3 mt">
+        <div class="card ombre">Repos<code>aucune ombre</code></div>
+        <div class="card ombre ombre-btn">Bouton survolé<code>0 10px 24px --shadow</code></div>
+        <div class="card ombre ombre-carte">Carte survolée<code>0 18px 40px --shadow</code></div>
+      </div>
+    </section>
+
+    <!-- ═══ ICÔNES ═══ -->
+    <section id="icones" class="ds-section">
+      <h2 class="h2 h2-sm">Icônes</h2>
+      <p class="chapo">Un seul trait, une seule grille. On les appelle par leur nom : <code>&lt;app-icon name="mail" /&gt;</code></p>
+      <div class="icones">
+        @for (nom of icones; track nom) {
+          <div class="icone"><app-icon [name]="nom" [size]="22" /><span>{{ nom }}</span></div>
+        }
+      </div>
+      <h3 class="h3 sous-titre">Pastilles d’icône</h3>
+      <div class="card demo rangee">
+        <span class="ico"><app-icon name="folder-check" [size]="26" /></span><code>.ico</code>
+        <span class="ico-soft"><app-icon name="chart" [size]="22" /></span><code>.ico-soft</code>
+        <span class="live"></span><code>.live</code>
+      </div>
+    </section>
+
+    <!-- ═══ BOUTONS ═══ -->
+    <section id="boutons" class="ds-section">
+      <h2 class="h2 h2-sm">Boutons</h2>
+      <p class="chapo">
+        Une seule taille, trois variantes. Au survol, une seule règle par surface : sur fond clair, le bouton se remplit
+        en prune vif ; sur fond sombre, il se remplit en blanc.
+      </p>
+      <div class="card demo">
+        <span class="etat">Sur fond clair · au repos</span>
+        <div class="rangee">
+          <button type="button" class="btn btn-primary">Principal</button>
+          <button type="button" class="btn btn-secondary">Secondaire</button>
+          <button type="button" class="btn btn-accent">Accent</button>
+          <button type="button" class="btn btn-primary"><app-icon name="download" [size]="18" />Avec icône</button>
+          <button type="button" class="btn btn-primary" disabled>Envoi en cours…</button>
+        </div>
+        <span class="etat">Sur fond clair · au survol</span>
+        <div class="rangee">
+          <button type="button" class="btn btn-primary is-hover">Principal</button>
+          <button type="button" class="btn btn-secondary is-hover">Secondaire</button>
+          <button type="button" class="btn btn-accent is-hover">Accent</button>
+        </div>
+        <code class="usage">class="btn btn-primary | btn-secondary | btn-accent" · btn-block pour la pleine largeur</code>
+      </div>
+      <div class="dark demo panneau">
+        <span class="etat">Sur fond sombre · au repos</span>
+        <div class="rangee">
+          <button type="button" class="btn btn-primary">Principal</button>
+          <button type="button" class="btn btn-secondary">Secondaire</button>
+          <button type="button" class="btn btn-light">Blanc</button>
+        </div>
+        <span class="etat">Sur fond sombre · au survol</span>
+        <div class="rangee">
+          <button type="button" class="btn btn-primary is-hover">Principal</button>
+          <button type="button" class="btn btn-secondary is-hover">Secondaire</button>
+          <button type="button" class="btn btn-light is-hover">Blanc</button>
+        </div>
+        <code class="usage">Dans un bloc .dark, les couleurs s’inversent d’elles-mêmes. .btn-light : bouton blanc (pied de page), rose poudré au survol.</code>
+      </div>
+    </section>
+
+    <!-- ═══ ÉTIQUETTES ═══ -->
+    <section id="etiquettes" class="ds-section">
+      <h2 class="h2 h2-sm">Étiquettes</h2>
+      <p class="chapo">Les étiquettes informent, elles ne se cliquent pas : elles ne réagissent donc pas au survol.</p>
+      <div class="card demo">
+        <div class="rangee">
+          <span class="chip">Contrôle de dossiers</span><code>.chip</code>
+          <span class="chip chip-round">Escape games</span><code>.chip-round</code>
+        </div>
+        <div class="rangee">
+          <span class="pill pill-dark">Mai — Juil. 2026</span><code>.pill-dark</code>
+          <span class="pill pill-soft">2019 — 2021 · Alternance</span><code>.pill-soft</code>
+          <span class="pill pill-outline"><app-icon name="clock" [size]="14" [stroke]="2.2" />2 ans</span><code>.pill-outline</code>
+          <span class="pill pill-accent">Mon diplôme le plus récent</span><code>.pill-accent</code>
+        </div>
+      </div>
+      <div class="dark demo panneau">
+        <div class="rangee">
+          <span class="pill pill-accent">≈ 4 ans d’expérience</span><code>.pill-accent</code>
+          <span class="pill pill-outline-light">5 expériences</span><code>.pill-outline-light</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CARTES ═══ -->
+    <section id="cartes" class="ds-section">
+      <h2 class="h2 h2-sm">Cartes</h2>
+      <p class="chapo">Même contour partout. Une carte qui réagit au survol se soulève et son contour passe en prune vif.</p>
+      <div class="grille-3">
+        <div class="card carte-demo"><strong>Carte</strong><code>.card</code><span class="usage">Au repos</span></div>
+        <div class="card hover-lift carte-demo is-hover">
+          <strong>Carte au survol</strong><code>.card.hover-lift</code><span class="usage">Soulevée, contour prune</span>
+        </div>
+        <div class="dark carte-demo carte-sombre">
+          <strong>Panneau sombre</strong><code>.dark</code><span class="usage">Mise en avant</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ANIMATIONS ═══ -->
+    <section id="animations" class="ds-section">
+      <h2 class="h2 h2-sm">Animations</h2>
+      <p class="chapo">
+        Les blocs apparaissent en glissant vers le haut : <code>.reveal</code> au chargement, <code>.rv</code> + la
+        directive <code>appReveal</code> au défilement. Elles sont coupées si l’appareil demande moins d’animations.
+      </p>
+      <div class="card demo">
+        <button type="button" class="btn btn-secondary self-start" (click)="rejouer.set(rejouer() + 1)">Rejouer</button>
+        @for (k of [rejouer()]; track k) {
+          <div class="rangee">
+            <span class="chip reveal">.reveal</span>
+            <span class="chip reveal d1">.d1</span>
+            <span class="chip reveal d2">.d2</span>
+            <span class="chip reveal d3">.d3</span>
+            <span class="chip reveal d4">.d4</span>
+            <span class="chip reveal d5">.d5</span>
+          </div>
+        }
+      </div>
+    </section>
+  </div>
+</div>

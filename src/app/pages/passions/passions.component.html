@@ -1,0 +1,99 @@
+<section class="dark page-hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">En dehors du bureau</span>
+    <h1 class="h1-page reveal d1">Mes passions</h1>
+    <p class="lead reveal d2">
+      Écrire et autoéditer mes romans, résoudre des énigmes en équipe, réussir une belle recette : de la méthode,
+      de la patience et le goût du travail bien fait, comme dans mon métier.
+    </p>
+  </div>
+</section>
+
+<section class="sec pt-64">
+  <div class="wrap stack gap-32">
+    <div class="section-head full">
+      <span class="eyebrow">Passion n°1 · L’écriture</span>
+      <h2 class="h2 h2-sm">J’écris et j’autoédite mes romans</h2>
+      <p class="lead body">
+        Écrire un roman, c’est tenir un planning, relire chaque détail et mener un projet jusqu’à sa publication — de la
+        méthode et de la constance, comme dans mon métier.
+      </p>
+    </div>
+
+    @for (b of books; track b.title) {
+      <article class="card book hover-lift rv" appReveal>
+        <img class="cover" [src]="b.cover" [alt]="'Couverture du roman ' + b.title" width="220" height="330" />
+        <div class="book-text">
+          <div class="chips">
+            <span class="chip chip-round">{{ b.year }}</span>
+            <span class="chip chip-round">{{ b.genres }}</span>
+            <span class="chip chip-round">{{ b.pages }} pages</span>
+          </div>
+          <h3 class="h2 h2-sm">{{ b.title }}</h3>
+          <span class="role">Autrice — autoéditrice</span>
+          <p class="summary">{{ b.summary }}</p>
+          <div class="stack gap-10 mt-6">
+            <a class="btn btn-primary self-start" [href]="b.url" target="_blank" rel="noopener noreferrer">
+              Acheter sur Amazon<span class="sr-only"> : {{ b.title }} (site d’achat, nouvel onglet)</span>
+              <app-icon name="external" [size]="16" [stroke]="2.2" />
+            </a>
+            <span class="ext-note">
+              <app-icon name="info" [size]="16" />Lien externe : vous serez redirigé vers le site d’achat Amazon.
+            </span>
+          </div>
+        </div>
+      </article>
+    }
+
+    <div class="section-head pt-40">
+      <span class="eyebrow">Mes autres passions</span>
+      <h2 class="h2 h2-sm">Jeux d’énigmes et pâtisserie</h2>
+    </div>
+
+    <div class="hobbies">
+      <article class="card hobby hover-lift rv" appReveal>
+        <div class="hobby-head">
+          <span class="ico"><app-icon name="key" [size]="26" /></span>
+          <span class="stack gap-2"><span class="eyebrow">Passion n°2</span><h3 class="h3 h3-lg">Jeux d’énigmes et immersifs</h3></span>
+        </div>
+        <p class="hobby-p">Observer, organiser les indices, communiquer avec l’équipe et garder l’œil sur le chrono.</p>
+        <div class="chips">
+          <span class="chip chip-round">Escape games</span>
+          <span class="chip chip-round">Réalité virtuelle</span>
+          <span class="chip chip-round">Quiz room</span>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><span class="kpi-n">17</span><span class="kpi-l">salles d’escape game jouées</span></div>
+          <div class="kpi"><span class="kpi-n">15</span><span class="kpi-l">salles réussies</span></div>
+        </div>
+        <div class="dark record">
+          <span class="trophy"><app-icon name="trophy" [size]="24" /></span>
+          <span class="stack gap-3">
+            <span class="record-k">Top 5&nbsp;%</span>
+            <span class="record-t">Fort Boyard Rouen : 718 points, à deux</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="card hobby hover-lift rv" [appReveal]="120">
+        <div class="hobby-head">
+          <span class="ico"><app-icon name="cake" [size]="26" /></span>
+          <span class="stack gap-2"><span class="eyebrow">Passion n°3</span><h3 class="h3 h3-lg">Pâtisserie</h3></span>
+        </div>
+        <p class="hobby-p">Le plaisir de faire soi-même et de faire plaisir aux autres : un moment où l’on suit une recette et où l’on prend son temps.</p>
+        <span class="fav">Celles que je préfère préparer</span>
+        <ol class="pastries">
+          @for (p of pastries; track p.name; let i = $index) {
+            <li class="pastry">
+              <span class="pastry-img">
+                <img [src]="p.image" [alt]="p.name" loading="lazy" />
+                <span class="rank" aria-hidden="true">{{ i + 1 }}</span>
+              </span>
+              <span class="pastry-name">{{ p.name }}</span>
+            </li>
+          }
+        </ol>
+      </article>
+    </div>
+  </div>
+</section>

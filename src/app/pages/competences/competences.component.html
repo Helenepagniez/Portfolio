@@ -1,0 +1,69 @@
+<section class="dark page-hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">Mes compétences</span>
+    <h1 class="h1-page reveal d1">Trois métiers de l’assistanat, exercés en entreprise</h1>
+    <p class="lead reveal d2">Chaque compétence vient d’une mission réelle, rangée sous l’entreprise où je l’ai exercée.</p>
+  </div>
+</section>
+
+<section class="sec pt-64">
+  <div class="wrap groups">
+    @for (g of groups; track g.title; let i = $index) {
+      <article class="card hover-lift skill-card rv" [appReveal]="i * 120">
+        <div class="card-head">
+          <span class="ico"><app-icon [name]="g.icon" [size]="26" /></span>
+          <h2 class="h3 group-title">{{ g.title }}</h2>
+        </div>
+        @for (c of g.companies; track c.company) {
+          <div class="company">
+            <h3 class="company-name"><app-icon name="building" [size]="14" [stroke]="2.2" /><span class="sr-only">Chez </span>{{ c.company }}</h3>
+            <ul class="list items">
+              @for (t of c.texts; track t) {
+                <li>{{ t }}</li>
+              }
+            </ul>
+          </div>
+        }
+      </article>
+    }
+  </div>
+</section>
+
+<section class="sec pt-88">
+  <div class="wrap qualities-row">
+    <div class="q-head">
+      <span class="eyebrow">Qualités professionnelles</span>
+      <h2 class="h2 h2-md">Ce qui me définit au travail</h2>
+    </div>
+    <ul class="qualities">
+      @for (q of qualities; track q.name; let i = $index) {
+        <li class="card hover-lift quality rv" [appReveal]="i * 60">
+          <span class="check"><app-icon name="check" [size]="16" [stroke]="2.6" /></span>
+          <span class="q-text"><span class="q-name">{{ q.name }}</span><span class="q-proof">{{ q.proof }}</span></span>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<section class="sec pt-88">
+  <div class="wrap dark tools-box">
+    <div class="section-head">
+      <span class="eyebrow">Mes outils</span>
+      <h2 class="h2 h2-md">Opérationnelle sur les outils du quotidien</h2>
+    </div>
+    <ul class="tools">
+      @for (t of tools; track t.name) {
+        <li class="hover-lift tool"><span class="tool-name">{{ t.name }}</span><span class="tool-use">{{ t.use }}</span></li>
+      }
+    </ul>
+    <div class="task-tools">
+      <h3 class="tt-title">Organisation et suivi des tâches</h3>
+      <ul class="tools">
+        @for (t of taskTools; track t.name) {
+          <li class="hover-lift tool tool-outline"><span class="tool-name">{{ t.name }}</span><span class="tool-use">{{ t.use }}</span></li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>

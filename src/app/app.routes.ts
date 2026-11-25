@@ -1,14 +1,23 @@
 import { Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
-import { ProjetsComponent } from './projets/projets.component';
+import { AccueilComponent } from './pages/accueil/accueil.component';
+import { CompetencesComponent } from './pages/competences/competences.component';
+import { DesignSystemComponent } from './pages/design-system/design-system.component';
+import { ContactPageComponent } from './pages/contact/contact-page.component';
+import { ParcoursComponent } from './pages/parcours/parcours.component';
+import { PassionsComponent } from './pages/passions/passions.component';
+
+const SITE = 'Hélène Pagniez — Assistante administrative';
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'projets', component: ProjetsComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'home', component: AccueilComponent, title: SITE },
+  { path: 'parcours', component: ParcoursComponent, title: 'Parcours · ' + SITE },
+  { path: 'competences', component: CompetencesComponent, title: 'Compétences · ' + SITE },
+  { path: 'passions', component: PassionsComponent, title: 'Mes passions · ' + SITE },
+  { path: 'contact', component: ContactPageComponent, title: 'Contact · ' + SITE },
+  { path: 'design-system', component: DesignSystemComponent, title: 'Design system · ' + SITE },
+  // Anciennes adresses du portfolio
+  { path: 'about', redirectTo: '/parcours' },
+  { path: 'projets', redirectTo: '/home' },
   { path: '', pathMatch: 'full', redirectTo: '/home' },
-  { path: '**', pathMatch: 'full', redirectTo: '/home' },
+  { path: '**', redirectTo: '/home' },
 ];

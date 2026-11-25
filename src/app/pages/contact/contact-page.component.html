@@ -1,0 +1,62 @@
+<section class="dark page-hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">Contact</span>
+    <h1 class="h1-page reveal d1">Vous recrutez une assistante administrative ?</h1>
+    <p class="lead reveal d2">
+      Disponible immédiatement, à Rennes de préférence et ouverte à Caen. Je réponds rapidement par mail ou par
+      téléphone.
+    </p>
+  </div>
+</section>
+
+<section class="sec pt-64">
+  <div class="wrap contact-grid">
+    <div class="info reveal">
+      <h2 class="h3 info-title">Me joindre directement</h2>
+      <div class="rows">
+        <div class="contact-row split hover-lift">
+          <a [href]="'mailto:' + contact.email" class="row-link"><app-icon name="mail" class="acc" />{{ contact.email }}</a>
+          <button type="button" class="btn btn-accent copy" (click)="copyMail()">
+            {{ copied() ? 'Adresse copiée ✓' : 'Copier l’adresse' }}
+          </button>
+          <span class="sr-only" aria-live="polite">{{ copied() ? 'Adresse e-mail copiée' : '' }}</span>
+        </div>
+        <a [href]="contact.phoneHref" class="contact-row hover-lift"><app-icon name="phone" class="acc" />{{ contact.phone }}</a>
+        <a [href]="contact.linkedin" target="_blank" rel="noopener noreferrer" class="contact-row hover-lift"
+          ><app-icon name="linkedin" class="acc" />LinkedIn — helene-pagniez<span class="sr-only"> (nouvel onglet)</span></a
+        >
+        <a [href]="contact.cv" [attr.download]="contact.cvFileName" class="btn btn-primary self-start mt-8">
+          <app-icon name="download" [size]="18" />Télécharger mon CV (PDF)
+        </a>
+      </div>
+    </div>
+
+    <div class="card form-card reveal d2">
+      @if (status() === 'sent') {
+        <div role="status" class="sent">
+          <span class="sent-ico"><app-icon name="check" [size]="28" [stroke]="2.6" /></span>
+          <h2 class="h3 form-title">Merci, votre message est bien envoyé</h2>
+          <p class="sent-p">Je reviens vers vous rapidement. En attendant, vous pouvez télécharger mon CV.</p>
+          <button type="button" class="btn btn-secondary" (click)="newMessage()">Écrire un autre message</button>
+        </div>
+      } @else {
+        <form (ngSubmit)="send()" class="form" novalidate>
+          <h2 class="h3 form-title">M’envoyer un message</h2>
+          <div class="two">
+            <label class="field">Nom<input class="input" type="text" name="nom" autocomplete="name" [(ngModel)]="nom" required /></label>
+            <label class="field">E-mail<input class="input" type="email" name="email" autocomplete="email" [(ngModel)]="email" required /></label>
+          </div>
+          <label class="field">Entreprise (facultatif)<input class="input" type="text" name="entreprise" autocomplete="organization" [(ngModel)]="entreprise" /></label>
+          <label class="field">Sujet<input class="input" type="text" name="sujet" [(ngModel)]="sujet" required /></label>
+          <label class="field">Message<textarea class="input" name="message" rows="6" [(ngModel)]="message" required></textarea></label>
+          @if (status() === 'error') {
+            <p class="form-error" role="alert">{{ error() }}</p>
+          }
+          <button type="submit" class="btn btn-primary self-start" [disabled]="status() === 'sending'">
+            {{ status() === 'sending' ? 'Envoi en cours…' : 'Envoyer le message' }}
+          </button>
+        </form>
+      }
+    </div>
+  </div>
+</section>

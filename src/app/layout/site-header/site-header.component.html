@@ -1,0 +1,31 @@
+<header class="hdr">
+  <div class="hdr-in">
+    <a routerLink="/home" class="brand" (click)="closeMenu()">
+      <span class="logo" aria-hidden="true">HP</span>
+      <span class="brand-name">Hélène Pagniez</span>
+    </a>
+
+    <button
+      type="button"
+      class="menu-btn"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="menu-principal"
+    >
+      <app-icon name="menu" [size]="18" />Menu
+    </button>
+
+    <nav id="menu-principal" aria-label="Navigation principale" class="navwrap" [class.open]="menuOpen()">
+      @for (item of nav; track item.path) {
+        <a
+          class="navlink"
+          [routerLink]="item.path"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          (click)="closeMenu()"
+          >{{ item.label }}</a
+        >
+      }
+    </nav>
+  </div>
+</header>
