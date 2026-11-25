@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, afterNextRender, signal, viewChild } from '@angular/core';
 import { RevealDirective } from '../../shared/reveal/reveal.directive';
 import { RouterLink } from '@angular/router';
-import { CHAPTERS, DIPLOMAS, Diploma, EXPERIENCES, LANGUAGES, LEVELS, MASTER } from '../../core/data/profil';
+import { DIPLOMAS, Diploma, EXPERIENCES, LANGUAGES, LEVELS, MASTER } from '../../core/data/profil';
 import { IconComponent } from '../../shared/icon/icon.component';
 
 @Component({
@@ -13,7 +13,6 @@ import { IconComponent } from '../../shared/icon/icon.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ParcoursComponent {
-  protected readonly chapters = CHAPTERS;
   protected readonly experiences = EXPERIENCES;
   protected readonly master = MASTER;
   protected readonly diplomas = DIPLOMAS;

@@ -98,45 +98,46 @@
 .stat-n small { font-size: 24px; margin-left: 6px; }
 .stat-l { font-size: 14px; line-height: 1.45; color: var(--on-dark); }
 
-/* ---------- Frise : la ligne se remplit de gauche à droite ---------- */
+/* ---------- Frise en 3 étapes : le rail se remplit étape après étape, de 2018 jusqu’en 2026 ---------- */
 .head-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px; }
-.frise { position: relative; }
-.frise-line {
-  position: absolute; left: 12px; right: 12px; top: 11px; height: 3px;
-  background: var(--line); border-radius: 3px; overflow: hidden;
-}
-.frise-fill {
-  display: block; height: 100%; background: var(--accent-ink);
-  transform: scaleX(0); transform-origin: left;
-  transition: transform 1.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-}
-.frise.is-visible .frise-fill { transform: scaleX(1); }
-.frise-list {
+.chapters {
   list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  border-radius: 18px; overflow: hidden; border: 1.5px solid var(--line-strong);
+  box-shadow: 0 12px 32px var(--shadow); background: var(--card);
 }
-.frise-step {
-  position: relative; display: flex; flex-direction: column; gap: 8px; padding-top: 40px;
-  opacity: 0; transform: translateX(-16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+.chapter { padding: 20px; display: flex; flex-direction: column; gap: 5px; }
+.chapter + .chapter { border-left: 1px solid var(--line); }
+.chapter-top { display: flex; align-items: center; gap: 10px; }
+.num {
+  width: 28px; height: 28px; border-radius: 50%; background: var(--dark); color: var(--accent);
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; flex: none;
 }
-.frise-dot {
-  position: absolute; top: 0; left: 0; width: 25px; height: 25px; border-radius: 50%;
-  background: var(--card); border: 3px solid var(--line-strong);
-  transition: background-color 0.4s ease, border-color 0.4s ease;
+.years { font-size: 13px; font-weight: 700; color: var(--accent-ink); }
+.rail { display: block; height: 3px; margin: 8px -20px 4px; background: var(--line); overflow: hidden; }
+.chapter:first-child .rail { margin-left: 0; border-radius: 3px 0 0 3px; }
+.chapter:last-child .rail { margin-right: 0; border-radius: 0 3px 3px 0; }
+.rail::after {
+  content: ''; display: block; height: 100%;
+  background: var(--accent-ink); transform: scaleX(0); transform-origin: left;
 }
-.frise.is-visible .frise-step { opacity: 1; transform: none; }
-.frise.is-visible .frise-dot { background: var(--accent); border-color: var(--accent-ink); }
-.frise.is-visible .frise-step:nth-child(1),
-.frise.is-visible .frise-step:nth-child(1) .frise-dot { transition-delay: 0.2s; }
-.frise.is-visible .frise-step:nth-child(2),
-.frise.is-visible .frise-step:nth-child(2) .frise-dot { transition-delay: 0.85s; }
-.frise.is-visible .frise-step:nth-child(3),
-.frise.is-visible .frise-step:nth-child(3) .frise-dot { transition-delay: 1.5s; }
-.frise.is-visible .frise-step:nth-child(3) .frise-dot { animation: pulse 2s 2s infinite; }
-.frise-years { font-size: 14px; font-weight: 700; color: var(--accent-ink); }
-.frise-name { font-size: 21px; }
-.frise-text { font-size: 15px; line-height: 1.55; color: var(--muted); }
+.chapters.is-visible .rail::after {
+  animation: fill-bar 0.9s cubic-bezier(0.45, 0, 0.25, 1) forwards;
+  animation-delay: calc(0.2s + var(--i) * 0.9s);
+}
+.chapters.is-visible .chapter:last-child .rail::after { animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1); }
+.chapters.is-visible .num { animation: num-on 0.3s ease forwards; animation-delay: calc(0.2s + var(--i) * 0.9s); }
+.now-tag {
+  display: inline-flex; align-items: center; gap: 6px; margin-left: auto; font-size: 12px; font-weight: 700;
+  color: var(--accent-ink); opacity: 0;
+}
+.chapters.is-visible .now-tag { animation: fade-in 0.4s ease forwards; animation-delay: calc(0.2s + 3 * 0.9s); }
+.now-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-ink); animation: pulse 2s infinite; }
+@keyframes fill-bar { to { transform: scaleX(1); } }
+@keyframes num-on { to { background: var(--accent-ink); color: #ffffff; } }
+@keyframes fade-in { to { opacity: 1; } }
+.chapter-name { font-size: 17px; padding-top: 4px; }
+.chapter-text { font-size: 14px; line-height: 1.5; color: var(--muted); }
 
 /* ---------- Savoir-faire et secteurs ---------- */
 .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
@@ -180,6 +181,7 @@
 
 @media (max-width: 860px) {
   .hero { padding: 28px 16px 8px; }
+  .chapter + .chapter { border-left: 0; border-top: 1px solid var(--line); }
   .kpi-panel { padding: 28px 22px; }
   .kpi-panel { grid-template-columns: 1fr 1fr; }
   .stat-main { grid-row: auto; grid-column: 1 / -1; padding-right: 0; padding-bottom: 20px; border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
@@ -191,6 +193,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .frise-step { opacity: 1; transform: none; }
-  .frise-fill { transform: none; }
+  .rail::after, .chapters.is-visible .rail::after { animation: none; transform: none; }
+  .num, .chapters.is-visible .num { animation: none; background: var(--accent-ink); color: #ffffff; }
+  .now-tag, .chapters.is-visible .now-tag { animation: none; opacity: 1; }
 }

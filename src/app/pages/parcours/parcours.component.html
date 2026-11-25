@@ -3,9 +3,9 @@
     <span class="eyebrow reveal">Mon parcours</span>
     <h1 class="h1-page reveal d1">Un parcours varié, un même fil conducteur</h1>
     <p class="lead reveal d2">
-      Formée à l’assistanat de direction, j’ai enrichi ce socle avec la gestion des données et les outils numériques, puis
-      je l’ai mis au service de l’administration des ventes. Le fil conducteur : organiser, contrôler et fiabiliser
-      l’information.
+      J’ai toujours aimé les missions d’assistanat, et j’en fais depuis des années, dans des postes et des secteurs
+      différents. J’ai appris de nouvelles compétences et de nouveaux outils en chemin, mais je reste fidèle à ce que je
+      fais le mieux : organiser, suivre et fiabiliser.
     </p>
     <div class="chips reveal d3 pt">
       <span class="pill pill-accent">≈ 4 ans d’expérience en assistanat</span>
@@ -15,25 +15,7 @@
   </div>
 </section>
 
-<section class="overlap">
-  <ol class="wrap chapters reveal d2">
-    @for (c of chapters; track c.n; let i = $index, last = $last) {
-      <li class="chapter" [style.--i]="i">
-        <div class="chapter-top">
-          <span class="num" aria-hidden="true">{{ c.n }}</span><span class="years">{{ c.years }}</span>
-          @if (last) {
-            <span class="now-tag"><span class="now-dot" aria-hidden="true"></span>Aujourd’hui</span>
-          }
-        </div>
-        <span class="rail" aria-hidden="true"></span>
-        <span class="h3 chapter-name">{{ c.name }}</span>
-        <span class="chapter-text">{{ c.text }}</span>
-      </li>
-    }
-  </ol>
-</section>
-
-<section class="sec pt-80">
+<section class="sec pt-64">
   <div class="wrap stack gap-28">
     <h2 class="h2 h2-sm">Expériences professionnelles</h2>
     <div class="tl" #timeline>
