@@ -104,11 +104,10 @@ Le site s'ouvre sur http://localhost:4200.
   <summary><strong>Mettre en ligne</strong></summary>
 
 ```bash
-npx ng build --base-href https://Helenepagniez.github.io/Portfolio/
-cp docs/index.html docs/404.html
+npm run build:github
 ```
 
-Le fichier `404.html` permet d'ouvrir directement n'importe quelle page du site (par exemple `/parcours`).
+Cette commande construit le site puis crée une vraie page pour chaque adresse (`docs/competences/index.html`, `docs/parcours/index.html`…), avec le bon titre. Ainsi, `/Portfolio/competences` répond normalement au lieu d'une erreur 404, et les liens fonctionnent sur LinkedIn et partout où un aperçu est affiché. Le fichier `404.html` reste en filet de sécurité pour les autres adresses.
 Il suffit ensuite de commiter et d'envoyer le dossier `docs` sur la branche publiée par GitHub Pages.
 
 </details>
