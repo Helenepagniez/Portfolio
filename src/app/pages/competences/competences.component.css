@@ -4,11 +4,12 @@
 
 .groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
 .group-title { font-size: 20px; }
-.items { gap: 12px; }
-.src-tag {
-  display: inline-flex; align-items: center; gap: 6px; margin-top: 6px;
-  font-size: 13px; font-weight: 700; color: var(--accent-ink); background: var(--soft);
-  border-radius: 999px; padding: 3px 10px 3px 8px;
+.items { gap: 6px; }
+.company { display: flex; flex-direction: column; gap: 8px; }
+.company + .company { padding-top: 14px; border-top: 1px dashed var(--line-strong); }
+.company-name {
+  margin: 0; display: flex; align-items: center; gap: 7px;
+  font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-ink);
 }
 
 .qualities-row { display: flex; flex-wrap: wrap; gap: 48px; }

@@ -41,7 +41,7 @@
 .master-text { flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
 .master-title { font-size: 30px; line-height: 1.2; }
 .master-school { font-size: 16px; color: var(--on-dark); }
-.master-p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--on-dark-2); max-width: 560px; }
+.master-p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--on-dark-2); max-width: 760px; }
 .thumb {
   position: relative; flex: 1 1 280px; max-width: 360px; height: 250px; padding: 0; border: 0;
   background: transparent; cursor: pointer; border-radius: 14px; overflow: hidden;

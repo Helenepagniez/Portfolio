@@ -260,6 +260,7 @@ export const QUALITIES = [
   { name: 'À l’écoute', proof: 'Au contact quotidien des équipes, des services et des clients.' },
   { name: 'Polyvalente', proof: 'Industrie, énergie, high-tech, diagnostic immobilier.' },
   { name: 'Adaptable', proof: 'Alternance, intérim, missions courtes : opérationnelle vite.' },
+  { name: 'Esprit d’équipe', proof: 'Coordination entre les services et boîte mail partagée avec les collègues au quotidien.' },
 ];
 
 export const TOOLS = [
